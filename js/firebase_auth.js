@@ -1,3 +1,4 @@
+console.log('[DEBUG] Page loaded (firebase_auth.js)');
 // Initialize Firebase
 // Replace the below config object with your actual Firebase project config from the Firebase Console
 const firebaseConfig = {
@@ -22,3 +23,45 @@ const googleProvider = new firebase.auth.GoogleAuthProvider();
 // Export for use in other scripts (if using modules, otherwise these are global)
 window.firebaseAuth = auth;
 window.firebaseGoogleProvider = googleProvider;
+
+// Force sign out on every page load
+// firebase.auth().signOut();
+
+// Add global Google sign-in function for use in scripts.js
+window.signInWithGoogle = function() {
+  auth.signInWithPopup(googleProvider)
+    .then((result) => {
+      // Show dashboard, hide login
+      const loginPage = document.getElementById('login-page');
+      const dashboard = document.getElementById('dashboard');
+      if (loginPage) loginPage.classList.add('hidden');
+      if (dashboard) dashboard.classList.remove('hidden');
+      // Always select the first tab after login
+      if (window.tabs && window.tabs.length > 0) {
+        window.selectedTabIdx = 0;
+        localStorage.setItem('selectedTabIdx', 0);
+      }
+      if (typeof window.renderAppUI === 'function') window.renderAppUI();
+    })
+    .catch((error) => {
+      // Handle Errors here.
+      console.error('Google sign-in error:', error);
+      const loginError = document.getElementById('login-error');
+      if (loginError) {
+        loginError.textContent = 'Login failed. Please try again.';
+        loginError.classList.remove('hidden');
+      }
+    });
+};
+
+// Add global logout function
+window.signOutAndShowLogin = function() {
+  console.log('[DEBUG] signOutAndShowLogin called');
+  auth.signOut().then(() => {
+    // Show login, hide dashboard
+    const loginPage = document.getElementById('login-page');
+    const dashboard = document.getElementById('dashboard');
+    if (loginPage) loginPage.classList.remove('hidden');
+    if (dashboard) dashboard.classList.add('hidden');
+  });
+};

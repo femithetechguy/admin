@@ -4,70 +4,70 @@
     {
       "serial_no": 1,
       "question": "Can you describe your experience with Power BI?",
-      "answer": "I have over 6 years of hands-on experience using Power BI Desktop and Power BI Service. I’ve developed 50+ interactive dashboards across healthcare, insurance, retail, and IT operations, integrating data from SQL Server, Oracle, and APIs using Power Query. I specialize in DAX, RLS, and scalable data modeling.",
+      "answer": "S: Over the past 6 years, I’ve worked in various sectors using Power BI, including healthcare, insurance, retail, and IT. T: My role was to build interactive and scalable dashboards to support decision-making. A: I developed over 50 dashboards using Power BI Desktop and Service, integrated data using Power Query, and modeled it using DAX and RLS. R: These solutions provided end users with actionable insights, improved data access control, and significantly reduced manual reporting.",
       "category": "Power BI",
       "skills": ["Power BI", "Data Visualization", "Power Query", "DAX", "Report Development"]
     },
     {
       "serial_no": 2,
       "question": "How do you ensure data accuracy in your reports?",
-      "answer": "I implement validation rules during data transformation, use test datasets to verify DAX measures, and apply visual indicators to highlight anomalies. I also work closely with stakeholders to validate KPIs and build refresh audit logic using Power BI Service and Dataflows.",
+      "answer": "S: In multiple reporting environments, maintaining data accuracy was critical to ensure stakeholder trust. T: I needed to implement reliable mechanisms for validating KPIs and preventing errors. A: I added validation rules during transformations, tested DAX measures with sample data, and used visual alerts for anomalies. I also coordinated stakeholder reviews and set up refresh audits. R: This approach minimized reporting errors and built credibility in the reports I delivered.",
       "category": "Data Quality",
       "skills": ["Data Validation", "DAX", "Power BI Service", "ETL", "Stakeholder Collaboration"]
     },
     {
       "serial_no": 3,
       "question": "What’s your approach to data modeling in Power BI?",
-      "answer": "I follow a star schema approach wherever possible, use role-playing dimensions, create calculated tables for hierarchy, and ensure relationships are single-direction unless needed. I optimize with summarization tables and minimize row-level calculations in visuals.",
+      "answer": "S: In complex projects, poor data models often led to performance issues and user confusion. T: My task was to build scalable, performant data models that supported future enhancements. A: I applied star schema principles, created calculated tables, and optimized relationships. I also reduced row-level calculations by using summary tables. R: This improved report load times and allowed the business to scale their reporting needs efficiently.",
       "category": "Data Modeling",
       "skills": ["Data Modeling", "Star Schema", "Relationships", "Calculated Tables", "Performance Tuning"]
     },
     {
       "serial_no": 4,
       "question": "Explain Row-Level Security (RLS) and how you’ve used it.",
-      "answer": "RLS restricts data access based on user roles. At Northside Hospital, I implemented RLS on clinical dashboards so each department could only see its own patients and metrics. I defined roles in Power BI and validated them using the 'View As Role' feature before deployment.",
+      "answer": "S: At Northside Hospital, clinical dashboards needed to restrict data access to department-level views. T: I had to implement secure data access based on user roles. A: I defined roles in Power BI, used RLS filters, and tested using the 'View As Role' feature before publishing. R: This ensured compliance with data privacy policies and improved stakeholder confidence in data access.",
       "category": "Security",
       "skills": ["Row-Level Security (RLS)", "Power BI", "Data Privacy", "Role Management"]
     },
     {
       "serial_no": 5,
       "question": "How do you handle performance issues in Power BI reports?",
-      "answer": "I use tools like Performance Analyzer and DAX Studio. I optimize slow visuals by using calculated columns instead of measures when needed, removing unused columns from the data model, avoiding bi-directional relationships, and aggregating data before loading it into Power BI.",
+      "answer": "S: I encountered performance issues in reports with large datasets and slow visuals. T: I was responsible for diagnosing and optimizing these reports. A: I used DAX Studio and Performance Analyzer, replaced heavy measures with columns where possible, removed unused fields, and avoided bi-directional filters. R: These actions significantly improved report speed and responsiveness.",
       "category": "Performance Optimization",
       "skills": ["Performance Analyzer", "DAX Studio", "Data Modeling", "Query Optimization", "Calculated Columns"]
     },
     {
       "serial_no": 6,
       "question": "Have you worked with Power BI Gateways and Dataflows?",
-      "answer": "Yes. At Manhattan Associates, I configured on-premise gateways to refresh SQL Server data and used Dataflows for shared ETL logic across multiple reports. This setup standardized refresh pipelines and improved maintainability.",
+      "answer": "S: At Manhattan Associates, multiple reports needed shared ETL logic and scheduled data refresh from on-prem sources. T: I was tasked with configuring gateways and standardizing data ingestion. A: I set up Power BI Gateway for SQL Server connections and developed shared Dataflows to centralize transformations. R: This streamlined data management, reduced refresh failures, and improved cross-report consistency.",
       "category": "Deployment",
       "skills": ["Power BI Gateway", "Dataflows", "ETL", "SQL Server", "Automation"]
     },
     {
       "serial_no": 7,
       "question": "How do you manage version control with PBIX files?",
-      "answer": "I use Git to version control datasets and documentation. For PBIX files, I follow a naming convention with timestamps and store release notes in Markdown. I’ve also experimented with breaking reports into dataset and report layers using deployment pipelines in Power BI Service.",
+      "answer": "S: Our team faced challenges managing PBIX versions and ensuring documentation consistency. T: I needed to implement a reliable version control process for Power BI assets. A: I used Git for scripts and documentation, enforced naming conventions for PBIX files, and leveraged deployment pipelines for separating datasets and reports. R: This improved auditability and reduced confusion during updates and releases.",
       "category": "Governance",
       "skills": ["Version Control", "Git", "Deployment Pipelines", "Documentation", "Power BI Governance"]
     },
     {
       "serial_no": 8,
       "question": "Describe a dashboard you’re proud of.",
-      "answer": "At Hiscox Insurance, I built a fraud detection dashboard combining claims data with external trend indicators. It used AI insights, conditional formatting, and layered drill-through filters. The dashboard reduced review time by 60% and surfaced $750K in premium misalignment.",
+      "answer": "S: At Hiscox Insurance, the fraud detection team lacked visibility into potential claim anomalies. T: I was asked to build a dashboard that could surface risk indicators across data sources. A: I combined internal claims data with external trend indicators, applied AI visuals and drill-through filters, and used conditional formatting. R: The dashboard reduced review time by 60% and uncovered $750K in premium mismatches.",
       "category": "Showcase",
       "skills": ["Power BI", "Conditional Formatting", "Drill-through", "Data Integration", "Fraud Detection"]
     },
     {
       "serial_no": 9,
       "question": "How do you stay updated with Power BI features?",
-      "answer": "I follow Guy in a Cube, SQLBI, and the official Power BI blog. I also test features in the monthly preview updates and share internal demos with my team during knowledge transfer sessions.",
+      "answer": "S: Staying current with Power BI’s rapid updates is essential in my role. T: I aimed to keep my knowledge fresh and share it with my team. A: I follow Power BI blogs, Guy in a Cube, and SQLBI. I test new features in monthly updates and run internal demo sessions. R: This has helped my teams adopt new capabilities faster and improve report design practices.",
       "category": "Professional Development",
       "skills": ["Continuous Learning", "Community Engagement", "Feature Testing", "Team Training"]
     },
     {
       "serial_no": 10,
       "question": "What do you think makes a great Power BI dashboard?",
-      "answer": "Clarity, speed, and purpose. A great dashboard should answer business questions in under 5 seconds, have intuitive layout and navigation, and be visually consistent. It must tell a story without requiring user explanation.",
+      "answer": "S: I've seen many dashboards that look nice but don’t help users make decisions. T: I focus on building dashboards that are both functional and elegant. A: I prioritize clarity, ensure that the top KPIs are visible in under 5 seconds, and maintain consistent layout and navigation. R: This approach increases adoption and ensures users can act on insights without needing training.",
       "category": "Design Philosophy",
       "skills": ["Dashboard Design", "User Experience", "Storytelling", "KPI Reporting", "UI/UX"]
     }
