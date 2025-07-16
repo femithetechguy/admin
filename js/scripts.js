@@ -13,8 +13,8 @@ fetch('json/app.json')
 function renderApp(config) {
   // Render login and dashboard containers
   appRoot.innerHTML = `
-    <div id="login-page" class="flex items-center justify-center min-h-screen">
-      <form id="login-form" class="bg-white p-8 rounded shadow-md w-full max-w-sm">
+    <div id="login-page" class="flex items-center justify-center min-h-screen px-2">
+      <form id="login-form" class="bg-white p-6 sm:p-8 rounded shadow-md w-full max-w-sm">
         <h2 class="text-2xl font-bold mb-6 text-center">${config.appName} Login</h2>
         <div class="mb-4">
           <label class="block mb-1 font-medium" for="username">${config.pages[0].fields[0]}</label>
@@ -32,16 +32,16 @@ function renderApp(config) {
     </div>
     <div id="dashboard" class="hidden min-h-screen flex flex-col">
       <nav class="bg-white shadow sticky top-0 z-10">
-        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-          <span class="text-xl font-bold flex items-center gap-2">
+        <div class="container mx-auto px-2 sm:px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-2">
+          <span class="text-xl font-bold flex items-center gap-2 mb-2 sm:mb-0">
             <i class="bi bi-kanban"></i> ${config.appName}
           </span>
-          <ul class="flex space-x-4" id="tabs-menu">
+          <ul class="flex flex-col sm:flex-row w-full sm:w-auto space-y-2 sm:space-y-0 sm:space-x-4" id="tabs-menu">
             ${config.pages[1].tabs.map(tab => renderTabBtn(tab)).join('')}
           </ul>
         </div>
       </nav>
-      <main class="flex-1 container mx-auto px-4 py-8" id="tabs-content">
+      <main class="flex-1 container mx-auto px-2 sm:px-4 py-4 sm:py-8" id="tabs-content">
         ${config.pages[1].tabs.map(tab => renderTabContent(tab)).join('')}
       </main>
     </div>
@@ -62,20 +62,36 @@ function renderTabBtn(tab) {
 
 function renderTabContent(tab) {
   if (tab.name === 'Resume') {
+    setTimeout(() => {
+      const card = document.createElement('div');
+      card.className = 'bg-white p-4 sm:p-6 rounded shadow mt-4 overflow-x-auto';
+      card.innerHTML = `
+        <h4 class="text-lg font-semibold mb-2 flex items-center"><i class="bi bi-file-earmark-pdf mr-2 text-red-600"></i> Resume PDF Preview</h4>
+        <div class="w-full" style="min-height:500px;">
+          <iframe src="doc/Adefemi_Kolawole_Resume.pdf" class="w-full rounded border border-gray-200" style="min-height:500px; height:75vh; max-height:90vh; border:none;"></iframe>
+        </div>
+        <div class="mt-2 text-right">
+          <a href="doc/Adefemi_Kolawole_Resume.pdf" download class="text-blue-600 hover:underline flex items-center justify-end"><i class="bi bi-download mr-1"></i>Download PDF</a>
+        </div>
+      `;
+      const textarea = document.querySelector('#tab-resume textarea');
+      if (textarea) textarea.parentNode.appendChild(card);
+    }, 0);
     return `<section id="tab-resume" class="tab-content">
       <h3 class="text-xl font-semibold mb-4 flex items-center"><i class="bi bi-file-earmark-person mr-2"></i> ${tab.name}</h3>
-      <div class="bg-white p-6 rounded shadow">
+      <div class="bg-white p-4 sm:p-6 rounded shadow">
         <p class="mb-2">${tab.content[0]}</p>
-        <input type="file" class="mb-2">
+        <input type="file" class="mb-2 w-full">
         <textarea class="w-full border rounded p-2 mt-2" rows="3" placeholder="${tab.content[1]}"></textarea>
       </div>
+      <!-- Resume PDF card will be injected here -->
     </section>`;
   }
   if (tab.name === 'Interview Prep') {
     return `<section id="tab-interview-prep" class="tab-content hidden">
       <h3 class="text-xl font-semibold mb-4 flex items-center"><i class="bi bi-chat-dots mr-2"></i> ${tab.name}</h3>
-      <div class="bg-white p-6 rounded shadow">
-        <table class="w-full mb-4">
+      <div class="bg-white p-4 sm:p-6 rounded shadow overflow-x-auto">
+        <table class="w-full mb-4 text-sm">
           <thead>
             <tr class="bg-gray-100">
               <th class="p-2 text-left">Company</th>
@@ -86,7 +102,7 @@ function renderTabContent(tab) {
           </thead>
           <tbody id="interview-tasks"></tbody>
         </table>
-        <div class="flex gap-2 mb-2">
+        <div class="flex flex-col sm:flex-row gap-2 mb-2">
           <input type="text" id="prep-company" class="border rounded p-2 flex-1" placeholder="Company">
           <input type="text" id="prep-role" class="border rounded p-2 flex-1" placeholder="Role">
           <input type="date" id="prep-date" class="border rounded p-2 flex-1">
@@ -100,8 +116,8 @@ function renderTabContent(tab) {
   if (tab.name === 'Applied') {
     return `<section id="tab-applied" class="tab-content hidden">
       <h3 class="text-xl font-semibold mb-4 flex items-center"><i class="bi bi-briefcase mr-2"></i> ${tab.name}</h3>
-      <div class="bg-white p-6 rounded shadow">
-        <table class="w-full mb-4">
+      <div class="bg-white p-4 sm:p-6 rounded shadow overflow-x-auto">
+        <table class="w-full mb-4 text-sm">
           <thead>
             <tr class="bg-gray-100">
               <th class="p-2 text-left">Company</th>
@@ -111,7 +127,7 @@ function renderTabContent(tab) {
           </thead>
           <tbody id="applied-jobs"></tbody>
         </table>
-        <div class="flex gap-2 mb-2">
+        <div class="flex flex-col sm:flex-row gap-2 mb-2">
           <input type="text" id="applied-company" class="border rounded p-2 flex-1" placeholder="Company">
           <input type="date" id="applied-date" class="border rounded p-2 flex-1">
           <select id="applied-status" class="border rounded p-2 flex-1">
