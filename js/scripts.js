@@ -167,15 +167,103 @@ function renderTabContent(tab) {
     </section>`;
   }
   if (tab.name === 'Interview Prep') {
-    function renderInterviewQA() {
+    let interviewQAFilter = { type: null, value: null };
+    function renderInterviewQA(filterType = null, filterValue = null, force = false) {
+      // If not force, use last filter
+      if (!force && interviewQAFilter.type !== null) {
+        filterType = interviewQAFilter.type;
+        filterValue = interviewQAFilter.value;
+      } else {
+        interviewQAFilter.type = filterType;
+        interviewQAFilter.value = filterValue;
+      }
       fetch('json/interviewqa.json?_=' + Date.now())
         .then(res => res.json())
         .then(data => {
+          // Collect unique categories and skills
+          const categories = Array.from(new Set(data.questions.map(q => q.category)));
+          const skills = Array.from(new Set(data.questions.flatMap(q => q.skills)));
+          // Render filter buttons
+          const filterWrap = document.getElementById('interviewqa-filter-wrap');
+          if (filterWrap) {
+            filterWrap.innerHTML = `
+              <div class='flex gap-2 mb-4'>
+                <button id='show-category-btn' class='px-3 py-1 rounded bg-blue-100 text-blue-700 font-semibold hover:bg-blue-200 transition'>Category</button>
+                <button id='show-skill-btn' class='px-3 py-1 rounded bg-green-100 text-green-700 font-semibold hover:bg-green-200 transition'>Skill</button>
+                <button id='remove-filter-btn' class='px-3 py-1 rounded bg-gray-100 text-gray-700 font-semibold hover:bg-gray-200 transition ${filterType ? '' : 'hidden'}'>Remove Filter</button>
+              </div>
+              <div id='category-btns' class='flex flex-wrap gap-2 mb-2 hidden'></div>
+              <div id='skill-btns' class='flex flex-wrap gap-2 mb-2 hidden'></div>
+            `;
+            // Add category buttons
+            const catBtns = document.getElementById('category-btns');
+            if (catBtns) {
+              catBtns.innerHTML = categories.map(cat => `<button class='px-2 py-1 rounded bg-blue-50 text-blue-800 border border-blue-200 hover:bg-blue-200 transition' data-cat="${cat}">${cat}</button>`).join('');
+            }
+            // Add skill buttons
+            const skillBtns = document.getElementById('skill-btns');
+            if (skillBtns) {
+              skillBtns.innerHTML = skills.map(skill => `<button class='px-2 py-1 rounded bg-green-50 text-green-800 border border-green-200 hover:bg-green-200 transition' data-skill="${skill}">${skill}</button>`).join('');
+            }
+            // Toggle logic
+            const showCatBtn = document.getElementById('show-category-btn');
+            const showSkillBtn = document.getElementById('show-skill-btn');
+            const removeFilterBtn = document.getElementById('remove-filter-btn');
+            if (showCatBtn && catBtns) {
+              showCatBtn.onclick = () => {
+                // Only toggle category buttons, do not collapse skill buttons
+                catBtns.classList.toggle('hidden');
+              };
+            }
+            if (showSkillBtn && skillBtns) {
+              showSkillBtn.onclick = () => {
+                // Only toggle skill buttons, do not collapse category buttons
+                skillBtns.classList.toggle('hidden');
+              };
+            }
+            // Filtering logic
+            if (catBtns) {
+              catBtns.querySelectorAll('button').forEach(btn => {
+                btn.onclick = () => {
+                  interviewQAFilter.type = 'category';
+                  interviewQAFilter.value = btn.textContent;
+                  renderInterviewQA('category', btn.textContent, true);
+                  catBtns.querySelectorAll('button').forEach(b => b.classList.remove('bg-blue-300', 'text-white'));
+                  btn.classList.add('bg-blue-300', 'text-white');
+                };
+              });
+            }
+            if (skillBtns) {
+              skillBtns.querySelectorAll('button').forEach(btn => {
+                btn.onclick = () => {
+                  interviewQAFilter.type = 'skill';
+                  interviewQAFilter.value = btn.textContent;
+                  renderInterviewQA('skill', btn.textContent, true);
+                  skillBtns.querySelectorAll('button').forEach(b => b.classList.remove('bg-green-300', 'text-white'));
+                  btn.classList.add('bg-green-300', 'text-white');
+                };
+              });
+            }
+            if (removeFilterBtn) {
+              removeFilterBtn.onclick = () => {
+                interviewQAFilter.type = null;
+                interviewQAFilter.value = null;
+                renderInterviewQA(null, null, true);
+              };
+            }
+          }
+          // Render cards
           const wrap = document.getElementById('interviewqa-card-wrap');
           if (!wrap) return;
           wrap.innerHTML = '';
           let idx = 0;
-          for (const q of data.questions) {
+          let filtered = data.questions;
+          if (filterType === 'category') {
+            filtered = filtered.filter(q => q.category === filterValue);
+          } else if (filterType === 'skill') {
+            filtered = filtered.filter(q => q.skills.includes(filterValue));
+          }
+          for (const q of filtered) {
             let baseClass = idx % 2 === 0 ? 'bg-gray-50' : 'bg-white';
             const card = document.createElement('div');
             card.className = `mb-3 rounded shadow p-3 border-l-4 border-blue-500 transition-all duration-200 ease-in-out transform hover:scale-105 hover:shadow-xl cursor-pointer ${baseClass}`;
@@ -193,9 +281,9 @@ function renderTabContent(tab) {
     setTimeout(() => {
       renderInterviewQA();
       window.interviewQAInterval && clearInterval(window.interviewQAInterval);
-      window.interviewQAInterval = setInterval(renderInterviewQA, 5000);
+      window.interviewQAInterval = setInterval(() => renderInterviewQA(), 5000);
     }, 0);
-    return `<section id=\"tab-interview-prep\" class=\"tab-content hidden\">\n      <h3 class=\"text-xl font-semibold mb-4 flex items-center\"><i class=\"bi bi-chat-dots mr-2\"></i> ${tab.name}</h3>\n      <div id=\"interviewqa-card-wrap\"></div>\n    </section>`;
+    return `<section id=\"tab-interview-prep\" class=\"tab-content hidden\">\n      <h3 class=\"text-xl font-semibold mb-4 flex items-center\"><i class=\"bi bi-chat-dots mr-2\"></i> ${tab.name}</h3>\n      <div id=\"interviewqa-filter-wrap\"></div>\n      <div id=\"interviewqa-card-wrap\"></div>\n    </section>`;
   }
   if (tab.name === 'Applied') {
     setTimeout(() => {
