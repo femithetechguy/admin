@@ -100,27 +100,14 @@ window.renderAppliedTab = function(tab) {
             e.preventDefault();
             const url = decodeURIComponent(link.getAttribute('data-link'));
             const title = link.getAttribute('data-title') || 'Application';
-            // Try to fetch the link, if fails (CORS), show fallback message
-            fetch(url, { method: 'GET', mode: 'cors' })
-              .then(res => {
-                if (!res.ok) throw new Error('Not OK');
-                return res.text();
-              })
-              .then(text => {
-                // Try to extract <body> if present
-                const match = text.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
-                const html = match ? match[1] : text;
-                showPopup({ title, html });
-              })
-              .catch(() => {
-                showPopup({
-                  title,
-                  html: `<div class='text-center py-8'>
-                    <div class='text-gray-500 mb-4'>Preview not available for this link due to site restrictions.</div>
-                    <a href='${url}' target='_blank' rel='noopener' class='inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition'>Open in new tab</a>
-                  </div>`
-                });
-              });
+            // Always show popup with open-in-new-tab message (skip fetch)
+            showPopup({
+              title,
+              html: `<div class='text-center py-8'>
+                <div class='text-gray-500 mb-4'>Preview not available for this link due to site restrictions.</div>
+                <a href='${url}' target='_blank' rel='noopener' class='inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition'>Open in new tab</a>
+              </div>`
+            });
           });
         });
         // Attach status dropdown change logic (persist to localStorage)
