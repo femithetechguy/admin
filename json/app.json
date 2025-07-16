@@ -1,0 +1,66 @@
+{
+  "appName": "Dashboard",
+  "pages": [
+    {
+      "name": "Login",
+      "fields": ["Username", "Password"],
+      "actions": [
+        {
+          "action": "Authenticate user",
+          "onSuccess": "redirect to dashboard"
+        }
+      ]
+    },
+    {
+      "name": "Dashboard",
+      "tabs": [
+        {
+          "name": "Resume",
+          "content": [
+            "Resume preview or upload section",
+            "Optional: notes or key skills"
+          ]
+        },
+        {
+          "name": "Interview Prep",
+          "content": [
+            "Table or card view of interview prep tasks",
+            "Fields: Company, Role, Date, Notes",
+            "Optional: mock questions, tips, resource links"
+          ]
+        },
+        {
+          "name": "Applied",
+          "content": [
+            "List of jobs applied to",
+            "Fields: Company, Date, Status",
+            "Optional: status filters (e.g., Interviewing, Rejected, Offer)"
+          ]
+        },
+        {
+          "name": "Logout"
+        }
+      ]
+    }
+  ],
+  "layout": {
+    "responsive": true,
+    "navbar": "sticky",
+    "mobileMenu": "column layout on small screens",
+    "css": ["Tailwind CSS"],
+    "icons": "Bootstrap Icons"
+  },
+  "security": {
+    "auth": "Simple username and password (Firebase planned for later)",
+    "protectDashboard": true,
+    "dummyCredentials": {
+      "username": "admin",
+      "password": "admin123"
+    }
+  },
+  "files": [
+    {"file": "index.html", "purpose": "Structure for login + dashboard"},
+    {"file": "style.css", "purpose": "Styles for layout, tabs, and UI"},
+    {"file": "app.js", "purpose": "Handles login, tab navigation"}
+  ]
+}

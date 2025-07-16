@@ -1,0 +1,68 @@
+Here’s your updated SPA structure document with the tab name changed from “Interview” to “Interview Prep”:
+
+⸻
+
+📄 SPA Admin Page Structure (FTTG Job Tracker)
+
+🔐 Login Page (Entry Point)
+	•	Fields:
+	•	Username
+	•	Password
+	•	Action:
+	•	Authenticate user
+	•	On success → redirect to dashboard
+
+⸻
+
+🏠 Main Dashboard (Visible after login)
+
+🧭 Navigation (Tabs Menu)
+	•	Resume
+	•	Interview Prep
+	•	Applied
+	•	Logout
+
+⸻
+
+📂 Tabs Content
+
+1. Resume Tab
+	•	Resume preview or upload section
+	•	Optional: notes or key skills
+
+2. Interview Prep Tab
+	•	Table or card view of interview prep tasks
+	•	Fields: Company, Role, Date, Notes
+	•	Optional: mock questions, tips, resource links
+
+3. Applied Tab
+	•	List of jobs applied to
+	•	Fields: Company, Date, Status
+	•	Optional: status filters (e.g., Interviewing, Rejected, Offer)
+
+⸻
+
+🖼️ Layout & Design
+	•	Responsive layout using Flexbox or CSS Grid
+	•	Sticky navbar
+	•	Mobile-friendly menu (column layout on small screens)
+
+⸻
+
+🔐 Security & Auth (Simple)
+	•	JavaScript login logic (local variables or localStorage)
+	•	Protect dashboard content from access without login
+
+⸻
+
+📁 Files
+
+File	Purpose
+index.html	Structure for login + dashboard
+style.css	Styles for layout, tabs, and UI
+app.js	Handles login, tab navigation
+
+
+⸻
+
+Let me know if you’d like this in downloadable format or paired with working code!
