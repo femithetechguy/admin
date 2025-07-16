@@ -67,8 +67,8 @@ function renderTabContent(tab) {
       card.className = 'bg-white p-4 sm:p-6 rounded shadow mt-4 overflow-x-auto';
       card.innerHTML = `
         <h4 class="text-lg font-semibold mb-2 flex items-center"><i class="bi bi-file-earmark-pdf mr-2 text-red-600"></i> Resume PDF Preview</h4>
-        <div class="w-full" style="min-height:220px;">
-          <iframe src="doc/Adefemi_Kolawole_Resume.pdf" class="w-full rounded border border-gray-200" style="min-height:220px; height:40vh; max-height:60vh; border:none;"></iframe>
+        <div class="w-full" style="min-height:500px;">
+          <iframe src="doc/Adefemi_Kolawole_Resume.pdf" class="w-full rounded border border-gray-200" style="min-height:500px; height:75vh; max-height:90vh; border:none;"></iframe>
         </div>
         <div class="mt-2 text-right">
           <a href="doc/Adefemi_Kolawole_Resume.pdf" download class="text-blue-600 hover:underline flex items-center justify-end"><i class="bi bi-download mr-1"></i>Download PDF</a>
