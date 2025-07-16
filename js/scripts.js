@@ -37,18 +37,12 @@ function renderApp(config) {
     <div id="login-page" class="flex items-center justify-center min-h-screen px-2">
       <form id="login-form" class="bg-white p-6 sm:p-8 rounded shadow-md w-full max-w-sm">
         <h2 class="text-2xl font-bold mb-6 text-center">${config.appName} Login</h2>
-        <div class="mb-4">
-          <label class="block mb-1 font-medium" for="username">${config.pages[0].fields[0]}</label>
-          <input class="w-full px-3 py-2 border rounded focus:outline-none focus:ring" type="text" id="username" required>
+        <div class="mt-6 text-center">
+          <button type="button" id="google-signin-btn" class="w-full bg-white border border-gray-300 text-gray-700 py-2 rounded hover:bg-gray-100 flex items-center justify-center gap-2 transition">
+            <i class="bi bi-google text-lg text-red-500"></i> Sign in with Google
+          </button>
         </div>
-        <div class="mb-6">
-          <label class="block mb-1 font-medium" for="password">${config.pages[0].fields[1]}</label>
-          <input class="w-full px-3 py-2 border rounded focus:outline-none focus:ring" type="password" id="password" required>
-        </div>
-        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition flex items-center justify-center">
-          <i class="bi bi-box-arrow-in-right mr-2"></i> Login
-        </button>
-        <p id="login-error" class="text-red-500 text-sm mt-4 hidden text-center">Invalid username or password.</p>
+        <p id="login-error" class="text-red-500 text-sm mt-4 hidden text-center">Login failed. Please try again.</p>
       </form>
     </div>
     <div id="dashboard" class="hidden min-h-screen flex flex-col">
@@ -124,7 +118,7 @@ function renderTabContent(tab) {
           for (const [question, obj] of Object.entries(data)) {
             let baseClass = idx % 2 === 0 ? 'bg-gray-50' : 'bg-white';
             const card = document.createElement('div');
-            card.className = `mb-3 rounded shadow p-3 border-l-4 border-blue-500 transition-all duration-200 ease-in-out transform hover:scale-105 hover:shadow-xl cursor-pointer ${baseClass}`;
+            card.className = `mb-3 rounded shadow p-3 border-l-4 border-blue-500 transition-all duration-200 ease-in-out hover:shadow-xl cursor-pointer ${baseClass}`;
             card.innerHTML = `
               <div class=\"font-bold text-base mb-2 flex items-center\"><i class=\"bi bi-chat-quote mr-2 text-blue-600\"></i>${question}</div>
               <div class=\"mb-1\"><span class=\"font-semibold\">Situation:</span> <span class=\"text-gray-700\">${obj.situation}</span></div>
@@ -266,7 +260,7 @@ function renderTabContent(tab) {
           for (const q of filtered) {
             let baseClass = idx % 2 === 0 ? 'bg-gray-50' : 'bg-white';
             const card = document.createElement('div');
-            card.className = `mb-3 rounded shadow p-3 border-l-4 border-blue-500 transition-all duration-200 ease-in-out transform hover:scale-105 hover:shadow-xl cursor-pointer ${baseClass}`;
+            card.className = `mb-3 rounded shadow p-3 border-l-4 border-blue-500 transition-all duration-200 ease-in-out hover:shadow-xl cursor-pointer ${baseClass}`;
             card.innerHTML = `
               <div class=\"font-bold text-base mb-2 flex items-center\"><i class=\"bi bi-question-circle mr-2 text-blue-600\"></i>${q.question}</div>
               <div class=\"mb-1\"><span class=\"font-semibold\">Answer:</span> <span class=\"text-gray-700\">${q.answer}</span></div>
@@ -304,7 +298,10 @@ function renderTabContent(tab) {
             else if (job.status === 'offer') statusClass = 'border-l-4 border-green-400';
             else if (job.status === 'submitted') statusClass = 'border-l-4 border-gray-400';
             const row = document.createElement('tr');
-            row.className = `transition-all duration-200 ease-in-out transform hover:scale-x-95 hover:shadow-xl cursor-pointer ${baseClass} ${statusClass}`;
+            row.className = `transition-all duration-200 ease-in-out hover:shadow-xl cursor-pointer ${baseClass} ${statusClass}`;
+            // Add hover effect for table row
+            row.onmouseenter = () => row.classList.add('shadow-xl');
+            row.onmouseleave = () => row.classList.remove('shadow-xl');
             row.innerHTML = `
               <td class='p-2'>${job.company || ''}</td>
               <td class='p-2'>${job.position || ''}</td>
@@ -330,7 +327,7 @@ function renderTabContent(tab) {
           else if (job.status === 'offer') statusClass = 'border-l-4 border-green-400';
           else if (job.status === 'submitted') statusClass = 'border-l-4 border-gray-400';
           const card = document.createElement('div');
-          card.className = `mb-3 rounded shadow p-3 transition-all duration-200 ease-in-out transform hover:scale-105 hover:shadow-xl cursor-pointer ${baseClass} ${statusClass}`;
+          card.className = `mb-3 rounded shadow p-3 transition-all duration-200 ease-in-out hover:shadow-xl cursor-pointer ${baseClass} ${statusClass}`;
           card.innerHTML = `
             <div class="flex items-center mb-2">
               <span class="font-bold text-base mr-2">${job.company || ''}</span>
@@ -410,19 +407,22 @@ function setupLogic(config) {
 
   // Login logic
   if (loginForm) {
-    loginForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const username = document.getElementById('username').value.trim();
-      const password = document.getElementById('password').value.trim();
-      if (username === DEMO_USER.username && password === DEMO_USER.password) {
-        loginPage.classList.add('hidden');
-        dashboard.classList.remove('hidden');
-        loginError.classList.add('hidden');
-        showDefaultTab();
-      } else {
-        loginError.classList.remove('hidden');
-      }
-    });
+    // Google sign-in logic only
+    const googleBtn = document.getElementById('google-signin-btn');
+    if (googleBtn && window.firebaseAuth && window.firebaseGoogleProvider) {
+      googleBtn.addEventListener('click', function() {
+        window.firebaseAuth.signInWithPopup(window.firebaseGoogleProvider)
+          .then(() => {
+            loginPage.classList.add('hidden');
+            dashboard.classList.remove('hidden');
+            loginError.classList.add('hidden');
+            showDefaultTab();
+          })
+          .catch(() => {
+            loginError.classList.remove('hidden');
+          });
+      });
+    }
   }
 
   // Tab navigation
