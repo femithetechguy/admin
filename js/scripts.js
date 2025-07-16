@@ -113,7 +113,7 @@ function renderTabBtn(tab) {
 
 function renderTabContent(tab) {
   if (tab.name === 'Behavioral') {
-    setTimeout(() => {
+    function renderBehavioral() {
       fetch('json/behavioral.json?_=' + Date.now())
         .then(res => res.json())
         .then(data => {
@@ -126,21 +126,24 @@ function renderTabContent(tab) {
             const card = document.createElement('div');
             card.className = `mb-3 rounded shadow p-3 border-l-4 border-blue-500 transition-all duration-200 ease-in-out transform hover:scale-105 hover:shadow-xl cursor-pointer ${baseClass}`;
             card.innerHTML = `
-              <div class="font-bold text-base mb-2 flex items-center"><i class="bi bi-chat-quote mr-2 text-blue-600"></i>${question}</div>
-              <div class="mb-1"><span class="font-semibold">Situation:</span> <span class="text-gray-700">${obj.situation}</span></div>
-              <div class="mb-1"><span class="font-semibold">Task:</span> <span class="text-gray-700">${obj.task}</span></div>
-              <div class="mb-1"><span class="font-semibold">Action:</span> <span class="text-gray-700">${obj.action}</span></div>
-              <div class="mb-1"><span class="font-semibold">Result:</span> <span class="text-gray-700">${obj.result}</span></div>
+              <div class=\"font-bold text-base mb-2 flex items-center\"><i class=\"bi bi-chat-quote mr-2 text-blue-600\"></i>${question}</div>
+              <div class=\"mb-1\"><span class=\"font-semibold\">Situation:</span> <span class=\"text-gray-700\">${obj.situation}</span></div>
+              <div class=\"mb-1\"><span class=\"font-semibold\">Task:</span> <span class=\"text-gray-700\">${obj.task}</span></div>
+              <div class=\"mb-1\"><span class=\"font-semibold\">Action:</span> <span class=\"text-gray-700\">${obj.action}</span></div>
+              <div class=\"mb-1\"><span class=\"font-semibold\">Result:</span> <span class=\"text-gray-700\">${obj.result}</span></div>
+              ${obj.skills ? `<div class='mb-1'><span class='font-semibold'>Skills:</span> <span class='text-gray-700'>${obj.skills.join(', ')}</span></div>` : ''}
             `;
             wrap.appendChild(card);
             idx++;
           }
         });
+    }
+    setTimeout(() => {
+      renderBehavioral();
+      window.behavioralInterval && clearInterval(window.behavioralInterval);
+      window.behavioralInterval = setInterval(renderBehavioral, 5000);
     }, 0);
-    return `<section id="tab-behavioral" class="tab-content hidden">
-      <h3 class="text-xl font-semibold mb-4 flex items-center"><i class="bi bi-person-lines-fill mr-2"></i> ${tab.name}</h3>
-      <div id="behavioral-card-wrap"></div>
-    </section>`;
+    return `<section id=\"tab-behavioral\" class=\"tab-content hidden\">\n      <h3 class=\"text-xl font-semibold mb-4 flex items-center\"><i class=\"bi bi-person-lines-fill mr-2\"></i> ${tab.name}</h3>\n      <div id=\"behavioral-card-wrap\"></div>\n    </section>`;
   }
   if (tab.name === 'Resume') {
     setTimeout(() => {
@@ -164,22 +167,35 @@ function renderTabContent(tab) {
     </section>`;
   }
   if (tab.name === 'Interview Prep') {
-    setTimeout(() => {
-      fetch('doc/interview_prep.md')
-        .then(res => res.text())
-        .then(md => {
-          let html = window.marked ? window.marked.parse(md) : md.replace(/\n/g, '<br>');
-          const card = document.createElement('div');
-          card.className = 'bg-white p-4 sm:p-6 rounded shadow mt-4 overflow-x-auto';
-          card.innerHTML = html;
-          const section = document.getElementById('tab-interview-prep');
-          if (section) section.appendChild(card);
+    function renderInterviewQA() {
+      fetch('json/interviewqa.json?_=' + Date.now())
+        .then(res => res.json())
+        .then(data => {
+          const wrap = document.getElementById('interviewqa-card-wrap');
+          if (!wrap) return;
+          wrap.innerHTML = '';
+          let idx = 0;
+          for (const q of data.questions) {
+            let baseClass = idx % 2 === 0 ? 'bg-gray-50' : 'bg-white';
+            const card = document.createElement('div');
+            card.className = `mb-3 rounded shadow p-3 border-l-4 border-blue-500 transition-all duration-200 ease-in-out transform hover:scale-105 hover:shadow-xl cursor-pointer ${baseClass}`;
+            card.innerHTML = `
+              <div class=\"font-bold text-base mb-2 flex items-center\"><i class=\"bi bi-question-circle mr-2 text-blue-600\"></i>${q.question}</div>
+              <div class=\"mb-1\"><span class=\"font-semibold\">Answer:</span> <span class=\"text-gray-700\">${q.answer}</span></div>
+              <div class=\"mb-1\"><span class=\"font-semibold\">Category:</span> <span class=\"text-gray-700\">${q.category}</span></div>
+              <div class=\"mb-1\"><span class=\"font-semibold\">Skills:</span> <span class=\"text-gray-700\">${q.skills.join(', ')}</span></div>
+            `;
+            wrap.appendChild(card);
+            idx++;
+          }
         });
+    }
+    setTimeout(() => {
+      renderInterviewQA();
+      window.interviewQAInterval && clearInterval(window.interviewQAInterval);
+      window.interviewQAInterval = setInterval(renderInterviewQA, 5000);
     }, 0);
-    return `<section id="tab-interview-prep" class="tab-content hidden">
-      <h3 class="text-xl font-semibold mb-4 flex items-center"><i class="bi bi-chat-dots mr-2"></i> ${tab.name}</h3>
-      <!-- Interview Prep markdown will be injected here -->
-    </section>`;
+    return `<section id=\"tab-interview-prep\" class=\"tab-content hidden\">\n      <h3 class=\"text-xl font-semibold mb-4 flex items-center\"><i class=\"bi bi-chat-dots mr-2\"></i> ${tab.name}</h3>\n      <div id=\"interviewqa-card-wrap\"></div>\n    </section>`;
   }
   if (tab.name === 'Applied') {
     setTimeout(() => {
