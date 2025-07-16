@@ -12,6 +12,19 @@ fetch('json/app.json')
 
 function renderApp(config) {
   // Render login and dashboard containers
+  // Reorder tabs: Applied first, Resume second to last, Logout last, others in between
+  let tabs = config.pages[1].tabs.slice();
+  const appliedIdx = tabs.findIndex(t => t.name === 'Applied');
+  const resumeIdx = tabs.findIndex(t => t.name === 'Resume');
+  const logoutIdx = tabs.findIndex(t => t.name === 'Logout');
+  let newTabs = [];
+  if (appliedIdx !== -1) newTabs.push(tabs[appliedIdx]);
+  // Add all tabs except Applied, Resume, Logout
+  newTabs = newTabs.concat(tabs.filter((t, i) => i !== appliedIdx && i !== resumeIdx && i !== logoutIdx));
+  // Add Resume second to last
+  if (resumeIdx !== -1) newTabs.push(tabs[resumeIdx]);
+  // Add Logout last
+  if (logoutIdx !== -1) newTabs.push(tabs[logoutIdx]);
   appRoot.innerHTML = `
     <div id="login-page" class="flex items-center justify-center min-h-screen px-2">
       <form id="login-form" class="bg-white p-6 sm:p-8 rounded shadow-md w-full max-w-sm">
@@ -41,12 +54,12 @@ function renderApp(config) {
             <i class="bi bi-list"></i>
           </button>
           <ul class="flex flex-col sm:flex-row sm:w-auto sm:max-w-none max-w-xs space-y-2 sm:space-y-0 sm:space-x-4 bg-white sm:bg-transparent absolute sm:static right-0 left-auto top-12 sm:top-0 z-20 shadow sm:shadow-none p-4 sm:p-0 transition-all duration-200 ease-in-out hidden sm:flex" id="tabs-menu">
-            ${config.pages[1].tabs.map(tab => renderTabBtn(tab)).join('')}
+            ${newTabs.map(tab => renderTabBtn(tab)).join('')}
           </ul>
         </div>
       </nav>
       <main class="flex-1 container mx-auto px-2 sm:px-4 py-4 sm:py-8" id="tabs-content">
-        ${config.pages[1].tabs.map(tab => renderTabContent(tab)).join('')}
+        ${newTabs.map(tab => renderTabContent(tab)).join('')}
       </main>
     </div>
   `;
@@ -95,12 +108,12 @@ function renderTabContent(tab) {
       const card = document.createElement('div');
       card.className = 'bg-white p-4 sm:p-6 rounded shadow mt-4 overflow-x-auto';
       card.innerHTML = `
-        <h4 class="text-lg font-semibold mb-2 flex items-center"><i class="bi bi-file-earmark-pdf mr-2 text-red-600"></i> Resume PDF Preview</h4>
+        <h4 class="text-lg font-semibold mb-2 flex items-center"><i class="bi bi-file-earmark-pdf mr-2 text-red-600"></i> Resume Folder (Google Drive)</h4>
         <div class="w-full" style="min-height:500px;">
-          <iframe src="doc/Adefemi_Kolawole_Resume.pdf" class="w-full rounded border border-gray-200" style="min-height:500px; height:75vh; max-height:90vh; border:none;"></iframe>
+          <iframe src="https://drive.google.com/embeddedfolderview?id=1gxb2bAIcYI0PffKOTDkHirW6udH3lN-6#grid" class="w-full rounded border border-gray-200" style="min-height:500px; height:75vh; max-height:90vh; border:none;"></iframe>
         </div>
         <div class="mt-2 text-right">
-          <a href="doc/Adefemi_Kolawole_Resume.pdf" download class="text-blue-600 hover:underline flex items-center justify-end"><i class="bi bi-download mr-1"></i>Download PDF</a>
+          <a href="https://drive.google.com/drive/u/0/folders/1gxb2bAIcYI0PffKOTDkHirW6udH3lN-6" target="_blank" class="text-blue-600 hover:underline flex items-center justify-end"><i class="bi bi-download mr-1"></i>Open Resume Folder</a>
         </div>
       `;
       const section = document.getElementById('tab-resume');
@@ -174,7 +187,7 @@ function renderTabContent(tab) {
           else if (job.status === 'offer') statusClass = 'border-l-4 border-green-400';
           else if (job.status === 'submitted') statusClass = 'border-l-4 border-gray-400';
           const card = document.createElement('div');
-          card.className = `mb-3 rounded shadow p-3 ${baseClass} ${statusClass}`;
+          card.className = `mb-3 rounded shadow p-3 transition-all duration-200 ease-in-out transform hover:scale-105 hover:shadow-xl cursor-pointer ${baseClass} ${statusClass}`;
           card.innerHTML = `
             <div class="flex items-center mb-2">
               <span class="font-bold text-base mr-2">${job.company || ''}</span>
@@ -330,10 +343,10 @@ function setupLogic(config) {
     });
   }
 
-  // Default: show Resume tab on login
+  // Default: show Applied tab on login
   function showDefaultTab() {
     tabContents.forEach(section => section.classList.add('hidden'));
-    const resumeTab = document.getElementById('tab-resume');
-    if (resumeTab) resumeTab.classList.remove('hidden');
+    const appliedTab = document.getElementById('tab-applied');
+    if (appliedTab) appliedTab.classList.remove('hidden');
   }
 }
