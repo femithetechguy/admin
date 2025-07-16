@@ -124,7 +124,7 @@ function renderTabContent(tab) {
           for (const [question, obj] of Object.entries(data)) {
             let baseClass = idx % 2 === 0 ? 'bg-gray-50' : 'bg-white';
             const card = document.createElement('div');
-            card.className = `mb-3 rounded shadow p-3 border-l-4 border-blue-500 transition-all duration-200 ease-in-out transform hover:scale-105 hover:shadow-xl cursor-pointer ${baseClass}`;
+            card.className = `mb-3 rounded shadow p-3 border-l-4 border-blue-500 transition-all duration-200 ease-in-out hover:shadow-xl cursor-pointer ${baseClass}`;
             card.innerHTML = `
               <div class=\"font-bold text-base mb-2 flex items-center\"><i class=\"bi bi-chat-quote mr-2 text-blue-600\"></i>${question}</div>
               <div class=\"mb-1\"><span class=\"font-semibold\">Situation:</span> <span class=\"text-gray-700\">${obj.situation}</span></div>
@@ -266,7 +266,7 @@ function renderTabContent(tab) {
           for (const q of filtered) {
             let baseClass = idx % 2 === 0 ? 'bg-gray-50' : 'bg-white';
             const card = document.createElement('div');
-            card.className = `mb-3 rounded shadow p-3 border-l-4 border-blue-500 transition-all duration-200 ease-in-out transform hover:scale-105 hover:shadow-xl cursor-pointer ${baseClass}`;
+            card.className = `mb-3 rounded shadow p-3 border-l-4 border-blue-500 transition-all duration-200 ease-in-out hover:shadow-xl cursor-pointer ${baseClass}`;
             card.innerHTML = `
               <div class=\"font-bold text-base mb-2 flex items-center\"><i class=\"bi bi-question-circle mr-2 text-blue-600\"></i>${q.question}</div>
               <div class=\"mb-1\"><span class=\"font-semibold\">Answer:</span> <span class=\"text-gray-700\">${q.answer}</span></div>
@@ -304,7 +304,10 @@ function renderTabContent(tab) {
             else if (job.status === 'offer') statusClass = 'border-l-4 border-green-400';
             else if (job.status === 'submitted') statusClass = 'border-l-4 border-gray-400';
             const row = document.createElement('tr');
-            row.className = `transition-all duration-200 ease-in-out transform hover:scale-x-95 hover:shadow-xl cursor-pointer ${baseClass} ${statusClass}`;
+            row.className = `transition-all duration-200 ease-in-out hover:shadow-xl cursor-pointer ${baseClass} ${statusClass}`;
+            // Add hover effect for table row
+            row.onmouseenter = () => row.classList.add('shadow-xl');
+            row.onmouseleave = () => row.classList.remove('shadow-xl');
             row.innerHTML = `
               <td class='p-2'>${job.company || ''}</td>
               <td class='p-2'>${job.position || ''}</td>
@@ -330,7 +333,7 @@ function renderTabContent(tab) {
           else if (job.status === 'offer') statusClass = 'border-l-4 border-green-400';
           else if (job.status === 'submitted') statusClass = 'border-l-4 border-gray-400';
           const card = document.createElement('div');
-          card.className = `mb-3 rounded shadow p-3 transition-all duration-200 ease-in-out transform hover:scale-105 hover:shadow-xl cursor-pointer ${baseClass} ${statusClass}`;
+          card.className = `mb-3 rounded shadow p-3 transition-all duration-200 ease-in-out hover:shadow-xl cursor-pointer ${baseClass} ${statusClass}`;
           card.innerHTML = `
             <div class="flex items-center mb-2">
               <span class="font-bold text-base mr-2">${job.company || ''}</span>
