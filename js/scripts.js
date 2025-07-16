@@ -115,21 +115,27 @@ function renderTabContent(tab) {
           if (!wrap) return;
           wrap.innerHTML = '';
           let idx = 0;
-          for (const [question, obj] of Object.entries(data)) {
-            let baseClass = idx % 2 === 0 ? 'bg-gray-50' : 'bg-white';
-            const card = document.createElement('div');
-            card.className = `mb-3 rounded shadow p-3 border-l-4 border-blue-500 transition-all duration-200 ease-in-out hover:shadow-xl cursor-pointer ${baseClass}`;
-            card.innerHTML = `
-              <div class=\"font-bold text-base mb-2 flex items-center\"><i class=\"bi bi-chat-quote mr-2 text-blue-600\"></i>${question}</div>
-              <div class=\"mb-1\"><span class=\"font-semibold\">Situation:</span> <span class=\"text-gray-700\">${obj.situation}</span></div>
-              <div class=\"mb-1\"><span class=\"font-semibold\">Task:</span> <span class=\"text-gray-700\">${obj.task}</span></div>
-              <div class=\"mb-1\"><span class=\"font-semibold\">Action:</span> <span class=\"text-gray-700\">${obj.action}</span></div>
-              <div class=\"mb-1\"><span class=\"font-semibold\">Result:</span> <span class=\"text-gray-700\">${obj.result}</span></div>
-              ${obj.skills ? `<div class='mb-1'><span class='font-semibold'>Skills:</span> <span class='text-gray-700'>${obj.skills.join(', ')}</span></div>` : ''}
-            `;
-            wrap.appendChild(card);
-            idx++;
-          }
+            if (Array.isArray(data.questions)) {
+              for (const obj of data.questions) {
+                let baseClass = idx % 2 === 0 ? 'bg-gray-50' : 'bg-white';
+                const card = document.createElement('div');
+                card.className = `mb-3 rounded shadow p-3 border-l-4 border-blue-500 transition-all duration-200 ease-in-out hover:shadow-xl cursor-pointer ${baseClass}`;
+                card.innerHTML = `
+                  <div class=\"flex items-center mb-2\">
+                    <span class=\"inline-block bg-blue-200 text-blue-800 text-xs font-bold rounded-full px-2 py-0.5 mr-2\">${obj.serial_no || idx + 1}</span>
+                    <span class=\"font-bold text-base flex items-center\"><i class=\"bi bi-chat-quote mr-2 text-blue-600\"></i>${obj.question}</span>
+                  </div>
+                  ${obj.situation ? `<div class='mb-1'><span class='font-semibold'>Situation:</span> <span class='text-gray-700'>${obj.situation}</span></div>` : ''}
+                  ${obj.task ? `<div class='mb-1'><span class='font-semibold'>Task:</span> <span class='text-gray-700'>${obj.task}</span></div>` : ''}
+                  ${obj.action ? `<div class='mb-1'><span class='font-semibold'>Action:</span> <span class='text-gray-700'>${obj.action}</span></div>` : ''}
+                  ${obj.result ? `<div class='mb-1'><span class='font-semibold'>Result:</span> <span class='text-gray-700'>${obj.result}</span></div>` : ''}
+                  <div class='mb-1'><span class='font-semibold'>Answer:</span> <span class='text-gray-700'>${obj.answer || ''}</span></div>
+                  ${obj.skills ? `<div class='mb-1'><span class='font-semibold'>Skills:</span> <span class='text-gray-700'>${obj.skills.join(', ')}</span></div>` : ''}
+                `;
+                wrap.appendChild(card);
+                idx++;
+              }
+            }
         });
     }
     setTimeout(() => {
@@ -262,7 +268,10 @@ function renderTabContent(tab) {
             const card = document.createElement('div');
             card.className = `mb-3 rounded shadow p-3 border-l-4 border-blue-500 transition-all duration-200 ease-in-out hover:shadow-xl cursor-pointer ${baseClass}`;
             card.innerHTML = `
-              <div class=\"font-bold text-base mb-2 flex items-center\"><i class=\"bi bi-question-circle mr-2 text-blue-600\"></i>${q.question}</div>
+              <div class=\"flex items-center mb-2\">
+                <span class=\"inline-block bg-blue-200 text-blue-800 text-xs font-bold rounded-full px-2 py-0.5 mr-2\">${q.serial_no || idx + 1}</span>
+                <span class=\"font-bold text-base flex items-center\"><i class=\"bi bi-question-circle mr-2 text-blue-600\"></i>${q.question}</span>
+              </div>
               <div class=\"mb-1\"><span class=\"font-semibold\">Answer:</span> <span class=\"text-gray-700\">${q.answer}</span></div>
               <div class=\"mb-1\"><span class=\"font-semibold\">Category:</span> <span class=\"text-gray-700\">${q.category}</span></div>
               <div class=\"mb-1\"><span class=\"font-semibold\">Skills:</span> <span class=\"text-gray-700\">${q.skills.join(', ')}</span></div>
