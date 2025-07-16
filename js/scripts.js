@@ -32,11 +32,15 @@ function renderApp(config) {
     </div>
     <div id="dashboard" class="hidden min-h-screen flex flex-col">
       <nav class="bg-white shadow sticky top-0 z-10">
-        <div class="container mx-auto px-2 sm:px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div class="container mx-auto px-2 sm:px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 relative">
           <span class="text-xl font-bold flex items-center gap-2 mb-2 sm:mb-0">
             <i class="bi bi-kanban"></i> ${config.appName}
           </span>
-          <ul class="flex flex-col sm:flex-row w-full sm:w-auto space-y-2 sm:space-y-0 sm:space-x-4" id="tabs-menu">
+          <!-- Hamburger for mobile -->
+          <button id="hamburger" class="sm:hidden absolute right-2 top-3 text-2xl p-2 rounded focus:outline-none" aria-label="Open menu">
+            <i class="bi bi-list"></i>
+          </button>
+          <ul class="flex flex-col sm:flex-row sm:w-auto sm:max-w-none max-w-xs space-y-2 sm:space-y-0 sm:space-x-4 bg-white sm:bg-transparent absolute sm:static right-0 left-auto top-12 sm:top-0 z-20 shadow sm:shadow-none p-4 sm:p-0 transition-all duration-200 ease-in-out hidden sm:flex" id="tabs-menu">
             ${config.pages[1].tabs.map(tab => renderTabBtn(tab)).join('')}
           </ul>
         </div>
@@ -46,6 +50,31 @@ function renderApp(config) {
       </main>
     </div>
   `;
+  // Hamburger menu logic
+  const hamburger = document.getElementById('hamburger');
+  const tabsMenu = document.getElementById('tabs-menu');
+  if (hamburger && tabsMenu) {
+    hamburger.addEventListener('click', () => {
+      tabsMenu.classList.toggle('hidden');
+      hamburger.classList.toggle('bg-blue-100');
+    });
+    // Hide menu on tab click (mobile)
+    tabsMenu.addEventListener('click', () => {
+      if (window.innerWidth < 640) {
+        tabsMenu.classList.add('hidden');
+        hamburger.classList.remove('bg-blue-100');
+      }
+    });
+    // Ensure menu is visible on resize
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 640) {
+        tabsMenu.classList.remove('hidden');
+      } else {
+        tabsMenu.classList.add('hidden');
+        hamburger.classList.remove('bg-blue-100');
+      }
+    });
+  }
   setupLogic(config);
 }
 
@@ -74,16 +103,11 @@ function renderTabContent(tab) {
           <a href="doc/Adefemi_Kolawole_Resume.pdf" download class="text-blue-600 hover:underline flex items-center justify-end"><i class="bi bi-download mr-1"></i>Download PDF</a>
         </div>
       `;
-      const textarea = document.querySelector('#tab-resume textarea');
-      if (textarea) textarea.parentNode.appendChild(card);
+      const section = document.getElementById('tab-resume');
+      if (section) section.appendChild(card);
     }, 0);
     return `<section id="tab-resume" class="tab-content">
       <h3 class="text-xl font-semibold mb-4 flex items-center"><i class="bi bi-file-earmark-person mr-2"></i> ${tab.name}</h3>
-      <div class="bg-white p-4 sm:p-6 rounded shadow">
-        <p class="mb-2">${tab.content[0]}</p>
-        <input type="file" class="mb-2 w-full">
-        <textarea class="w-full border rounded p-2 mt-2" rows="3" placeholder="${tab.content[1]}"></textarea>
-      </div>
       <!-- Resume PDF card will be injected here -->
     </section>`;
   }
