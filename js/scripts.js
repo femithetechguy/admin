@@ -62,6 +62,21 @@ function renderTabBtn(tab) {
 
 function renderTabContent(tab) {
   if (tab.name === 'Resume') {
+    setTimeout(() => {
+      const card = document.createElement('div');
+      card.className = 'bg-white p-4 sm:p-6 rounded shadow mt-4 overflow-x-auto';
+      card.innerHTML = `
+        <h4 class="text-lg font-semibold mb-2 flex items-center"><i class="bi bi-file-earmark-pdf mr-2 text-red-600"></i> Resume PDF Preview</h4>
+        <div class="w-full" style="min-height:220px;">
+          <iframe src="doc/Adefemi_Kolawole_Resume.pdf" class="w-full rounded border border-gray-200" style="min-height:220px; height:40vh; max-height:60vh; border:none;"></iframe>
+        </div>
+        <div class="mt-2 text-right">
+          <a href="doc/Adefemi_Kolawole_Resume.pdf" download class="text-blue-600 hover:underline flex items-center justify-end"><i class="bi bi-download mr-1"></i>Download PDF</a>
+        </div>
+      `;
+      const textarea = document.querySelector('#tab-resume textarea');
+      if (textarea) textarea.parentNode.appendChild(card);
+    }, 0);
     return `<section id="tab-resume" class="tab-content">
       <h3 class="text-xl font-semibold mb-4 flex items-center"><i class="bi bi-file-earmark-person mr-2"></i> ${tab.name}</h3>
       <div class="bg-white p-4 sm:p-6 rounded shadow">
@@ -69,6 +84,7 @@ function renderTabContent(tab) {
         <input type="file" class="mb-2 w-full">
         <textarea class="w-full border rounded p-2 mt-2" rows="3" placeholder="${tab.content[1]}"></textarea>
       </div>
+      <!-- Resume PDF card will be injected here -->
     </section>`;
   }
   if (tab.name === 'Interview Prep') {
