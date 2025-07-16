@@ -49,8 +49,9 @@ function renderInterviewCard(q) {
     s = q.answer;
   }
   return `
-    <div class="bg-white rounded shadow p-5 hover:shadow-lg transition group border border-gray-100 hover:border-blue-300 flex flex-col gap-2">
+    <div class="bg-white rounded shadow p-5 hover:shadow-lg transition group border border-gray-100 hover:border-yellow-300 flex flex-col gap-2">
       <div class="flex items-center gap-2 mb-2">
+        <span class="inline-block bg-yellow-100 text-yellow-700 rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm">${q.serial_no || ''}</span>
         <i class="bi bi-lightbulb text-yellow-500"></i>
         <span class="font-semibold text-gray-800">${q.question}</span>
       </div>
