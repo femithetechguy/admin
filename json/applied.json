@@ -1,6 +1,7 @@
 {
   "jobs": [
     {
+      "serial_no": 1,
       "company": "Brooks Rehabilitation",
       "position": "Power BI Developer",
       "location": "Remote (FL, GA, SC, NC)",
@@ -11,6 +12,7 @@
       "notes": "Contacted Jasmine directly before applying. Awaiting interview schedule."
     },
     {
+      "serial_no": 2,
       "company": "Brooks Rehabilitation",
       "position": "Power BI Developer",
       "location": "Remote (FL, GA, SC, NC)",
