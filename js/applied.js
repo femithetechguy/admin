@@ -7,11 +7,19 @@ export function renderAppliedTab(tab) {
     fetch('json/applied.json')
       .then(res => res.json())
       .then(data => {
-        const jobs = Array.isArray(data.jobs) ? data.jobs : [];
+        let jobs = Array.isArray(data.jobs) ? data.jobs : [];
+        const statusOptions = Array.isArray(data.statusOptions) ? data.statusOptions : [];
+        // --- Persisted status logic ---
+        const persistedStatus = JSON.parse(localStorage.getItem('appliedJobStatus') || '{}');
+        jobs = jobs.map((job, i) => {
+          const key = job.serial_no || i;
+          if (persistedStatus[key]) job.status = persistedStatus[key];
+          return job;
+        });
         const container = document.getElementById('applied-jobs-container');
         if (!container) return;
         if (jobs.length === 0) {
-          container.innerHTML = `<div class="text-gray-500 text-center py-8">No applied jobs found.</div>`;
+          container.innerHTML = `<div class=\"text-gray-500 text-center py-8\">No applied jobs found.</div>`;
           return;
         }
         // Responsive: Table on desktop, cards on mobile
@@ -39,7 +47,9 @@ export function renderAppliedTab(tab) {
                     <td class="px-4 py-2">${job.location}</td>
                     <td class="px-4 py-2">${job.dateApplied}</td>
                     <td class="px-4 py-2">
-                      <span class="inline-block px-2 py-1 rounded text-xs font-bold ${job.status === 'submitted' ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-700'}">${job.status}</span>
+                      <select class="status-dropdown px-2 py-1 rounded border border-gray-200 text-xs font-bold focus:outline-none focus:ring-2 focus:ring-blue-200 transition" data-job-idx="${i}">
+                        ${statusOptions.map(opt => `<option value="${opt}" ${opt === job.status ? 'selected' : ''}>${opt.charAt(0).toUpperCase() + opt.slice(1)}</option>`).join('')}
+                      </select>
                     </td>
                     <td class="px-4 py-2 text-xs text-gray-600">${job.notes || ''}</td>
                     <td class="px-4 py-2">
@@ -55,7 +65,9 @@ export function renderAppliedTab(tab) {
               <div class="bg-white rounded shadow p-4 hover:shadow-lg transition group border border-gray-100 hover:border-blue-300">
                 <div class="flex items-center justify-between mb-2">
                   <span class="font-bold text-blue-700 text-lg">${job.company}</span>
-                  <span class="inline-block px-2 py-1 rounded text-xs font-bold ${job.status === 'submitted' ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-700'}">${job.status}</span>
+                  <select class="status-dropdown px-2 py-1 rounded border border-gray-200 text-xs font-bold focus:outline-none focus:ring-2 focus:ring-blue-200 transition" data-job-idx="${i}">
+                    ${statusOptions.map(opt => `<option value="${opt}" ${opt === job.status ? 'selected' : ''}>${opt.charAt(0).toUpperCase() + opt.slice(1)}</option>`).join('')}
+                  </select>
                 </div>
                 <div class="text-gray-800 font-semibold mb-1">${job.position}</div>
                 <div class="text-gray-500 text-sm mb-1"><i class="bi bi-geo-alt mr-1"></i> ${job.location}</div>
@@ -95,6 +107,39 @@ export function renderAppliedTab(tab) {
               });
           });
         });
+        // Attach status dropdown change logic (persist to localStorage)
+        container.querySelectorAll('.status-dropdown').forEach(dropdown => {
+          dropdown.addEventListener('change', (e) => {
+            const idx = parseInt(dropdown.getAttribute('data-job-idx'), 10);
+            const newStatus = dropdown.value;
+            // UI only: update the dropdown's style (optional)
+            dropdown.classList.add('ring-2', 'ring-blue-400');
+            setTimeout(() => dropdown.classList.remove('ring-2', 'ring-blue-400'), 600);
+            // Persist to localStorage
+            const key = jobs[idx].serial_no || idx;
+            const statusMap = JSON.parse(localStorage.getItem('appliedJobStatus') || '{}');
+            statusMap[key] = newStatus;
+            localStorage.setItem('appliedJobStatus', JSON.stringify(statusMap));
+            // Show toast notification
+            showToast(`Status updated to <b>${newStatus.charAt(0).toUpperCase() + newStatus.slice(1)}</b>`, 'success');
+          });
+        });
+
+        // Toast utility
+        function showToast(message, type = 'info') {
+          // Remove any existing toast
+          const existing = document.getElementById('custom-toast');
+          if (existing) existing.remove();
+          const toast = document.createElement('div');
+          toast.id = 'custom-toast';
+          toast.className = `fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded shadow-lg text-white text-sm font-medium animate-fadeIn pointer-events-none ${type === 'success' ? 'bg-green-600' : 'bg-blue-600'}`;
+          toast.innerHTML = message;
+          document.body.appendChild(toast);
+          setTimeout(() => {
+            toast.classList.add('animate-fadeOut');
+            setTimeout(() => toast.remove(), 400);
+          }, 1800);
+        }
       })
       .catch(() => {
         const container = document.getElementById('applied-jobs-container');
