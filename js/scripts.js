@@ -1,3 +1,31 @@
+// Show last active tab or default to Applied (global scope)
+function showDefaultTab() {
+  // Always re-query tabContents in case DOM was re-rendered
+  const tabContentsNow = document.querySelectorAll('.tab-content');
+  tabContentsNow.forEach(section => section.classList.add('hidden'));
+  let lastTab = localStorage.getItem('lastActiveTab');
+  let tabId = lastTab ? lastTab : 'tab-applied';
+  const tabSection = document.getElementById(tabId);
+  if (tabSection) tabSection.classList.remove('hidden');
+}
+
+// Persist login state using Firebase Auth
+if (window.firebaseAuth) {
+  window.firebaseAuth.onAuthStateChanged(function(user) {
+    const loginPage = document.getElementById('login-page');
+    const dashboard = document.getElementById('dashboard');
+    if (user) {
+      // User is signed in, show dashboard
+      if (loginPage) loginPage.classList.add('hidden');
+      if (dashboard) dashboard.classList.remove('hidden');
+      setTimeout(() => { showDefaultTab && showDefaultTab(); }, 0);
+    } else {
+      // User is signed out, show login
+      if (dashboard) dashboard.classList.add('hidden');
+      if (loginPage) loginPage.classList.remove('hidden');
+    }
+  });
+}
 
 // Dynamic SPA rendering from app.json
 const appRoot = document.getElementById('app-root');
@@ -495,10 +523,15 @@ function setupLogic(config) {
     });
   }
 
-  // Default: show Applied tab on login
-  function showDefaultTab() {
-    tabContents.forEach(section => section.classList.add('hidden'));
-    const appliedTab = document.getElementById('tab-applied');
-    if (appliedTab) appliedTab.classList.remove('hidden');
+
+  // Save last active tab on tab change
+  if (tabsMenu) {
+    tabsMenu.addEventListener('click', function(e) {
+      if (e.target.closest('.tab-btn')) {
+        const tab = e.target.closest('.tab-btn').dataset.tab;
+        let tabId = tab === 'interview-prep' ? 'tab-interview-prep' : 'tab-' + tab;
+        localStorage.setItem('lastActiveTab', tabId);
+      }
+    });
   }
 }
