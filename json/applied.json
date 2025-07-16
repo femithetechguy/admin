@@ -1,4 +1,12 @@
 {
+  "statusOptions": [
+    "submitted",
+    "interviewing",
+    "offer",
+    "rejected",
+    "withdrawn",
+    "WIP"
+  ],
   "jobs": [
     {
       "serial_no": 1,

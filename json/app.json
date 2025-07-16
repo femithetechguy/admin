@@ -15,22 +15,8 @@
       "name": "Dashboard",
       "tabs": [
         {
-          "name": "Resume",
-          "content": [
-            "Resume preview or upload section",
-            "Optional: notes or key skills"
-          ]
-        },
-        {
-          "name": "Interview Prep",
-          "content": [
-            "Table or card view of interview prep tasks",
-            "Fields: Company, Role, Date, Notes",
-            "Optional: mock questions, tips, resource links"
-          ]
-        },
-        {
           "name": "Applied",
+          "biIcon": "bi-briefcase",
           "content": [
             "List of jobs applied to",
             "Fields: Company, Date, Status",
@@ -38,7 +24,33 @@
           ]
         },
         {
-          "name": "Logout"
+          "name": "Interview Prep",
+          "biIcon": "bi-lightbulb",
+          "content": [
+            "Table or card view of interview prep tasks",
+            "Fields: Company, Role, Date, Notes",
+            "Optional: mock questions, tips, resource links"
+          ]
+        },
+        {
+          "name": "Behavioral",
+          "biIcon": "bi-chat-dots",
+          "content": [
+            "Behavioral questions and answers",
+            "Optional: STAR model formatting"
+          ]
+        },
+        {
+          "name": "Resume",
+          "biIcon": "bi-file-earmark-person",
+          "content": [
+            "Resume preview or upload section",
+            "Optional: notes or key skills"
+          ]
+        },
+        {
+          "name": "Logout",
+          "biIcon": "bi-box-arrow-right"
         }
       ]
     }
@@ -59,8 +71,8 @@
     }
   },
   "files": [
-    {"file": "index.html", "purpose": "Structure for login + dashboard"},
-    {"file": "style.css", "purpose": "Styles for layout, tabs, and UI"},
-    {"file": "app.js", "purpose": "Handles login, tab navigation"}
+    { "file": "index.html", "purpose": "Structure for login + dashboard" },
+    { "file": "style.css", "purpose": "Styles for layout, tabs, and UI" },
+    { "file": "app.js", "purpose": "Handles login, tab navigation" }
   ]
 }
