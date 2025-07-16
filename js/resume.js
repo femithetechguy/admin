@@ -21,7 +21,21 @@ export function renderResumeTab(tab) {
         if (!folderUrl && !defaultResumeUrl) {
           html = '<div class="text-red-500">No resume links found.</div>';
         }
-        container.innerHTML = `<div class="flex flex-col sm:flex-row items-center justify-center gap-4">${html}</div>`;
+        let afterLine = '';
+        // If defaultResumeUrl is a Google Drive file, try to embed as PDF
+        if (defaultResumeUrl) {
+          // Extract file ID from Google Drive link
+          const match = defaultResumeUrl.match(/\/d\/([\w-]+)/);
+          if (match && match[1]) {
+            const fileId = match[1];
+            const pdfUrl = `https://drive.google.com/file/d/${fileId}/preview`;
+            afterLine = `<div class="w-full flex flex-col items-center justify-center"><iframe src="${pdfUrl}" style="width:100%; min-height:600px; border:1px solid #ddd; border-radius:8px; background:#fafbfc;" allow="autoplay"></iframe></div>`;
+          } else {
+            // If not a Google Drive file, show a message
+            afterLine = `<div class="text-gray-500 text-center mt-4">Cannot preview this file type here.</div>`;
+          }
+        }
+        container.innerHTML = `<div class="flex flex-col sm:flex-row items-center justify-center gap-4">${html}</div><hr class="my-6 w-full border-t border-gray-300">${afterLine}`;
       })
       .catch(() => {
         const container = document.getElementById('resume-folder-container');
