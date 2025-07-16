@@ -1,8 +1,5 @@
 console.log('[DEBUG] Page loaded (scripts.js)');
-import { renderBehavioralTab } from "./behavioral.js";
-import { renderInterviewPrepTab } from "./interview_prep.js";
-import { renderResumeTab } from "./resume.js";
-import { renderAppliedTab } from "./applied.js";
+
 
 // --- Ensure Firebase Auth uses local persistence (persist login across reloads) ---
 if (window.firebaseAuth && window.firebaseAuth.setPersistence && window.firebaseAuth.Auth && window.firebaseAuth.Auth.Persistence) {
@@ -124,10 +121,10 @@ function renderTabBtn(tab, idx) {
 
 function renderTabContent(tab, idx) {
   if (idx !== selectedTabIdx) return '';
-  if (tab.name === "Behavioral") return renderBehavioralTab(tab);
-  if (tab.name === "Interview Prep") return renderInterviewPrepTab(tab);
-  if (tab.name === "Resume") return renderResumeTab(tab);
-  if (tab.name === "Applied") return renderAppliedTab(tab);
+  if (tab.name === "Behavioral" && window.renderBehavioralTab) return window.renderBehavioralTab(tab);
+  if (tab.name === "Interview Prep" && window.renderInterviewPrepTab) return window.renderInterviewPrepTab(tab);
+  if (tab.name === "Resume" && window.renderResumeTab) return window.renderResumeTab(tab);
+  if (tab.name === "Applied" && window.renderAppliedTab) return window.renderAppliedTab(tab);
   if (tab.name === "Logout") return '';
   return '';
 }

@@ -1,20 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin</title>
-  <!-- Tailwind CSS (imported in styles.css) -->
-  <link rel="stylesheet" href="css/styles.css">
-  <!-- Bootstrap Icons CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-</head>
-<body class="bg-gray-50 min-h-screen">
-  <!-- Dynamic App Content -->
-  <div id="app-root"></div>
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-  <script src="js/firebase_auth.js"></script>
-  <script type="module" src="js/scripts.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <!-- Tailwind CSS (imported in styles.css) -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Bootstrap Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+    <!-- Dynamic App Content -->
+    <div id="app-root"></div>
+    <!-- Firebase App (always required) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <!-- Firebase Auth -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <!-- Firebase Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <!-- Your Firebase config and initialization -->
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyDefgrzPi5Gqq_rIAVvazYH1dGJ3YmNbok",
+        authDomain: "kolawolesadmin.firebaseapp.com",
+        projectId: "kolawolesadmin",
+        storageBucket: "kolawolesadmin.firebasestorage.app",
+        messagingSenderId: "305741254750",
+        appId: "1:305741254750:web:d2849cf1baebb8d38424cf",
+        measurementId: "G-2S91LL8TNC",
+        // ...all other config fields from your Firebase project settings
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <!-- Your custom scripts (appliedStatus.js, etc) -->
+    <script src="js/behavioral.js"></script>
+    <script src="js/interview_prep.js"></script>
+    <script src="js/resume.js"></script>
+    <script src="js/applied.js"></script>
+    <script src="js/firebase_auth.js"></script>
+    <script src="js/appliedStatus.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
