@@ -12,15 +12,23 @@ fetch('json/app.json')
 
 function renderApp(config) {
   // Render login and dashboard containers
-  // Reorder tabs: Applied first, Resume second to last, Logout last, others in between
+  // Reorder tabs: Applied first, Interview Prep, Behavioral, others, Resume, Logout
   let tabs = config.pages[1].tabs.slice();
+  // Add Behavioral tab if not present
+  if (!tabs.some(t => t.name === 'Behavioral')) {
+    tabs.push({ name: 'Behavioral', content: ['Behavioral content goes here.'] });
+  }
   const appliedIdx = tabs.findIndex(t => t.name === 'Applied');
+  const interviewIdx = tabs.findIndex(t => t.name === 'Interview Prep');
+  const behavioralIdx = tabs.findIndex(t => t.name === 'Behavioral');
   const resumeIdx = tabs.findIndex(t => t.name === 'Resume');
   const logoutIdx = tabs.findIndex(t => t.name === 'Logout');
   let newTabs = [];
   if (appliedIdx !== -1) newTabs.push(tabs[appliedIdx]);
-  // Add all tabs except Applied, Resume, Logout
-  newTabs = newTabs.concat(tabs.filter((t, i) => i !== appliedIdx && i !== resumeIdx && i !== logoutIdx));
+  if (interviewIdx !== -1) newTabs.push(tabs[interviewIdx]);
+  if (behavioralIdx !== -1) newTabs.push(tabs[behavioralIdx]);
+  // Add all tabs except Applied, Interview Prep, Behavioral, Resume, Logout
+  newTabs = newTabs.concat(tabs.filter((t, i) => i !== appliedIdx && i !== interviewIdx && i !== behavioralIdx && i !== resumeIdx && i !== logoutIdx));
   // Add Resume second to last
   if (resumeIdx !== -1) newTabs.push(tabs[resumeIdx]);
   // Add Logout last
@@ -96,6 +104,7 @@ function renderTabBtn(tab) {
     Resume: 'file-earmark-person',
     'Interview Prep': 'chat-dots',
     Applied: 'briefcase',
+    Behavioral: 'person-lines-fill',
     Logout: 'box-arrow-right'
   };
   const color = tab.name === 'Logout' ? 'hover:bg-red-100 text-red-600' : 'hover:bg-blue-100';
@@ -103,6 +112,36 @@ function renderTabBtn(tab) {
 }
 
 function renderTabContent(tab) {
+  if (tab.name === 'Behavioral') {
+    setTimeout(() => {
+      fetch('json/behavioral.json?_=' + Date.now())
+        .then(res => res.json())
+        .then(data => {
+          const wrap = document.getElementById('behavioral-card-wrap');
+          if (!wrap) return;
+          wrap.innerHTML = '';
+          let idx = 0;
+          for (const [question, obj] of Object.entries(data)) {
+            let baseClass = idx % 2 === 0 ? 'bg-gray-50' : 'bg-white';
+            const card = document.createElement('div');
+            card.className = `mb-3 rounded shadow p-3 border-l-4 border-blue-500 transition-all duration-200 ease-in-out transform hover:scale-105 hover:shadow-xl cursor-pointer ${baseClass}`;
+            card.innerHTML = `
+              <div class="font-bold text-base mb-2 flex items-center"><i class="bi bi-chat-quote mr-2 text-blue-600"></i>${question}</div>
+              <div class="mb-1"><span class="font-semibold">Situation:</span> <span class="text-gray-700">${obj.situation}</span></div>
+              <div class="mb-1"><span class="font-semibold">Task:</span> <span class="text-gray-700">${obj.task}</span></div>
+              <div class="mb-1"><span class="font-semibold">Action:</span> <span class="text-gray-700">${obj.action}</span></div>
+              <div class="mb-1"><span class="font-semibold">Result:</span> <span class="text-gray-700">${obj.result}</span></div>
+            `;
+            wrap.appendChild(card);
+            idx++;
+          }
+        });
+    }, 0);
+    return `<section id="tab-behavioral" class="tab-content hidden">
+      <h3 class="text-xl font-semibold mb-4 flex items-center"><i class="bi bi-person-lines-fill mr-2"></i> ${tab.name}</h3>
+      <div id="behavioral-card-wrap"></div>
+    </section>`;
+  }
   if (tab.name === 'Resume') {
     setTimeout(() => {
       const card = document.createElement('div');
@@ -161,7 +200,7 @@ function renderTabContent(tab) {
             else if (job.status === 'offer') statusClass = 'border-l-4 border-green-400';
             else if (job.status === 'submitted') statusClass = 'border-l-4 border-gray-400';
             const row = document.createElement('tr');
-            row.className = `${baseClass} ${statusClass}`;
+            row.className = `transition-all duration-200 ease-in-out transform hover:scale-x-95 hover:shadow-xl cursor-pointer ${baseClass} ${statusClass}`;
             row.innerHTML = `
               <td class='p-2'>${job.company || ''}</td>
               <td class='p-2'>${job.position || ''}</td>
