@@ -6,8 +6,16 @@
       "location": "Remote (FL, GA, SC, NC)",
       "dateApplied": "2025-07-16",
       "applicationLink": "https://www.indeed.com/viewjob?jk=bf04849d5eb4ce64",
-      "resumeUsed": "https://kolawoles.com/files/Adefemi_Kolawole_Resume.pdf",
-      "coverLetterUsed": "https://kolawoles.com/files/Brooks_PowerBI_CoverLetter.pdf",
+      "status": "submitted",
+      "isActive": true,
+      "notes": "Contacted Jasmine directly before applying. Awaiting interview schedule."
+    },
+    {
+      "company": "Brooks Rehabilitation",
+      "position": "Power BI Developer",
+      "location": "Remote (FL, GA, SC, NC)",
+      "dateApplied": "2025-07-16",
+      "applicationLink": "https://www.indeed.com/viewjob?jk=bf04849d5eb4ce64",
       "status": "submitted",
       "isActive": true,
       "notes": "Contacted Jasmine directly before applying. Awaiting interview schedule."
