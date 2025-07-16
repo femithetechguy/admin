@@ -6,7 +6,7 @@
  * - If html is provided, displays it directly.
  * - Only one popup is shown at a time.
  */
-export function showPopup({ title = '', url = '', html = '' } = {}) {
+window.showPopup = function({ title = '', url = '', html = '' } = {}) {
   // Remove any existing popup
   const existing = document.getElementById('custom-popup-root');
   if (existing) existing.remove();
