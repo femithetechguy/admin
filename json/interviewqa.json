@@ -1,0 +1,65 @@
+{
+  "role": "Power BI Developer",
+  "questions": [
+    {
+      "question": "Can you describe your experience with Power BI?",
+      "answer": "I have over 6 years of hands-on experience using Power BI Desktop and Power BI Service. I’ve developed 50+ interactive dashboards across healthcare, insurance, retail, and IT operations, integrating data from SQL Server, Oracle, and APIs using Power Query. I specialize in DAX, RLS, and scalable data modeling.",
+      "category": "Power BI",
+      "skills": ["Power BI", "Data Visualization", "Power Query", "DAX", "Report Development"]
+    },
+    {
+      "question": "How do you ensure data accuracy in your reports?",
+      "answer": "I implement validation rules during data transformation, use test datasets to verify DAX measures, and apply visual indicators to highlight anomalies. I also work closely with stakeholders to validate KPIs and build refresh audit logic using Power BI Service and Dataflows.",
+      "category": "Data Quality",
+      "skills": ["Data Validation", "DAX", "Power BI Service", "ETL", "Stakeholder Collaboration"]
+    },
+    {
+      "question": "What’s your approach to data modeling in Power BI?",
+      "answer": "I follow a star schema approach wherever possible, use role-playing dimensions, create calculated tables for hierarchy, and ensure relationships are single-direction unless needed. I optimize with summarization tables and minimize row-level calculations in visuals.",
+      "category": "Data Modeling",
+      "skills": ["Data Modeling", "Star Schema", "Relationships", "Calculated Tables", "Performance Tuning"]
+    },
+    {
+      "question": "Explain Row-Level Security (RLS) and how you’ve used it.",
+      "answer": "RLS restricts data access based on user roles. At Northside Hospital, I implemented RLS on clinical dashboards so each department could only see its own patients and metrics. I defined roles in Power BI and validated them using the 'View As Role' feature before deployment.",
+      "category": "Security",
+      "skills": ["Row-Level Security (RLS)", "Power BI", "Data Privacy", "Role Management"]
+    },
+    {
+      "question": "How do you handle performance issues in Power BI reports?",
+      "answer": "I use tools like Performance Analyzer and DAX Studio. I optimize slow visuals by using calculated columns instead of measures when needed, removing unused columns from the data model, avoiding bi-directional relationships, and aggregating data before loading it into Power BI.",
+      "category": "Performance Optimization",
+      "skills": ["Performance Analyzer", "DAX Studio", "Data Modeling", "Query Optimization", "Calculated Columns"]
+    },
+    {
+      "question": "Have you worked with Power BI Gateways and Dataflows?",
+      "answer": "Yes. At Manhattan Associates, I configured on-premise gateways to refresh SQL Server data and used Dataflows for shared ETL logic across multiple reports. This setup standardized refresh pipelines and improved maintainability.",
+      "category": "Deployment",
+      "skills": ["Power BI Gateway", "Dataflows", "ETL", "SQL Server", "Automation"]
+    },
+    {
+      "question": "How do you manage version control with PBIX files?",
+      "answer": "I use Git to version control datasets and documentation. For PBIX files, I follow a naming convention with timestamps and store release notes in Markdown. I’ve also experimented with breaking reports into dataset and report layers using deployment pipelines in Power BI Service.",
+      "category": "Governance",
+      "skills": ["Version Control", "Git", "Deployment Pipelines", "Documentation", "Power BI Governance"]
+    },
+    {
+      "question": "Describe a dashboard you’re proud of.",
+      "answer": "At Hiscox Insurance, I built a fraud detection dashboard combining claims data with external trend indicators. It used AI insights, conditional formatting, and layered drill-through filters. The dashboard reduced review time by 60% and surfaced $750K in premium misalignment.",
+      "category": "Showcase",
+      "skills": ["Power BI", "Conditional Formatting", "Drill-through", "Data Integration", "Fraud Detection"]
+    },
+    {
+      "question": "How do you stay updated with Power BI features?",
+      "answer": "I follow Guy in a Cube, SQLBI, and the official Power BI blog. I also test features in the monthly preview updates and share internal demos with my team during knowledge transfer sessions.",
+      "category": "Professional Development",
+      "skills": ["Continuous Learning", "Community Engagement", "Feature Testing", "Team Training"]
+    },
+    {
+      "question": "What do you think makes a great Power BI dashboard?",
+      "answer": "Clarity, speed, and purpose. A great dashboard should answer business questions in under 5 seconds, have intuitive layout and navigation, and be visually consistent. It must tell a story without requiring user explanation.",
+      "category": "Design Philosophy",
+      "skills": ["Dashboard Design", "User Experience", "Storytelling", "KPI Reporting", "UI/UX"]
+    }
+  ]
+}
