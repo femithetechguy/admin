@@ -118,7 +118,8 @@ function renderAppUI() {
 
 function renderTabBtn(tab, idx) {
   const activeClass = idx === selectedTabIdx ? 'bg-blue-100 font-bold' : '';
-  return `<li><button class="tab-btn ${activeClass}" data-tab-idx="${idx}">${tab.name}</button></li>`;
+  const icon = tab.biIcon ? `<i class="bi ${tab.biIcon} mr-2"></i>` : '';
+  return `<li><button class="tab-btn ${activeClass}" data-tab-idx="${idx}">${icon}${tab.name}</button></li>`;
 }
 
 function renderTabContent(tab, idx) {

@@ -16,6 +16,7 @@
       "tabs": [
         {
           "name": "Applied",
+          "biIcon": "bi-briefcase",
           "content": [
             "List of jobs applied to",
             "Fields: Company, Date, Status",
@@ -24,6 +25,7 @@
         },
         {
           "name": "Interview Prep",
+          "biIcon": "bi-lightbulb",
           "content": [
             "Table or card view of interview prep tasks",
             "Fields: Company, Role, Date, Notes",
@@ -32,6 +34,7 @@
         },
         {
           "name": "Behavioral",
+          "biIcon": "bi-chat-dots",
           "content": [
             "Behavioral questions and answers",
             "Optional: STAR model formatting"
@@ -39,13 +42,15 @@
         },
         {
           "name": "Resume",
+          "biIcon": "bi-file-earmark-person",
           "content": [
             "Resume preview or upload section",
             "Optional: notes or key skills"
           ]
         },
         {
-          "name": "Logout"
+          "name": "Logout",
+          "biIcon": "bi-box-arrow-right"
         }
       ]
     }
