@@ -112,56 +112,126 @@ function renderTabContent(tab) {
     </section>`;
   }
   if (tab.name === 'Interview Prep') {
+    setTimeout(() => {
+      fetch('doc/interview_prep.md')
+        .then(res => res.text())
+        .then(md => {
+          let html = window.marked ? window.marked.parse(md) : md.replace(/\n/g, '<br>');
+          const card = document.createElement('div');
+          card.className = 'bg-white p-4 sm:p-6 rounded shadow mt-4 overflow-x-auto';
+          card.innerHTML = html;
+          const section = document.getElementById('tab-interview-prep');
+          if (section) section.appendChild(card);
+        });
+    }, 0);
     return `<section id="tab-interview-prep" class="tab-content hidden">
       <h3 class="text-xl font-semibold mb-4 flex items-center"><i class="bi bi-chat-dots mr-2"></i> ${tab.name}</h3>
-      <div class="bg-white p-4 sm:p-6 rounded shadow overflow-x-auto">
-        <table class="w-full mb-4 text-sm">
-          <thead>
-            <tr class="bg-gray-100">
-              <th class="p-2 text-left">Company</th>
-              <th class="p-2 text-left">Role</th>
-              <th class="p-2 text-left">Date</th>
-              <th class="p-2 text-left">Notes</th>
-            </tr>
-          </thead>
-          <tbody id="interview-tasks"></tbody>
-        </table>
-        <div class="flex flex-col sm:flex-row gap-2 mb-2">
-          <input type="text" id="prep-company" class="border rounded p-2 flex-1" placeholder="Company">
-          <input type="text" id="prep-role" class="border rounded p-2 flex-1" placeholder="Role">
-          <input type="date" id="prep-date" class="border rounded p-2 flex-1">
-          <input type="text" id="prep-notes" class="border rounded p-2 flex-1" placeholder="Notes">
-          <button id="add-prep-task" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"><i class="bi bi-plus"></i></button>
-        </div>
-        <div class="text-sm text-gray-500">${tab.content[2]}</div>
-      </div>
+      <!-- Interview Prep markdown will be injected here -->
     </section>`;
   }
   if (tab.name === 'Applied') {
+    setTimeout(() => {
+      function renderJobs(jobs) {
+        // Responsive: show table on desktop, cards on mobile
+        const tableWrap = document.getElementById('applied-table-wrap');
+        const cardWrap = document.getElementById('applied-card-wrap');
+        if (!tableWrap || !cardWrap) return;
+        // Table (desktop)
+        const tbody = document.getElementById('applied-jobs');
+        if (tbody) {
+          tbody.innerHTML = '';
+          jobs.forEach((job, idx) => {
+            let baseClass = idx % 2 === 0 ? 'bg-gray-50' : 'bg-white';
+            let statusClass = '';
+            if (job.status === 'interview') statusClass = 'border-l-4 border-blue-400';
+            else if (job.status === 'rejected') statusClass = 'border-l-4 border-red-400';
+            else if (job.status === 'offer') statusClass = 'border-l-4 border-green-400';
+            else if (job.status === 'submitted') statusClass = 'border-l-4 border-gray-400';
+            const row = document.createElement('tr');
+            row.className = `${baseClass} ${statusClass}`;
+            row.innerHTML = `
+              <td class='p-2'>${job.company || ''}</td>
+              <td class='p-2'>${job.position || ''}</td>
+              <td class='p-2'>${job.location || ''}</td>
+              <td class='p-2'>${job.dateApplied || ''}</td>
+              <td class='p-2'>${job.applicationLink ? `<a href='${job.applicationLink}' target='_blank' class='text-blue-600 underline'>Link</a>` : ''}</td>
+              <td class='p-2'>${job.resumeUsed ? `<a href='${job.resumeUsed}' target='_blank' class='text-blue-600 underline'>Resume</a>` : ''}</td>
+              <td class='p-2'>${job.coverLetterUsed ? `<a href='${job.coverLetterUsed}' target='_blank' class='text-blue-600 underline'>Cover</a>` : ''}</td>
+              <td class='p-2 font-semibold capitalize'>${job.status || ''}</td>
+              <td class='p-2'>${job.isActive === false ? '<span class="text-red-500">Closed</span>' : '<span class="text-green-600">Active</span>'}</td>
+              <td class='p-2 text-xs text-gray-600'>${job.notes || ''}</td>
+            `;
+            tbody.appendChild(row);
+          });
+        }
+        // Cards (mobile)
+        cardWrap.innerHTML = '';
+        jobs.forEach((job, idx) => {
+          let baseClass = idx % 2 === 0 ? 'bg-gray-50' : 'bg-white';
+          let statusClass = '';
+          if (job.status === 'interview') statusClass = 'border-l-4 border-blue-400';
+          else if (job.status === 'rejected') statusClass = 'border-l-4 border-red-400';
+          else if (job.status === 'offer') statusClass = 'border-l-4 border-green-400';
+          else if (job.status === 'submitted') statusClass = 'border-l-4 border-gray-400';
+          const card = document.createElement('div');
+          card.className = `mb-3 rounded shadow p-3 ${baseClass} ${statusClass}`;
+          card.innerHTML = `
+            <div class="flex items-center mb-2">
+              <span class="font-bold text-base mr-2">${job.company || ''}</span>
+              <span class="text-xs text-gray-500">${job.position || ''}</span>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-1">
+              <span class="text-xs bg-gray-200 rounded px-2 py-0.5">${job.location || ''}</span>
+              <span class="text-xs bg-blue-100 rounded px-2 py-0.5">${job.dateApplied || ''}</span>
+              <span class="text-xs bg-gray-100 rounded px-2 py-0.5">${job.status || ''}</span>
+              <span class="text-xs ${job.isActive === false ? 'bg-red-100 text-red-600' : 'bg-green-100 text-green-600'} rounded px-2 py-0.5">${job.isActive === false ? 'Closed' : 'Active'}</span>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-1">
+              ${job.applicationLink ? `<a href='${job.applicationLink}' target='_blank' class='text-blue-600 underline text-xs'>Link</a>` : ''}
+              ${job.resumeUsed ? `<a href='${job.resumeUsed}' target='_blank' class='text-blue-600 underline text-xs'>Resume</a>` : ''}
+              ${job.coverLetterUsed ? `<a href='${job.coverLetterUsed}' target='_blank' class='text-blue-600 underline text-xs'>Cover</a>` : ''}
+            </div>
+            <div class="text-xs text-gray-600">${job.notes || ''}</div>
+          `;
+          cardWrap.appendChild(card);
+        });
+      }
+      function fetchJobs() {
+        fetch('json/applied.json?_=' + Date.now())
+          .then(res => res.json())
+          .then(data => renderJobs(data.jobs || []));
+      }
+      fetchJobs();
+      // Poll for changes every 5 seconds
+      window.appliedJobsInterval && clearInterval(window.appliedJobsInterval);
+      window.appliedJobsInterval = setInterval(fetchJobs, 5000);
+    }, 0);
     return `<section id="tab-applied" class="tab-content hidden">
       <h3 class="text-xl font-semibold mb-4 flex items-center"><i class="bi bi-briefcase mr-2"></i> ${tab.name}</h3>
-      <div class="bg-white p-4 sm:p-6 rounded shadow overflow-x-auto">
-        <table class="w-full mb-4 text-sm">
-          <thead>
-            <tr class="bg-gray-100">
-              <th class="p-2 text-left">Company</th>
-              <th class="p-2 text-left">Date</th>
-              <th class="p-2 text-left">Status</th>
-            </tr>
-          </thead>
-          <tbody id="applied-jobs"></tbody>
-        </table>
-        <div class="flex flex-col sm:flex-row gap-2 mb-2">
-          <input type="text" id="applied-company" class="border rounded p-2 flex-1" placeholder="Company">
-          <input type="date" id="applied-date" class="border rounded p-2 flex-1">
-          <select id="applied-status" class="border rounded p-2 flex-1">
-            <option value="Interviewing">Interviewing</option>
-            <option value="Rejected">Rejected</option>
-            <option value="Offer">Offer</option>
-          </select>
-          <button id="add-applied-job" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"><i class="bi bi-plus"></i></button>
+      <div class="bg-white p-2 sm:p-6 rounded shadow">
+        <!-- Table for desktop -->
+        <div id="applied-table-wrap" class="hidden sm:block overflow-x-auto">
+          <table class="min-w-[700px] w-full mb-4 text-xs sm:text-sm">
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="p-2 text-left whitespace-nowrap">Company</th>
+                <th class="p-2 text-left whitespace-nowrap">Position</th>
+                <th class="p-2 text-left whitespace-nowrap">Location</th>
+                <th class="p-2 text-left whitespace-nowrap">Date Applied</th>
+                <th class="p-2 text-left whitespace-nowrap">Link</th>
+                <th class="p-2 text-left whitespace-nowrap">Resume</th>
+                <th class="p-2 text-left whitespace-nowrap">Cover</th>
+                <th class="p-2 text-left whitespace-nowrap">Status</th>
+                <th class="p-2 text-left whitespace-nowrap">Active</th>
+                <th class="p-2 text-left whitespace-nowrap">Notes</th>
+              </tr>
+            </thead>
+            <tbody id="applied-jobs"></tbody>
+          </table>
         </div>
-        <div class="text-sm text-gray-500">${tab.content[2]}</div>
+        <!-- Cards for mobile -->
+        <div id="applied-card-wrap" class="block sm:hidden"></div>
+        <div class="text-sm text-gray-500 mt-2">${tab.content[2]}</div>
       </div>
     </section>`;
   }
