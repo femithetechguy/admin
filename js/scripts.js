@@ -37,18 +37,12 @@ function renderApp(config) {
     <div id="login-page" class="flex items-center justify-center min-h-screen px-2">
       <form id="login-form" class="bg-white p-6 sm:p-8 rounded shadow-md w-full max-w-sm">
         <h2 class="text-2xl font-bold mb-6 text-center">${config.appName} Login</h2>
-        <div class="mb-4">
-          <label class="block mb-1 font-medium" for="username">${config.pages[0].fields[0]}</label>
-          <input class="w-full px-3 py-2 border rounded focus:outline-none focus:ring" type="text" id="username" required>
+        <div class="mt-6 text-center">
+          <button type="button" id="google-signin-btn" class="w-full bg-white border border-gray-300 text-gray-700 py-2 rounded hover:bg-gray-100 flex items-center justify-center gap-2 transition">
+            <i class="bi bi-google text-lg text-red-500"></i> Sign in with Google
+          </button>
         </div>
-        <div class="mb-6">
-          <label class="block mb-1 font-medium" for="password">${config.pages[0].fields[1]}</label>
-          <input class="w-full px-3 py-2 border rounded focus:outline-none focus:ring" type="password" id="password" required>
-        </div>
-        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition flex items-center justify-center">
-          <i class="bi bi-box-arrow-in-right mr-2"></i> Login
-        </button>
-        <p id="login-error" class="text-red-500 text-sm mt-4 hidden text-center">Invalid username or password.</p>
+        <p id="login-error" class="text-red-500 text-sm mt-4 hidden text-center">Login failed. Please try again.</p>
       </form>
     </div>
     <div id="dashboard" class="hidden min-h-screen flex flex-col">
@@ -413,19 +407,22 @@ function setupLogic(config) {
 
   // Login logic
   if (loginForm) {
-    loginForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const username = document.getElementById('username').value.trim();
-      const password = document.getElementById('password').value.trim();
-      if (username === DEMO_USER.username && password === DEMO_USER.password) {
-        loginPage.classList.add('hidden');
-        dashboard.classList.remove('hidden');
-        loginError.classList.add('hidden');
-        showDefaultTab();
-      } else {
-        loginError.classList.remove('hidden');
-      }
-    });
+    // Google sign-in logic only
+    const googleBtn = document.getElementById('google-signin-btn');
+    if (googleBtn && window.firebaseAuth && window.firebaseGoogleProvider) {
+      googleBtn.addEventListener('click', function() {
+        window.firebaseAuth.signInWithPopup(window.firebaseGoogleProvider)
+          .then(() => {
+            loginPage.classList.add('hidden');
+            dashboard.classList.remove('hidden');
+            loginError.classList.add('hidden');
+            showDefaultTab();
+          })
+          .catch(() => {
+            loginError.classList.remove('hidden');
+          });
+      });
+    }
   }
 
   // Tab navigation
