@@ -1,6 +1,6 @@
 // Interview Prep tab logic
 
-export function renderInterviewPrepTab(tab) {
+window.renderInterviewPrepTab = function(tab) {
   // State for filters
   let filterState = {
     showCategory: false,

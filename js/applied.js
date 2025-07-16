@@ -1,19 +1,35 @@
 // Applied tab logic
 
-import { showPopup } from './popup.js';
+// showPopup is expected to be globally available (from popup.js loaded via <script> tag)
 
-export function renderAppliedTab(tab) {
-  setTimeout(() => {
+window.renderAppliedTab = function(tab) {
+  setTimeout(async () => {
+    // Wait for Firebase Auth user
+    let userId = null;
+    if (window.firebaseAuth && window.firebaseAuth.currentUser) {
+      userId = window.firebaseAuth.currentUser.uid;
+    } else if (window.firebase && window.firebase.auth) {
+      const user = window.firebase.auth().currentUser;
+      if (user) userId = user.uid;
+    }
     fetch('json/applied.json')
-      .then(res => res.json())
-      .then(data => {
+      .then(async res => {
+        const data = await res.json();
         let jobs = Array.isArray(data.jobs) ? data.jobs : [];
         const statusOptions = Array.isArray(data.statusOptions) ? data.statusOptions : [];
-        // --- Persisted status logic ---
-        const persistedStatus = JSON.parse(localStorage.getItem('appliedJobStatus') || '{}');
+        // --- Firestore jobs logic ---
+        let firestoreJobs = {};
+        if (userId && window.fetchJobs) {
+          try {
+            firestoreJobs = await window.fetchJobs(userId);
+          } catch (e) { firestoreJobs = {}; }
+        }
         jobs = jobs.map((job, i) => {
-          const key = job.serial_no || i;
-          if (persistedStatus[key]) job.status = persistedStatus[key];
+          const key = String(job.serial_no || i);
+          if (firestoreJobs[key]) {
+            // Merge Firestore job object (user's edits) with local job (from JSON)
+            return { ...job, ...firestoreJobs[key] };
+          }
           return job;
         });
         const container = document.getElementById('applied-jobs-container');
@@ -109,19 +125,25 @@ export function renderAppliedTab(tab) {
         });
         // Attach status dropdown change logic (persist to localStorage)
         container.querySelectorAll('.status-dropdown').forEach(dropdown => {
-          dropdown.addEventListener('change', (e) => {
+          dropdown.addEventListener('change', async (e) => {
             const idx = parseInt(dropdown.getAttribute('data-job-idx'), 10);
             const newStatus = dropdown.value;
             // UI only: update the dropdown's style (optional)
             dropdown.classList.add('ring-2', 'ring-blue-400');
             setTimeout(() => dropdown.classList.remove('ring-2', 'ring-blue-400'), 600);
-            // Persist to localStorage
-            const key = jobs[idx].serial_no || idx;
-            const statusMap = JSON.parse(localStorage.getItem('appliedJobStatus') || '{}');
-            statusMap[key] = newStatus;
-            localStorage.setItem('appliedJobStatus', JSON.stringify(statusMap));
-            // Show toast notification
-            showToast(`Status updated to <b>${newStatus.charAt(0).toUpperCase() + newStatus.slice(1)}</b>`, 'success');
+            // Persist the whole job object to Firestore
+            const key = String(jobs[idx].serial_no || idx);
+            if (userId && window.updateJob) {
+              try {
+                const updatedJob = { ...jobs[idx], status: newStatus };
+                await window.updateJob(userId, key, updatedJob);
+                showToast(`Status updated to <b>${newStatus.charAt(0).toUpperCase() + newStatus.slice(1)}</b>`, 'success');
+              } catch (err) {
+                showToast('Failed to update job in Firestore', 'error');
+              }
+            } else {
+              showToast('User not authenticated', 'error');
+            }
           });
         });
 

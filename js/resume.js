@@ -1,7 +1,7 @@
 // Resume tab logic
 
 
-export function renderResumeTab(tab) {
+window.renderResumeTab = function(tab) {
   // Fetch folder and default resume links from resume.json and show as styled buttons
   setTimeout(() => {
     fetch('json/resume.json')

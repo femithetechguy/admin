@@ -1,6 +1,6 @@
 // Behavioral tab logic
 
-export function renderBehavioralTab(tab) {
+window.renderBehavioralTab = function(tab) {
   // State for filters
   let filterState = {
     showCategory: false,
