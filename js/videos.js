@@ -39,27 +39,67 @@ window.closeNotePopup = function() {
   if (popup) popup.remove();
 };
 
+
+// Track the currently open video (for both mobile and desktop)
+window._currentVideo = {
+  type: null, // 'mobile' or 'desktop'
+  element: null, // iframeDiv for mobile, container for desktop
+  button: null // button element for mobile
+};
+
 window.showVideoIframe = function(youtubeId, btn) {
+  // Helper to close any open video
+  function closeCurrentVideo() {
+    if (window._currentVideo.type === 'mobile' && window._currentVideo.element && window._currentVideo.button) {
+      window._currentVideo.element.innerHTML = '';
+      window._currentVideo.element.classList.add('hidden');
+      window._currentVideo.button.textContent = 'Watch';
+    } else if (window._currentVideo.type === 'desktop' && window._currentVideo.element) {
+      window._currentVideo.element.innerHTML = '';
+      const popup = document.getElementById('video-iframe-popup');
+      if (popup) popup.classList.add('hidden');
+    }
+    window._currentVideo = { type: null, element: null, button: null };
+  }
+
   if (window.innerWidth <= 768) {
-    // Show in card
+    // Mobile: inline card
     const card = btn.closest('.bg-white');
     const iframeDiv = card.querySelector('.video-iframe');
-    if (iframeDiv.classList.contains('hidden')) {
+    const isOpening = iframeDiv.classList.contains('hidden');
+    // If opening a new video, close any previous
+    if (isOpening) {
+      closeCurrentVideo();
       iframeDiv.innerHTML = `<iframe width="100%" height="200" src="https://www.youtube.com/embed/${youtubeId}" frameborder="0" allowfullscreen></iframe>`;
       iframeDiv.classList.remove('hidden');
       btn.textContent = 'Hide';
+      window._currentVideo = { type: 'mobile', element: iframeDiv, button: btn };
     } else {
+      // Closing current video
       iframeDiv.innerHTML = '';
       iframeDiv.classList.add('hidden');
       btn.textContent = 'Watch';
+      window._currentVideo = { type: null, element: null, button: null };
     }
   } else {
-    // Show in popup
+    // Desktop: popup
+    // If a video is already open, close it
+    closeCurrentVideo();
     const popup = document.getElementById('video-iframe-popup');
     const container = document.getElementById('video-iframe-container');
     container.innerHTML = `<iframe width="100%" height="400" src="https://www.youtube.com/embed/${youtubeId}" frameborder="0" allowfullscreen></iframe>`;
     popup.classList.remove('hidden');
+    window._currentVideo = { type: 'desktop', element: container, button: null };
   }
+};
+
+// Also close the tracker when popup is closed
+window.closeVideoIframePopup = function() {
+  const popup = document.getElementById('video-iframe-popup');
+  const container = document.getElementById('video-iframe-container');
+  container.innerHTML = '';
+  popup.classList.add('hidden');
+  window._currentVideo = { type: null, element: null, button: null };
 };
 
 window.closeVideoIframePopup = function() {
@@ -217,32 +257,3 @@ window.closeNotePopup = function() {
   if (popup) popup.remove();
 };
 
-window.showVideoIframe = function(youtubeId, btn) {
-  if (window.innerWidth <= 768) {
-    // Show in card
-    const card = btn.closest('.bg-white');
-    const iframeDiv = card.querySelector('.video-iframe');
-    if (iframeDiv.classList.contains('hidden')) {
-      iframeDiv.innerHTML = `<iframe width="100%" height="200" src="https://www.youtube.com/embed/${youtubeId}" frameborder="0" allowfullscreen></iframe>`;
-      iframeDiv.classList.remove('hidden');
-      btn.textContent = 'Hide';
-    } else {
-      iframeDiv.innerHTML = '';
-      iframeDiv.classList.add('hidden');
-      btn.textContent = 'Watch';
-    }
-  } else {
-    // Show in popup
-    const popup = document.getElementById('video-iframe-popup');
-    const container = document.getElementById('video-iframe-container');
-    container.innerHTML = `<iframe width="100%" height="400" src="https://www.youtube.com/embed/${youtubeId}" frameborder="0" allowfullscreen></iframe>`;
-    popup.classList.remove('hidden');
-  }
-};
-
-window.closeVideoIframePopup = function() {
-  const popup = document.getElementById('video-iframe-popup');
-  const container = document.getElementById('video-iframe-container');
-  container.innerHTML = '';
-  popup.classList.add('hidden');
-};
