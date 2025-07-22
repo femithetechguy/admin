@@ -49,6 +49,14 @@
           ]
         },
         {
+          "name": "Videos",
+            "biIcon": "bi-camera-video",
+          "content": [
+            "Video tutorials and resources",
+            "Optional: filters for topic, duration, etc."
+          ]
+        },
+        {
           "name": "Logout",
           "biIcon": "bi-box-arrow-right"
         }
