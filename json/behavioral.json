@@ -79,6 +79,35 @@
     },
     {
       "serial_no": 4,
+      "question": "What’s your salary expectation?",
+      "answer": "S: I understand that compensation is an important part of any job offer. T: My goal is to find a role that aligns with my skills and experience while also offering fair market compensation. A: I have researched industry standards for this position and considered my background and the value I bring. I’m open to discussing a competitive salary that reflects the responsibilities and opportunities of the role. R: Ultimately, I want to ensure a mutually beneficial agreement that supports my motivation and allows me to contribute effectively to the team.",
+      "additional_notes": [
+        {
+          "strategy": "Research-Based Range",
+          "description": "Demonstrates you've done your homework and are reasonable. Provide a range that's competitive for the role, your experience, and the industry.",
+          "answer_example": "Based on my research for similar roles in this industry and geographic area, considering my experience and skills, I'm looking for a salary in the range of [Lower Figure] to [Higher Figure]. I'm also open to discussing the entire compensation package, including benefits and bonuses."
+        },
+        {
+          "strategy": "Defer and Redirect",
+          "description": "If you're early in the process or don't have enough information, this shifts the focus back to the employer's budget, allowing you to learn more before committing.",
+          "answer_example": "That's a great question, and I'd be happy to discuss salary. Before I provide a specific figure, I'd like to learn more about the full scope of responsibilities for this position and what the comprehensive compensation package looks like, including benefits, bonuses, and growth opportunities. What is the typical salary range for this role within your organization?"
+        },
+        {
+          "strategy": "Focus on Value",
+          "description": "Emphasizes the value you bring rather than just a number, especially effective if you have unique skills or a strong track record.",
+          "answer_example": "My primary focus is on finding a role where I can make a significant impact and contribute to the team's success, and I'm confident my skills in [mention key skills or achievements] align well with the requirements here. I'm looking for a compensation package that reflects the value I can bring to this role and the company. Could you share what the budgeted range is for this position?"
+        },
+        {
+          "strategy": "State a Flexible Range (if confident)",
+          "description": "Similar to the research-based range, but with an explicit acknowledgment of flexibility, which can be good if you're very interested in the role and want to keep doors open.",
+          "answer_example": "Given my qualifications and what I understand of the responsibilities involved, I am expecting a salary in the [Lower Figure] to [Higher Figure] range. However, I'm flexible for the right opportunity and am more interested in the overall fit and the potential for growth within the company."
+        }
+      ],
+      "category": "Compensation",
+      "skills": "N/A"
+    },
+    {
+      "serial_no": 4,
       "question": "Tell me about yourself - Healthcare",
       "answer": "S: At Northside Hospital, I was part of the BI team supporting Community Health Needs Assessment (CHNA) and operations reporting. T: I was responsible for transforming static Excel-based reports into automated, interactive dashboards. A: I used Power BI, integrated public health data sources, and applied Power Query to automate refresh schedules and filters. R: This reduced CHNA turnaround time by 50%, enabled real-time tracking of community health indicators, and improved visibility for leadership.",
       "category": "Healthcare",
