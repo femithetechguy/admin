@@ -144,6 +144,37 @@ function renderQuestionCard(q) {
     // fallback: show all as one answer
     s = q.answer;
   }
+  // Render any array field (except skills) as a bulleted list with a header
+  let extraFieldsHtml = '';
+  for (const key in q) {
+    if (!q.hasOwnProperty(key)) continue;
+    if (Array.isArray(q[key]) && key !== 'skills' && q[key].length > 0) {
+      // Make a readable header from the field name
+      let header = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+      // Special case for camelCase
+      header = header.replace(/([a-z])([A-Z])/g, '$1 $2');
+      // Check if array of objects or primitives
+      if (typeof q[key][0] === 'object' && q[key][0] !== null) {
+        // Array of objects: render each object as a sub-card or detailed list
+        extraFieldsHtml += `<div class="mt-2"><span class="font-semibold text-gray-700">${header}:</span><div class="flex flex-col gap-3 mt-2">`;
+        q[key].forEach(obj => {
+          extraFieldsHtml += '<div class="border border-gray-200 rounded p-3 bg-gray-50">';
+          for (const prop in obj) {
+            if (!obj.hasOwnProperty(prop)) continue;
+            let propLabel = prop.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+            propLabel = propLabel.replace(/([a-z])([A-Z])/g, '$1 $2');
+            extraFieldsHtml += `<div class="mb-1"><span class="font-semibold text-gray-600">${propLabel}:</span> <span class="text-gray-800">${obj[prop]}</span></div>`;
+          }
+          extraFieldsHtml += '</div>';
+        });
+        extraFieldsHtml += '</div></div>';
+      } else {
+        // Array of primitives
+        extraFieldsHtml += `<div class="mt-2"><span class="font-semibold text-gray-700">${header}:</span><ul class="list-disc pl-6 mt-1">` +
+          q[key].map(r => `<li class="mb-1">${r}</li>`).join('') + '</ul></div>';
+      }
+    }
+  }
   return `
     <div class="bg-white rounded shadow p-5 hover:shadow-lg transition group border border-gray-100 hover:border-blue-300 flex flex-col gap-2">
       <div class="flex items-center gap-2 mb-2">
@@ -161,6 +192,7 @@ function renderQuestionCard(q) {
         <div><span class="font-bold text-blue-700">A:</span> <span>${a}</span></div>
         <div><span class="font-bold text-blue-700">R:</span> <span>${r}</span></div>
       </div>
+      ${extraFieldsHtml}
     </div>
   `;
 }
