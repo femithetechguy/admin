@@ -152,10 +152,11 @@ function renderMobileCards(videos) {
     const youtubeId = getYoutubeId(v.URL);
     return `
     <div class="bg-white rounded-lg shadow p-4 mb-4 flex flex-col transition-transform duration-300 ease-out opacity-0 translate-y-4 hover:scale-[1.025] hover:shadow-lg video-fadein" style="animation-delay:${i*60}ms">
-      <div class="flex items-center mb-2">
+      <div class="flex items-center mb-1">
         <span class="font-bold text-gray-700 mr-2">${i+1}.</span>
         <span class="font-semibold">${v.Title}</span>
       </div>
+      <div class="text-xs text-gray-400 mb-2">${v.Duration ? `Duration: ${v.Duration}` : ''}</div>
       <div class="text-gray-500 text-sm mb-2 flex flex-col gap-2">
         <span>${v.Note ? v.Note[0] : ''}</span>
         <button class="bg-gray-200 text-gray-700 rounded px-2 py-1 text-xs w-max hover:bg-gray-300" onclick="window.showNotePopupB64('${btoa(unescape(encodeURIComponent(JSON.stringify(v.Note || []))))}')">Read Note</button>
@@ -183,6 +184,7 @@ function renderDesktopTable(videos) {
           <tr class="bg-gray-100">
             <th class="px-4 py-2 text-left">#</th>
             <th class="px-4 py-2 text-left">Title</th>
+            <th class="px-4 py-2 text-left">Duration</th>
             <th class="px-4 py-2 text-left">Description</th>
             <th class="px-4 py-2 text-left">Action</th>
           </tr>
@@ -194,6 +196,7 @@ function renderDesktopTable(videos) {
               <tr class="border-b transition-transform duration-300 ease-out opacity-0 translate-y-4 hover:scale-[1.015] hover:bg-blue-50 video-fadein" style="animation-delay:${i*60}ms">
                 <td class="px-4 py-2">${i+1}</td>
                 <td class="px-4 py-2 font-semibold">${v.Title}</td>
+                <td class="px-4 py-2 text-xs text-gray-400">${v.Duration ? v.Duration : ''}</td>
                 <td class="px-4 py-2 text-sm text-gray-500 flex flex-col gap-2">
                   <span>${v.Note ? v.Note[0] : ''}</span>
                   <button class="bg-gray-200 text-gray-700 rounded px-2 py-1 text-xs w-max hover:bg-gray-300" onclick="window.showNotePopupB64('${btoa(unescape(encodeURIComponent(JSON.stringify(v.Note || []))))}')">Read Note</button>
