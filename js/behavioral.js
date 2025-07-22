@@ -144,6 +144,11 @@ function renderQuestionCard(q) {
     // fallback: show all as one answer
     s = q.answer;
   }
+  let otherReasonsHtml = '';
+  if (q.question && q.question.toLowerCase().includes('why do you want to leave your current job') && Array.isArray(q.other_reasons) && q.other_reasons.length > 0) {
+    otherReasonsHtml = '<div class="mt-2"><span class="font-semibold text-gray-700">Other reasons:</span><ul class="list-disc pl-6 mt-1">' +
+      q.other_reasons.map(r => `<li class="mb-1">${r}</li>`).join('') + '</ul></div>';
+  }
   return `
     <div class="bg-white rounded shadow p-5 hover:shadow-lg transition group border border-gray-100 hover:border-blue-300 flex flex-col gap-2">
       <div class="flex items-center gap-2 mb-2">
@@ -161,6 +166,7 @@ function renderQuestionCard(q) {
         <div><span class="font-bold text-blue-700">A:</span> <span>${a}</span></div>
         <div><span class="font-bold text-blue-700">R:</span> <span>${r}</span></div>
       </div>
+      ${otherReasonsHtml}
     </div>
   `;
 }

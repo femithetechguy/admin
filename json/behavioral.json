@@ -1,10 +1,10 @@
 {
   "questions": [
     {
-      "serial_no": 0,
+      "serial_no": 1,
       "question": "Tell me about yourself - 1 Minute Pitch (STAR Method)",
       "description": "One-minute general pitch",
-      "answer": "S: Hi, I'm a seasoned Business Intelligence professional with broad experience spanning healthcare, insurance, retail, and logistics. In every role, my mission has been to transform intricate data into clear, actionable insights through automated and interactive dashboards. T: I've consistently delivered robust reporting solutions, specializing in unifying key performance indicators, enhancing data quality, and significantly improving data accessibility for stakeholders. A: My approach involves seamlessly integrating diverse data sources and leveraging powerful tools like Power BI, Power Query, Databricks, and SSIS to build efficient ETL pipelines and insightful reports. R: The results speak for themselves: I've successfully reduced reporting turnaround times, boosted data trust by minimizing errors, and eliminated manual tracking, ultimately providing leadership with real-time visibility to support critical business decisions. I'm passionate about driving data-driven improvements and am eager to bring this proven ability to your team.",
+      "answer": "S: Hi, I'm a Business Intelligence professional with broad experience spanning healthcare, insurance, retail, and logistics. In every role, my mission has been to transform intricate business data into clear, actionable insights through automated and interactive dashboards. T: I've consistently delivered robust reporting solutions, specializing in unifying key performance indicators, enhancing data quality, and significantly improving data accessibility for stakeholders. A: My approach involves seamlessly integrating diverse data sources and leveraging powerful tools like Power BI, Power Query, Databricks, SQL, DAX and SSIS to build efficient ETL pipelines and insightful reports. R: The results speak for themselves: I've successfully reduced reporting turnaround times, boosted data trust by minimizing errors, and eliminated manual tracking, ultimately providing leadership with real-time visibility to support critical business decisions. I'm passionate about driving data-driven improvements and am eager to bring this proven ability to your team.",
       "skills": [
         "Power BI",
         "Public Health Data",
@@ -32,7 +32,7 @@
       ]
     },
     {
-      "serial_no": 0,
+      "serial_no": 2,
       "question": "Tell me about yourself - General (STAR Method)",
       "answer": "S: I have extensive experience in Business Intelligence across various industries, including healthcare, insurance, retail, and logistics, often facing challenges in transforming complex data into actionable insights and unifying diverse reporting needs. T: My core responsibilities consistently involved delivering automated, interactive dashboards and robust reporting solutions, specifically unifying KPI dashboards, addressing data quality, and enhancing data accessibility. A: I achieved this by integrating diverse data sources, leveraging tools like Power BI, Power Query, Databricks, and SSIS, and implementing features such as row-level security (RLS) and data validation. I also engaged stakeholders to refine KPIs and applied front-end design principles for intuitive user interfaces. R: This consistently led to significant improvements, including reduced reporting turnaround times, improved data trust with fewer errors, and elimination of manual tracking, ultimately empowering leadership with real-time visibility and supporting critical business decisions.",
       "category": "General",
@@ -63,7 +63,22 @@
       ]
     },
     {
-      "serial_no": 1,
+      "serial_no": 3,
+      "question": "Why do you want to leave your current job?",
+      "answer": "S: In my current role, I have gained valuable experience managing projects and delivering results, but I have reached a point where growth opportunities are limited. T: My goal is to continue developing professionally by taking on more responsibility and working on challenging projects that align with my long-term career objectives. A: To achieve this, I am actively seeking a role where I can apply my skills in new ways, collaborate with diverse teams, and contribute to meaningful initiatives that match my values. R: I believe this change will allow me to have a greater impact, enhance my skills, and maintain a better work-life balance, ultimately benefiting both my career and the organization I join.",
+      "other_reasons": [
+        "Seeking growth or advancement:\n“I’m excited about new challenges and opportunities to grow my skills. While I’ve learned a lot in my current role, I’m seeking a position that allows me to take on more responsibility and contribute in new ways.”",
+        "Seeking new challenges:\n“I want to broaden my experience and work on projects that align more closely with my career goals. I’m eager to apply my skills in a different environment where I can continue to develop professionally.”",
+        "Cultural fit or company direction:\n“My current role has been valuable, but I’m looking for a company whose values and vision align more closely with mine, and where I can make a bigger impact.”",
+        "Work-life balance:\n“I’m seeking a role that offers a better balance between my professional and personal life, which I believe will help me be more productive and focused.”",
+        "Desire for more impactful work:\n“I want to contribute to projects that have a meaningful impact on the company and community, and feel that a change will allow me to make a bigger difference.”",
+        "Learning new skills:\n“I am eager to learn new technologies and methodologies that my current role doesn’t fully provide.”"
+      ],
+      "category": "Career Motivation",
+      "skills": "N/A"
+    },
+    {
+      "serial_no": 4,
       "question": "Tell me about yourself - Healthcare",
       "answer": "S: At Northside Hospital, I was part of the BI team supporting Community Health Needs Assessment (CHNA) and operations reporting. T: I was responsible for transforming static Excel-based reports into automated, interactive dashboards. A: I used Power BI, integrated public health data sources, and applied Power Query to automate refresh schedules and filters. R: This reduced CHNA turnaround time by 50%, enabled real-time tracking of community health indicators, and improved visibility for leadership.",
       "category": "Healthcare",
@@ -76,7 +91,7 @@
       ]
     },
     {
-      "serial_no": 2,
+      "serial_no": 5,
       "question": "Tell me about yourself - Insurance",
       "answer": "S: At Hiscox Insurance, I worked on underwriting and claims reporting projects with cross-functional teams. T: I was tasked with unifying KPI dashboards while addressing role-based access and recurring data quality issues. A: I built Power BI reports with row-level security (RLS), added a data validation dashboard, and engaged stakeholders to refine KPIs. R: This improved data trust, reduced errors by 40%, and helped standardize reporting across regions.",
       "category": "Insurance",
@@ -89,7 +104,7 @@
       ]
     },
     {
-      "serial_no": 3,
+      "serial_no": 6,
       "question": "Tell me about yourself - Retail",
       "answer": "S: At Costco, we had less than a week to deliver a merchandising dashboard for an executive board review. T: I was responsible for integrating data from various retail sources and producing a user-ready dashboard. A: I used Databricks, SSIS, and Power BI to build the solution quickly, and drew on my web development background to make the interface intuitive and visually appealing. R: The dashboard was delivered early, reduced manual reporting by 40%, and was repurposed across three departments.",
       "category": "Retail",
@@ -103,7 +118,7 @@
       ]
     },
     {
-      "serial_no": 4,
+      "serial_no": 7,
       "question": "Tell me about yourself - Logistics",
       "answer": "S: At Manhattan Associates, I led BI initiatives for IT and operations teams, focusing on service level reporting and process optimization. T: I needed to unify data from Jira, Oracle, and ServiceNow, and build reliable SLA dashboards. A: I developed Power Query pipelines, used Dataflows for ETL, and applied validation and alerting logic to ensure accuracy. R: This reduced SLA violations by 18% and eliminated 40% of manual tracking work across support teams.",
       "category": "Logistics",
@@ -117,7 +132,7 @@
       ]
     },
     {
-      "serial_no": 5,
+      "serial_no": 8,
       "question": "Tell me about a time you had to work with a difficult team member.",
       "answer": "At Northside Hospital, I worked with a developer who often missed deadlines. I scheduled a 1:1 to understand his challenges, discovered he was overloaded, and helped redistribute tasks. This improved our delivery and team morale.",
       "category": "Teamwork",
@@ -129,7 +144,7 @@
       ]
     },
     {
-      "serial_no": 6,
+      "serial_no": 9,
       "question": "Describe a situation where you had to quickly learn a new tool or technology.",
       "answer": "When I joined Hiscox, I had to learn Power BI Dataflows in under a week to meet a reporting deadline. I used Microsoft Learn, built a POC, and delivered the solution on time.",
       "category": "Adaptability",
@@ -141,7 +156,7 @@
       ]
     },
     {
-      "serial_no": 7,
+      "serial_no": 10,
       "question": "How do you handle tight deadlines?",
       "answer": "I break down the project into smaller tasks, prioritize based on impact, and communicate progress daily. At Manhattan Associates, this approach helped us deliver a critical dashboard 2 days early.",
       "category": "Time Management",
@@ -153,7 +168,7 @@
       ]
     },
     {
-      "serial_no": 8,
+      "serial_no": 11,
       "question": "Give an example of a time you failed and how you handled it.",
       "answer": "I once underestimated the complexity of a data migration, causing a 2-day delay. I owned the mistake, communicated transparently, and worked overtime to resolve it, ensuring no data loss.",
       "category": "Resilience",
@@ -165,7 +180,7 @@
       ]
     },
     {
-      "serial_no": 9,
+      "serial_no": 12,
       "question": "Describe a time you had to persuade others to adopt your idea.",
       "answer": "At a retail client, I proposed using Power BI Dataflows for reusable ETL. I presented a demo, highlighted time savings, and addressed concerns. The team adopted my approach, reducing future dev time by 30%.",
       "category": "Influence",
@@ -177,7 +192,7 @@
       ]
     },
     {
-      "serial_no": 10,
+      "serial_no": 13,
       "question": "How do you prioritize multiple projects?",
       "answer": "I use a matrix to assess urgency and impact, then communicate priorities with stakeholders. At Northside, this helped balance daily reporting with a major dashboard rollout.",
       "category": "Prioritization",
@@ -188,7 +203,7 @@
       ]
     },
     {
-      "serial_no": 11,
+      "serial_no": 14,
       "question": "Tell me about a time you improved a process.",
       "answer": "At Manhattan Associates, I automated data refreshes using Power BI Gateway and PowerShell scripts, reducing manual effort by 80% and eliminating refresh failures.",
       "category": "Process Improvement",
@@ -200,7 +215,7 @@
       ]
     },
     {
-      "serial_no": 12,
+      "serial_no": 15,
       "question": "Describe a time you had to deliver bad news to a client or stakeholder.",
       "answer": "I had to inform a client about a delay due to a vendor API outage. I provided a revised timeline, regular updates, and a mitigation plan, which maintained trust and satisfaction.",
       "category": "Communication",
@@ -212,7 +227,7 @@
       ]
     },
     {
-      "serial_no": 13,
+      "serial_no": 16,
       "question": "How do you handle feedback or criticism?",
       "answer": "I view feedback as an opportunity to grow. After a dashboard review, I received feedback on visual clutter. I simplified the design, which improved user adoption and satisfaction.",
       "category": "Self-Improvement",
@@ -223,7 +238,7 @@
       ]
     },
     {
-      "serial_no": 14,
+      "serial_no": 17,
       "question": "Give an example of a time you took initiative.",
       "answer": "At Hiscox, I noticed recurring data quality issues. I created a data validation dashboard, which reduced errors by 40% and was later adopted by other teams.",
       "category": "Initiative",
@@ -235,7 +250,7 @@
       ]
     },
     {
-      "serial_no": 15,
+      "serial_no": 18,
       "question": "Tell me about a time you solved a complex problem",
       "answer": "S: At Manhattan Associates, we were facing inconsistencies in SLA reporting due to disparate data sources from Jira, ServiceNow, and Oracle. T: I was tasked with standardizing the ingestion process and ensuring accurate, automated reporting for operations leadership. A: I engineered ingestion pipelines using Power Query and Dataflows, applied robust data validation logic, and built parameterized refresh schedules. I also added visual alerts for SLA breaches. R: This reduced SLA violations by 18%, improved stakeholder trust, and eliminated 40% of manual tracking tasks.",
       "category": "Expanded",
@@ -249,7 +264,7 @@
       ]
     },
     {
-      "serial_no": 16,
+      "serial_no": 19,
       "question": "Describe a time you improved a process",
       "answer": "S: At Northside Hospital, the Community Health Needs Assessment (CHNA) reports were built manually using Excel and static charts. T: I needed to modernize this process to make the reporting faster and more insightful. A: I used Power BI and public health datasets to build interactive dashboards, added drill-through filters, and automated the data pipeline using Power Query. R: Turnaround time for CHNA reporting was reduced by 50%, and the team could easily track real-time community health indicators.",
       "category": "Expanded",
@@ -263,7 +278,7 @@
       ]
     },
     {
-      "serial_no": 17,
+      "serial_no": 20,
       "question": "Tell me about a time you had to work with a difficult stakeholder",
       "answer": "S: At Hiscox Insurance, I was working with regional underwriting leads who had conflicting priorities regarding dashboard KPIs. T: I had to unify these views while respecting role-based access and differing reporting needs. A: I conducted stakeholder interviews, developed separate RLS-filtered views in Power BI, and built a dynamic reporting layer using semantic models. R: This improved satisfaction across teams, reduced access issues, and created a unified dashboard experience across four business units.",
       "category": "Expanded",
@@ -277,7 +292,7 @@
       ]
     },
     {
-      "serial_no": 18,
+      "serial_no": 21,
       "question": "Give an example of how you handled a tight deadline",
       "answer": "S: At Costco, we had to deploy a merchandising dashboard for an upcoming board review with less than a week’s notice. T: I was responsible for integrating multi-source retail data and building an executive-ready dashboard. A: I used Databricks with SSIS and Power Query to ingest and transform data quickly, while using templates and existing components to accelerate dashboard creation. R: The dashboard was delivered ahead of schedule, reducing manual reporting by 40% and was reused in three other departments.",
       "category": "Expanded",
