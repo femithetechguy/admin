@@ -126,6 +126,7 @@ function renderTabContent(tab, idx) {
   if (tab.name === "Resume" && window.renderResumeTab) return window.renderResumeTab(tab);
   if (tab.name === "Applied" && window.renderAppliedTab) return window.renderAppliedTab(tab);
   if (tab.name === "Videos" && window.renderVideosTab) return window.renderVideosTab(tab);
+  if (tab.name === "School" && window.renderSchoolTab) return window.renderSchoolTab(tab);
   if (tab.name === "Logout") return '';
   return '';
 }

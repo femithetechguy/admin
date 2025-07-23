@@ -50,10 +50,18 @@
         },
         {
           "name": "Videos",
-            "biIcon": "bi-camera-video",
+          "biIcon": "bi-camera-video",
           "content": [
             "Video tutorials and resources",
             "Optional: filters for topic, duration, etc."
+          ]
+        },
+        {
+          "name": "School",
+          "biIcon": "bi-book",
+          "content": [
+            "School resources and links",
+            "Optional: notes or study materials from second site"
           ]
         },
         {
