@@ -102,13 +102,6 @@ window.closeVideoIframePopup = function() {
   window._currentVideo = { type: null, element: null, button: null };
 };
 
-window.closeVideoIframePopup = function() {
-  const popup = document.getElementById('video-iframe-popup');
-  const container = document.getElementById('video-iframe-container');
-  container.innerHTML = '';
-  popup.classList.add('hidden');
-};
-
 
 // Utility: detect mobile
 function isMobile() {
@@ -226,37 +219,5 @@ function renderDesktopTable(videos) {
   }, 50);
 }
 
-window.showNotePopupB64 = function(b64) {
-  let noteArr;
-  try {
-    noteArr = JSON.parse(decodeURIComponent(escape(atob(b64))));
-  } catch (e) {
-    noteArr = [];
-  }
-  const noteHtml = Array.isArray(noteArr) ? noteArr.map(p => `<p class='mb-2'>${p}</p>`).join('') : '';
-  let popup = document.getElementById('note-popup');
-  if (!popup) {
-    popup = document.createElement('div');
-    popup.id = 'note-popup';
-    popup.className = 'fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50';
-    popup.innerHTML = `
-      <div class="bg-white rounded-lg shadow-lg p-6 relative w-full max-w-lg animate-fadein">
-        <button onclick="window.closeNotePopup()" class="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-xl">&times;</button>
-        <div class="text-lg font-bold mb-4">Note</div>
-        <div class="note-content text-gray-700 text-base max-h-96 overflow-y-auto">${noteHtml || '<span class=\'text-gray-400\'>No note available.</span>'}</div>
-      </div>
-    `;
-    document.body.appendChild(popup);
-  } else {
-    const noteDiv = popup.querySelector('.note-content');
-    if (noteDiv) noteDiv.innerHTML = noteHtml || '<span class=\'text-gray-400\'>No note available.</span>';
-    popup.classList.remove('hidden');
-  }
-  popup.classList.remove('hidden');
-};
-
-window.closeNotePopup = function() {
-  const popup = document.getElementById('note-popup');
-  if (popup) popup.remove();
-};
+// Note popup functions already defined globally
 
