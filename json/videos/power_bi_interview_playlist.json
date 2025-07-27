@@ -1,0 +1,50 @@
+[
+  {
+    "SerialNo": 1,
+    "Title": "What to Expect in Power BI Interview || Questions and Answers Topics || 0-2 Years Experience",
+    "Channel": "Analytics with Nags",
+    "Duration": "6 minutes 16 seconds",
+    "URL": "https://www.youtube.com/watch?v=Om_DqqvZWOM",
+    "Note": [
+      "Overview of Power BI interview questions for entry-level candidates (0-2 years experience)",
+      "Covers fundamental concepts like data visualization, basic DAX formulas, and Power Query",
+      "Provides tips on how to prepare and what interviewers look for in junior Power BI developers"
+    ]
+  },
+  {
+    "SerialNo": 2,
+    "Title": "What to Expect in Power BI Interview || Questions and Answers Topics || 2-5 Years Experience",
+    "Channel": "Analytics with Nags",
+    "Duration": "10 minutes 14 seconds",
+    "URL": "https://www.youtube.com/watch?v=rWexQRu-YXk",
+    "Note": [
+      "Detailed guide to mid-level Power BI interview questions for those with 2-5 years experience",
+      "Explores intermediate topics like complex DAX functions, data modeling best practices, and performance optimization",
+      "Discusses how to demonstrate practical experience and problem-solving skills to potential employers"
+    ]
+  },
+  {
+    "SerialNo": 3,
+    "Title": "What to Expect in Power BI Interview || Questions and Answers Topics || 5-8 Years Experience",
+    "Channel": "Analytics with Nags",
+    "Duration": "9 minutes 29 seconds",
+    "URL": "https://www.youtube.com/watch?v=raFzlzhc1Ec",
+    "Note": [
+      "Advanced Power BI interview preparation for senior analysts and developers (5-8 years experience)",
+      "Focuses on enterprise-level implementation, security models, governance, and complex architecture design",
+      "Includes strategies for handling scenario-based questions and demonstrating leadership in BI projects"
+    ]
+  },
+  {
+    "SerialNo": 4,
+    "Title": "What to Expect in Power BI Interview || Questions and Answers Topics || 8+ Years Experience",
+    "Channel": "Analytics with Nags",
+    "Duration": "13 minutes 10 seconds",
+    "URL": "https://www.youtube.com/watch?v=CkIzICELPmU",
+    "Note": [
+      "Expert-level Power BI interview guide for architects and leaders with 8+ years experience",
+      "Covers strategic BI implementation, integration with enterprise systems, and advanced optimization techniques",
+      "Discusses leadership questions, managing large-scale BI projects, and setting organizational data strategy"
+    ]
+  }
+]
