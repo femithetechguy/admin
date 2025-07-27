@@ -1,0 +1,47 @@
+{
+  "tool": "https://youtubesummarized.com/tools/playlist-calculator-youtube/",
+  "description": "This tool is for analyzing and summarizing playlist",
+  "playlists": [
+    {
+      "title": "End to End Tutorials - Analytics with Nags",
+      "id": "PLjNd3r1KLjQsZ7VDfhSvSjLmEf6BQTLLj",
+      "url": "https://www.youtube.com/playlist?list=PLjNd3r1KLjQsZ7VDfhSvSjLmEf6BQTLLj",
+      "description": "End to End Tutorials - Analytics with Nags",
+      "thumbnailUrl": "",
+      "videoCount": 0
+    },
+    {
+      "title": "Data Warehouse Tutorials Playlist",
+      "id": "PLjNd3r1KLjQu4f2V9aa9C7NHqn-lTqppN",
+      "url": "https://www.youtube.com/watch?v=t52xNJTBicc&list=PLjNd3r1KLjQu4f2V9aa9C7NHqn-lTqppN",
+      "description": "Data Warehouse Tutorials Playlist",
+      "thumbnailUrl": "",
+      "videoCount": 0
+    },
+    {
+      "title": "Power BI Project Dashboards - Power BI Realtime Projects - Playlist",
+      "id": "PLjNd3r1KLjQty8rRYWwTUhS_gnzk0f2VK",
+      "url": "https://www.youtube.com/watch?v=wS2Hw9CPJeY&list=PLjNd3r1KLjQty8rRYWwTUhS_gnzk0f2VK",
+      "description": "Power BI Project Dashboards - Power BI Realtime Projects - Playlist",
+      "thumbnailUrl": "",
+      "videoCount": 0
+    },
+    {
+      "title": "Power BI Interview - Topics - What to Expect - Playlist",
+      "id": "PLjNd3r1KLjQtX-KTIk1_CjG5_3b5dxnGI",
+      "url": "https://www.youtube.com/watch?v=Om_DqqvZWOM&list=PLjNd3r1KLjQtX-KTIk1_CjG5_3b5dxnGI",
+      "description": "Power BI Interview - Topics - What to Expect - Playlist",
+      "thumbnailUrl": "Power BI Interview - Topics - What to Expect - Playlist",
+      "videoCount": 0
+    },
+    {
+      "title": "Power BI Tutorials - Complete Playlist",
+      "id": "PLjNd3r1KLjQt0xN_y8F6BSIOVNvdQmq4d",
+      "url": "https://www.youtube.com/watch?v=h9hgkh-iraI&list=PLjNd3r1KLjQt0xN_y8F6BSIOVNvdQmq4d",
+      "description": "Power BI Tutorials - Complete Playlist",
+      "thumbnailUrl": "",
+      "videoCount": 0
+    }
+  ],
+  "lastUpdated": "2025-07-27"
+}

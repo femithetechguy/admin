@@ -1,0 +1,134 @@
+[
+  {
+    "SerialNo": 1,
+    "Title": "[[ 8.5 HOURS ]] Complete SQL End to End - SQL Server Tutorial { End to End } Full Course Beginners",
+    "Channel": "Analytics with Nags",
+    "Duration": "8 hours 29 minutes 20 seconds",
+    "URL": "https://www.youtube.com/watch?v=wI4HWGlI6gM",
+    "Note": [
+      "Comprehensive tutorial covering SQL Server from basics to advanced concepts",
+      "Includes database design, T-SQL querying, stored procedures, and performance optimization",
+      "Perfect for beginners looking to master SQL Server end-to-end"
+    ]
+  },
+  {
+    "SerialNo": 2,
+    "Title": "[[ 4 HOURS ]] SSIS Complete Tutorial  - { End to End } Full Course - SQL Server Integration Services",
+    "Channel": "Analytics with Nags",
+    "Duration": "4 hours 11 minutes 40 seconds",
+    "URL": "https://www.youtube.com/watch?v=G_wG-bzTCZY",
+    "Note": [
+      "Complete guide to SQL Server Integration Services (SSIS) for ETL processes",
+      "Covers package development, data flow tasks, control flow, and deployment strategies",
+      "Includes real-world examples and best practices for data integration"
+    ]
+  },
+  {
+    "SerialNo": 3,
+    "Title": "[[ 3.1 HOURS ]] SSAS Complete Tutorial - End to End - SQL Server Analysis Service",
+    "Channel": "Analytics with Nags",
+    "Duration": "3 hours 5 minutes 55 seconds",
+    "URL": "https://www.youtube.com/watch?v=RWtfutxe4zc",
+    "Note": [
+      "In-depth tutorial on SQL Server Analysis Services (SSAS) for business intelligence",
+      "Explains multidimensional and tabular models, data modeling, and MDX/DAX queries",
+      "Shows how to implement OLAP solutions for advanced analytics"
+    ]
+  },
+  {
+    "SerialNo": 4,
+    "Title": "[[ 3 HOURS ]] Data Warehouse Complete Tutorial - SQL + SSIS + SSAS + Power BI - { End to End }",
+    "Channel": "Analytics with Nags",
+    "Duration": "3 hours 5 minutes 30 seconds",
+    "URL": "https://www.youtube.com/watch?v=eNxbMwUGl1g",
+    "Note": [
+      "Comprehensive data warehouse implementation using Microsoft BI stack",
+      "Demonstrates integration between SQL Server, SSIS, SSAS, and Power BI",
+      "Covers end-to-end process from data extraction to visualization in Power BI"
+    ]
+  },
+  {
+    "SerialNo": 5,
+    "Title": "[[ 2.5 HOURS ]] Power BI Complete Tutorial - Beginner to Pro - End to End",
+    "Channel": "Analytics with Nags",
+    "Duration": "2 hours 27 minutes 41 seconds",
+    "URL": "https://www.youtube.com/watch?v=weAmHoAKjCc",
+    "Note": [
+      "Complete Power BI tutorial covering desktop, service, and mobile applications",
+      "Walks through data importing, transformation, modeling, and visualization techniques",
+      "Includes advanced topics like row-level security, gateways, and embedding"
+    ]
+  },
+  {
+    "SerialNo": 6,
+    "Title": "[[ 3 HOURS ]] Complete Power BI DAX End to End  - Power BI DAX Tutorial - { End to End } Full Course",
+    "Channel": "Analytics with Nags",
+    "Duration": "2 hours 57 minutes 19 seconds",
+    "URL": "https://www.youtube.com/watch?v=yTOSOgUGKe4",
+    "Note": [
+      "Comprehensive guide to Data Analysis Expressions (DAX) in Power BI",
+      "Covers functions, formulas, context transitions, and complex calculations",
+      "Shows how to create advanced measures and calculated columns for business intelligence"
+    ]
+  },
+  {
+    "SerialNo": 7,
+    "Title": "[[ 3 HOURS ]] Complete Power Query End to End - PowerBI Tutorial { End to End } Full Course Beginner",
+    "Channel": "Analytics with Nags",
+    "Duration": "2 hours 47 minutes 1 seconds",
+    "URL": "https://www.youtube.com/watch?v=VO-MyVMKUC4",
+    "Note": [
+      "Detailed tutorial on Power Query for data transformation and preparation",
+      "Explains M language, query folding, and advanced transformation techniques",
+      "Shows how to clean, shape, and combine data from multiple sources effectively"
+    ]
+  },
+  {
+    "SerialNo": 8,
+    "Title": "[[ 4.5 HOURS ]] Complete Power BI Services - { End to End } Full Course - Deployment & more",
+    "Channel": "Analytics with Nags",
+    "Duration": "4 hours 18 minutes 21 seconds",
+    "URL": "https://www.youtube.com/watch?v=fmmQ4bhLfbo",
+    "Note": [
+      "Extensive coverage of Power BI Service for report deployment and collaboration",
+      "Demonstrates workspaces, apps, dataflows, and security implementation",
+      "Includes governance, licensing, and enterprise deployment strategies"
+    ]
+  },
+  {
+    "SerialNo": 9,
+    "Title": "[[ 3 HOURS ]] Complete Power BI Paginated Reports- { End to End } Full Course - SSRS Tutorial",
+    "Channel": "Analytics with Nags",
+    "Duration": "3 hours 1 minutes 29 seconds",
+    "URL": "https://www.youtube.com/watch?v=JcH1BxOAejY",
+    "Note": [
+      "Comprehensive guide to creating paginated reports in Power BI and SSRS",
+      "Covers report builder, data sources, parameters, and expression language",
+      "Shows how to design pixel-perfect reports for printing and distribution"
+    ]
+  },
+  {
+    "SerialNo": 10,
+    "Title": "[[ 4.5 HOURS ]] Complete Power BI Visuals / Charts / Dashboards - { End to End } Full Course",
+    "Channel": "Analytics with Nags",
+    "Duration": "4 hours 28 minutes 30 seconds",
+    "URL": "https://www.youtube.com/watch?v=tZuSf8jRlr8",
+    "Note": [
+      "Detailed tutorial on all Power BI visualization types and dashboard design",
+      "Explains custom visuals, formatting options, and interactive features",
+      "Demonstrates how to create compelling and effective dashboards for business insights"
+    ]
+  },
+  {
+    "SerialNo": 11,
+    "Title": "[[ 3 HOURS ]] Complete Azure Data Factory - { End to End } Full Course",
+    "Channel": "Analytics with Nags",
+    "Duration": "3 hours 5 minutes 21 seconds",
+    "URL": "https://www.youtube.com/watch?v=9COKVzBvQyo",
+    "Note": [
+      "Comprehensive tutorial on Azure Data Factory for cloud-based data integration",
+      "Covers pipelines, activities, triggers, and integration with other Azure services",
+      "Shows how to implement modern ETL/ELT processes in the cloud environment"
+    ]
+  }
+]

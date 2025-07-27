@@ -1,0 +1,194 @@
+[
+  {
+    "SerialNo": 1,
+    "Title": "Introduction | Data Warehouse Tutorial For Beginners | Data Warehouse Concepts (1/30)",
+    "Channel": "Analytics with Nags",
+    "Duration": "3 minutes 55 seconds",
+    "URL": "https://www.youtube.com/watch?v=t52xNJTBicc",
+    "Note": [
+      "Introduction to data warehouse concepts and tutorial series",
+      "Overview of what will be covered in the series",
+      "Basic explanation of what a data warehouse is and its importance"
+    ]
+  },
+  {
+    "SerialNo": 2,
+    "Title": "Why We Need Data Warehouse | Data Warehouse Tutorial For Beginners | Data Warehouse Concepts (2/30)",
+    "Channel": "Analytics with Nags",
+    "Duration": "11 minutes 11 seconds",
+    "URL": "https://www.youtube.com/watch?v=oeLir_TyTkE",
+    "Note": [
+      "Explains the business need and rationale for data warehousing",
+      "Covers challenges of using operational systems for analytics",
+      "Details the benefits of implementing a dedicated data warehouse"
+    ]
+  },
+  {
+    "SerialNo": 3,
+    "Title": "Modern DW Architecture | Data Warehouse Tutorial For Beginners | Data Warehouse Concepts (3/30)",
+    "Channel": "Analytics with Nags",
+    "Duration": "12 minutes 16 seconds",
+    "URL": "https://www.youtube.com/watch?v=AuyqbpwImnM",
+    "Note": [
+      "Overview of modern data warehouse architecture",
+      "Explains different layers and components of a data warehouse system",
+      "Discusses how modern architectures differ from traditional approaches"
+    ]
+  },
+  {
+    "SerialNo": 4,
+    "Title": "OLTP vs OLAP | Data Warehouse Tutorial For Beginners | Data Warehouse Concepts (4/30)",
+    "Channel": "Analytics with Nags",
+    "Duration": "8 minutes 41 seconds",
+    "URL": "https://www.youtube.com/watch?v=Wg4OVJ4C7Ek",
+    "Note": [
+      "Compares Online Transaction Processing (OLTP) with Online Analytical Processing (OLAP)",
+      "Details key differences in design, purpose, and performance characteristics",
+      "Explains why OLAP is preferred for data warehousing and analytics"
+    ]
+  },
+  {
+    "SerialNo": 5,
+    "Title": "What is ETL | Data Warehouse Tutorial For Beginners | Data Warehouse Concepts (5/30)",
+    "Channel": "Analytics with Nags",
+    "Duration": "5 minutes 50 seconds",
+    "URL": "https://www.youtube.com/watch?v=BH5SvngiDIE",
+    "Note": [
+      "Introduction to Extract, Transform, Load (ETL) processes",
+      "Explains each step of the ETL process in detail",
+      "Discusses the importance of ETL in data warehousing"
+    ]
+  },
+  {
+    "SerialNo": 6,
+    "Title": "ETL vs ELT | Data Warehouse Tutorial For Beginners | Data Warehouse Concepts (6/30)",
+    "Channel": "Analytics with Nags",
+    "Duration": "6 minutes 4 seconds",
+    "URL": "https://www.youtube.com/watch?v=dfACzp0AyWE",
+    "Note": [
+      "Compares traditional ETL with modern ELT approaches",
+      "Explains when to use ETL versus ELT based on use cases",
+      "Discusses advantages and disadvantages of each approach"
+    ]
+  },
+  {
+    "SerialNo": 7,
+    "Title": "What is Staging Area | Data Warehouse Tutorial For Beginners | Data Warehouse Concepts (7/30)",
+    "Channel": "Analytics with Nags",
+    "Duration": "6 minutes 21 seconds",
+    "URL": "https://www.youtube.com/watch?v=jjBXmyUbl0Q",
+    "Note": [
+      "Explains the concept and purpose of staging areas in data warehousing",
+      "Discusses how staging areas fit into the overall data flow",
+      "Covers best practices for implementing and managing staging areas"
+    ]
+  },
+  {
+    "SerialNo": 8,
+    "Title": "What is ODS | Data Warehouse Tutorial For Beginners | Data Warehouse Concepts (8/30)",
+    "Channel": "Analytics with Nags",
+    "Duration": "10 minutes 20 seconds",
+    "URL": "https://www.youtube.com/watch?v=1D0MEqfcqQo",
+    "Note": [
+      "Introduction to Operational Data Store (ODS) concepts",
+      "Explains how ODS differs from staging areas and data warehouses",
+      "Discusses use cases and implementation strategies for ODS"
+    ]
+  },
+  {
+    "SerialNo": 9,
+    "Title": "What is Dimensional Modelling | Data Warehouse Tutorial Beginners | Data Warehouse Concepts (9/30)",
+    "Channel": "Analytics with Nags",
+    "Duration": "7 minutes 25 seconds",
+    "URL": "https://www.youtube.com/watch?v=j-KVIKb1F58",
+    "Note": [
+      "Overview of dimensional modeling approach for data warehousing",
+      "Explains facts, dimensions, and how they relate to business processes",
+      "Discusses benefits of dimensional modeling for analytics and reporting"
+    ]
+  },
+  {
+    "SerialNo": 10,
+    "Title": "What is Star Schema | Data Warehouse Tutorial For Beginners | Data Warehouse Concepts (10/30)",
+    "Channel": "Analytics with Nags",
+    "Duration": "12 minutes 28 seconds",
+    "URL": "https://www.youtube.com/watch?v=Re0I6zYCKjw",
+    "Note": [
+      "Detailed explanation of star schema design in dimensional modeling",
+      "Covers fact tables, dimension tables, and their relationships",
+      "Provides examples of star schema implementation for business scenarios"
+    ]
+  },
+  {
+    "SerialNo": 11,
+    "Title": "What is Data Mart | Data Warehouse Tutorial For Beginners | Data Warehouse Concepts (11/30)",
+    "Channel": "Analytics with Nags",
+    "Duration": "3 minutes 33 seconds",
+    "URL": "https://www.youtube.com/watch?v=1BTW0gEVQ2U",
+    "Note": [
+      "Explains the concept of data marts as subsets of data warehouses",
+      "Discusses department-specific or function-specific data marts",
+      "Covers top-down vs bottom-up approaches to data mart implementation"
+    ]
+  },
+  {
+    "SerialNo": 12,
+    "Title": "What are Types Of Dimension | Data Warehouse Tutorial | Data Warehouse Concepts (12/30)",
+    "Channel": "Analytics with Nags",
+    "Duration": "10 minutes 59 seconds",
+    "URL": "https://www.youtube.com/watch?v=tgzQ3IpRZEA",
+    "Note": [
+      "Overview of different dimension types used in data warehousing",
+      "Explains conformed dimensions, role-playing dimensions, and junk dimensions",
+      "Discusses implementation strategies for different dimension types"
+    ]
+  },
+  {
+    "SerialNo": 13,
+    "Title": "What is Surrogate Key | Data Warehouse Tutorial For Beginners | Data Warehouse Concepts (13/30)",
+    "Channel": "Analytics with Nags",
+    "Duration": "5 minutes 41 seconds",
+    "URL": "https://www.youtube.com/watch?v=YO58bvr6o-E",
+    "Note": [
+      "Explains surrogate keys and their importance in data warehousing",
+      "Contrasts surrogate keys with natural/business keys",
+      "Covers implementation strategies and best practices for surrogate keys"
+    ]
+  },
+  {
+    "SerialNo": 14,
+    "Title": "What is SCD / Slowly Changing Dimension | Data Warehouse Tutorial | Data Warehouse Concepts (14/30)",
+    "Channel": "Analytics with Nags",
+    "Duration": "9 minutes 49 seconds",
+    "URL": "https://www.youtube.com/watch?v=b4yRyAAyhBo",
+    "Note": [
+      "Comprehensive explanation of Slowly Changing Dimensions (SCDs)",
+      "Covers Type 1, Type 2, and Type 3 SCD implementation strategies",
+      "Discusses handling historical changes in dimension data"
+    ]
+  },
+  {
+    "SerialNo": 15,
+    "Title": "What is Granularity & Cardinality | Data Warehouse Tutorial | Data Warehouse Concepts (15/30)",
+    "Channel": "Analytics with Nags",
+    "Duration": "6 minutes 31 seconds",
+    "URL": "https://www.youtube.com/watch?v=ta1mOdjYYhU",
+    "Note": [
+      "Explains granularity and cardinality concepts in data warehousing",
+      "Discusses how granularity affects fact table design and performance",
+      "Covers the relationship between granularity and analytical capabilities"
+    ]
+  },
+  {
+    "SerialNo": 16,
+    "Title": "What is Unknowns Not Available Not Applicable in Dimension | Data Warehouse Tutorial (16/30)",
+    "Channel": "Analytics with Nags",
+    "Duration": "12 minutes",
+    "URL": "https://www.youtube.com/watch?v=U9EINeSv3_Y",
+    "Note": [
+      "Detailed explanation of handling unknown, not available, and not applicable values in dimensions",
+      "Discusses strategies for managing missing data in data warehouse",
+      "Covers best practices for implementing these special cases"
+    ]
+  }
+]

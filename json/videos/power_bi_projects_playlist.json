@@ -1,0 +1,86 @@
+[
+  {
+    "SerialNo": 1,
+    "Title": "Loan disbursement Analysis in Power BI Project Dashboard (1/30)",
+    "Channel": "Analytics with Nags",
+    "Duration": "49 minutes 54 seconds",
+    "URL": "https://www.youtube.com/watch?v=wS2Hw9CPJeY",
+    "Note": [
+      "Comprehensive loan disbursement analysis project using Power BI",
+      "Demonstrates data modeling, DAX calculations, and financial metrics for loan analysis",
+      "Includes custom visualizations and dashboard design for financial services"
+    ]
+  },
+  {
+    "SerialNo": 2,
+    "Title": "Revenue and Customer Ageing Analysis in Power BI Project Dashboard (2/30)",
+    "Channel": "Analytics with Nags",
+    "Duration": "31 minutes 34 seconds",
+    "URL": "https://www.youtube.com/watch?v=PyCLTGNI8y8",
+    "Note": [
+      "Project focusing on revenue analysis and customer aging reports",
+      "Shows how to create aging buckets and revenue trends using DAX time intelligence",
+      "Covers creation of executive dashboards for financial performance monitoring"
+    ]
+  },
+  {
+    "SerialNo": 3,
+    "Title": "Restaurant Analytics - Power BI Project Dashboard (3/30)",
+    "Channel": "Analytics with Nags",
+    "Duration": "44 minutes",
+    "URL": "https://www.youtube.com/watch?v=yWicMc2p-Cw",
+    "Note": [
+      "End-to-end restaurant analytics project in Power BI",
+      "Demonstrates menu performance analysis, peak hours identification, and staff optimization",
+      "Includes geospatial visualization and customer behavior analysis techniques"
+    ]
+  },
+  {
+    "SerialNo": 4,
+    "Title": "Data Quality Analytics | KPI Analytics - Power BI Project Dashboard (4/30)",
+    "Channel": "Analytics with Nags",
+    "Duration": "39 minutes 10 seconds",
+    "URL": "https://www.youtube.com/watch?v=UfmIA13_U0k",
+    "Note": [
+      "Project focused on data quality monitoring and KPI analytics",
+      "Shows how to identify and visualize data quality issues and key performance indicators",
+      "Includes techniques for data profiling and implementing data quality metrics"
+    ]
+  },
+  {
+    "SerialNo": 5,
+    "Title": "Tableau to Power BI Migration - Power BI Project Dashboard (5/30)",
+    "Channel": "Analytics with Nags",
+    "Duration": "41 minutes 23 seconds",
+    "URL": "https://www.youtube.com/watch?v=0eAPLogu0iI",
+    "Note": [
+      "Step-by-step guide to migrating dashboards from Tableau to Power BI",
+      "Covers differences in data modeling, calculations, and visualization approaches",
+      "Demonstrates how to recreate complex Tableau features in the Power BI environment"
+    ]
+  },
+  {
+    "SerialNo": 6,
+    "Title": "HR Analytics Recruitment Analysis | Flat file to Star Schema - Power BI Project Dashboard (6/30)",
+    "Channel": "Analytics with Nags",
+    "Duration": "40 minutes 46 seconds",
+    "URL": "https://www.youtube.com/watch?v=Fpvc85z7pno",
+    "Note": [
+      "HR analytics project focusing on recruitment metrics and performance",
+      "Shows how to transform flat file data into a proper star schema for analysis",
+      "Includes hiring funnel analysis, time-to-hire metrics, and candidate source effectiveness"
+    ]
+  },
+  {
+    "SerialNo": 7,
+    "Title": "Real Business Problem in Power BI | Slicer Based on multiple columns in Power BI | How I Solved (76)",
+    "Channel": "Analytics with Nags",
+    "Duration": "11 minutes 12 seconds",
+    "URL": "https://www.youtube.com/watch?v=U7IKuKCXZZ0",
+    "Note": [
+      "Solution to a common business challenge: implementing slicers based on multiple columns",
+      "Demonstrates advanced DAX techniques and creative approaches to filtering",
+      "Shows practical application of Power BI problem-solving for real-world scenarios"
+    ]
+  }
+]
