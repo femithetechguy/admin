@@ -102,13 +102,6 @@ window.closeVideoIframePopup = function() {
   window._currentVideo = { type: null, element: null, button: null };
 };
 
-window.closeVideoIframePopup = function() {
-  const popup = document.getElementById('video-iframe-popup');
-  const container = document.getElementById('video-iframe-container');
-  container.innerHTML = '';
-  popup.classList.add('hidden');
-};
-
 
 // Utility: detect mobile
 function isMobile() {
