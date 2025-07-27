@@ -49,7 +49,39 @@
           ]
         },
         {
-          "name": "PowerBI",
+          "name": "Masterclass",
+          "biIcon": "bi-camera-video",
+          "content": [
+            "Video tutorials and resources",
+            "Optional: filters for topic, duration, etc."
+          ]
+        },
+        {
+          "name": "DataWarehouse",
+          "biIcon": "bi-camera-video",
+          "content": [
+            "Video tutorials and resources",
+            "Optional: filters for topic, duration, etc."
+          ]
+        },
+        {
+          "name": "BiProjects",
+          "biIcon": "bi-camera-video",
+          "content": [
+            "Video tutorials and resources",
+            "Optional: filters for topic, duration, etc."
+          ]
+        },
+        {
+          "name": "Interview",
+          "biIcon": "bi-camera-video",
+          "content": [
+            "Video tutorials and resources",
+            "Optional: filters for topic, duration, etc."
+          ]
+        },
+        {
+          "name": "E2EAnalytics",
           "biIcon": "bi-camera-video",
           "content": [
             "Video tutorials and resources",
