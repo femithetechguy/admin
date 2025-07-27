@@ -116,9 +116,9 @@ function isMobile() {
 }
 
 // Fetch and render videos
-window.renderVideosTab = function() {
+window.renderDataWarehouseTab = function() {
   setTimeout(() => {
-    fetch('json/videos/playlist-videos.json')
+    fetch('json/videos/data_warehouse_playlist.json')
       .then(r => r.json())
       .then(data => renderVideos(data))
       .catch(() => {
@@ -128,7 +128,7 @@ window.renderVideosTab = function() {
         }
       });
   }, 0);
-  return '<div class="w-full flex justify-center py-4"><span class="text-xl font-bold">Video Playlist</span></div>' +
+  return '<div class="w-full flex justify-center py-4"><span class="text-xl font-bold">Data Warehouse Playlist</span></div>' +
     '<div id="videos-content"></div>';
 };
 

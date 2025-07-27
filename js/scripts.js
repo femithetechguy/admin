@@ -125,7 +125,12 @@ function renderTabContent(tab, idx) {
   if (tab.name === "Interview Prep" && window.renderInterviewPrepTab) return window.renderInterviewPrepTab(tab);
   if (tab.name === "Resume" && window.renderResumeTab) return window.renderResumeTab(tab);
   if (tab.name === "Applied" && window.renderAppliedTab) return window.renderAppliedTab(tab);
-  if (tab.name === "PowerBI" && window.renderVideosTab) return window.renderVideosTab(tab);
+  if (tab.name === "Masterclass" && window.renderMasterclassTab) return window.renderMasterclassTab(tab);
+  if (tab.name === "Videos" && window.renderMasterclassTab) return window.renderMasterclassTab(tab);
+  if (tab.name === "BiProjects" && window.renderBiProjectsTab) return window.renderBiProjectsTab(tab);
+  if (tab.name === "Interview" && window.renderInterviewTopicsTab) return window.renderInterviewTopicsTab(tab);
+  if (tab.name === "E2EAnalytics" && window.renderE2EAnalyticsTab) return window.renderE2EAnalyticsTab(tab);
+  if (tab.name === "DataWarehouse" && window.renderDataWarehouseTab) return window.renderDataWarehouseTab(tab);
   if (tab.name === "School" && window.renderSchoolTab) return window.renderSchoolTab(tab);
   if (tab.name === "Logout") return '';
   return '';
