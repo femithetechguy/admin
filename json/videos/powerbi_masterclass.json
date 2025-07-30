@@ -18,9 +18,9 @@
     "Duration": "7 minutes 42 seconds",
     "URL": "https://www.youtube.com/watch?v=T_bRcvmOMSM",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial covers the step-by-step process of installing Power BI Desktop on a Windows system. It guides users through downloading from the Microsoft Store or the direct download link from Microsoft's official website, followed by the installation wizard that walks through setup options.",
+      "Key steps include: checking system requirements (Windows 8.1/10/11, 1GB RAM minimum), choosing between 32-bit vs 64-bit versions depending on your system architecture, and accepting license terms. The video demonstrates how to navigate through common installation prompts and settings, including choosing installation location and creating desktop shortcuts.",
+      "After installation completes, the tutorial shows how to verify successful setup by launching Power BI Desktop for the first time, configuring initial preferences, and checking for updates through the Help menu to ensure you're running the latest version with all current features and security patches."
     ]
   },
   {
@@ -30,9 +30,9 @@
     "Duration": "8 minutes 58 seconds",
     "URL": "https://www.youtube.com/watch?v=9JV6eHe3OIQ",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial guides beginners through creating their first Power BI dashboard from scratch, starting with importing data from an Excel file. The instructor demonstrates how to connect to data sources, transform basic data, and create simple visuals to build an interactive dashboard.",
+      "Key steps include: 1) Getting data from Excel using the 'Get Data' option, 2) Basic data cleaning in Power Query Editor, 3) Creating the first visualization (a bar chart showing sales by category), 4) Adding additional visuals like a pie chart and card visuals for KPIs, 5) Formatting visuals with colors and labels, and 6) Adding slicers for interactive filtering.",
+      "The tutorial emphasizes the drag-and-drop simplicity of Power BI while showing how to establish relationships between tables, format visualizations professionally, and create a cohesive dashboard layout. It covers how visuals interact with each other through cross-filtering, which is an essential concept for creating interactive reports."
     ]
   },
   {
@@ -42,9 +42,9 @@
     "Duration": "8 minutes 7 seconds",
     "URL": "https://www.youtube.com/watch?v=QCRGdYsf8vs",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial provides a comprehensive overview of the Power BI Desktop interface, exploring the three main views: Report view, Data view, and Model view. The instructor demonstrates how these different perspectives work together to create effective visualizations from raw data.",
+      "Key features covered include: 1) The Report view with its visualization pane, fields list, filters panel, and formatting options; 2) The Data view for examining and validating data tables; 3) The Model view for creating and managing relationships between tables. The tutorial also explains the ribbon interface with its Home, View, Modeling, and Transform Data tabs that provide access to different functionality.",
+      "Special attention is given to the Fields pane (managing data elements), Visualizations pane (creating and customizing charts), and Filters pane (controlling what data appears in visuals). The instructor emphasizes how the proper understanding of these interface elements is fundamental to becoming proficient in creating meaningful Power BI reports."
     ]
   },
   {
@@ -54,9 +54,9 @@
     "Duration": "9 minutes 27 seconds",
     "URL": "https://www.youtube.com/watch?v=1tmaCLV284Q",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial provides a comprehensive overview of the various data types in Power BI, explaining how each type affects visualization capabilities and calculations. The instructor covers numeric types (whole numbers, decimals, currency), text/string types, date/time formats, Boolean values, and binary data types.",
+      "Key concepts include: 1) How data type detection works during import, 2) Manual data type conversion techniques and potential issues, 3) The importance of choosing appropriate data types for performance optimization, 4) How different data types affect available visualizations and DAX functions, and 5) Best practices for handling special cases like geographic data, percentages, and images.",
+      "The tutorial emphasizes the critical relationship between data types and Power BI functionality, showing how proper data typing prevents calculation errors and improves report accuracy. Practical examples demonstrate common scenarios where changing data types resolves visualization problems or enables specific analytical capabilities."
     ]
   },
   {
@@ -66,9 +66,9 @@
     "Duration": "8 minutes 17 seconds",
     "URL": "https://www.youtube.com/watch?v=giWb_rpTGT0",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial focuses on essential formatting techniques in Power BI that enhance visual presentation and readability. The instructor demonstrates how to customize colors, fonts, borders, and backgrounds for various visualizations, emphasizing the importance of consistent formatting to create professional-looking dashboards.",
+      "Key topics covered include: 1) Adjusting individual visual properties through the format pane, 2) Applying corporate branding colors and themes, 3) Formatting text elements like titles and labels for better readability, 4) Using conditional formatting to highlight important data points, and 5) Creating consistent visualization layouts through alignment tools and grid settings.",
+      "The instructor emphasizes how proper formatting not only improves aesthetics but also enhances data comprehension by directing viewer attention to the most important insights. Practical examples show before-and-after comparisons, revealing how small formatting adjustments can dramatically improve dashboard effectiveness and user engagement."
     ]
   },
   {
@@ -78,9 +78,9 @@
     "Duration": "10 minutes 17 seconds",
     "URL": "https://www.youtube.com/watch?v=8rOiqzmdaOc",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This comprehensive tutorial explores the various data connection options available in Power BI, covering both file-based sources (Excel, CSV, XML, JSON) and database connections (SQL Server, Oracle, MySQL). The instructor demonstrates the step-by-step process of connecting to each source type, highlighting configuration options and authentication methods specific to each connection.",
+      "Key topics include: 1) Understanding the difference between Import, DirectQuery, and Live Connection modes; 2) Setting up connection parameters and credentials; 3) Using the Power Query Editor to preview and transform data before loading; 4) Handling connection strings and server configurations; and 5) Troubleshooting common connection issues like firewall restrictions and permission errors.",
+      "The tutorial emphasizes best practices for selecting appropriate connection methods based on data size, refresh requirements, and performance considerations. It also covers how to manage data source credentials securely and explains the implications of different connection types on report development and deployment."
     ]
   },
   {
@@ -90,9 +90,9 @@
     "Duration": "6 minutes 1 seconds",
     "URL": "https://www.youtube.com/watch?v=un2i7yvaoaA",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial explains how to control and customize visual interactions in Power BI dashboards, allowing users to create more sophisticated reporting experiences. The instructor demonstrates how to set specific relationships between visuals so that filtering or selecting data in one visualization affects others in predictable, controlled ways.",
+      "Key steps to configure visual interactions include: 1) Select the visual you want to control interactions for, 2) On the Format menu in the top ribbon, click the 'Format' tab, then select 'Edit interactions' button, 3) For each visual on your page, choose one of three interaction options that appear above them: Filter (funnel icon), Highlight (highlighter icon), or None (no interaction/crossed-out icon), 4) Test your interactions by clicking elements in your source visual and observing how target visuals respond.",
+      "The tutorial emphasizes practical applications, showing how to create a dashboard where selecting a category in a bar chart might filter a table visual while only highlighting data in a pie chart, maintaining context. The instructor demonstrates how these interaction controls enhance report usability by guiding users through data exploration pathways, allowing for more intuitive analysis as users click through different segments of their data."
     ]
   },
   {
@@ -102,9 +102,9 @@
     "Duration": "12 minutes 56 seconds",
     "URL": "https://www.youtube.com/watch?v=t05tlCaJEOw",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial provides a comprehensive overview of visualization types available in Power BI, covering both standard and specialized chart options. The instructor explains how to select appropriate charts for different data scenarios and walks through the visualization pane interface where all chart types can be accessed by clicking the visualizations icon in the right panel.",
+      "Key chart types covered include: 1) Bar and column charts for comparing categorical data; 2) Line and area charts for showing trends over time; 3) Pie and donut charts for part-to-whole relationships; 4) Scatter and bubble charts for correlation analysis; 5) Tables and matrices for detailed data examination; 6) Cards and KPI visuals for highlighting key metrics; 7) Maps (filled maps, bubble maps) for geographical data; 8) Slicers for filtering data across multiple visualizations; and 9) Power BI-specific visuals like waterfall charts, funnel charts, gauges, and decomposition trees.",
+      "The tutorial also demonstrates Power BI-specific features like the visual formatting options (accessible through the format painter icon), cross-filtering capabilities between visuals, and how to access additional custom visuals from the marketplace (via the ellipsis in the visualization pane). Special attention is given to slicers as powerful filtering tools that allow users to interactively segment data on a report page, with various slicer styles including dropdown, list, date range, and numeric range options. The instructor shows how slicers can be synchronized across multiple report pages for consistent filtering experience throughout a dashboard."
     ]
   },
   {
@@ -114,9 +114,9 @@
     "Duration": "6 minutes 25 seconds",
     "URL": "https://www.youtube.com/watch?v=FwAu_4ZqZDs",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial explains how to create and use hierarchies in Power BI, which allow users to navigate from summary data to detailed information through an intuitive drilldown experience. The instructor demonstrates how to create custom hierarchies by grouping related fields (like Year > Quarter > Month > Date) in the Fields pane through simple drag-and-drop operations where one field is dropped onto another.",
+      "Key concepts covered include: 1) Creating hierarchies in the Fields pane (right-click a field > New hierarchy or drag one field onto another), 2) Adding fields to existing hierarchies (drag additional fields onto the hierarchy), 3) Using the drill navigation buttons in visuals (down arrow to go deeper, up arrow to go back up levels), 4) Enabling drill-through mode versus drill-down mode, and 5) Setting the sort order of hierarchy levels to ensure logical presentation of data.",
+      "The practical demonstration shows how these hierarchies enhance data exploration in charts and tables by allowing users to start with high-level data and then click to reveal increasingly granular details within the same visual. The instructor emphasizes that hierarchies don't change the underlying data model but provide an organized way to navigate complex datasets through related dimensions like geography (Country > State > City) or time periods."
     ]
   },
   {
@@ -126,9 +126,9 @@
     "Duration": "9 minutes 50 seconds",
     "URL": "https://www.youtube.com/watch?v=k1t7LoLg4-4",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial explains drill-through functionality in Power BI, which allows users to navigate from summary data in one report to detailed information in a separate drill-through report page. The instructor demonstrates how to set up and configure drill-through pages that display context-specific details when users right-click on data points in visuals, showing how this creates a more interactive and comprehensive analysis experience.",
+      "Key steps covered include: 1) Creating a dedicated drill-through page with detailed visuals; 2) Configuring drill-through fields in the Drill-through section of the Fields pane (requires navigating to Format > Drill-through > Add drill-through fields); 3) Setting up filters to control which data appears when drilling through; 4) Customizing the drill-through page with dynamic titles and back buttons; and 5) Using the feature by right-clicking on data points in source visuals and selecting 'Drill through' from the context menu.",
+      "The instructor draws a parallel to Excel pivot tables' drill-down functionality, explaining that while Excel allows users to expand rows/columns to see underlying data, Power BI's drill-through provides a more sophisticated experience by taking users to customized report pages with relevant context-filtered visualizations rather than just showing raw data. This creates a guided analytical path for users to explore data relationships across multiple dimensions while maintaining the visual presentation format."
     ]
   },
   {
@@ -138,9 +138,10 @@
     "Duration": "8 minutes 12 seconds",
     "URL": "https://www.youtube.com/watch?v=dEf77pl1-2E",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial explains how to create and configure custom tooltips in Power BI, which enhance data visualization by showing additional contextual information when users hover over data points. The instructor demonstrates how to build tooltip pages that display supplementary charts and metrics instead of the default simple tooltips, creating a more interactive and information-rich experience.",
+      "Key steps covered include: 1) Creating a dedicated page sized for tooltips (select Format > Page size > Tooltip), 2) Adding relevant visuals to this tooltip page, 3) Configuring the tooltip page settings under the Page Information section (enabling 'Tooltip' toggle), 4) Setting up filters to make the tooltip context-aware, and 5) Assigning the custom tooltip to specific visuals through the Format panel's Tooltip card.",
+      "The instructor emphasizes practical applications like using tooltips to show trend lines when hovering over a bar chart, displaying top contributors when hovering over a total, or revealing additional KPIs without cluttering the main report. These dynamic tooltips can be accessed through Power BI's Format panel where users select a visual, navigate to the Format tab, and under the Tooltip section choose the custom tooltip page from the dropdown menu.",
+      "The fundamental difference between custom and dynamic tooltips is that custom tooltips are pre-designed tooltip pages that show the same layout of visuals for any data point (though the data shown adapts to the selection), while dynamic tooltips intelligently change their structure and content based on the specific data point being hovered over, often incorporating DAX measures and conditional formatting to determine what information appears and how it's presented. Custom tooltips are static in design but dynamic in data, whereas truly dynamic tooltips are flexible in both design and data presentation."
     ]
   },
   {
