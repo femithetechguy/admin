@@ -1,42 +1,49 @@
 
 
-window.showNotePopupB64 = function(b64) {
+window.showNotePopupB64 = function(b64, title = '') {
+  // First, close any open video popups
+  const videoPopup = document.getElementById('video-iframe-popup');
+  if (videoPopup && videoPopup.style.display !== 'none') {
+    window.closeVideoIframePopup();
+  }
+  
+  // Process the note data
   let noteArr;
   try {
     noteArr = JSON.parse(decodeURIComponent(escape(atob(b64))));
   } catch (e) {
     noteArr = [];
   }
-  const noteHtml = Array.isArray(noteArr) ? noteArr.map(p => `<p class='mb-2'>${p}</p>`).join('') : '';
+  const noteHtml = Array.isArray(noteArr) ? noteArr.map(p => `<p>${p}</p>`).join('') : '';
+  
+  // Get or create the popup
   let popup = document.getElementById('note-popup');
   if (!popup) {
     popup = document.createElement('div');
     popup.id = 'note-popup';
-    popup.className = 'fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50';
+    popup.className = 'note-popup';
+    popup.style.display = 'flex'; // Set display explicitly
     popup.innerHTML = `
-      <style>
-        @media (min-width: 640px) {
-          #note-popup-inner { margin: 0 !important; width: 80vw !important; height: 80vh !important; }
-        }
-      </style>
-      <div id="note-popup-inner" class="bg-white rounded-lg shadow-lg relative animate-fadein flex flex-col items-stretch justify-stretch" style="width:80vw !important; height:80vh !important; margin:8px !important;">
-        <button onclick=\"window.closeNotePopup()\" class=\"absolute top-2 right-2 text-gray-500 hover:text-red-500 text-xl\">&times;</button>
-        <div class=\"text-2xl font-bold mb-6\" style=\"margin-top:2.5rem;\">Note</div>
-        <div class=\"note-content text-gray-700 text-lg flex-1 overflow-y-auto\" style=\"min-height:0;\">${noteHtml || "<span class='text-gray-400'>No note available.</span>"}</div>
+      <div id="note-popup-inner" class="note-popup-inner">
+        <button onclick=\"window.closeNotePopup()\" class=\"note-popup-close\">&times;</button>
+        <div class=\"note-popup-title\">${title || 'Note'}</div>
+        <div class=\"note-popup-content\">${noteHtml || "<span class='text-gray-400'>No note available.</span>"}</div>
       </div>
     `;
     document.body.appendChild(popup);
   } else {
-    const noteDiv = popup.querySelector('.note-content');
+    // Update existing popup
+    const noteDiv = popup.querySelector('.note-popup-content');
+    const titleDiv = popup.querySelector('.note-popup-title');
+    if (titleDiv) titleDiv.textContent = title || 'Note';
     if (noteDiv) noteDiv.innerHTML = noteHtml || '<span class=\'text-gray-400\'>No note available.</span>';
-    popup.classList.remove('hidden');
+    popup.style.display = 'flex'; // Ensure it's visible
   }
-  popup.classList.remove('hidden');
 };
 
 window.closeNotePopup = function() {
   const popup = document.getElementById('note-popup');
-  if (popup) popup.remove();
+  if (popup) popup.style.display = 'none';
 };
 
 
@@ -48,16 +55,22 @@ window._currentVideo = {
 };
 
 window.showVideoIframe = function(youtubeId, btn) {
+  // First, close any open note popups
+  const notePopup = document.getElementById('note-popup');
+  if (notePopup && notePopup.style.display !== 'none') {
+    window.closeNotePopup();
+  }
+  
   // Helper to close any open video
   function closeCurrentVideo() {
     if (window._currentVideo.type === 'mobile' && window._currentVideo.element && window._currentVideo.button) {
       window._currentVideo.element.innerHTML = '';
-      window._currentVideo.element.classList.add('hidden');
+      window._currentVideo.element.style.display = 'none';
       window._currentVideo.button.textContent = 'Watch';
     } else if (window._currentVideo.type === 'desktop' && window._currentVideo.element) {
       window._currentVideo.element.innerHTML = '';
       const popup = document.getElementById('video-iframe-popup');
-      if (popup) popup.classList.add('hidden');
+      if (popup) popup.style.display = 'none';
     }
     window._currentVideo = { type: null, element: null, button: null };
   }
@@ -66,18 +79,18 @@ window.showVideoIframe = function(youtubeId, btn) {
     // Mobile: inline card
     const card = btn.closest('.bg-white');
     const iframeDiv = card.querySelector('.video-iframe');
-    const isOpening = iframeDiv.classList.contains('hidden');
+    const isOpening = iframeDiv.style.display === 'none' || !iframeDiv.style.display;
     // If opening a new video, close any previous
     if (isOpening) {
       closeCurrentVideo();
       iframeDiv.innerHTML = `<iframe width="100%" height="200" src="https://www.youtube.com/embed/${youtubeId}" frameborder="0" allowfullscreen></iframe>`;
-      iframeDiv.classList.remove('hidden');
+      iframeDiv.style.display = 'block';
       btn.textContent = 'Hide';
       window._currentVideo = { type: 'mobile', element: iframeDiv, button: btn };
     } else {
       // Closing current video
       iframeDiv.innerHTML = '';
-      iframeDiv.classList.add('hidden');
+      iframeDiv.style.display = 'none';
       btn.textContent = 'Watch';
       window._currentVideo = { type: null, element: null, button: null };
     }
@@ -88,7 +101,7 @@ window.showVideoIframe = function(youtubeId, btn) {
     const popup = document.getElementById('video-iframe-popup');
     const container = document.getElementById('video-iframe-container');
     container.innerHTML = `<iframe width="100%" height="400" src="https://www.youtube.com/embed/${youtubeId}" frameborder="0" allowfullscreen></iframe>`;
-    popup.classList.remove('hidden');
+    popup.style.display = 'flex';
     window._currentVideo = { type: 'desktop', element: container, button: null };
   }
 };
@@ -98,7 +111,7 @@ window.closeVideoIframePopup = function() {
   const popup = document.getElementById('video-iframe-popup');
   const container = document.getElementById('video-iframe-container');
   container.innerHTML = '';
-  popup.classList.add('hidden');
+  popup.style.display = 'none';
   window._currentVideo = { type: null, element: null, button: null };
 };
 
@@ -152,10 +165,10 @@ function renderMobileCards(videos) {
       <div class="text-xs text-gray-400 mb-2">${v.Duration ? `Duration: ${v.Duration}` : ''}</div>
       <div class="text-gray-500 text-sm mb-2 flex flex-col gap-2">
         <span>${v.Note ? v.Note[0] : ''}</span>
-        <button class="bg-gray-200 text-gray-700 rounded px-2 py-1 text-xs w-max hover:bg-gray-300" onclick="window.showNotePopupB64('${btoa(unescape(encodeURIComponent(JSON.stringify(v.Note || []))))}')">Read Note</button>
+        <button class="bg-gray-200 text-gray-700 rounded px-2 py-1 text-xs w-max hover:bg-gray-300" onclick="window.showNotePopupB64('${btoa(unescape(encodeURIComponent(JSON.stringify(v.Note || []))))}', '${v.Title.replace(/'/g, "\\'")}')">Read Note</button>
       </div>
       <button class="bg-blue-500 text-white rounded px-3 py-1 w-full" onclick="window.showVideoIframe('${youtubeId}', this)">Watch</button>
-      <div class="video-iframe mt-2 hidden"></div>
+      <div class="video-iframe mt-2" style="display: none;"></div>
       ${!youtubeId ? '<div class="text-red-500 text-xs mt-2">Invalid or missing YouTube ID</div>' : ''}
     </div>
     `;
@@ -192,7 +205,7 @@ function renderDesktopTable(videos) {
                 <td class="px-4 py-2 text-xs text-gray-400">${v.Duration ? v.Duration : ''}</td>
                 <td class="px-4 py-2 text-sm text-gray-500 flex flex-col gap-2">
                   <span>${v.Note ? v.Note[0] : ''}</span>
-                  <button class="bg-gray-200 text-gray-700 rounded px-2 py-1 text-xs w-max hover:bg-gray-300" onclick="window.showNotePopupB64('${btoa(unescape(encodeURIComponent(JSON.stringify(v.Note || []))))}')">Read Note</button>
+                  <button class="bg-gray-200 text-gray-700 rounded px-2 py-1 text-xs w-max hover:bg-gray-300" onclick="window.showNotePopupB64('${btoa(unescape(encodeURIComponent(JSON.stringify(v.Note || []))))}', '${v.Title.replace(/'/g, "\\'")}')">Read Note</button>
                 </td>
                 <td class="px-4 py-2">
                   <button class="bg-blue-500 text-white rounded px-3 py-1" onclick="window.showVideoIframe('${youtubeId}')">Watch</button>
@@ -204,9 +217,9 @@ function renderDesktopTable(videos) {
         </tbody>
       </table>
     </div>
-    <div id="video-iframe-popup" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden">
-      <div class="bg-white rounded-lg shadow-lg p-4 relative w-full max-w-xl">
-        <button onclick="window.closeVideoIframePopup()" class="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-xl">&times;</button>
+    <div id="video-iframe-popup" class="video-iframe-popup" style="display: none;">
+      <div class="video-popup-inner">
+        <button onclick="window.closeVideoIframePopup()" class="video-popup-close">&times;</button>
         <div id="video-iframe-container"></div>
       </div>
     </div>

@@ -1,0 +1,123 @@
+/* 
+ * popup.css - Styling for popups used across the admin interface
+ * Used by: note popups, video popups, and other modal dialogs
+ */
+
+/* Note popup styling */
+.note-popup {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.note-popup-inner {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  position: relative;
+  animation: fadein 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  margin: 8px;
+}
+
+.note-popup-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  margin-top: 2.5rem;
+  padding: 0 2rem;
+}
+
+.note-popup-content {
+  color: #4b5563;
+  font-size: 1.125rem;
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+  padding: 0 2rem 2rem 2rem;
+}
+
+.note-popup-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: #6b7280;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: color 0.2s;
+}
+
+.note-popup-close:hover {
+  color: #ef4444;
+}
+
+/* Video popup styling */
+.video-iframe-popup {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.video-popup-inner {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+}
+
+.video-popup-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: #6b7280;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: color 0.2s;
+}
+
+.video-popup-close:hover {
+  color: #ef4444;
+}
+
+/* Animation */
+
+/* Note: We're using inline style.display instead of CSS classes for showing/hiding popups */
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadein {
+  animation: fadein 0.3s ease;
+}
+
+/* Paragraph spacing in note content */
+.note-popup-content p {
+  margin-bottom: 0.5rem;
+}
