@@ -162,6 +162,22 @@
     },
     {
       "serial_no": 9,
+      "question": "Why should we hire you?",
+      "answer": "S: Companies need BI professionals who can translate complex data into actionable business intelligence.(Strategic Insight & Execution, End-to-End Solution Ownership, Collaborative Leadership ) T: You need someone who can deliver end-to-end Power BI solutions while understanding the bigger business context. A: I bring strategic insight to transform business challenges into robust Power BI solutions with scalable data models and advanced DAX. I own the entire development lifecycle - from data integration and transformation to visualization and security implementation. Additionally, I collaborate closely with stakeholders to understand core needs and foster data literacy. R: This comprehensive approach ensures you'll get more than just reports - you'll get actionable intelligence that drives better decision-making, maintains data integrity, increases user adoption, and delivers consistent, high-quality BI solutions with tangible business impact.",
+      "category": "Career Motivation",
+      "skills": [
+        "Power BI",
+        "Data Modeling",
+        "DAX",
+        "Power Query",
+        "Data Visualization",
+        "Stakeholder Management",
+        "Solution Architecture",
+        "Business Intelligence"
+      ]
+    },
+    {
+      "serial_no": 10,
       "question": "Tell me about a time you had to work with a difficult team member.",
       "answer": "At Northside Hospital, I worked with a developer who often missed deadlines. I scheduled a 1:1 to understand his challenges, discovered he was overloaded, and helped redistribute tasks. This improved our delivery and team morale.",
       "category": "Teamwork",
@@ -173,7 +189,7 @@
       ]
     },
     {
-      "serial_no": 10,
+      "serial_no": 11,
       "question": "Describe a situation where you had to quickly learn a new tool or technology.",
       "answer": "When I joined Hiscox, I had to learn Power BI Dataflows in under a week to meet a reporting deadline. I used Microsoft Learn, built a POC, and delivered the solution on time.",
       "category": "Adaptability",
@@ -185,7 +201,7 @@
       ]
     },
     {
-      "serial_no": 11,
+      "serial_no": 12,
       "question": "How do you handle tight deadlines?",
       "answer": "I break down the project into smaller tasks, prioritize based on impact, and communicate progress daily. At Manhattan Associates, this approach helped us deliver a critical dashboard 2 days early.",
       "category": "Time Management",
@@ -197,7 +213,7 @@
       ]
     },
     {
-      "serial_no": 12,
+      "serial_no": 13,
       "question": "Give an example of a time you failed and how you handled it.",
       "answer": "I once underestimated the complexity of a data migration, causing a 2-day delay. I owned the mistake, communicated transparently, and worked overtime to resolve it, ensuring no data loss.",
       "category": "Resilience",
@@ -209,7 +225,7 @@
       ]
     },
     {
-      "serial_no": 13,
+      "serial_no": 14,
       "question": "Describe a time you had to persuade others to adopt your idea.",
       "answer": "At a retail client, I proposed using Power BI Dataflows for reusable ETL. I presented a demo, highlighted time savings, and addressed concerns. The team adopted my approach, reducing future dev time by 30%.",
       "category": "Influence",
@@ -221,7 +237,7 @@
       ]
     },
     {
-      "serial_no": 14,
+      "serial_no": 15,
       "question": "How do you prioritize multiple projects?",
       "answer": "I use a matrix to assess urgency and impact, then communicate priorities with stakeholders. At Northside, this helped balance daily reporting with a major dashboard rollout.",
       "category": "Prioritization",
@@ -232,7 +248,7 @@
       ]
     },
     {
-      "serial_no": 15,
+      "serial_no": 16,
       "question": "Tell me about a time you improved a process.",
       "answer": "At Manhattan Associates, I automated data refreshes using Power BI Gateway and PowerShell scripts, reducing manual effort by 80% and eliminating refresh failures.",
       "category": "Process Improvement",
@@ -244,7 +260,7 @@
       ]
     },
     {
-      "serial_no": 16,
+      "serial_no": 17,
       "question": "Describe a time you had to deliver bad news to a client or stakeholder.",
       "answer": "I had to inform a client about a delay due to a vendor API outage. I provided a revised timeline, regular updates, and a mitigation plan, which maintained trust and satisfaction.",
       "category": "Communication",
@@ -256,7 +272,7 @@
       ]
     },
     {
-      "serial_no": 17,
+      "serial_no": 18,
       "question": "How do you handle feedback or criticism?",
       "answer": "I view feedback as an opportunity to grow. After a dashboard review, I received feedback on visual clutter. I simplified the design, which improved user adoption and satisfaction.",
       "category": "Self-Improvement",
@@ -267,7 +283,7 @@
       ]
     },
     {
-      "serial_no": 18,
+      "serial_no": 19,
       "question": "Give an example of a time you took initiative.",
       "answer": "At Hiscox, I noticed recurring data quality issues. I created a data validation dashboard, which reduced errors by 40% and was later adopted by other teams.",
       "category": "Initiative",
@@ -279,7 +295,7 @@
       ]
     },
     {
-      "serial_no": 19,
+      "serial_no": 20,
       "question": "Tell me about a time you solved a complex problem",
       "answer": "S: At Manhattan Associates, we were facing inconsistencies in SLA reporting due to disparate data sources from Jira, ServiceNow, and Oracle. T: I was tasked with standardizing the ingestion process and ensuring accurate, automated reporting for operations leadership. A: I engineered ingestion pipelines using Power Query and Dataflows, applied robust data validation logic, and built parameterized refresh schedules. I also added visual alerts for SLA breaches. R: This reduced SLA violations by 18%, improved stakeholder trust, and eliminated 40% of manual tracking tasks.",
       "category": "Expanded",
@@ -293,7 +309,7 @@
       ]
     },
     {
-      "serial_no": 20,
+      "serial_no": 21,
       "question": "Describe a time you improved a process",
       "answer": "S: At Northside Hospital, the Community Health Needs Assessment (CHNA) reports were built manually using Excel and static charts. T: I needed to modernize this process to make the reporting faster and more insightful. A: I used Power BI and public health datasets to build interactive dashboards, added drill-through filters, and automated the data pipeline using Power Query. R: Turnaround time for CHNA reporting was reduced by 50%, and the team could easily track real-time community health indicators.",
       "category": "Expanded",
@@ -307,7 +323,7 @@
       ]
     },
     {
-      "serial_no": 21,
+      "serial_no": 22,
       "question": "Tell me about a time you had to work with a difficult stakeholder",
       "answer": "S: At Hiscox Insurance, I was working with regional underwriting leads who had conflicting priorities regarding dashboard KPIs. T: I had to unify these views while respecting role-based access and differing reporting needs. A: I conducted stakeholder interviews, developed separate RLS-filtered views in Power BI, and built a dynamic reporting layer using semantic models. R: This improved satisfaction across teams, reduced access issues, and created a unified dashboard experience across four business units.",
       "category": "Expanded",
@@ -321,7 +337,7 @@
       ]
     },
     {
-      "serial_no": 22,
+      "serial_no": 23,
       "question": "Give an example of how you handled a tight deadline",
       "answer": "S: At Costco, we had to deploy a merchandising dashboard for an upcoming board review with less than a week’s notice. T: I was responsible for integrating multi-source retail data and building an executive-ready dashboard. A: I used Databricks with SSIS and Power Query to ingest and transform data quickly, while using templates and existing components to accelerate dashboard creation. R: The dashboard was delivered ahead of schedule, reducing manual reporting by 40% and was reused in three other departments.",
       "category": "Expanded",
