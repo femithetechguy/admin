@@ -6,9 +6,9 @@
     "Duration": "4 minutes 55 seconds",
     "URL": "https://www.youtube.com/watch?v=h9hgkh-iraI",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This introductory video provides an overview of the entire Power BI tutorial series (50 videos) and explains how to navigate through the playlist. The instructor outlines the learning path from basic installation to advanced DAX functions and data modeling concepts, helping viewers understand the logical progression of topics covered throughout the series.",
+      "The video demonstrates how to use YouTube playlist features to navigate between tutorials and highlights key areas of the Power BI interface that will be covered in subsequent videos, including the Home ribbon (containing import data options, themes, and visualizations), Modeling tab (for relationships and calculations), View tab (for switching between Report/Data/Model views), and Help menu (for updates and support resources).",
+      "For beginners, this video serves as a roadmap for learning Power BI systematically, explaining the importance of understanding basic concepts like data connections and transformations before moving to advanced topics like DAX formulas and complex visualizations. The instructor emphasizes that viewers should follow the tutorials in sequence for the most effective learning experience."
     ]
   },
   {
