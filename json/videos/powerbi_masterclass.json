@@ -199,9 +199,9 @@
     "Duration": "3 minutes 8 seconds",
     "URL": "https://www.youtube.com/watch?v=rHgPbkoUE68",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial demonstrates how to handle missing data points in Power BI datasets, particularly focusing on filling gaps in time series data. The instructor explains how to use Power Query Editor to generate complete date sequences and join them with existing datasets to identify and fill missing dates. This common data preparation technique ensures visualizations like line charts display correctly without breaks or disconnected segments caused by missing dates.",
+      "Key steps covered include: 1) Creating a complete date sequence using the 'List.Dates' function in Power Query (accessed via Transform Data > Advanced Editor), 2) Converting the list to a table with proper date formatting, 3) Performing an outer join with the original data table (using Merge Queries option in the Home tab), and 4) Replacing NULL values with zeros or appropriate defaults using the 'Replace Values' feature. The instructor emphasizes how Power BI's Power Query identifies NULL values differently from empty cells or blanks, showing how to use conditional columns to distinguish between true missing values versus intentional zeros.",
+      "The practical application shown includes analyzing daily sales data with missing dates, where the instructor demonstrates how Power BI interprets these gaps (showing broken lines in visualizations by default) and how filling them provides more accurate trend analysis. The tutorial also covers how Power BI identifies and handles different types of empty values: NULL (completely missing data), empty string (\"\" - exists but contains no characters), and blank (DAX BLANK() function result), explaining how each affects calculations and visualizations differently."
     ]
   },
   {
@@ -211,9 +211,9 @@
     "Duration": "5 minutes 50 seconds",
     "URL": "https://www.youtube.com/watch?v=ZV9vOFmorBA",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial demonstrates how to split columns in Power BI's Power Query Editor, showing multiple methods for dividing text data into separate columns. The instructor walks through splitting by delimiters (like commas, spaces, or special characters), splitting by number of characters, and handling more complex text parsing scenarios. This common data transformation technique is essential for cleaning imported data that contains multiple pieces of information within a single column.",
+      "Key menu navigation: After loading data, click 'Transform Data' to open Power Query Editor > Select the column to split > Click 'Split Column' button in the Transform tab > Choose between 'By Delimiter' (for splitting at commas, spaces, tabs) or 'By Number of Characters' (for fixed-width data). For delimiter-based splitting, you can select options like 'At each occurrence', 'At the left-most delimiter', or 'At the right-most delimiter'. The instructor demonstrates practical applications like separating full names into first/last names (using space delimiter), extracting area codes from phone numbers, and parsing complex product codes.",
+      "The tutorial also covers advanced splitting techniques like using the TRIM function to remove unwanted spaces before splitting, handling non-digit to digit transitions (useful for product codes like 'ABC123'), and dealing with inconsistent delimiters. A real-world example shows how to parse product information containing both text and numeric components, demonstrating how strategic column splitting improves data analysis capabilities by allowing users to filter, sort, and visualize by individual components rather than compound values."
     ]
   },
   {
@@ -223,9 +223,9 @@
     "Duration": "4 minutes 26 seconds",
     "URL": "https://www.youtube.com/watch?v=ta2jIP4cxCI",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial demonstrates how to create derived columns in Power BI using Power Query Editor's 'Add Column' capabilities. The instructor walks through several methods for generating new columns from existing data, including using the Custom Column feature to write expressions with the M query language. The process begins by clicking 'Transform Data' to open Power Query Editor, then navigating to the 'Add Column' tab in the ribbon where various column creation options are available.",
+      "Key techniques demonstrated include: 1) Using 'Custom Column' (from the Add Column tab) to create expressions using the ampersand (&) operator to concatenate text fields (e.g., FirstName & \" \" & LastName to create a FullName column); 2) Creating conditional columns with if-then logic using the 'Conditional Column' button (e.g., categorizing sales values as 'High', 'Medium', or 'Low' based on thresholds); 3) Applying unique formatting to derived columns through the 'Data Type' dropdown; and 4) Using basic mathematical operations between columns (e.g., calculating profit by subtracting Cost from Revenue).",
+      "The instructor emphasizes that derived columns in Power Query (created during the data preparation phase) are different from calculated columns created using DAX in the data model. Power Query derived columns are processed during data loading and remain static until the next refresh, making them ideal for frequently used calculations or text manipulations that should be performed once rather than repeatedly in the visualization layer. This approach improves model performance by performing calculations during the ETL process rather than at query time."
     ]
   },
   {
@@ -235,9 +235,9 @@
     "Duration": "3 minutes 41 seconds",
     "URL": "https://www.youtube.com/watch?v=dEC8g6KLuCg",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial demonstrates how to manage columns in Power BI's Power Query Editor, focusing on removing, reordering, and moving columns to optimize your dataset for analysis. The instructor shows three primary methods: 1) Manually removing individual columns by right-clicking and selecting 'Remove'; 2) Using 'Remove Other Columns' to keep only selected columns, which is faster when you want to retain just a few columns from a large dataset; and 3) Using 'Move' options to reorder columns logically without deleting them.",
+      "To access these functions, click 'Transform Data' to open Power Query Editor, then navigate to the 'Transform' tab in the ribbon where you'll find column management options. For removing columns: right-click on column headers and select 'Remove' or select multiple columns using Ctrl+Click and remove them together. For keeping only specific columns: select those columns first, then click 'Remove Columns' dropdown > 'Remove Other Columns'. For reordering: select columns and use 'Move' dropdown to choose 'To Beginning', 'To End', 'Left', or 'Right' options.",
+      "The instructor emphasizes how proper column management improves both report performance and usability. When dealing with data sources containing dozens or hundreds of columns, strategic column removal reduces file size and memory usage, while thoughtful column arrangement (placing key dimensions and measures first) makes report building more intuitive. The tutorial demonstrates a practical example where a sales dataset with 30+ columns is streamlined to just the 8-10 columns needed for analysis, significantly improving Power BI performance."
     ]
   },
   {
@@ -247,9 +247,9 @@
     "Duration": "8 minutes 54 seconds",
     "URL": "https://www.youtube.com/watch?v=O79DReR6roI",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial demonstrates how to combine or append multiple datasets with identical structures in Power BI, equivalent to a UNION ALL operation in SQL. The instructor shows how to merge data from separate files (like monthly sales reports) into a single consolidated dataset for comprehensive analysis. The process begins by selecting 'Transform Data' to open Power Query Editor, then using the 'Append Queries' function located in the 'Home' tab under the 'Combine' dropdown menu.",
+      "Key steps include: 1) Loading initial dataset via Get Data; 2) Clicking 'Append Queries' dropdown and selecting either 'Append Queries' (to replace existing queries) or 'Append Queries as New' (to create a separate combined query while preserving originals); 3) Choosing between 'Two Tables' (for appending two datasets) or 'Three or More Tables' (for multiple datasets); 4) Selecting source tables to combine; and 5) Optionally disabling 'Enable Load' on individual source tables to prevent them from loading separately into the model, which helps avoid duplicates and reduces file size. This approach is equivalent to SQL's 'SELECT * FROM Table1 UNION ALL SELECT * FROM Table2' syntax but with a user-friendly interface that handles column alignment automatically.",
+      "The instructor emphasizes that all source tables must have exactly the same column structure (names, order, and data types) for the append operation to work properly. Because this process performs a UNION ALL operation rather than a UNION, duplicate rows will be retained in the combined dataset. To remove these duplicates after appending, you must select all relevant columns in the combined table, right-click, and choose 'Remove Duplicates' from the context menu. After completing the append operation and clicking 'Close & Apply', the Power BI dashboard automatically updates to reflect the consolidated dataset, allowing for comprehensive analysis across what were previously separate data sources. This technique is particularly valuable for analyzing trends across time periods, consolidating regional data, or combining data from multiple systems with compatible structures."
     ]
   },
   {
@@ -259,9 +259,9 @@
     "Duration": "13 minutes 37 seconds",
     "URL": "https://www.youtube.com/watch?v=YNqOXugr6K0",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial provides a comprehensive overview of transforming Excel data in Power BI's Power Query Editor, emphasizing the critical importance of data preparation before visualization. The instructor demonstrates how raw Excel data often requires significant cleaning and restructuring before it can yield meaningful insights. Users access these transformation tools by clicking 'Transform Data' after importing an Excel file, which opens the Power Query Editor interface with its ribbon menu containing Home, Transform, Add Column, View, and Help tabs.",
+      "Key transformations demonstrated include: 1) Removing unnecessary rows (using Remove Top/Bottom Rows from the Home tab) to eliminate headers, footers, and extraneous information; 2) Promoting the first row to headers (using 'Use First Row as Headers' button in the Home tab); 3) Changing data types (via the Transform tab or column header icons) to ensure proper numeric calculations and date handling; 4) Filling values up/down (via Transform tab) to populate empty cells with values from adjacent rows; 5) Pivoting data (Transform > Pivot Column) to transform unique column values into individual columns; and 6) Unpivoting columns (Transform > Unpivot Columns) to convert wide data with multiple measure columns into a normalized format with measure names and values. The instructor emphasizes how each transformation is automatically recorded in the Applied Steps pane on the right side, creating a reproducible sequence that will be reapplied whenever the data refreshes.",
+      "The tutorial highlights the business significance of proper Excel data transformation: it prevents calculation errors, ensures visualization accuracy, improves report performance, and creates consistency in refreshable reports. Common transformation scenarios addressed include: dealing with Excel reports containing merged cells and decorative elements, handling financial data with subtotals and grand totals that need removal, converting cross-tab reports with dates as columns into a format suitable for time-series analysis, and standardizing inconsistent column naming conventions across multiple Excel files. The instructor emphasizes validating data type conversions, particularly for dates, currencies and percentages, which Power BI might incorrectly interpret during import, showing how to manually set appropriate data types when Power BI's automatic detection fails."
     ]
   },
   {
