@@ -151,9 +151,9 @@
     "Duration": "11 minutes 16 seconds",
     "URL": "https://www.youtube.com/watch?v=zue_bygNx7k",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial explains how to enhance Power BI visualizations using custom visuals from the Microsoft AppSource marketplace. The instructor demonstrates how to access and install custom visuals by navigating to the visualization pane, clicking the ellipsis (three dots) in the bottom section, and selecting 'Get more visuals', which opens the Power BI Visuals marketplace containing hundreds of free and premium third-party visualization options designed for specific analytical scenarios.",
+      "Key steps covered include: 1) Finding visuals in AppSource via the Power BI interface or by browsing https://appsource.microsoft.com/en-us/marketplace/apps directly; 2) Installing visuals with a simple click (no coding required); 3) Configuring downloaded visuals through familiar field wells and formatting options; and 4) Using organizational custom visuals that might be pre-approved by IT departments. The instructor demonstrates this process using a practical example where customer satisfaction data from Google reviews is visualized using a custom gauge visual to identify which product has the highest satisfaction rating - clearly showing how Product A outperforms others at 92% satisfaction.",
+      "The tutorial also addresses important limitations of custom visuals, including: potential performance impacts with large datasets; the need to vet visuals for security (especially from third parties); possible incompatibility with Power BI Mobile; export limitations when using custom visuals (many don't work in exported PDFs or PowerPoint); and governance considerations for enterprise deployments. The instructor emphasizes that while custom visuals greatly extend Power BI's capabilities, users should balance their visual appeal with practical considerations about performance and compatibility."
     ]
   },
   {
@@ -163,9 +163,9 @@
     "Duration": "10 minutes 6 seconds",
     "URL": "https://www.youtube.com/watch?v=TMQMd___qng",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial explains Power BI Actions feature, which allows users to create interactive navigation flows and trigger various operations when users click on visualizations. The instructor demonstrates how to set up different types of actions (page navigation, bookmark, drill through, and URL) from the Format pane of any visualization by selecting a visual, navigating to the Format tab, and expanding the Action card to configure behavior triggered by user clicks.",
+      "The primary focus is on using page navigation actions to build a menu-driven dashboard experience where users can select specific topics (like Timesheet, Attendance, Payroll, Legal, Finance) from a landing page rather than scrolling through all reports. The instructor walks through step-by-step configuration: selecting a visual on a landing page (typically buttons, images, or text boxes), configuring its Action type as 'Page navigation', then selecting the destination report page. This creates an intuitive navigation system that directs users only to relevant content based on their role or information needs.",
+      "For implementation, the instructor shows several practical approaches: 1) Using a matrix or table with department names that navigate to department-specific pages, 2) Creating button groups with custom icons representing different functional areas, 3) Building an image-based navigation menu with department logos, and 4) Setting up conditional navigation based on user selections. This navigation technique significantly improves user experience by organizing large reports with multiple pages into logical sections accessible through an intuitive interface, making reports more user-friendly especially for non-technical users who might be overwhelmed by complex reports."
     ]
   },
   {
@@ -175,9 +175,9 @@
     "Duration": "9 minutes 55 seconds",
     "URL": "https://www.youtube.com/watch?v=lfLAvUARle4",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial provides a comprehensive explanation of the three core components that form Power BI's foundation: Power Query (ETL functionality), Power Pivot (data modeling and DAX), and Power View (visualization). The instructor traces the evolution of these technologies from their origins as Excel add-ins to their integration into Power BI Desktop, explaining how understanding these components helps master the Power BI workflow from data import to visualization.",
+      "Power Query (known as 'Get & Transform' in Excel) handles the Extract, Transform, Load (ETL) processes using M Language (Mashup Language). The instructor demonstrates how it enables users to connect to various data sources, clean and reshape data, and perform transformations like filtering, merging, and pivoting. Power Pivot forms the modeling layer where users establish relationships between tables, create calculated columns/measures using DAX (Data Analysis Expressions), and build the semantic model that defines how data interacts. Within Power Pivot, calculated columns are row-level calculations that compute a value for each row in a table and consume storage space, while measures are dynamic aggregation formulas that calculate results on-the-fly based on context and filter selections, making them more memory-efficient and responsive to user interactions.",
+      "The tutorial emphasizes how these components work together in Power BI Desktop: first importing and transforming data with Power Query, then creating relationships and calculations with Power Pivot, and finally building visualizations with Power View's capabilities. The instructor demonstrates creating both calculated columns (using the 'New Column' button in the modeling view) and measures (using 'New Measure') with DAX expressions like SUM(), CALCULATE(), and RELATED() to perform different types of business calculations. While in Excel these were separate add-ins that needed to be individually enabled, Power BI Desktop seamlessly integrates them into a unified interface, accessible through the 'Home' tab (for Power View), 'Transform data' button (for Power Query), and 'Model view' tab (for Power Pivot). This integration creates a more streamlined workflow while maintaining the powerful functionality that made these tools popular among data analysts."
     ]
   },
   {
@@ -187,9 +187,9 @@
     "Duration": "3 minutes 54 seconds",
     "URL": "https://www.youtube.com/watch?v=PyFQh8MmDWo",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial demonstrates how to remove unwanted header rows from imported data in Power BI using the Power Query Editor. The instructor shows how to clean messy Excel or CSV files that contain unnecessary title rows, logos, or metadata before the actual data begins, which is a common data preparation challenge when working with business reports exported to Excel.",
+      "Step-by-step process: 1) After loading data, click 'Transform Data' to open Power Query Editor; 2) Select the column headers by clicking on them; 3) On the Home tab, click the 'Remove Rows' dropdown button; 4) Choose 'Remove Top Rows' option; 5) Enter the number of rows to remove (e.g., 5); 6) Use 'Use First Row As Headers' button if your data has header information in what is now the first row after removal; 7) Review the transformed data, then click 'Close & Apply' to apply the changes to your Power BI model.",
+      "The instructor emphasizes this as an essential data cleaning technique that ensures proper data typing and formatting in Power BI. Without removing these extraneous header rows, Power BI would misinterpret column types and relationships, causing calculation errors and visualization problems. This technique is particularly useful for regularly imported reports that always contain the same number of header rows, allowing the process to be automated in future refreshes."
     ]
   },
   {
