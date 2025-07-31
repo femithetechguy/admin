@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "description": "A collection of useful resources for Power BI and data visualization",
+    "lastUpdated": "July 31, 2025",
+    "category": "Power BI Resources"
+  },
+  "resources": [
+    {
+      "id": 1,
+      "filename": "Macaw Power BI Cheat Sheet EN.pdf",
+      "type": "pdf",
+      "description": "Power BI cheat sheet by Macaw (English version)",
+      "path": "../extras/Macaw Power BI Cheat Sheet EN.pdf",
+      "author": "Macaw",
+      "dateAdded": "June 15, 2025",
+      "version": "2023",
+      "tags": ["cheatsheet", "reference", "DAX", "Power BI"]
+    },
+    {
+      "id": 2,
+      "filename": "power-bi-or-dashboards-decision-tree.png",
+      "type": "image",
+      "description": "Decision tree for choosing between Power BI and dashboards",
+      "path": "../extras/power-bi-or-dashboards-decision-tree.png",
+      "author": "Microsoft",
+      "dateAdded": "May 10, 2025",
+      "tags": ["decision tree", "tool selection", "best practices"]
+    },
+    {
+      "id": 3,
+      "filename": "powerbi_cheatsheet.jpeg",
+      "type": "image",
+      "description": "Power BI cheat sheet reference image",
+      "path": "../extras/powerbi_cheatsheet.jpeg",
+      "author": "Power BI Community",
+      "dateAdded": "July 20, 2025",
+      "version": "2025",
+      "tags": ["cheatsheet", "visualization", "reference"]
+    },
+    {
+      "id": 4,
+      "filename": "dataquest-power-bi-cheat-sheet",
+      "type": "url",
+      "description": "Comprehensive Power BI cheat sheet by Dataquest",
+      "path": "https://www.dataquest.io/cheat-sheet/power-bi-cheat-sheet/",
+      "author": "Dataquest",
+      "dateAdded": "July 31, 2025",
+      "tags": ["cheatsheet", "reference", "external", "learning"]
+    }
+  ]
+}

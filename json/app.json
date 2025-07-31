@@ -97,6 +97,14 @@
           ]
         },
         {
+          "name": "Extras",
+          "biIcon": "bi-star",
+          "content": [
+            "Additional resources and tools",
+            "Optional: miscellaneous content and links"
+          ]
+        },
+        {
           "name": "Logout",
           "biIcon": "bi-box-arrow-right"
         }
