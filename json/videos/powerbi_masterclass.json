@@ -271,9 +271,9 @@
     "Duration": "7 minutes 5 seconds",
     "URL": "https://www.youtube.com/watch?v=nu19dyCzUUU",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial explains the UNPIVOT operation in Power BI, which transforms columns into rows to convert wide-format data into a long format that's more analytics-friendly. The instructor demonstrates how data often comes in cross-tabular formats (like Excel pivot tables) with values spread across multiple columns, which makes time-series analysis and visualization difficult. By using the UNPIVOT transformation in Power Query (accessible via Transform Data > Transform tab > Unpivot Columns), users can normalize such data into a standard dimension-measure structure with clear entity relationships.",
+      "The step-by-step process involves: 1) Loading the data and opening Power Query Editor, 2) Selecting the columns to unpivot (typically measure columns containing values), 3) Right-clicking or using the Transform tab to select 'Unpivot Columns', 4) Renaming the resulting 'Attribute' column (containing former column headers) and 'Value' column (containing the data values) to more meaningful names, and 5) Setting proper data types for the new columns. The instructor emphasizes that this transformation is particularly important for Power BI because its visualization engine works best with long-format data where measures are clearly separated from dimensions, allowing for proper aggregation and filtering.",
+      "A practical business application shown involves sales data originally stored with separate columns for each month (Jan_Sales, Feb_Sales, etc.). By unpivoting these month columns into a standardized format with 'Month' and 'Sales' columns, users can create time-series visualizations like trend lines, perform month-over-month comparisons, and establish proper date hierarchies - none of which would be possible with the original columnar structure. The instructor also shows how unpivoted data integrates better with date tables in a star schema model, enabling time intelligence calculations like year-to-date and moving averages that require a proper date relationship."
     ]
   },
   {
@@ -283,9 +283,9 @@
     "Duration": "6 minutes 21 seconds",
     "URL": "https://www.youtube.com/watch?v=BwTYIpFixx4",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial demonstrates how to transform date data into week-based analyses in Power BI to identify which week of the month and which day of the week show the best sales performance. The instructor walks through creating custom columns in Power Query Editor that extract the week of month and day of week from transaction dates, allowing for time-based pattern analysis. Access these transformations by clicking 'Transform Data' to open Power Query Editor, then using the 'Add Column' tab to create custom columns with M language formulas.",
+      "Key steps include: 1) Creating a 'DayOfWeek' column using Date.DayOfWeek([Date]) to get numerical day values (0=Sunday through 6=Saturday), then adding a custom column with a switch statement to convert numbers to day names; 2) Creating a 'WeekOfMonth' column using Date.WeekOfMonth([Date]) which returns values 1-5 representing which week of the month a date falls in; 3) Using these new columns as dimensions in visualizations like bar charts to identify patterns (e.g., weekends showing higher retail sales, first week of month showing higher performance after paydays). The instructor emphasizes setting 'Do not summarize' in the field well properties for these columns to ensure they're treated as categories rather than being aggregated.",
+      "The practical application demonstrated shows how a retail business identified that Fridays (day 5) consistently outperformed other weekdays by 27%, and the first week of each month showed 35% higher sales than other weeks due to salary payment timing. This pattern discovery enables more strategic staffing decisions and inventory management. The instructor also covers creating hierarchies with these new columns, allowing users to drill from month to week of month to specific day, enabling multi-level temporal analysis of sales patterns."
     ]
   },
   {
@@ -295,9 +295,9 @@
     "Duration": "6 minutes 8 seconds",
     "URL": "https://www.youtube.com/watch?v=dEs-ZWDXQWw",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial demonstrates how to properly sort chronological data (months, days, weeks) in Power BI visualizations. By default, Power BI sorts text values alphabetically, causing months to appear as April, August, December rather than in calendar order. The instructor shows how to create custom sort orders using the 'Sort by Column' feature in the modeling tab, ensuring chronological values display in their natural sequence instead of alphabetically.",
+      "Key steps covered include: 1) Creating an index column for proper ordering in Power Query (Transform Data > Add Column > Custom Column) using month number values (1-12) or day number values (1-7); 2) Setting up the sort relationship in the Data Model view by selecting the month/day name column > Modeling tab > Sort by Column > selecting the corresponding index column; 3) Using built-in date functions like Date.MonthName([Date]) paired with Date.Month([Date]) for automatic sorting. The instructor demonstrates the navigation path in detail: selecting the column in the Fields pane > clicking the Column tools dropdown > Sort by Column > choosing the appropriate numeric column that represents the correct order.",
+      "The practical application shown includes a sales analysis dashboard where data needs to be displayed by month and by day of week to identify sales patterns. Without proper sorting, the dashboard showed February sales after December, making trend analysis impossible. After implementing correct sort order, the visualization clearly revealed that Mondays had the highest customer traffic while sales peaked mid-month following paydays. This ordering technique is particularly valuable for reports with time-based dimensions, ensuring executives see data in proper chronological sequence rather than alphabetically, which can lead to misinterpretation of trends and patterns."
     ]
   },
   {
