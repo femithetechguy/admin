@@ -20,7 +20,7 @@ function showToast(message, type = 'info') {
 
 window.renderAppliedTab = function(tab) {
   // Function to load jobs data and render the table/cards
-  const loadAndRenderJobs = async (skipFirestore = false) => {
+  const loadAndRenderJobs = async () => {
     // Show loading spinner
     const container = document.getElementById('applied-jobs-container');
     if (!container) return;
@@ -49,49 +49,20 @@ window.renderAppliedTab = function(tab) {
       
       // --- Firestore jobs logic ---
       let firestoreJobs = {};
-      if (userId && window.fetchJobs && !skipFirestore) {
+      if (userId && window.fetchJobs) {
         try {
           firestoreJobs = await window.fetchJobs(userId);
-          console.log('Firestore jobs:', firestoreJobs);
-        } catch (e) { 
-          console.error('Error fetching Firestore jobs:', e);
-          firestoreJobs = {}; 
-        }
-      } else if (skipFirestore) {
-        console.log('Skipping Firestore data as requested');
+        } catch (e) { firestoreJobs = {}; }
       }
       
-      console.log('Original jobs from JSON:', jobs);
-      
-      // Make a copy of the jobs array to avoid mutation issues
-      jobs = [...jobs].map((job, i) => {
+      jobs = jobs.map((job, i) => {
         const key = String(job.serial_no || i);
         if (firestoreJobs[key]) {
-          console.log(`Merging Firestore job for key ${key}:`, firestoreJobs[key]);
-          
-          // Check if company name in Firestore matches the original JSON
-          // If company doesn't match, only merge status changes and notes, not company/position
-          if (firestoreJobs[key].company && firestoreJobs[key].company !== job.company) {
-            console.warn(`Company mismatch for job ${key}:`, {
-              original: job.company,
-              firestore: firestoreJobs[key].company
-            });
-            
-            // Only merge status, not the other fields that might be wrong
-            return { 
-              ...job, 
-              status: firestoreJobs[key].status || job.status,
-              notes: firestoreJobs[key].notes || job.notes
-            };
-          }
-          
-          // If company matches, merge all fields
+          // Merge Firestore job object (user's edits) with local job (from JSON)
           return { ...job, ...firestoreJobs[key] };
         }
         return job;
       });
-      
-      console.log('Final jobs after merging with Firestore:', jobs);
       
       if (jobs.length === 0) {
         container.innerHTML = `<div class="text-gray-500 text-center py-8">No applied jobs found.</div>`;
@@ -207,20 +178,9 @@ window.renderAppliedTab = function(tab) {
   const skeleton = `<section id="tab-applied" class="tab-content">
     <h3 class="text-xl font-semibold mb-4 flex items-center justify-between">
       <span><i class="bi bi-briefcase mr-2"></i> ${tab.name}</span>
-      <div class="space-x-2">
-        <button id="fix-data-btn" class="px-3 py-1 bg-green-100 hover:bg-green-200 text-green-700 rounded text-sm">
-          <i class="bi bi-tools mr-1"></i> Fix Data
-        </button>
-        <button id="clear-data-btn" class="px-3 py-1 bg-red-100 hover:bg-red-200 text-red-700 rounded text-sm">
-          <i class="bi bi-trash mr-1"></i> Clear Stored Data
-        </button>
-        <button id="json-only-btn" class="px-3 py-1 bg-yellow-100 hover:bg-yellow-200 text-yellow-700 rounded text-sm">
-          <i class="bi bi-file-earmark-text mr-1"></i> JSON Only
-        </button>
-        <button id="refresh-applied-btn" class="px-3 py-1 bg-blue-100 hover:bg-blue-200 text-blue-700 rounded text-sm">
-          <i class="bi bi-arrow-repeat mr-1"></i> Refresh
-        </button>
-      </div>
+      <button id="refresh-applied-btn" class="px-3 py-1 bg-blue-100 hover:bg-blue-200 text-blue-700 rounded text-sm">
+        <i class="bi bi-arrow-repeat mr-1"></i> Refresh
+      </button>
     </h3>
     <div id="applied-jobs-container" class="min-h-[120px] flex items-center justify-center">
       <div class="w-full flex justify-center py-8">
@@ -239,118 +199,6 @@ window.renderAppliedTab = function(tab) {
       refreshBtn.addEventListener('click', () => {
         loadAndRenderJobs();
         showToast('Refreshing applied jobs...', 'success');
-      });
-    }
-    
-    // Add clear data button functionality
-    const clearDataBtn = document.getElementById('clear-data-btn');
-    if (clearDataBtn) {
-      clearDataBtn.addEventListener('click', async () => {
-        // Get userId within this function scope
-        let localUserId = null;
-        if (window.firebaseAuth && window.firebaseAuth.currentUser) {
-          localUserId = window.firebaseAuth.currentUser.uid;
-        } else if (window.firebase && window.firebase.auth) {
-          const user = window.firebase.auth().currentUser;
-          if (user) localUserId = user.uid;
-        }
-        
-        if (!localUserId) {
-          showToast('User not authenticated', 'error');
-          return;
-        }
-        
-        try {
-          if (window.clearAllJobs) {
-            await window.clearAllJobs(localUserId);
-            showToast('All stored job data cleared', 'success');
-            
-            // Reload the data
-            loadAndRenderJobs();
-          } else {
-            showToast('Clear function not available', 'error');
-          }
-        } catch (err) {
-          console.error('Error clearing data:', err);
-          showToast('Failed to clear stored data', 'error');
-        }
-      });
-    }
-    
-    // Add JSON only button functionality
-    const jsonOnlyBtn = document.getElementById('json-only-btn');
-    if (jsonOnlyBtn) {
-      jsonOnlyBtn.addEventListener('click', () => {
-        loadAndRenderJobs(true);
-        showToast('Showing JSON data only (ignoring stored changes)', 'success');
-      });
-    }
-    
-    // Add fix data button functionality
-    const fixDataBtn = document.getElementById('fix-data-btn');
-    if (fixDataBtn) {
-      fixDataBtn.addEventListener('click', async () => {
-        // Get userId within this function scope
-        let localUserId = null;
-        if (window.firebaseAuth && window.firebaseAuth.currentUser) {
-          localUserId = window.firebaseAuth.currentUser.uid;
-        } else if (window.firebase && window.firebase.auth) {
-          const user = window.firebase.auth().currentUser;
-          if (user) localUserId = user.uid;
-        }
-        
-        if (!localUserId) {
-          showToast('User not authenticated', 'error');
-          return;
-        }
-        
-        try {
-          // First, fetch the JSON data
-          const res = await fetch(`json/applied.json?t=${new Date().getTime()}`);
-          const data = await res.json();
-          const jsonJobs = Array.isArray(data.jobs) ? data.jobs : [];
-          
-          // Next, fetch the Firestore data
-          const firestoreJobs = await window.fetchJobs(localUserId);
-          
-          // Create a mapping of correct company names by serial_no
-          const correctCompanies = {};
-          jsonJobs.forEach(job => {
-            correctCompanies[job.serial_no] = {
-              company: job.company,
-              position: job.position,
-              location: job.location,
-              dateApplied: job.dateApplied,
-              applicationLink: job.applicationLink
-            };
-          });
-          
-          // Update each Firestore entry with the correct company name
-          for (const [key, job] of Object.entries(firestoreJobs)) {
-            const serialNo = parseInt(key);
-            if (correctCompanies[serialNo]) {
-              // Update with correct company data while preserving user edits (status/notes)
-              const updatedJob = {
-                ...job,
-                company: correctCompanies[serialNo].company,
-                position: correctCompanies[serialNo].position,
-                location: correctCompanies[serialNo].location,
-                dateApplied: correctCompanies[serialNo].dateApplied,
-                applicationLink: correctCompanies[serialNo].applicationLink,
-                serial_no: serialNo
-              };
-              
-              await window.updateJob(localUserId, key, updatedJob);
-            }
-          }
-          
-          showToast('Firestore data corrected based on JSON file', 'success');
-          // Reload the data
-          loadAndRenderJobs();
-        } catch (err) {
-          console.error('Error fixing data:', err);
-          showToast('Failed to fix stored data', 'error');
-        }
       });
     }
   }, 0);

@@ -23,12 +23,111 @@
       "serial_no": 2,
       "company": "HOLOGIC",
       "position": "BI Development and Insights Analyst",
-      "location": "San Diego, CA",
-      "dateApplied": "",
+      "location": "San Diego, CA, United States",
+      "dateApplied": "2025-07-31",
       "applicationLink": "https://ebwb.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/9668",
       "status": "submitted",
       "isActive": true,
-      "notes": "Contacted Jasmine directly before applying. Awaiting interview schedule."
+      "notes": ""
+    },
+    {
+      "serial_no": 3,
+      "company": "Allstate",
+      "position": "Power BI Developer",
+      "location": "Remote",
+      "dateApplied": "2025-07-31",
+      "applicationLink": "https://allstate.wd5.myworkdayjobs.com/allstate_careers/job/US---Remote/Power-BI-Developer_R19493?jr_id=688bc39f906ac06e1d1ce2d6",
+      "status": "submitted",
+      "isActive": true,
+      "notes": ""
+    },
+    {
+      "serial_no": 4,
+      "company": "Holistic Partners, Inc",
+      "position": "Senior Business Intelligence Developer",
+      "location": "Remote",
+      "dateApplied": "2025-07-31",
+      "applicationLink": "https://www.linkedin.com/jobs/view/4276873643/",
+      "status": "submitted",
+      "isActive": true,
+      "notes": ""
+    },
+    {
+      "serial_no": 5,
+      "company": "APEI",
+      "position": "Senior Insights Analyst",
+      "location": "Remote",
+      "dateApplied": "2025-07-31",
+      "applicationLink": "https://recruiting.ultipro.com/ame1070/JobBoard/b66d4325-6be5-4691-ab44-c96532dee1ff/OpportunityDetail?opportunityId=a23c880c-3c83-4433-91e1-3301f9ea2166&source=LinkedIn",
+      "status": "submitted",
+      "isActive": true,
+      "notes": ""
+    },
+    {
+      "serial_no": 6,
+      "company": "FERGUSON",
+      "position": "Senior Power BI Developer",
+      "location": "Remote",
+      "dateApplied": "2025-07-31",
+      "applicationLink": "https://ferguson.wd1.myworkdayjobs.com/Ferguson_Experienced/job/Remote/Senior-Power-BI-Developer_R-127569?source=LinkedIn&jr_id=6889973509808a6103e48dd6",
+      "status": "submitted",
+      "isActive": true,
+      "notes": ""
+    },
+    {
+      "serial_no": 7,
+      "company": "NORDIC GLOBAL",
+      "position": "Power BI Consultant",
+      "location": "Remote",
+      "dateApplied": "2025-07-31",
+      "applicationLink": "https://www.linkedin.com/jobs/view/4273772860/",
+      "status": "submitted",
+      "isActive": true,
+      "notes": ""
+    },
+    {
+      "serial_no": 8,
+      "company": "AVALARA",
+      "position": "Business Intelligence Analyst",
+      "location": "Remote",
+      "dateApplied": "2025-07-31",
+      "applicationLink": "https://careers.avalara.com/careers-home/jobs/16108",
+      "status": "submitted",
+      "isActive": true,
+      "notes": ""
+    },
+    {
+      "serial_no": 9,
+      "company": "LAZER LOGISTICS",
+      "position": "IT Business Intelligence Analyst",
+      "location": "Remote",
+      "dateApplied": "2025-07-31",
+      "applicationLink": "https://jobs.lazerlogistics.com/jobs/details/united-states/georgia/alpharetta/corporate/it-business-intelligence-analyst/11464?r=referrer",
+      "status": "submitted",
+      "isActive": true,
+      "notes": "Thank you for submitting! A representative from Lazer Spot Inc.(Corporate) will be in touch with you within 48 hours. If you have any questions in the meantime, please contact us at 770-886-6851."
+    },
+    {
+      "serial_no": 10,
+      "company": "SIMPLE PRACTICE",
+      "position": "Business Intelligence Data Analyst",
+      "location": "Remote",
+      "dateApplied": "2025-07-31",
+      "applicationLink": "https://boards.greenhouse.io/embed/job_app?token=5601772004&utm_source=jobright&jr_id=688a6a2c09808a6103e4e5cd",
+      "status": "submitted",
+      "isActive": true,
+      "notes": ""
+    },
+    {
+      "serial_no": 11,
+      "company": "HEXAWARE",
+      "position": "Information Delivery & Visualization Lead",
+      "location": "Remote",
+      "dateApplied": "2025-07-31",
+      "applicationLink": "https://fa-etqo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/472849",
+      "status": "submitted",
+      "isActive": true,
+      "notes": ""
     }
   ]
 }
