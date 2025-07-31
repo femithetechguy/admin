@@ -307,9 +307,9 @@
     "Duration": "8 minutes 26 seconds",
     "URL": "https://www.youtube.com/watch?v=_lDkhgeruwU",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial demonstrates how to join or merge tables in Power BI using the Power Query Editor, which is equivalent to SQL JOIN operations. The instructor explains how to combine data from two related tables (Supplier Info and Supplier Branches) based on matching columns to create a consolidated view. To access this functionality, click 'Transform Data' to open Power Query Editor, then use the 'Merge Queries' option found in the 'Home' tab under the 'Combine' dropdown menu.",
+      "Key steps covered include: 1) Loading both tables into Power Query; 2) Ensuring column headers are properly promoted if needed (using 'Use First Row As Headers' button); 3) Selecting 'Merge Queries as New' to create a new consolidated table without altering originals; 4) In the Merge dialog, selecting the tables and identifying matching join columns (like SupplierID); 5) Choosing the appropriate join type (Inner, Left Outer, Right Outer, Full Outer); and 6) Expanding the resulting nested table by clicking the expand icon in the new column header, unchecking 'Use original column name as prefix', and selecting only needed columns from the second table. The instructor explains SQL join equivalents: Inner join (only matching rows), Left join (all from first, matching from second), Right join (all from second, matching from first), and Full join (all rows from both tables).",
+      "A practical application shown demonstrates combining supplier master data (company name, contact info, payment terms) with their branch locations (addresses, phone numbers). Before the merge, analyzing supplier performance by location required manual cross-referencing between tables. After merging, the company can instantly see which supplier branches are most reliable, allowing for more strategic inventory management decisions. The instructor emphasizes how proper table joining creates a more comprehensive and actionable dataset while maintaining data integrity, showing how a multinational manufacturing company used this technique to optimize their supply chain by identifying which supplier branches consistently delivered on time versus those with frequent delays."
     ]
   },
   {
@@ -319,9 +319,9 @@
     "Duration": "4 minutes 32 seconds",
     "URL": "https://www.youtube.com/watch?v=LXKCBXlcwlM",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial demonstrates how to use the Group By function in Power Query Editor to aggregate data similar to SQL's GROUP BY clause. The instructor explains how to consolidate records based on common values in specified columns, calculating summaries like count, sum, average, or other aggregations. To access this functionality, click 'Transform Data' to open Power Query Editor, then right-click on the column you want to group by, and select 'Group By' from the context menu (alternatively, use the 'Group By' button in the Transform tab of the ribbon).",
+      "The step-by-step process involves: 1) Selecting the column to group by (e.g., SupplierID); 2) Choosing aggregation operations for other columns (Count Rows, Sum, Average, Min, Max, etc.); 3) Naming the resulting aggregated columns (e.g., 'BranchCount'); and 4) Clicking OK to execute the transformation. The instructor emphasizes the similarity to SQL's 'SELECT SupplierID, COUNT(*) AS BranchCount FROM Table GROUP BY SupplierID' syntax, but with a user-friendly interface that doesn't require writing code.",
+      "A practical business application demonstrated involves supplier management analysis where a company needs to identify which suppliers have multiple branch locations. By grouping the Supplier data by SupplierID and counting the rows, the procurement team quickly identifies that Supplier A has 12 branches while Supplier B has only 2, informing their supply chain diversification strategy. This analysis helps the company assess supplier dependency risk and negotiate better terms with suppliers that have wider geographical presence. The instructor also shows how combining Group By with other transformations like Sort and Filter can create powerful insights, such as identifying the top 5 suppliers with the most locations."
     ]
   },
   {
@@ -331,9 +331,9 @@
     "Duration": "5 minutes 55 seconds",
     "URL": "https://www.youtube.com/watch?v=uO7MEifwCdI",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial demonstrates how to calculate age from birth dates in Power BI using Power Query Editor. The instructor shows multiple approaches, including the built-in Power BI method that requires no code and a custom formula method. To access this functionality, click 'Transform Data' to open Power Query Editor, then use 'Add Column' > 'Date' > 'Age' which automatically calculates years between birth dates and the current date.",
+      "The step-by-step process involves: 1) Loading data containing birth dates; 2) Opening Power Query Editor; 3) Selecting the birth date column; 4) Clicking 'Add Column' tab > 'Date' group > 'Age' button; 5) For more control, using 'Date' > 'Duration' > 'Convert duration to Total Years' (which gives decimal ages); 6) Using 'Transform' tab > 'Rounding' > 'Round Down' to get completed years. The instructor emphasizes that this built-in approach is simpler than writing custom formulas and automatically handles leap years and different month lengths.",
+      "A practical business application shown involves customer segmentation by age groups to tailor marketing strategies. The company first calculates ages from customer birth dates, then creates a conditional column categorizing customers as: Kids (0-13), Youth (14-30), Middle-aged (31-55), and Elderly (56-100). This segmentation revealed that while Youth represented 40% of customers, the Middle-aged group generated 65% of revenue, prompting a strategy shift to better target this high-value segment. The tutorial also addresses common challenges like duplicate birth dates (identifying customers with identical birth dates) and handling missing or invalid date values through proper data cleansing steps."
     ]
   },
   {
@@ -343,9 +343,9 @@
     "Duration": "7 minutes 2 seconds",
     "URL": "https://www.youtube.com/watch?v=puilS0bFg5o",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial demonstrates how to create age groups or value ranges in Power BI, which transforms continuous numeric data into categorical buckets for better analysis and visualization. The instructor walks through the process of grouping ages into meaningful categories like '0-18', '19-30', '31-45', etc., explaining how binning makes patterns easier to identify than raw numeric values. The process begins in the Fields pane by right-clicking on a numeric column (like Age or Salary), selecting 'New Group', then choosing between automatic binning or custom defined ranges.",
+      "Key menu navigation: Select the numeric column in Fields pane > Right-click > 'New Group' > Choose grouping type (Bin for equal intervals, List for custom ranges) > For Bin type, specify either number of bins or bin size > For List type, manually define your categories and their ranges > Check 'Include Other group' to capture outliers > Click 'OK'. After creating the grouping, the instructor emphasizes changing the aggregation behavior of the new column by right-clicking it in the Fields pane, selecting 'Summarize by', and choosing 'Do not summarize' to ensure it's treated as a category rather than being aggregated.",
+      "A practical business application shown involves a retail analytics dashboard where customer purchase patterns were analyzed by age. By grouping customer ages into buckets (Under 18, 19-25, 26-35, 36-50, 51-65, 65+), the company discovered that while the 26-35 group made the most frequent purchases, the 36-50 age group spent significantly more per transaction. This insight helped the marketing team create targeted promotions for each segment - focusing on loyalty programs for the frequent younger buyers while developing premium product offerings for the higher-spending middle-aged customers. The instructor demonstrates how to visualize this by creating a column chart with Age Group on the axis and order quantity or sales amount as values, revealing clear patterns that would be difficult to spot with ungrouped age data."
     ]
   },
   {
@@ -355,9 +355,9 @@
     "Duration": "11 minutes 34 seconds",
     "URL": "https://www.youtube.com/watch?v=rdscvHteaCw",
     "Note": [
-      "This is a placeholder for the first paragraph of the note.",
-      "This is a placeholder for the second paragraph, which can contain more details.",
-      "Further paragraphs can be added as needed to fully describe the content."
+      "This tutorial explains how to build relationships between tables in Power BI, which is essential for creating interactive dashboards with cross-filtering capabilities. The instructor demonstrates how to connect tables through common fields using two methods: drag-and-drop (connecting tables visually in the Model view) or using the Manage Relationships dialog (accessible via the Modeling tab in the ribbon). Key concepts covered include cardinality (one-to-many, many-to-one, one-to-one, many-to-many), filter direction (single vs bi-directional), and active vs inactive relationships.",
+      "To establish table relationships in Power BI: 1) Switch to Model view by clicking the Model icon in the left navigation bar; 2) Drag a column from one table and drop it onto the corresponding column in another table, or use the Modeling tab > Manage Relationships > New to create relationships manually; 3) In the relationship dialog, set cardinality (typically 'Many to One') and filter direction ('Single' for standard star schema or 'Both' for bi-directional filtering); 4) Verify relationships work correctly by testing filtering behavior between visuals. The instructor emphasizes the importance of proper key columns (matching data types and values) and explains that relationships enable the 'filter context' that makes interactive dashboards possible.",
+      "A practical business application demonstrated involves a garment retail chain with three store branches selling men's clothing, ladies' wear, and accessories. The data model includes Sales, Products, Stores, and Date tables connected through relationship keys like ProductID and StoreID. By establishing proper relationships, when a user selects a specific store in a pie chart, the bar chart showing product category sales automatically filters to display only data for that store. Without these relationships, visuals would operate independently. The tutorial shows how setting cross-filter direction to 'Both' enables bi-directional filtering where selecting a product category can also filter store performance metrics, providing management with deeper insights into which product lines perform best across different locations. This proper data modeling revealed that while the downtown branch had higher total sales, the suburban location showed stronger performance in accessories, leading to a decision to expand that product line in other locations. The instructor notes that a common sign of missing relationships is when totals for each row in a visual aggregate to the same number regardless of filtering - this indicates that the tables aren't properly connected, preventing filters from propagating between tables."
     ]
   },
   {
