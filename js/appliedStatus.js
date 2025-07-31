@@ -26,5 +26,17 @@ window.fetchJobs = async function(userId) {
   querySnapshot.forEach((doc) => {
     jobs[doc.id] = doc.data();
   });
+  console.log('Jobs fetched from Firestore:', jobs);
   return jobs;
+};
+
+window.clearAllJobs = async function(userId) {
+  const querySnapshot = await db.collection(`users/${userId}/appliedJobs`).get();
+  const batch = db.batch();
+  querySnapshot.forEach((doc) => {
+    batch.delete(doc.ref);
+  });
+  await batch.commit();
+  console.log('All jobs cleared for user:', userId);
+  return true;
 };
