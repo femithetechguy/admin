@@ -128,6 +128,116 @@
       "status": "submitted",
       "isActive": true,
       "notes": ""
+    },
+    {
+      "serial_no": 12,
+      "company": "LATERAL",
+      "position": "Power BI/Data Analyst",
+      "location": "Remote",
+      "dateApplied": "2025-08-01",
+      "applicationLink": "https://careers.lateralgroup.com/jobs/6249715-power-bi-data-analyst-contractor-remote-us",
+      "status": "submitted",
+      "isActive": true,
+      "notes": ""
+    },
+    {
+      "serial_no": 13,
+      "company": "COMPASSX",
+      "position": "Business Intelligence Engineer (Power BI)",
+      "location": "Remote",
+      "dateApplied": "2025-08-01",
+      "applicationLink": "https://jobs.lever.co/compassx/ec413e0d-9dd7-4db8-bf44-cf32dede27f7/apply?utm_source=jobright&jr_id=688cf6453a30793eb96477ea",
+      "status": "submitted",
+      "isActive": true,
+      "notes": ""
+    },
+    {
+      "serial_no": 14,
+      "company": "JOBGETTER",
+      "position": "Business Intelligence (BI) Analyst (Remote - US)",
+      "location": "Remote",
+      "dateApplied": "2025-08-01",
+      "applicationLink": "https://www.linkedin.com/jobs/view/business-intelligence-bi-analyst-remote-us-at-jobgether-4277516200/",
+      "status": "submitted",
+      "isActive": true,
+      "notes": ""
+    },
+    {
+      "serial_no": 15,
+      "company": "NATIONAL GENERAL",
+      "position": "Power BI Developer",
+      "location": "Remote",
+      "dateApplied": "2025-08-01",
+      "applicationLink": "https://allstate.wd5.myworkdayjobs.com/allstate_careers/job/US---Remote/Power-BI-Developer_R19493?utm_source=LinkedIn_Job%20Board&utm_source=LILimitedListings&source=jobright",
+      "status": "submitted",
+      "isActive": true,
+      "notes": ""
+    },
+    {
+      "serial_no": 16,
+      "company": "MASA",
+      "position": "Business Intelligence Analyst",
+      "location": "Remote",
+      "dateApplied": "2025-08-01",
+      "applicationLink": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/3462250?src=LinkedIn",
+      "status": "submitted",
+      "isActive": true,
+      "notes": ""
+    },
+    {
+      "serial_no": 17,
+      "company": "CIRCLE",
+      "position": "Senior Data Analyst",
+      "location": "Remote",
+      "dateApplied": "2025-08-01",
+      "applicationLink": "https://careers.circle.com/us/en/job/CIICIRUSJR100432EXTERNALENUS/Senior-Data-Analyst?utm_source=jobright&utm_medium=phenom-feeds&src=LinkedIn",
+      "status": "submitted",
+      "isActive": true,
+      "notes": ""
+    },
+    {
+      "serial_no": 18,
+      "company": "CASPER's ICE CREAM",
+      "position": "Business Intelligence Analyst",
+      "location": "Remote",
+      "dateApplied": "2025-08-01",
+      "applicationLink": "https://secure7.saashr.com/ta/6200343.careers?CareersSearch=&lang=en-US",
+      "status": "submitted",
+      "isActive": true,
+      "notes": ""
+    },
+    {
+      "serial_no": 19,
+      "company": "OMADA HEALTH",
+      "position": "Senior Data Analyst, Product Analytics",
+      "location": "Remote",
+      "dateApplied": "2025-08-01",
+      "applicationLink": "https://www.linkedin.com/jobs/view/senior-data-analyst-product-analytics-12-months-at-omada-health-4236382911/",
+      "status": "submitted",
+      "isActive": true,
+      "notes": ""
+    },
+    {
+      "serial_no": 20,
+      "company": "ASCENDION",
+      "position": "Business Intelligence Analyst",
+      "location": "Remote",
+      "dateApplied": "2025-08-01",
+      "applicationLink": "https://www.linkedin.com/jobs/view/4277947016/",
+      "status": "submitted",
+      "isActive": true,
+      "notes": ""
+    },
+    {
+      "serial_no": 21,
+      "company": "AIMNEXT CONSULTING",
+      "position": "Power BI Developer",
+      "location": "Remote",
+      "dateApplied": "2025-08-01",
+      "applicationLink": "https://www.linkedin.com/jobs/view/4272268109/",
+      "status": "submitted",
+      "isActive": true,
+      "notes": ""
     }
   ]
 }
