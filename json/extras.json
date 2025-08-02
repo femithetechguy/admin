@@ -56,6 +56,76 @@
       "author": "YouTube Summarized",
       "dateAdded": "July 31, 2025",
       "tags": ["tool", "video", "external", "summarization"]
+    },
+    {
+      "id": 6,
+      "filename": "youtube-playlist-calculator",
+      "type": "url",
+      "description": "Tool to calculate total time of YouTube playlists",
+      "path": "https://youtubesummarized.com/tools/playlist-calculator-youtube/",
+      "author": "YouTube Summarized",
+      "dateAdded": "July 31, 2025",
+      "tags": ["tool", "video", "external", "playlist", "calculator"]
+    },
+    {
+      "id": 7,
+      "filename": "Power Bi Interview Part 1.pbix",
+      "type": "url",
+      "description": "Power BI interview questions sample file",
+      "path": "https://github.com/amitchandakpbi/powerbi/blob/main/Power%20Bi%20Interview%20Part%201.pbix",
+      "author": "Amit Chandak",
+      "dateAdded": "July 31, 2025",
+      "tags": ["interview", "sample", "external", "practice"]
+    },
+    {
+      "id": 8,
+      "filename": "AT Interview Questions Part 2 Video.pbix",
+      "type": "url",
+      "description": "Power BI interview questions sample file (part 2)",
+      "path": "https://github.com/amitchandakpbi/powerbi/blob/main/AT%20Interview%20Questions%20Part%202%20Video.pbix",
+      "author": "Amit Chandak",
+      "dateAdded": "July 31, 2025",
+      "tags": ["interview", "sample", "external", "practice"]
+    },
+    {
+      "id": 9,
+      "filename": "power-bi-interview-questions-part-1",
+      "type": "url",
+      "description": "Power BI interview questions article (part 1)",
+      "path": "https://amitchandak.medium.com/power-bi-interview-questions-part-1-4982de3be327",
+      "author": "Amit Chandak",
+      "dateAdded": "July 31, 2025",
+      "tags": ["interview", "article", "external", "practice"]
+    },
+    {
+      "id": 10,
+      "filename": "power-bi-interview-questions-part-2",
+      "type": "url",
+      "description": "Power BI interview questions article (part 2)",
+      "path": "https://amitchandak.medium.com/power-bi-interview-questions-part-2-de5c7b16db84",
+      "author": "Amit Chandak",
+      "dateAdded": "July 31, 2025",
+      "tags": ["interview", "article", "external", "practice"]
+    },
+    {
+      "id": 11,
+      "filename": "power-bi-dax-tutorial",
+      "type": "url",
+      "description": "Power BI DAX Tutorial YouTube video",
+      "path": "https://www.youtube.com/watch?v=Wfr1Wh5SxwM&t=1653s&ab_channel=LearnMicrosoftFabric%2CPowerBI%2CSQLAmitChandak",
+      "author": "Amit Chandak",
+      "dateAdded": "July 31, 2025",
+      "tags": ["tutorial", "video", "external", "DAX", "learning"]
+    },
+    {
+      "id": 12,
+      "filename": "power-bi-interview-playlist",
+      "type": "url",
+      "description": "Power BI Interview Questions and Answers Playlist",
+      "path": "https://www.youtube.com/playlist?list=PLPaNVDMhUXGbUzSOKy3A15J5wAgQedQtl",
+      "author": "Amit Chandak",
+      "dateAdded": "July 31, 2025",
+      "tags": ["interview", "video", "external", "playlist", "practice"]
     }
   ]
 }

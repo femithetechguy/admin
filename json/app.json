@@ -24,12 +24,21 @@
           ]
         },
         {
-          "name": "Interview Prep",
+          "name": "PowerBI Prep",
           "biIcon": "bi-question-circle",
           "content": [
-            "Table or card view of interview prep tasks",
+            "Table or card view of PowerBI prep tasks",
             "Fields: Company, Role, Date, Notes",
             "Optional: mock questions, tips, resource links"
+          ]
+        },
+        {
+          "name": "PowerBI Prep Vids",
+          "biIcon": "bi-camera-video",
+          "content": [
+            "Video tutorials for PowerBI preparation",
+            "Fields: Topic, Duration, Difficulty",
+            "Optional: filters for specific PowerBI concepts"
           ]
         },
         {

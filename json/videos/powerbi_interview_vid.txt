@@ -1,0 +1,50 @@
+00:00 Introduction to Power BI Interview Questions 
+09:30 What is Power BI?
+10:40 What are the components and elements parts of Power BI?
+13:10 What is Power BI Desktop? Why do we need a Power BI Desktop?
+16:40 What is Power Query?
+19:10 What is DAX?
+20:40 What is the difference between a Calculated Column and a measure?
+27:40 What is Import, Direct Query, and Live Mode?
+34:20 What are the different types of visuals?
+36:20 How to do a multi-column sort on a visual?
+37:15 What is conditional formatting in Power BI and three format styles?
+42:25 When does conditional formatting become unavailable?
+44:20 What are Interactions in Power BI?
+48:15 What are Field Parameters in Power BI- dynamic Axis using a slicer?
+52:25 Before the field parameters, how do we achieve dynamic dimensions and axes?
+58:40 What are bookmarks in Power BI? How can pass slicer values across bookmarks?
+01:04:10 What is the difference between sumx and sum in power bi?
+01:07:05 What is the difference between calculate and calculatetable?
+01:11:00 What is the difference between Summarize and SummarizeColumns?
+01:13:50 What is the difference between all and allselected in power bi?
+01:17:50 What is the difference between filtering data in CALCULATE with and without FILTER Expression?
+01:23:30 By default, sort order for RANKX? If we add an additional column same granularity, will I get the same ranks?
+01:28:40 What is the difference between skip and dense in Rank?
+01:30:10 Please provide a measure for top 10 states by gross sales?
+01:32:10 When Grand Total does not equal the sum of rows?
+01:33:30 Why Date table is very important in Power BI?
+01:35:30 What are some best practices related to Time intelligence?
+01:38:00 What do mean by MTD, QTD, and YTD? Could you provide the formulas for calculating MTD, QTD, and YTD?
+01:40:10 For which specific month does an MTD measure using DATESMTD display its value on card visual without a filter?
+01:43:50 Calculation Of Last Year Date for the very first date in the date table?
+01:46:50 Then how can I get the date year before for today?
+01:50:10 Are they same - LMTD= CALCULATE([Net],DATESMTD(dateadd(‘Date’[Date],-1,Month))) or CALCULATE([Net], Previousmonth(‘Date’[Date]))?
+01:56:15 How can I display a trend for the last 12 months when one month is selected?
+02:00:20 How do sort the Month Year in the format MMM-YYYY?
+02:02:50 What type of schema is preferred for Power BI modeling?
+02:04:00 What is the RELATED function? and the difference between RELATED and RELATEDTABLE?
+02:10:40 What is the difference between search and find?
+02:18:50 What does FIRSTNONBLANKVALUE function do?
+02:25:30 Give examples of Power BI functions that are very similar to SQL window functions?
+02:40:40 What are the differences between Rank and Rankx?
+02:57:00 What is the difference between GENERATE and CROSSJOIN?
+03:05:30 What is the difference between the CALENDAR and CALENDARAUTO?
+03:14:45 What is the best way to find min values 5 columns or measures for a given table row or visual row?
+03:23:40 How can we repeat the value of a measure or column?
+03:30:20 How can we generate a series of odd numbers or even numbers?
+03:37:30 Power Query Unpivot Multiple columns sets
+03:42:40 HR Analytics - Tenure Bucketing - Active employee, Hired, Terminated. Use relationship- Inactive Joins
+04:10:40 TOPN with Others and ABC Analytics, window function, and Matrix as Project Plan Visual 
+05:11:10 Field Parameters- Set of measures, Always Sort on Axis, Live connection 
+05:47:20 Power Query- Cross Join, Merge Excel Sheets Data
