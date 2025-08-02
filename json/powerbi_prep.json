@@ -3,71 +3,351 @@
   "questions": [
     {
       "serial_no": 1,
-      "question": "Can you describe your experience with Power BI?",
-      "answer": "S: Over the past 6 years, I’ve worked in various sectors using Power BI, including healthcare, insurance, retail, and IT. T: My role was to build interactive and scalable dashboards to support decision-making. A: I developed over 50 dashboards using Power BI Desktop and Service, integrated data using Power Query, and modeled it using DAX and RLS. R: These solutions provided end users with actionable insights, improved data access control, and significantly reduced manual reporting.",
-      "category": "Power BI",
-      "skills": ["Power BI", "Data Visualization", "Power Query", "DAX", "Report Development"]
+      "question": "What is Power BI?",
+      "answer": "Power BI is Microsoft's business analytics service that provides interactive visualizations and business intelligence capabilities. It allows users to create reports and dashboards from various data sources, share insights across organizations, and embed analytics within applications. Power BI offers both cloud-based services (Power BI Service) and a desktop-based interface (Power BI Desktop) for data preparation and visualization.",
+      "category": "Fundamentals",
+      "skills": ["Power BI", "Business Intelligence", "Data Visualization"]
     },
     {
       "serial_no": 2,
-      "question": "How do you ensure data accuracy in your reports?",
-      "answer": "S: In multiple reporting environments, maintaining data accuracy was critical to ensure stakeholder trust. T: I needed to implement reliable mechanisms for validating KPIs and preventing errors. A: I added validation rules during transformations, tested DAX measures with sample data, and used visual alerts for anomalies. I also coordinated stakeholder reviews and set up refresh audits. R: This approach minimized reporting errors and built credibility in the reports I delivered.",
-      "category": "Data Quality",
-      "skills": ["Data Validation", "DAX", "Power BI Service", "ETL", "Stakeholder Collaboration"]
+      "question": "What are the components and elements parts of Power BI?",
+      "answer": "The main components of Power BI include: 1) Power BI Desktop - for creating reports and data models; 2) Power BI Service (powerbi.com) - for sharing and viewing reports; 3) Power BI Mobile Apps - for accessing reports on mobile devices; 4) Power BI Report Server - for on-premises report deployment; 5) Power BI Embedded - for embedding analytics in applications. The key elements include Power Query for data transformation, DAX for calculations, data modeling capabilities, and visualization tools.",
+      "category": "Fundamentals",
+      "skills": ["Power BI Components", "Power BI Architecture", "Power BI Service"]
     },
     {
       "serial_no": 3,
-      "question": "What’s your approach to data modeling in Power BI?",
-      "answer": "S: In complex projects, poor data models often led to performance issues and user confusion. T: My task was to build scalable, performant data models that supported future enhancements. A: I applied star schema principles, created calculated tables, and optimized relationships. I also reduced row-level calculations by using summary tables. R: This improved report load times and allowed the business to scale their reporting needs efficiently.",
-      "category": "Data Modeling",
-      "skills": ["Data Modeling", "Star Schema", "Relationships", "Calculated Tables", "Performance Tuning"]
+      "question": "What is Power BI Desktop? Why do we need a Power BI Desktop?",
+      "answer": "Power BI Desktop is a free application that installs on your local computer and lets you connect to, transform, and visualize your data. We need Power BI Desktop because it provides the essential authoring capabilities that aren't available in the service: connecting to numerous data sources, data transformation with Power Query, data modeling with relationships and DAX measures, and creating interactive reports with rich visualizations. It's the primary tool for BI developers to create and test reports before publishing to the Power BI Service.",
+      "category": "Fundamentals",
+      "skills": ["Power BI Desktop", "Report Development", "Data Modeling"]
     },
     {
       "serial_no": 4,
-      "question": "Explain Row-Level Security (RLS) and how you’ve used it.",
-      "answer": "S: At Northside Hospital, clinical dashboards needed to restrict data access to department-level views. T: I had to implement secure data access based on user roles. A: I defined roles in Power BI, used RLS filters, and tested using the 'View As Role' feature before publishing. R: This ensured compliance with data privacy policies and improved stakeholder confidence in data access.",
-      "category": "Security",
-      "skills": ["Row-Level Security (RLS)", "Power BI", "Data Privacy", "Role Management"]
+      "question": "What is Power Query?",
+      "answer": "Power Query is an ETL (Extract, Transform, Load) tool integrated into Power BI Desktop. It allows users to connect to various data sources, transform and clean the data using a graphical interface or M language, and load it into the data model. Key features include the ability to merge and append queries, pivot/unpivot data, remove duplicates, create custom columns, and perform complex transformations. Power Query operations are recorded as steps that can be edited, providing transparency and reproducibility in the data preparation process.",
+      "category": "Data Preparation",
+      "skills": ["Power Query", "ETL", "M Language", "Data Transformation"]
     },
     {
       "serial_no": 5,
-      "question": "How do you handle performance issues in Power BI reports?",
-      "answer": "S: I encountered performance issues in reports with large datasets and slow visuals. T: I was responsible for diagnosing and optimizing these reports. A: I used DAX Studio and Performance Analyzer, replaced heavy measures with columns where possible, removed unused fields, and avoided bi-directional filters. R: These actions significantly improved report speed and responsiveness.",
-      "category": "Performance Optimization",
-      "skills": ["Performance Analyzer", "DAX Studio", "Data Modeling", "Query Optimization", "Calculated Columns"]
+      "question": "What is DAX?",
+      "answer": "DAX (Data Analysis Expressions) is a formula language used in Power BI for creating custom calculations on data in the model. It's specifically designed for working with relational data and performing dynamic aggregations. DAX includes functions for common aggregations (SUM, AVERAGE), time intelligence (SAMEPERIODLASTYEAR), context manipulation (CALCULATE), and filtering (FILTER). It operates on columns and tables in the data model and handles relationships automatically. The key concept in DAX is context - both row context and filter context - which determines how calculations behave.",
+      "category": "Data Modeling",
+      "skills": ["DAX", "Formula Language", "Calculations", "Measures"]
     },
     {
       "serial_no": 6,
-      "question": "Have you worked with Power BI Gateways and Dataflows?",
-      "answer": "S: At Manhattan Associates, multiple reports needed shared ETL logic and scheduled data refresh from on-prem sources. T: I was tasked with configuring gateways and standardizing data ingestion. A: I set up Power BI Gateway for SQL Server connections and developed shared Dataflows to centralize transformations. R: This streamlined data management, reduced refresh failures, and improved cross-report consistency.",
-      "category": "Deployment",
-      "skills": ["Power BI Gateway", "Dataflows", "ETL", "SQL Server", "Automation"]
+      "question": "What is the difference between a Calculated Column and a measure?",
+      "answer": "S: In a retail sales analysis project, I needed to implement various calculations. T: I had to choose between calculated columns and measures based on specific requirements. A: I found that calculated columns: 1) Are computed at data refresh time; 2) Calculate a value for each row; 3) Increase model size; 4) Don't respond to filter context. Measures, however: 1) Are computed at query time; 2) Return a single value based on aggregation; 3) Don't increase model size; 4) Respond dynamically to filters. R: I used calculated columns for static values needed in slicers/filters and measures for dynamic aggregations, optimizing both performance and functionality.",
+      "category": "Data Modeling",
+      "skills": ["DAX", "Calculated Columns", "Measures", "Performance Optimization"]
     },
     {
       "serial_no": 7,
-      "question": "How do you manage version control with PBIX files?",
-      "answer": "S: Our team faced challenges managing PBIX versions and ensuring documentation consistency. T: I needed to implement a reliable version control process for Power BI assets. A: I used Git for scripts and documentation, enforced naming conventions for PBIX files, and leveraged deployment pipelines for separating datasets and reports. R: This improved auditability and reduced confusion during updates and releases.",
-      "category": "Governance",
-      "skills": ["Version Control", "Git", "Deployment Pipelines", "Documentation", "Power BI Governance"]
+      "question": "What is Import, Direct Query, and Live Mode?",
+      "answer": "S: At a healthcare company, we had different data scenarios requiring various connection methods. T: I needed to select the appropriate connection mode for each dataset. A: I implemented: 1) Import Mode - for departmental data where we needed the fastest performance and full DAX functionality, but with the limitation of data size and refresh scheduling; 2) DirectQuery Mode - for real-time patient data where we needed the latest information and could handle larger datasets, accepting slower performance and some DAX limitations; 3) Live Connection - for enterprise-wide metrics in Analysis Services, maintaining a single version of truth while limiting editing capabilities. R: This approach balanced performance, freshness, and governance requirements across our BI ecosystem.",
+      "category": "Data Connectivity",
+      "skills": ["Import Mode", "DirectQuery", "Live Connection", "Performance Tuning"]
     },
     {
       "serial_no": 8,
-      "question": "Describe a dashboard you’re proud of.",
-      "answer": "S: At Hiscox Insurance, the fraud detection team lacked visibility into potential claim anomalies. T: I was asked to build a dashboard that could surface risk indicators across data sources. A: I combined internal claims data with external trend indicators, applied AI visuals and drill-through filters, and used conditional formatting. R: The dashboard reduced review time by 60% and uncovered $750K in premium mismatches.",
-      "category": "Showcase",
-      "skills": ["Power BI", "Conditional Formatting", "Drill-through", "Data Integration", "Fraud Detection"]
+      "question": "What are the different types of visuals?",
+      "answer": "Power BI offers numerous visualization types including: 1) Basic visuals: bar/column charts, line charts, pie/donut charts, tables and matrices; 2) Statistical visuals: scatter plots, box plots, histograms; 3) KPI visuals: cards, gauges, KPI tiles; 4) Map visuals: filled maps, bubble maps, shape maps; 5) Advanced visuals: decomposition trees, key influencers, AI visuals; 6) Custom visuals from AppSource. Each visual type serves different analytical purposes - comparison (bar charts), composition (pie charts), distribution (histograms), relationship (scatter plots), or trend analysis (line charts).",
+      "category": "Visualization",
+      "skills": ["Data Visualization", "Charts", "Custom Visuals", "Visual Selection"]
     },
     {
       "serial_no": 9,
-      "question": "How do you stay updated with Power BI features?",
-      "answer": "S: Staying current with Power BI’s rapid updates is essential in my role. T: I aimed to keep my knowledge fresh and share it with my team. A: I follow Power BI blogs, Guy in a Cube, and SQLBI. I test new features in monthly updates and run internal demo sessions. R: This has helped my teams adopt new capabilities faster and improve report design practices.",
-      "category": "Professional Development",
-      "skills": ["Continuous Learning", "Community Engagement", "Feature Testing", "Team Training"]
+      "question": "How to do a multi-column sort on a visual?",
+      "answer": "In Power BI, multi-column sorting can be achieved by: 1) For tables/matrices: Select the visual, go to the 'Column tools' tab, click 'Sort by column', and select the column to sort by; 2) For categorical charts: In the Visualizations pane, drag multiple fields to the 'Legend' section, then use the sort options; 3) For advanced scenarios: Create a calculated column that combines multiple fields in the desired sort order, then sort by this column; 4) For programmatic control: Use the RANKX function with multiple columns as the expression parameter. This functionality is particularly useful for hierarchical data or when primary and secondary sort orders are needed.",
+      "category": "Visualization",
+      "skills": ["Data Sorting", "Multi-column Sort", "Visual Formatting"]
     },
     {
       "serial_no": 10,
+      "question": "What is conditional formatting in Power BI and three format styles?",
+      "answer": "Conditional formatting in Power BI dynamically changes visual elements based on data values. The three main formatting styles are: 1) Color scales - Apply a gradient of colors based on value ranges (useful for heatmaps and highlighting trends); 2) Rules-based formatting - Apply specific formatting when values meet certain conditions (e.g., red for below target, green for above); 3) Data bars - Show in-cell bars proportional to values (combining text and visual representation). These can be applied to tables, matrices, cards, and some chart elements through the format pane, enabling users to quickly identify patterns, outliers, and threshold breaches.",
+      "category": "Visualization",
+      "skills": ["Conditional Formatting", "Data Visualization", "Visual Design"]
+    },
+    {
+      "serial_no": 11,
+      "question": "When does conditional formatting become unavailable?",
+      "answer": "Conditional formatting in Power BI becomes unavailable in several scenarios: 1) When using DirectQuery or Live Connection mode with certain data sources; 2) When the field is not numeric (for color scales and data bars); 3) When using custom visuals that don't support conditional formatting; 4) When applying formatting to calculated fields with complex DAX; 5) When attempting to use measures in table/matrix visuals that reference other fields not in the visual; 6) When the 'fx' button is missing, which often indicates incompatibility between the visual type and the conditional formatting type.",
+      "category": "Visualization",
+      "skills": ["Conditional Formatting", "Troubleshooting", "Visualization Limitations"]
+    },
+    {
+      "serial_no": 12,
+      "question": "What are Interactions in Power BI?",
+      "answer": "S: In a sales dashboard, stakeholders were confused when selecting a product category affected unrelated visuals. T: I needed to configure appropriate cross-filtering behavior between visuals. A: I used the 'Edit interactions' feature to: 1) Control how selecting data in one visual affects others; 2) Set specific visuals to filter, highlight, or have no effect on others; 3) Create focused analysis paths by disabling filtering between unrelated metrics; 4) Implement drill-through filters for detailed analysis. R: This created a more intuitive user experience where interactions were predictable and supported the analytical workflow, reducing user confusion and training needs.",
+      "category": "Visualization",
+      "skills": ["Visual Interactions", "Cross-filtering", "User Experience", "Dashboard Design"]
+    },
+    {
+      "serial_no": 13,
+      "question": "What are Field Parameters in Power BI- dynamic Axis using a slicer?",
+      "answer": "Field Parameters in Power BI allow users to dynamically change the fields used in visualizations through slicers. S: In a financial dashboard, executives wanted to compare different metrics without multiple charts. T: I needed to create a flexible solution that allowed switching between measures. A: I implemented Field Parameters by: 1) Creating a parameter that included relevant fields (Revenue, Profit, Margin); 2) Adding a slicer to select the desired metric; 3) Using the parameter in visualizations to dynamically change the plotted measure. R: This reduced dashboard clutter by 40%, improved user satisfaction, and allowed for dynamic analysis without developer intervention.",
+      "category": "Advanced Features",
+      "skills": ["Field Parameters", "Dynamic Reporting", "Slicers", "Advanced Visuals"]
+    },
+    {
+      "serial_no": 14,
+      "question": "Before the field parameters, how do we achieve dynamic dimensions and axes?",
+      "answer": "Before Field Parameters, dynamic dimensions and axes in Power BI were achieved through: 1) Bookmarks combined with buttons - creating multiple versions of a visual and toggling visibility; 2) Disconnected tables with SWITCH measures - creating a slicer from a disconnected table and using SWITCH to return different measures; 3) What-if parameters - creating parameters that could be used in calculations to change visual behavior; 4) Measure tables with DAX - organizing measures in virtual tables and selecting them with slicers. These approaches required more maintenance and complex DAX, but provided similar functionality to the now-streamlined Field Parameters.",
+      "category": "Advanced Features",
+      "skills": ["Dynamic Reporting", "Bookmarks", "DAX", "What-if Parameters"]
+    },
+    {
+      "serial_no": 15,
+      "question": "What are bookmarks in Power BI? How can pass slicer values across bookmarks?",
+      "answer": "S: For a multi-page sales dashboard, users needed to maintain their filter selections when navigating between different views. T: I needed to implement a way to preserve context across report sections. A: I used bookmarks to: 1) Capture specific report states including visuals, filters, and selections; 2) Created navigation buttons connected to these bookmarks; 3) Enabled the 'Data' option in bookmark settings to retain slicer selections across bookmarks; 4) Implemented synced slicers across pages for consistent filtering. R: This created a seamless navigation experience where users maintained their analysis context, improving productivity and adoption of the dashboard.",
+      "category": "Advanced Features",
+      "skills": ["Bookmarks", "Navigation", "User Experience", "Interactive Reports"]
+    },
+    {
+      "serial_no": 16,
+      "question": "What is the difference between sumx and sum in power bi?",
+      "answer": "S: In a sales analysis project, aggregate calculations were producing unexpected results. T: I needed to understand when to use SUM vs SUMX for accurate results. A: I found that: 1) SUM is a simple aggregation that totals a column's values; it's faster but limited to single-column operations; 2) SUMX iterates through each row in a table, evaluating an expression for each row before summing the results; it's more powerful for complex calculations involving multiple columns. R: By using SUMX for calculations like 'Revenue = SUMX(Sales, Sales[Quantity] * Sales[Price])' and SUM for simple totals, I delivered accurate reports that correctly handled row-level mathematics while optimizing performance.",
+      "category": "DAX",
+      "skills": ["DAX", "SUM", "SUMX", "Aggregation Functions"]
+    },
+    {
+      "serial_no": 17,
+      "question": "What is the difference between calculate and calculatetable?",
+      "answer": "S: In developing a complex financial model, I needed to manipulate filter context for both measures and tables. T: I had to understand when to use CALCULATE vs CALCULATETABLE for accurate results. A: I discovered that: 1) CALCULATE modifies the filter context for a scalar expression (measure), returning a single value; 2) CALCULATETABLE modifies the filter context for a table expression, returning a table; 3) CALCULATE is used for measures and aggregations; 4) CALCULATETABLE is used when you need the filtered table for further processing, like in variables or nested functions. R: This knowledge allowed me to create precise financial metrics and filtered datasets that maintained correct context and relationships.",
+      "category": "DAX",
+      "skills": ["DAX", "CALCULATE", "CALCULATETABLE", "Filter Context"]
+    },
+    {
+      "serial_no": 18,
+      "question": "What is the difference between Summarize and SummarizeColumns?",
+      "answer": "S: When building a custom aggregate table in DAX, I experienced performance issues with complex grouping operations. T: I needed to determine whether to use SUMMARIZE or SUMMARIZECOLUMNS for optimal results. A: I found that: 1) SUMMARIZE is an older function that groups by columns and can add calculated columns, but has limitations with relationships; 2) SUMMARIZECOLUMNS is newer, more efficient, handles relationships better, and works directly with measures; 3) SUMMARIZECOLUMNS has better performance and memory usage for large datasets. R: By replacing SUMMARIZE with SUMMARIZECOLUMNS, I reduced query execution time by 40% and created more reliable aggregations that respected the data model's relationships.",
+      "category": "DAX",
+      "skills": ["DAX", "SUMMARIZE", "SUMMARIZECOLUMNS", "Performance Optimization"]
+    },
+    {
+      "serial_no": 19,
+      "question": "What is the difference between all and allselected in power bi?",
+      "answer": "S: In a sales dashboard with complex hierarchical filters, percentage calculations weren't reflecting the correct denominator. T: I needed to understand when to use ALL vs ALLSELECTED for proper ratio calculations. A: I determined that: 1) ALL removes all filters from the specified column or table, ignoring any user selections; 2) ALLSELECTED removes filters from the specified column while preserving other filters applied by the user; 3) ALL is used for absolute ratios (e.g., % of grand total); 4) ALLSELECTED is used for relative ratios within the current selection. R: Implementing the correct function in each scenario provided users with meaningful percentages that answered their business questions regardless of their filter selections.",
+      "category": "DAX",
+      "skills": ["DAX", "ALL", "ALLSELECTED", "Filter Context"]
+    },
+    {
+      "serial_no": 20,
+      "question": "What is the difference between filtering data in CALCULATE with and without FILTER Expression?",
+      "answer": "S: In a customer analysis project, complex filtering requirements led to inconsistent results. T: I needed to understand the differences between CALCULATE's direct filters and the FILTER function. A: I discovered that: 1) Direct filters in CALCULATE (CALCULATE([Measure], Table[Column]=Value)) are optimized but limited to simple conditions; 2) FILTER expressions (CALCULATE([Measure], FILTER(Table, Condition))) are more flexible for complex logic but can impact performance; 3) Direct filters completely replace existing filters on columns; 4) FILTER expressions can reference multiple columns and use complex conditions. R: By using direct filters for simple conditions and FILTER only when necessary, I improved report performance while maintaining the complex filtering requirements.",
+      "category": "DAX",
+      "skills": ["DAX", "CALCULATE", "FILTER", "Performance Optimization"]
+    },
+    {
+      "serial_no": 21,
+      "question": "By default, sort order for RANKX? If we add an additional column same granularity, will I get the same ranks?",
+      "answer": "By default, RANKX sorts in descending order (highest value gets rank 1). When you add an additional column at the same granularity to a visual containing a RANKX measure, you will not get the same ranks because: 1) The ranking context changes as the grouping becomes more granular; 2) RANKX evaluates in the current filter context, which now includes the additional column; 3) Each unique combination of values becomes its own group to rank. For consistent ranking regardless of visual columns, you must explicitly define the grouping in the RANKX function rather than relying on the visual's implicit grouping.",
+      "category": "DAX",
+      "skills": ["DAX", "RANKX", "Sorting", "Data Analysis"]
+    },
+    {
+      "serial_no": 22,
+      "question": "What is the difference between skip and dense in Rank?",
+      "answer": "In Power BI's ranking functions like RANKX, the differences between skip and dense ranking methods are: 1) Skip ranking (default) - Leaves gaps in rank sequence when there are ties. If two items tie for 1st place, the next item is ranked 3rd; 2) Dense ranking - No gaps in the rank sequence. If two items tie for 1st place, the next item is ranked 2nd. Skip ranking follows the sporting competition model (e.g., Olympic medals), while dense ranking is useful for scenarios where you need consecutive ranks without gaps, such as percentile calculations or compact ranked lists.",
+      "category": "DAX",
+      "skills": ["DAX", "RANKX", "Skip Ranking", "Dense Ranking"]
+    },
+    {
+      "serial_no": 23,
+      "question": "Please provide a measure for top states by gross sales?",
+      "answer": "To create a measure for top states by gross sales, I would use: TopStates = IF(RANKX(ALL(Geography[State]), [Gross Sales],,DESC,Skip) <= 10, [Gross Sales], 0). This measure returns the gross sales value only for states ranked in the top 10, and 0 for all others. For more advanced requirements, I might create: TopStateFlag = IF(RANKX(ALL(Geography[State]), [Gross Sales],,DESC) <= 10, \"Top 10\", \"Other\"). This can be used for filtering or grouping. For dynamic parameters, I'd use a slicer connected to a parameter that changes the number of top states shown, using RANKX with a variable threshold.",
+      "category": "DAX",
+      "skills": ["DAX", "RANKX", "Top N Analysis", "Advanced Measures"]
+    },
+    {
+      "serial_no": 24,
+      "question": "When Grand Total does not equal the sum of rows?",
+      "answer": "S: In a financial dashboard, stakeholders noticed grand totals didn't match the sum of visible rows. T: I needed to explain this behavior and determine if it required correction. A: I identified several legitimate reasons for this discrepancy: 1) Measures using distinct counts don't sum linearly across dimensions; 2) Ratios/averages calculate differently at different levels of aggregation; 3) Semi-additive measures (like inventory balances) aggregate differently across time vs other dimensions; 4) Measures using filter context modifiers (CALCULATE with ALL/ALLEXCEPT) behave differently at grand total level; 5) Security filters may impact totals. R: I documented these behaviors and added visual cues to help users interpret the data correctly.",
+      "category": "DAX",
+      "skills": ["DAX", "Aggregation", "Data Modeling", "Filter Context"]
+    },
+    {
+      "serial_no": 25,
+      "question": "Why Date table is very important in Power BI?",
+      "answer": "S: In a retail analytics project, time-based calculations were inconsistent and difficult to maintain. T: I needed to implement a proper date table to solve these issues. A: I created a dedicated date table because: 1) It enables time intelligence functions (SAMEPERIODLASTYEAR, TOTALYTD) that require a date table marked as such; 2) It provides consistent date attributes (Year, Quarter, Month) for slicing; 3) It allows for custom calendar definitions (fiscal years, 4-4-5 calendars); 4) It standardizes handling of working days, holidays, and seasons; 5) It creates a central point for time-related calculations. R: This improved calculation accuracy, reduced development time for time-based measures, and ensured consistent date filtering across all reports.",
+      "category": "Data Modeling",
+      "skills": ["Date Table", "Time Intelligence", "Data Modeling", "Calendar Functions"]
+    },
+    {
+      "serial_no": 26,
+      "question": "What are some best practices related to Time intelligence?",
+      "answer": "S: A retail client was struggling with inconsistent and hard-to-maintain time intelligence calculations. T: I needed to implement best practices for time intelligence in their Power BI solution. A: I established the following standards: 1) Create a proper date table with continuous dates and mark it as a date table; 2) Ensure one-to-many relationships from date table to fact tables; 3) Include key attributes like fiscal periods, holidays, and working days; 4) Create a standard library of time intelligence measures using variables for maintainability; 5) Use specific functions like TOTALYTD instead of complex custom logic; 6) Maintain a single date table for consistency across measures. R: This approach reduced development time by 30% and eliminated discrepancies in time-based reporting.",
+      "category": "Data Modeling",
+      "skills": ["Time Intelligence", "Date Table", "DAX", "Best Practices"]
+    },
+    {
+      "serial_no": 27,
+      "question": "What do mean by MTD, QTD, and YTD? Could you provide the formulas for calculating MTD, QTD, and YTD?",
+      "answer": "MTD (Month-to-Date), QTD (Quarter-to-Date), and YTD (Year-to-Date) refer to cumulative values from the start of a period to the current date. Formulas for calculating these in DAX are: 1) MTD: SalesMTD = CALCULATE([Total Sales], DATESMTD('Date'[Date])) - Accumulates sales from the first day of the month to the current date; 2) QTD: SalesQTD = CALCULATE([Total Sales], DATESQTD('Date'[Date])) - Accumulates from the first day of the quarter; 3) YTD: SalesYTD = CALCULATE([Total Sales], DATESYTD('Date'[Date])) - Accumulates from the first day of the year. These functions automatically adjust to the filter context's latest date and require a properly marked date table.",
+      "category": "DAX",
+      "skills": ["Time Intelligence", "DAX", "MTD", "QTD", "YTD"]
+    },
+    {
+      "serial_no": 28,
+      "question": "For which specific month does an MTD measure using DATESMTD display its value on card visual without a filter?",
+      "answer": "When a measure using DATESMTD is placed on a card visual without any date filters applied, it displays values for the most recent month in the date table. Specifically: 1) Power BI identifies the maximum date in the date table as the 'current date'; 2) DATESMTD creates a filter from the beginning of that month to the maximum date; 3) The measure is calculated within this filter context. This behavior means that without explicit date filters, MTD measures will always show the partial or complete month of the latest date in your data, not the current system date. This is important to understand when designing dashboards with time intelligence measures.",
+      "category": "DAX",
+      "skills": ["Time Intelligence", "DAX", "DATESMTD", "Filter Context"]
+    },
+    {
+      "serial_no": 29,
+      "question": "Calculation Of Last Year Date for the very first date in the date table?",
+      "answer": "When calculating last year's date using DATEADD('Date'[Date], -1, YEAR) for the very first date in a date table, special handling is required because: 1) DATEADD returns blank if the resulting date doesn't exist in the date table; 2) For the first date in the table (e.g., Jan 1, 2022), the previous year date (Jan 1, 2021) may not exist in the table. This creates discontinuities in time intelligence calculations. To handle this: 1) Ensure the date table includes complete years with no gaps; 2) Extend the date table to include at least one full year before your first data point; 3) Use error handling in DAX to provide fallback values when dates don't exist.",
+      "category": "DAX",
+      "skills": ["Time Intelligence", "DAX", "DATEADD", "Date Table Design"]
+    },
+    {
+      "serial_no": 30,
+      "question": "Then how can I get the date year before for today?",
+      "answer": "To get the date from a year before the current date without using DATEADD, you can use alternative approaches: 1) Using SAMEPERIODLASTYEAR: LastYearDate = CALCULATE(MAX('Date'[Date]), SAMEPERIODLASTYEAR('Date'[Date])); 2) Using custom date logic: LastYearDate = CALCULATE(MAX('Date'[Date]), FILTER('Date', 'Date'[Year] = YEAR(TODAY())-1 && 'Date'[Month] = MONTH(TODAY()) && 'Date'[Day] = DAY(TODAY()))); 3) For handling edge cases like leap years: create a calculated column with a unique day-of-year identifier and match on that instead. These approaches work even when specific calendar dates don't exist in both years, such as February 29.",
+      "category": "DAX",
+      "skills": ["Time Intelligence", "DAX", "Date Calculations"]
+    },
+    {
+      "serial_no": 31,
+      "question": "Are they same - LMTD= CALCULATE([Net],DATESMTD(dateadd('Date'[Date],-1,Month))) or CALCULATE([Net], Previousmonth('Date'[Date]))?",
+      "answer": "No, these calculations are not the same. LMTD = CALCULATE([Net], DATESMTD(DATEADD('Date'[Date], -1, MONTH))) calculates Month-to-Date for the previous month up to the same day position. For example, if today is April 15, it shows March 1-15. CALCULATE([Net], PREVIOUSMONTH('Date'[Date])) shows the entire previous month regardless of the current date. For example, if today is April 15, it shows all of March 1-31. The first calculation is useful for comparing partial month performance (e.g., 'how are we doing compared to the same point last month?'), while the second is better for comparing against a complete previous month.",
+      "category": "DAX",
+      "skills": ["Time Intelligence", "DAX", "DATESMTD", "PREVIOUSMONTH"]
+    },
+    {
+      "serial_no": 32,
+      "question": "How can I display a trend for the last months when one month is selected?",
+      "answer": "S: In a financial dashboard, users wanted to see trend data when filtering to a specific month. T: I needed to show historical context regardless of filter selection. A: I implemented a disconnected table approach: 1) Created a disconnected 'Time Intelligence' table with relative month offsets (-6 to 0); 2) Created measures that shifted the selected month by the offset value: TrendSales = CALCULATE([Sales], DATEADD('Date'[Date], 'Time Intelligence'[MonthOffset], MONTH)); 3) Used the disconnected table as the axis in a line chart, with the measure as the value; 4) Labeled points with dynamic formatting based on the offset. R: This allowed users to always see a 6-month trend regardless of their filter selection, improving context for decision-making.",
+      "category": "Advanced Features",
+      "skills": ["Time Intelligence", "Disconnected Tables", "Advanced Visualization", "DAX"]
+    },
+    {
+      "serial_no": 33,
+      "question": "How do sort the Month Year in the format MMM-YYYY?",
+      "answer": "S: In a financial dashboard, month-year labels (e.g., Jan-2023) were sorting alphabetically instead of chronologically. T: I needed to implement proper chronological sorting while maintaining the readable MMM-YYYY format. A: I solved this by: 1) Creating a calculated column for the display format: MonthYearName = FORMAT('Date'[Date], \"mmm-yyyy\"); 2) Creating a sort column with a sortable format: MonthYearSort = FORMAT('Date'[Date], \"yyyy-mm\"); 3) Using the 'Sort by Column' feature to sort MonthYearName by MonthYearSort; 4) Using MonthYearName in visuals, which now displayed in proper chronological order. R: This provided both user-friendly date formatting and correct chronological sorting, improving report usability and analytical accuracy.",
+      "category": "Data Modeling",
+      "skills": ["Sort by Column", "Date Formatting", "Calculated Columns"]
+    },
+    {
+      "serial_no": 34,
+      "question": "What type of schema is preferred for Power BI modeling?",
+      "answer": "S: A client's data model with complex many-to-many relationships was causing performance issues and calculation errors. T: I needed to redesign their data model using best practices. A: I implemented a star schema approach because: 1) It organizes data into fact tables (containing measures) and dimension tables (containing attributes); 2) It uses single-direction relationships, reducing ambiguity; 3) It minimizes table joins, improving query performance; 4) It's optimized for the Vertipaq engine that Power BI uses; 5) It simplifies DAX expressions by creating clear paths between tables. R: The redesigned model reduced report refresh times by 60%, eliminated calculation errors, and made the model more intuitive for other developers to maintain.",
+      "category": "Data Modeling",
+      "skills": ["Star Schema", "Data Modeling", "Performance Optimization", "Dimensional Modeling"]
+    },
+    {
+      "serial_no": 35,
+      "question": "What is the RELATED function? and the difference between RELATED and RELATEDTABLE?",
+      "answer": "S: In a complex data model, I needed to access data across related tables. T: I had to understand when to use RELATED vs RELATEDTABLE for accurate results. A: I found that: 1) RELATED retrieves a single value from a related table, works in the context of a row (one-to-many relationship, looking up 'one' side), and returns a scalar value; 2) RELATEDTABLE retrieves multiple rows from a related table, works in a many-to-one or many-to-many context (looking up 'many' side), and returns a table. R: By using RELATED in calculated columns for lookups and RELATEDTABLE in measures for filtering and aggregating related records, I created accurate calculations that properly traversed the data model relationships.",
+      "category": "DAX",
+      "skills": ["DAX", "RELATED", "RELATEDTABLE", "Data Relationships"]
+    },
+    {
+      "serial_no": 36,
+      "question": "What is the difference between search and find?",
+      "answer": "In DAX, the differences between SEARCH and FIND functions are: 1) Case sensitivity - SEARCH is case-insensitive while FIND is case-sensitive; 2) Error handling - SEARCH returns an error if the text isn't found, while FIND returns a blank value; 3) Wildcard support - SEARCH supports wildcards (*) while FIND does not. For example, SEARCH(\"bi\", \"Power BI\") and SEARCH(\"BI\", \"Power BI\") both return 7, but FIND(\"bi\", \"Power BI\") returns an error while FIND(\"BI\", \"Power BI\") returns 7. These functions are useful for text manipulation, conditional formatting based on text content, and creating calculated columns for categorization based on string patterns.",
+      "category": "DAX",
+      "skills": ["DAX", "SEARCH", "FIND", "Text Functions"]
+    },
+    {
+      "serial_no": 37,
+      "question": "What does FIRSTNONBLANKVALUE function do?",
+      "answer": "The FIRSTNONBLANKVALUE function in DAX returns the first value from a column that isn't blank when evaluated by an expression. Syntax: FIRSTNONBLANKVALUE(column, expression). It works by: 1) Evaluating each value in the column using the expression; 2) Returning the first value where the expression result is not blank; 3) Returning blank if no values meet the criteria. This function is particularly useful for scenarios like: finding the first valid date in a series, retrieving default values when primary values are missing, implementing fallback logic in calculations, and handling display values in visuals when dealing with sparse data.",
+      "category": "DAX",
+      "skills": ["DAX", "FIRSTNONBLANKVALUE", "Data Handling", "Error Handling"]
+    },
+    {
+      "serial_no": 38,
+      "question": "Give examples of Power BI functions that are very similar to SQL window functions?",
+      "answer": "Power BI DAX includes several functions similar to SQL window functions: 1) RANKX - Similar to RANK() in SQL, ranks values within a partition; 2) WINDOW - Provides access to a window of rows before and after the current row; 3) OFFSET - Accesses data from a specific position in a table, similar to SQL LEAD/LAG; 4) RUNNINGSUM - Calculates cumulative totals, similar to SUM() OVER (ORDER BY...); 5) SUMMARIZECOLUMNS with WINDOW - Can achieve functionality similar to PARTITION BY; 6) TOPN - Similar to SQL's TOP N clause. These functions allow for advanced analytics like moving averages, cumulative totals, period-over-period comparisons, and ranking analyses directly in Power BI without requiring the source database to support window functions.",
+      "category": "DAX",
+      "skills": ["DAX", "Window Functions", "Advanced Analytics", "SQL Equivalents"]
+    },
+    {
+      "serial_no": 39,
+      "question": "What are the differences between Rank and Rankx?",
+      "answer": "The key differences between RANK and RANKX in DAX are: 1) Scope - RANK is a scalar function used in calculated columns for static ranking, while RANKX is an iterator function that can be used in both columns and measures for dynamic ranking; 2) Context - RANK operates in the current row context only, while RANKX can operate across a table and respects filter context; 3) Functionality - RANKX offers more parameters for controlling sort direction and tie handling; 4) Performance - RANK is generally faster but less flexible. RANKX is preferred in most scenarios because it handles the filter context properly in measures and provides more control over the ranking behavior.",
+      "category": "DAX",
+      "skills": ["DAX", "RANK", "RANKX", "Data Analysis"]
+    },
+    {
+      "serial_no": 40,
+      "question": "What is the difference between GENERATE and CROSSJOIN?",
+      "answer": "S: In a product analysis project, I needed to combine data from multiple tables efficiently. T: I had to understand the appropriate use cases for GENERATE vs CROSSJOIN. A: I found that: 1) CROSSJOIN combines all rows from two tables, creating a Cartesian product with every possible combination (Table1 has 10 rows, Table2 has 5 rows, result has 50 rows); 2) GENERATE iterates through each row of the first table and evaluates a table expression for each row, often using relationships between tables; 3) CROSSJOIN is simpler but can create very large result sets; 4) GENERATE is more flexible and can leverage existing relationships. R: By using GENERATE for related data and CROSSJOIN only when needed for unrelated combinations, I optimized model performance while meeting analytical requirements.",
+      "category": "DAX",
+      "skills": ["DAX", "GENERATE", "CROSSJOIN", "Table Functions"]
+    },
+    {
+      "serial_no": 41,
+      "question": "What is the difference between the CALENDAR and CALENDARAUTO?",
+      "answer": "S: When setting up time intelligence for a retail client, I needed to create a date table. T: I had to determine whether to use CALENDAR or CALENDARAUTO for the optimal date range. A: I found that: 1) CALENDAR requires explicit start and end dates (e.g., CALENDAR(DATE(2020,1,1), DATE(2023,12,31))); 2) CALENDARAUTO automatically determines the date range based on data in the model, with an optional fiscal year end month parameter; 3) CALENDAR provides more control but requires manual updates when data ranges change; 4) CALENDARAUTO is more dynamic but may include unnecessary dates or miss future dates needed for forecasting. R: I chose CALENDARAUTO for operational reports to automatically adapt to new data, and CALENDAR for financial reports where specific fiscal period boundaries were critical.",
+      "category": "DAX",
+      "skills": ["DAX", "CALENDAR", "CALENDARAUTO", "Date Table"]
+    },
+    {
+      "serial_no": 42,
+      "question": "What is the best way to find min values 5 columns or measures for a given table row or visual row?",
+      "answer": "S: In a manufacturing dashboard, I needed to identify the bottleneck step in each production line. T: I had to find the minimum value across 5 different production metrics for each line. A: I implemented several approaches: 1) Using the MINX function with a row context: MinStep = MINX(ROW(), MIN(Step1, Step2, Step3, Step4, Step5)); 2) Creating a disconnected table with step names and using SWITCH: MinStepName = SWITCH(MIN(Step1,Step2,Step3,Step4,Step5), Step1, \"Step1\", Step2, \"Step2\",...); 3) For visual comparison, using conditional formatting with icons to highlight the minimum; 4) For advanced scenarios, using variables to store each value and complex logic to handle ties. R: This allowed production managers to quickly identify bottlenecks and prioritize improvement efforts.",
+      "category": "DAX",
+      "skills": ["DAX", "MINX", "Comparative Analysis", "Advanced Measures"]
+    },
+    {
+      "serial_no": 43,
+      "question": "How can we repeat the value of a measure or column?",
+      "answer": "To repeat a measure or column value across different context in Power BI, you can: 1) Use the CALCULATE function with ALL to ignore specific filters: ConstantSales = CALCULATE([Total Sales], ALL(Product)); 2) For specific category comparison: CategorySales = CALCULATE([Total Sales], ALL(Product[Category])); 3) Create a disconnected table with a single row and use it to store values for reuse: GlobalMetrics = SUMMARIZECOLUMNS(\"TotalSales\", [Total Sales]); 4) Use variables in measures to capture and reuse values: VAR CurrentSales = [Sales] RETURN CurrentSales / [Target Sales]. These techniques help maintain consistency when comparing metrics across different filter contexts and are essential for calculating ratios, variances, and contribution analyses.",
+      "category": "DAX",
+      "skills": ["DAX", "CALCULATE", "Variables", "Filter Context"]
+    },
+    {
+      "serial_no": 44,
+      "question": "How can we generate a series of odd numbers or even numbers?",
+      "answer": "To generate series of odd or even numbers in Power BI, you can use these approaches: 1) For a calculated table with even numbers: EvenNumbers = GENERATESERIES(2, 100, 2); 2) For odd numbers: OddNumbers = GENERATESERIES(1, 99, 2); 3) Using FILTER on a continuous series: OddNumbers = FILTER(GENERATESERIES(1, 100, 1), MOD([Value], 2) = 1); 4) Using calculated columns in an existing table: IsEven = IF(MOD([ID], 2) = 0, \"Even\", \"Odd\"). These techniques are useful for creating bins, custom ranking systems, or for specialized visualizations like Gantt charts where you might need to position items on even/odd positions for visual separation.",
+      "category": "DAX",
+      "skills": ["DAX", "GENERATESERIES", "Calculated Tables", "Number Series"]
+    },
+    {
+      "serial_no": 45,
+      "question": "Power Query Unpivot Multiple columns sets",
+      "answer": "S: In a financial reporting project, I received data with multiple years of monthly figures spread across 60 columns (5 years × 12 months). T: I needed to transform this wide format into a standard date-measure format for analysis. A: I implemented a multi-step Power Query approach: 1) Selected the first set of 12 columns and used 'Unpivot Columns'; 2) Created a custom column to add the year; 3) Repeated for each 12-column set with different year values; 4) Appended the resulting tables; 5) Created a proper date column by combining the month and year values. R: This transformed unwieldy wide-format data into a clean, analyzable structure that enabled time-series analysis and simplified the creation of date-based visuals and calculations.",
+      "category": "Power Query",
+      "skills": ["Power Query", "Unpivot", "Data Reshaping", "ETL"]
+    },
+    {
+      "serial_no": 46,
+      "question": "HR Analytics - Tenure Bucketing - Active employee, Hired, Terminated. Use relationship- Inactive Joins",
+      "answer": "S: An HR department needed insights on employee tenure patterns, including active, new hire, and terminated employees. T: I needed to create a comprehensive HR analytics solution with proper tenure categories and handling of inactive relationships. A: I implemented: 1) Created tenure buckets (0-1 year, 1-3 years, etc.) using calculated columns; 2) Built measures for active employees, new hires, and terminations using time intelligence; 3) Used inactive relationships between date dimensions (hire date, termination date) and the date table, activating them with USERELATIONSHIP in specific measures; 4) Created turnover rate measures comparing terminations to active headcount. R: This allowed HR to identify retention patterns by department and tenure, revealing that mid-tenure employees (3-5 years) in technical roles had the highest turnover, leading to targeted retention programs.",
+      "category": "Advanced Modeling",
+      "skills": ["HR Analytics", "Inactive Relationships", "USERELATIONSHIP", "Bucketing"]
+    },
+    {
+      "serial_no": 47,
+      "question": "TOPN with Others and ABC Analytics, window function, and Matrix as Project Plan Visual",
+      "answer": "S: A retail client needed to focus on top-performing products while still accounting for the long tail in their analysis. T: I needed to implement a Top N analysis with an 'Others' category and ABC classification. A: My solution included: 1) Creating a Top N Products measure using TOPN and SUMMARIZE; 2) Adding an 'Others' category using EXCEPT to exclude top products; 3) Implementing ABC classification (A=top 70% of revenue, B=next 20%, C=final 10%) using RANKX and running totals; 4) Using these in a matrix visual that served as a project planning tool, with products as rows and months as columns; 5) Adding window functions for running totals and period-over-period comparisons. R: This allowed management to focus on key products while maintaining visibility of overall business performance.",
+      "category": "Advanced Analysis",
+      "skills": ["TOPN", "ABC Analysis", "Window Functions", "Matrix Visualization"]
+    },
+    {
+      "serial_no": 48,
+      "question": "Field Parameters- Set of measures, Always Sort on Axis, Live connection",
+      "answer": "S: Executives wanted a dashboard that could flexibly show different KPIs while maintaining consistent sorting and working with their Analysis Services data. T: I needed to implement a solution that worked with Live Connection mode's limitations. A: I created a Field Parameter solution by: 1) Creating a field parameter with multiple measures (Revenue, Profit, Units, etc.); 2) Adding a sort column to ensure consistent sorting regardless of the metric displayed; 3) Using the 'Always sort by' property on the axis to maintain ordering; 4) Adapting the solution for Live Connection by using limited DAX where possible and moving complex logic to the source model; 5) Creating documentation for maintaining the solution. R: This provided executives with flexible analysis capabilities while maintaining performance and governance requirements of the centralized data model.",
+      "category": "Advanced Features",
+      "skills": ["Field Parameters", "Live Connection", "Sorting", "Governance"]
+    },
+    {
+      "serial_no": 49,
+      "question": "Power Query- Cross Join, Merge Excel Sheets Data",
+      "answer": "S: A marketing team needed to analyze campaign performance across regions, products, and time periods, but had data in separate Excel sheets. T: I needed to combine data from multiple Excel sheets and create a complete analysis matrix. A: I used Power Query to: 1) Import all Excel sheets as separate queries; 2) Performed data cleaning and standardization; 3) Created a cross-join between dimension tables (regions, products, campaigns) using the Table.AddColumn and Table.ExpandTableColumn functions; 4) Merged this cross-joined table with actual performance data using Table.NestedJoin and appropriate keys; 5) Created calculated columns for gaps/missing combinations. R: This approach provided a complete analysis framework that properly handled sparse data and missing combinations, enabling accurate trend and comparative analysis across all dimensions.",
+      "category": "Power Query",
+      "skills": ["Cross Join", "Excel Integration", "Merge Queries", "M Language"]
+    },
+    {
+      "serial_no": 50,
       "question": "What do you think makes a great Power BI dashboard?",
-      "answer": "S: I've seen many dashboards that look nice but don’t help users make decisions. T: I focus on building dashboards that are both functional and elegant. A: I prioritize clarity, ensure that the top KPIs are visible in under 5 seconds, and maintain consistent layout and navigation. R: This approach increases adoption and ensures users can act on insights without needing training.",
+      "answer": "S: I've seen many dashboards that look nice but don't help users make decisions. T: I focus on building dashboards that are both functional and elegant. A: I prioritize clarity, ensure that the top KPIs are visible in under 5 seconds, and maintain consistent layout and navigation. R: This approach increases adoption and ensures users can act on insights without needing training.",
       "category": "Design Philosophy",
       "skills": ["Dashboard Design", "User Experience", "Storytelling", "KPI Reporting", "UI/UX"]
     }
