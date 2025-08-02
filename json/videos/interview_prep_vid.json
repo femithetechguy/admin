@@ -1,0 +1,926 @@
+[
+    {
+      "SerialNo": 1,
+      "Title": "Power BI Interview Questions- Introduction| Why I am creating videos on Job Questions and Answers",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "4 minutes 6 seconds",
+      "URL": "https://www.youtube.com/watch?v=vvFGAAbds1k",
+      "Note": [
+        "This video introduces a series on Power BI interview questions and answers.",
+        "The instructor explains their motivation for creating this educational content to help job seekers.",
+        "A brief overview of what to expect from the entire question and answer series is provided."
+      ]
+    },
+    {
+      "SerialNo": 2,
+      "Title": "Power BI Interview Questions- Your Introduction| What you need to cover as part of your introduction",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "1 minutes 53 seconds",
+      "URL": "https://www.youtube.com/watch?v=Dx2_2KrkMio",
+      "Note": [
+        "This video focuses on how to properly introduce yourself in a Power BI interview.",
+        "Tips are provided on what key points to cover during your self-introduction.",
+        "The instructor shares professional guidance on making a strong first impression."
+      ]
+    },
+    {
+      "SerialNo": 3,
+      "Title": "Power BI Interview Questions- What Organization is looking for, in an individual- Beyond Power BI",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "2 minutes 16 seconds",
+      "URL": "https://www.youtube.com/watch?v=gTuvlnnAxjM",
+      "Note": [
+        "This video discusses the soft skills and qualities organizations seek beyond technical Power BI knowledge.",
+        "The instructor explains how personality traits and professional attributes contribute to hiring decisions.",
+        "Guidance is provided on how to demonstrate these qualities during an interview."
+      ]
+    },
+    {
+      "SerialNo": 4,
+      "Title": "Power BI Interview Questions- What is Power BI| Tell Something about Power BI",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "51 seconds",
+      "URL": "https://www.youtube.com/watch?v=lQhhkjqIdQg",
+      "Note": [
+        "This brief video provides a concise definition of what Power BI is as a business intelligence tool.",
+        "The instructor covers the fundamental purpose and capabilities of Power BI.",
+        "A succinct explanation suitable for interview responses is presented."
+      ]
+    },
+    {
+      "SerialNo": 5,
+      "Title": "Power BI Interview Questions- What are the components/elements/parts of Power BI?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "2 minutes 34 seconds",
+      "URL": "https://www.youtube.com/watch?v=6O4chvRXWDc",
+      "Note": [
+        "This video breaks down the core components and elements of the Power BI ecosystem.",
+        "The instructor explains the relationship between different parts of Power BI like Desktop, Service, and Mobile.",
+        "A comprehensive overview of the Power BI architecture is provided."
+      ]
+    },
+    {
+      "SerialNo": 6,
+      "Title": "Power BI Interview Questions- What is Power BI Desktop| Tell Something about Power BI Desktop",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "1 minutes 52 seconds",
+      "URL": "https://www.youtube.com/watch?v=evTiRy4U8Ow",
+      "Note": [
+        "This video focuses specifically on Power BI Desktop and its role in the BI workflow.",
+        "The instructor explains the key features and capabilities of Power BI Desktop.",
+        "Information about how Power BI Desktop fits into the overall Power BI ecosystem is provided."
+      ]
+    },
+    {
+      "SerialNo": 7,
+      "Title": "Power BI Interview Questions- Why do we need Power BI Desktop| What is the use of Power BI Desktop",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "1 minutes 34 seconds",
+      "URL": "https://www.youtube.com/watch?v=sd9VlW0SQKw",
+      "Note": [
+        "This video explains the business value and use cases for Power BI Desktop.",
+        "The instructor discusses why Power BI Desktop is essential for data analysis and reporting.",
+        "Practical examples of how Power BI Desktop serves business intelligence needs are provided."
+      ]
+    },
+    {
+      "SerialNo": 8,
+      "Title": "Power BI Interview Questions- What is Power Query| What is Transform data in Power BI",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "2 minutes 30 seconds",
+      "URL": "https://www.youtube.com/watch?v=N2hsqP1IS9U",
+      "Note": [
+        "This video covers Power Query and its role in data transformation within Power BI.",
+        "The instructor explains how Power Query helps in cleaning and shaping data before analysis.",
+        "Key features and capabilities of Power Query for ETL processes are highlighted."
+      ]
+    },
+    {
+      "SerialNo": 9,
+      "Title": "Power BI Interview Questions- What is DAX| What is Data Analysis Expressions",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "1 minutes 39 seconds",
+      "URL": "https://www.youtube.com/watch?v=jqePwg75UV8",
+      "Note": [
+        "This video introduces DAX (Data Analysis Expressions) as the formula language in Power BI.",
+        "The instructor explains the purpose and importance of DAX in creating calculations and measures.",
+        "Basic concepts of how DAX is used for data analysis in Power BI are covered."
+      ]
+    },
+    {
+      "SerialNo": 10,
+      "Title": "Calculated Column vs Measure in Power BI: Key Differences Explained | Power BI Interview/Job Prep",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "6 minutes 52 seconds",
+      "URL": "https://www.youtube.com/watch?v=JoHxzC0JHMU",
+      "Note": [
+        "This video compares calculated columns and measures in Power BI, explaining their key differences.",
+        "The instructor demonstrates when to use each type of calculation for optimal performance.",
+        "Practical examples illustrate the impact of these choices on report functionality and efficiency."
+      ]
+    },
+    {
+      "SerialNo": 11,
+      "Title": "Power BI Interview Questions- What is the difference between Import, Direct Query, and Live mode?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "6 minutes 47 seconds",
+      "URL": "https://www.youtube.com/watch?v=934Wei0A4GU",
+      "Note": [
+        "This video explains the three data connectivity modes in Power BI: Import, Direct Query, and Live mode.",
+        "The instructor compares each mode's advantages, limitations, and appropriate use cases.",
+        "Performance considerations and data refresh implications for each connection type are discussed."
+      ]
+    },
+    {
+      "SerialNo": 12,
+      "Title": "Power BI Interview Questions- What are the different types of visuals/charts used in Power BI?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "1 minutes 45 seconds",
+      "URL": "https://www.youtube.com/watch?v=gzHvS7wq4jA",
+      "Note": [
+        "This video provides an overview of the various visualization types available in Power BI.",
+        "The instructor categorizes different charts and explains their best use cases for data presentation.",
+        "Common visuals like bar charts, pie charts, line charts, and more specialized options are covered."
+      ]
+    },
+    {
+      "SerialNo": 13,
+      "Title": "Power BI Interview Questions- How to do a multi-column sort on a visual in Power BI",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "1 minutes 9 seconds",
+      "URL": "https://www.youtube.com/watch?v=UTlobzOrQFU",
+      "Note": [
+        "This video demonstrates how to perform multi-column sorting on visuals in Power BI.",
+        "The instructor shows the step-by-step process for setting up complex sorting rules.",
+        "Practical examples illustrate how this feature enhances data presentation and analysis."
+      ]
+    },
+    {
+      "SerialNo": 14,
+      "Title": "Power BI Interview Questions- What is conditional formatting in Power BI?| How color background/font",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "3 minutes 10 seconds",
+      "URL": "https://www.youtube.com/watch?v=JmodMtyKBVo",
+      "Note": [
+        "This video explains conditional formatting in Power BI and its role in enhancing data visualization.",
+        "The instructor demonstrates how to apply color formatting to backgrounds and fonts based on data values.",
+        "Various techniques for creating visually impactful reports through conditional formatting are shared."
+      ]
+    },
+    {
+      "SerialNo": 15,
+      "Title": "Power BI Interview Questions- What are the three format styles in Power BI conditional formatting?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "1 minutes 57 seconds",
+      "URL": "https://www.youtube.com/watch?v=zlzql5EpqA8",
+      "Note": [
+        "This video covers the three main formatting styles available in Power BI's conditional formatting.",
+        "The instructor explains each style's purpose and appropriate use cases.",
+        "Demonstrations show how these formats can be applied to enhance data visualization."
+      ]
+    },
+    {
+      "SerialNo": 16,
+      "Title": "Power BI Interview Questions- When conditional formatting become unavailable(Fx icon) in Power BI?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "1 minutes 53 seconds",
+      "URL": "https://www.youtube.com/watch?v=vqs1ONp9atw",
+      "Note": [
+        "This video explains scenarios where conditional formatting options become unavailable in Power BI.",
+        "The instructor identifies common situations when the Fx icon for formatting disappears.",
+        "Troubleshooting tips are provided to resolve issues with conditional formatting access."
+      ]
+    },
+    {
+      "SerialNo": 17,
+      "Title": "Power BI Interview Questions- What is Interactions in Power BI? How to stop filtering across visuals",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "3 minutes 57 seconds",
+      "URL": "https://www.youtube.com/watch?v=wO1zD7E9_v8",
+      "Note": [
+        "This video explains visual interactions in Power BI and how they affect cross-filtering.",
+        "The instructor demonstrates how to control and customize filtering behavior between visuals.",
+        "Practical examples show how to enhance report interactivity through managed interactions."
+      ]
+    },
+    {
+      "SerialNo": 18,
+      "Title": "Power BI Interview Questions- What is Field Parameters? How to create a dynamic Axis using a slicer?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "4 minutes 14 seconds",
+      "URL": "https://www.youtube.com/watch?v=RblNR5yeF8Y",
+      "Note": [
+        "This video introduces Field Parameters in Power BI and their role in creating dynamic visualizations.",
+        "The instructor demonstrates how to implement dynamic axis selection using slicers.",
+        "Step-by-step guidance shows how to enhance report flexibility with field parameters."
+      ]
+    },
+    {
+      "SerialNo": 19,
+      "Title": "Power BI Interview Questions- How to create Axis Slicer without using Field Parameters| Bookmarks",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "6 minutes 14 seconds",
+      "URL": "https://www.youtube.com/watch?v=Qxvkg7fZrhU",
+      "Note": [
+        "This video demonstrates an alternative approach to creating dynamic axis selection without Field Parameters.",
+        "The instructor explains how to use bookmarks to achieve similar functionality.",
+        "Practical implementation steps are provided for both methods with their advantages and limitations."
+      ]
+    },
+    {
+      "SerialNo": 20,
+      "Title": "Power BI Interview Questions- What is bookmarks in power bi? How to use bookmarks and buttons",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "4 minutes 20 seconds",
+      "URL": "https://www.youtube.com/watch?v=uQaXQvhMslA",
+      "Note": [
+        "This video explains the concept of bookmarks in Power BI and their role in enhancing report interactivity.",
+        "The instructor demonstrates how to create and implement bookmarks with navigation buttons.",
+        "Practical examples show how bookmarks can be used for creating interactive dashboard experiences."
+      ]
+    },
+    {
+      "SerialNo": 21,
+      "Title": "Power BI Interview Questions- How can we maintain/pass slicer values across bookmarks?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "1 minutes 14 seconds",
+      "URL": "https://www.youtube.com/watch?v=tmS7YH1OWjw",
+      "Note": [
+        "This video addresses the challenge of maintaining slicer selections when navigating between bookmarks.",
+        "The instructor demonstrates techniques to preserve filter context across different bookmark states.",
+        "Practical implementation steps ensure a consistent user experience in interactive reports."
+      ]
+    },
+    {
+      "SerialNo": 22,
+      "Title": "Power BI Interview Questions- What is the difference between sumx and sum in power bi?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "2 minutes 49 seconds",
+      "URL": "https://www.youtube.com/watch?v=x4wMbFcTXIA",
+      "Note": [
+        "This video explains the key differences between the SUM and SUMX functions in DAX.",
+        "The instructor demonstrates when to use each function for different calculation scenarios.",
+        "Examples illustrate how these functions behave differently with row context and filter context."
+      ]
+    },
+    {
+      "SerialNo": 23,
+      "Title": "Power BI Interview Questions- What is difference between calculate and calculatetable in Power BI?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "3 minutes 55 seconds",
+      "URL": "https://www.youtube.com/watch?v=P1M7ZWokzPI",
+      "Note": [
+        "This video compares the CALCULATE and CALCULATETABLE functions in DAX, highlighting their differences.",
+        "The instructor explains how each function modifies filter context in Power BI calculations.",
+        "Practical examples demonstrate appropriate use cases for each function."
+      ]
+    },
+    {
+      "SerialNo": 24,
+      "Title": "Power BI Interview Questions- What is the difference between Summarize and SummarizeColumns?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "2 minutes 6 seconds",
+      "URL": "https://www.youtube.com/watch?v=eTaNofP-_BI",
+      "Note": [
+        "This video compares SUMMARIZE and SUMMARIZECOLUMNS functions in DAX for data aggregation.",
+        "The instructor explains the syntax differences and performance implications of each function.",
+        "Examples illustrate when to use each function for different data summarization needs."
+      ]
+    },
+    {
+      "SerialNo": 25,
+      "Title": "Power BI Interview Questions- Difference in filtering data in CALCULATE with and without FILTER?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "4 minutes 7 seconds",
+      "URL": "https://www.youtube.com/watch?v=KDcmzwgPvXQ",
+      "Note": [
+        "This video explains different approaches to filtering data in the CALCULATE function.",
+        "The instructor compares direct filter arguments with the FILTER function as a parameter.",
+        "Examples demonstrate the implications of each approach on calculation behavior and performance."
+      ]
+    },
+    {
+      "SerialNo": 26,
+      "Title": "Power BI Interview Questions- What is Order default sort order in DAX/power bi RankX function?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "1 minutes 18 seconds",
+      "URL": "https://www.youtube.com/watch?v=yP8RVuZ77Gg",
+      "Note": [
+        "This video explains the default sort order in the RANKX function in DAX.",
+        "The instructor clarifies how RANKX handles ties and ordering by default.",
+        "Examples demonstrate how to customize ranking behavior for different business requirements."
+      ]
+    },
+    {
+      "SerialNo": 27,
+      "Title": "Power BI Interview Questions-Impact of extra visual column on RankX| Why Rank 1 when added city id",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "1 minutes 56 seconds",
+      "URL": "https://www.youtube.com/watch?v=t77bd57IVqk",
+      "Note": [
+        "This video explains how adding additional columns to visuals affects RANKX calculations.",
+        "The instructor demonstrates why ranking might unexpectedly show rank 1 for all items in certain scenarios.",
+        "Troubleshooting tips are provided for resolving common ranking issues in Power BI."
+      ]
+    },
+    {
+      "SerialNo": 28,
+      "Title": "Power BI Interview Questions-What is the difference between skip and dense in Rank?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "1 minutes 29 seconds",
+      "URL": "https://www.youtube.com/watch?v=vkxVroOOTHY",
+      "Note": [
+        "This video explains the different ranking methods available in DAX: Skip and Dense.",
+        "The instructor demonstrates how each method handles ties and subsequent rankings.",
+        "Examples illustrate the practical implications of choosing between these ranking methods."
+      ]
+    },
+    {
+      "SerialNo": 29,
+      "Title": "Power BI Interview Questions- A measure that will display the top 10 elements by Measure| TOPN",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "2 minutes 12 seconds",
+      "URL": "https://www.youtube.com/watch?v=lp_kTFFCaao",
+      "Note": [
+        "This video demonstrates how to create a measure that displays only the top 10 elements by another measure.",
+        "The instructor explains how to use the TOPN function in DAX for this purpose.",
+        "Step-by-step implementation shows how to apply this technique in Power BI reports."
+      ]
+    },
+    {
+      "SerialNo": 30,
+      "Title": "Power BI Interview Questions- Why grand total does not match the sum of the row total?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "1 minutes 21 seconds",
+      "URL": "https://www.youtube.com/watch?v=YvZnva2C2vw",
+      "Note": [
+        "This video explains why grand totals might not match the sum of row totals in Power BI visuals.",
+        "The instructor covers concepts of filter context and how it affects aggregation calculations.",
+        "Examples demonstrate common scenarios where this behavior occurs and how to address it."
+      ]
+    },
+    {
+      "SerialNo": 31,
+      "Title": "Power BI Interview Questions- Why Date table is so important in Power BI| Why do we need date table?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "1 minutes 46 seconds",
+      "URL": "https://www.youtube.com/watch?v=9OPAQpFvwX0",
+      "Note": [
+        "This video explains the importance of dedicated date tables in Power BI data models.",
+        "The instructor discusses how proper date tables enable time intelligence calculations.",
+        "Best practices for date table implementation are covered with their benefits."
+      ]
+    },
+    {
+      "SerialNo": 32,
+      "Title": "Power BI Interview Questions- What are some best practices related to Time Intelligence, Date Table?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "2 minutes 43 seconds",
+      "URL": "https://www.youtube.com/watch?v=2jc4psmPt4Y",
+      "Note": [
+        "This video covers best practices for implementing time intelligence in Power BI.",
+        "The instructor provides guidelines for creating and using date tables effectively.",
+        "Key recommendations for optimizing date-related calculations are shared."
+      ]
+    },
+    {
+      "SerialNo": 33,
+      "Title": "Power BI Interview Questions- What do mean by MTD, QTD, and YTD?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "53 seconds",
+      "URL": "https://www.youtube.com/watch?v=-ctlT1ihlVw",
+      "Note": [
+        "This brief video explains the meaning of common time intelligence terms: MTD, QTD, and YTD.",
+        "The instructor defines Month-to-Date, Quarter-to-Date, and Year-to-Date calculations.",
+        "The business context for these time period calculations is provided."
+      ]
+    },
+    {
+      "SerialNo": 34,
+      "Title": "Power BI Interview Questions- Which functions can I use to get MTD, QTD, and YTD in Power BI?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "1 minutes 11 seconds",
+      "URL": "https://www.youtube.com/watch?v=rlX4EFaACaA",
+      "Note": [
+        "This video identifies the specific DAX functions used for MTD, QTD, and YTD calculations.",
+        "The instructor explains the syntax and usage of these time intelligence functions.",
+        "Examples demonstrate how to implement these calculations in Power BI measures."
+      ]
+    },
+    {
+      "SerialNo": 35,
+      "Title": "Power BI Interview Questions- What date range DATESMTD will use on card visual without filter/slicer",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "3 minutes 45 seconds",
+      "URL": "https://www.youtube.com/watch?v=sb2tdYpB9wo",
+      "Note": [
+        "This video explains how the DATESMTD function behaves without explicit date filters or slicers.",
+        "The instructor demonstrates the default date context used when no date is selected.",
+        "Practical examples show how this impacts calculations in card visuals."
+      ]
+    },
+    {
+      "SerialNo": 36,
+      "Title": "Power BI Interview Questions- Minus 1-year using DATEADD, what date is expected for the first date",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "2 minutes 31 seconds",
+      "URL": "https://www.youtube.com/watch?v=6GOeJ9kxU1Y",
+      "Note": [
+        "This video explains how the DATEADD function works when shifting dates by one year.",
+        "The instructor focuses on edge cases, particularly what happens with the first date in the range.",
+        "Examples demonstrate how to handle special cases like leap years in time intelligence calculations."
+      ]
+    },
+    {
+      "SerialNo": 37,
+      "Title": "Power BI Interview Questions- How to get a year before date, and date not in table| without DATEADD?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "3 minutes 49 seconds",
+      "URL": "https://www.youtube.com/watch?v=oiTGYJcKVKc",
+      "Note": [
+        "This video presents alternative approaches to calculating prior year values without using DATEADD.",
+        "The instructor demonstrates techniques for handling dates that might not exist in the date table.",
+        "Creative DAX solutions for time intelligence challenges are provided."
+      ]
+    },
+    {
+      "SerialNo": 38,
+      "Title": "Power BI Interview Questions- Is DATESMTD Minus 1 Month Using DATEADD(LMTD) save as PREVIOUSMONTH?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "6 minutes",
+      "URL": "https://www.youtube.com/watch?v=kqrRavKK7JM",
+      "Note": [
+        "This video compares different approaches to calculating previous month values in DAX.",
+        "The instructor analyzes whether DATESMTD with DATEADD is equivalent to PREVIOUSMONTH.",
+        "Detailed examples demonstrate the subtle differences between these calculation methods."
+      ]
+    },
+    {
+      "SerialNo": 39,
+      "Title": "Power BI Interview Questions- How to display a trend with single value selection| Disconnected Table",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "4 minutes 6 seconds",
+      "URL": "https://www.youtube.com/watch?v=XGD5RskFG08",
+      "Note": [
+        "This video demonstrates how to show trend data when a single value is selected in a slicer.",
+        "The instructor explains the concept of disconnected tables to achieve this functionality.",
+        "Step-by-step implementation shows how to enhance report interactivity with this technique."
+      ]
+    },
+    {
+      "SerialNo": 40,
+      "Title": "Power BI Interview Questions- How to sort the Month Year column correctly| What is Sort By Column",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "1 minutes 33 seconds",
+      "URL": "https://www.youtube.com/watch?v=lmkiFJllxgs",
+      "Note": [
+        "This video addresses the common challenge of sorting Month-Year columns chronologically.",
+        "The instructor demonstrates how to use the 'Sort by Column' feature in Power BI.",
+        "Practical implementation steps ensure correct chronological sorting in reports."
+      ]
+    },
+    {
+      "SerialNo": 41,
+      "Title": "Power BI Interview Questions- What type of schema preferred for Power BI modeling| Why Star Schema",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "2 minutes 8 seconds",
+      "URL": "https://www.youtube.com/watch?v=o6iCE4mk8JE",
+      "Note": [
+        "This video explains why star schema is the preferred data modeling approach in Power BI.",
+        "The instructor covers the benefits of star schema for performance and usability.",
+        "Comparison with other schema types illustrates why star schema works best for BI applications."
+      ]
+    },
+    {
+      "SerialNo": 42,
+      "Title": "Power BI Interview Questions- What is the RELATED function and why does not work sometimes?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "1 minutes 46 seconds",
+      "URL": "https://www.youtube.com/watch?v=mh2Lx36cPY0",
+      "Note": [
+        "This video explains the RELATED function in DAX and its role in accessing related tables.",
+        "The instructor identifies common scenarios where RELATED fails to work as expected.",
+        "Troubleshooting tips are provided for resolving issues with relationship navigation."
+      ]
+    },
+    {
+      "SerialNo": 43,
+      "Title": "Power BI Expertise Unveiled: Understanding RELATED vs RELATEDTABLE- Interview Question Series Part 2",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "8 minutes 48 seconds",
+      "URL": "https://www.youtube.com/watch?v=pzB0OEmiERw",
+      "Note": [
+        "This video provides an in-depth comparison between RELATED and RELATEDTABLE functions in DAX.",
+        "The instructor explains the fundamental differences in how these functions navigate relationships.",
+        "Practical examples demonstrate appropriate use cases for each function in different scenarios."
+      ]
+    },
+    {
+      "SerialNo": 44,
+      "Title": "Power BI Interview- Unraveling the Differences: Search vs. Find (Question 42) | Detailed Breakdown",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "6 minutes 1 seconds",
+      "URL": "https://www.youtube.com/watch?v=nMDkM-oiUwA",
+      "Note": [
+        "This video compares the SEARCH and FIND functions in DAX for text manipulation.",
+        "The instructor explains the key differences in case sensitivity and error handling.",
+        "Practical examples demonstrate when to use each function for different text search requirements."
+      ]
+    },
+    {
+      "SerialNo": 45,
+      "Title": "Power BI Interview: Mastering FIRSTNONBLANKVALUE Function - DAX Deep Dive | Interview Question #43",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "7 minutes 32 seconds",
+      "URL": "https://www.youtube.com/watch?v=JE8fnjQBVb4",
+      "Note": [
+        "This video provides a deep dive into the FIRSTNONBLANKVALUE function in DAX.",
+        "The instructor explains how this function finds the first non-blank value in a column or expression.",
+        "Practical implementation examples show how to use this function for default values and fallbacks."
+      ]
+    },
+    {
+      "SerialNo": 46,
+      "Title": "Power BI Interview Prep: DAX Functions similar to SQL window functions- Offset, Index| Question 44",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "16 minutes 12 seconds",
+      "URL": "https://www.youtube.com/watch?v=heZ5vwW0jWA",
+      "Note": [
+        "This comprehensive video covers DAX functions that provide SQL window function-like capabilities.",
+        "The instructor explains OFFSET and INDEX functions for accessing data relative to the current row.",
+        "Practical examples demonstrate how to implement SQL-like window operations in Power BI."
+      ]
+    },
+    {
+      "SerialNo": 47,
+      "Title": "How To Rank In Power Bi: Rank Vs Rankx| Essential Guide For Power Bi Interviews| Question 45",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "17 minutes 13 seconds",
+      "URL": "https://www.youtube.com/watch?v=Ppt3OTN2RMA",
+      "Note": [
+        "This detailed video compares the RANK and RANKX functions in DAX for ranking data.",
+        "The instructor explains the syntax, behavior, and performance implications of each function.",
+        "Comprehensive examples demonstrate various ranking scenarios and how to implement them."
+      ]
+    },
+    {
+      "SerialNo": 48,
+      "Title": "Power BI Interview Prep: Explain the difference between GENERATE vs. CROSSJOIN| Q46 | #powerbi",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "9 minutes 25 seconds",
+      "URL": "https://www.youtube.com/watch?v=QRWBfMujaXw",
+      "Note": [
+        "This video compares GENERATE and CROSSJOIN functions in DAX for combining tables.",
+        "The instructor explains how each function handles relationships and produces different results.",
+        "Examples demonstrate when to use each function for different data combination requirements."
+      ]
+    },
+    {
+      "SerialNo": 49,
+      "Title": "Power BI Date Tables: CALENDAR vs. CALENDARAUTO Explained | #47 Power BI Interview Q&A",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "9 minutes 53 seconds",
+      "URL": "https://www.youtube.com/watch?v=XD11xHVa85M",
+      "Note": [
+        "This video compares the CALENDAR and CALENDARAUTO functions for creating date tables in DAX.",
+        "The instructor explains how each function determines the date range and their parameters.",
+        "Practical guidance is provided on when to use each approach for different scenarios."
+      ]
+    },
+    {
+      "SerialNo": 50,
+      "Title": "Power BI Tutorial: Finding Minimum Values in Multiple Columns & Measures| Power BI Interview Q&A #48",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "9 minutes 54 seconds",
+      "URL": "https://www.youtube.com/watch?v=G2Msg11xKUs",
+      "Note": [
+        "This tutorial demonstrates techniques for finding minimum values across multiple columns and measures.",
+        "The instructor explains different DAX approaches for cross-column minimum calculations.",
+        "Step-by-step examples show how to implement these calculations in Power BI reports."
+      ]
+    },
+    {
+      "SerialNo": 51,
+      "Title": "Power BI Interview Question #49: How to Repeat Values? Repeating Values with REPT & CONCATENATEX",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "7 minutes 32 seconds",
+      "URL": "https://www.youtube.com/watch?v=71Tw8XH8VOc",
+      "Note": [
+        "This video explains how to repeat values in Power BI using DAX functions.",
+        "The instructor demonstrates the use of REPT and CONCATENATEX functions for text repetition.",
+        "Practical examples show how to create visual indicators through repeated characters."
+      ]
+    },
+    {
+      "SerialNo": 52,
+      "Title": "Top 50 Power BI Interview Questions (2025) + 10 Advanced Tutorials | Ultimate Power BI Guide",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "6 hours 1 minutes 27 seconds",
+      "URL": "https://www.youtube.com/watch?v=Wfr1Wh5SxwM",
+      "Note": [
+        "This comprehensive video compiles 50 essential Power BI interview questions plus 10 advanced tutorials.",
+        "The instructor covers a wide range of topics from basic concepts to advanced techniques.",
+        "The complete guide serves as an excellent resource for Power BI interview preparation."
+      ]
+    },
+    {
+      "SerialNo": 53,
+      "Title": "Power BI Interview: How to generate a series of odd numbers or even numbers with DAX & Power Query",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "8 minutes 3 seconds",
+      "URL": "https://www.youtube.com/watch?v=fshj5D3dG_E",
+      "Note": [
+        "This video demonstrates techniques for generating sequences of odd or even numbers in Power BI.",
+        "The instructor explains approaches using both DAX and Power Query for sequence generation.",
+        "Practical applications for these number sequences in data analysis are discussed."
+      ]
+    },
+    {
+      "SerialNo": 54,
+      "Title": "Power BI Interview Question: Cumulative Sales DAX Measure| Date table with/without Window Function",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "15 minutes 9 seconds",
+      "URL": "https://www.youtube.com/watch?v=y4zG8SQ9_8g",
+      "Note": [
+        "This video explains how to create cumulative sales measures in Power BI using DAX.",
+        "The instructor compares approaches with and without window functions and date tables.",
+        "Step-by-step implementation shows how to build running total calculations for sales analysis."
+      ]
+    },
+    {
+      "SerialNo": 55,
+      "Title": "Ace Your Power BI Interview: Find Top & Bottom Performers| How to get 2nd Topper without Rank-Filter",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "12 minutes 5 seconds",
+      "URL": "https://www.youtube.com/watch?v=vipvw4F8LcE",
+      "Note": [
+        "This video demonstrates techniques for identifying top and bottom performers in Power BI.",
+        "The instructor shows how to find specific ranks like the 2nd highest performer without using RANK functions.",
+        "Creative DAX approaches for performance ranking scenarios are explained in detail."
+      ]
+    },
+    {
+      "SerialNo": 56,
+      "Title": "Power BI Interview Question #53: How to add Sequence Numbers in Power BI visual?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "7 minutes 47 seconds",
+      "URL": "https://www.youtube.com/watch?v=PlrjuyfXNaY",
+      "Note": [
+        "This video explains how to add sequential numbering to Power BI visuals.",
+        "The instructor demonstrates different techniques for creating row numbers and sequence identifiers.",
+        "Practical applications for sequence numbers in reporting and analysis are covered."
+      ]
+    },
+    {
+      "SerialNo": 57,
+      "Title": "Power BI Interview Questions: How to append two tables in DAX? Create Common Dimensions| SQL Union",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "6 minutes 11 seconds",
+      "URL": "https://www.youtube.com/watch?v=2RqU3tiUlC0",
+      "Note": [
+        "This video explains how to combine tables in DAX, similar to SQL UNION operations.",
+        "The instructor demonstrates techniques for creating common dimensions across appended tables.",
+        "Practical implementation shows how to handle column mapping and data type consistency."
+      ]
+    },
+    {
+      "SerialNo": 58,
+      "Title": "Power BI Interview Ace: Window Functions for Rolling Averages & Running Totals (Explained!)| Q55",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "12 minutes 32 seconds",
+      "URL": "https://www.youtube.com/watch?v=LHkmgisyTcM",
+      "Note": [
+        "This video covers window functions in DAX for calculating rolling averages and running totals.",
+        "The instructor explains the concepts behind window functions for time-based calculations.",
+        "Step-by-step implementation demonstrates how to create moving averages and cumulative sums."
+      ]
+    },
+    {
+      "SerialNo": 59,
+      "Title": "Power BI Interview Questions: How to Identify and Remove Duplicates in Power BI | Q56- Join Failure",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "4 minutes 58 seconds",
+      "URL": "https://www.youtube.com/watch?v=rj1U_8H_2JA",
+      "Note": [
+        "This video demonstrates techniques for identifying and removing duplicate data in Power BI.",
+        "The instructor explains how duplicates can cause join failures and impact data analysis.",
+        "Solutions using both Power Query and DAX are presented for handling duplicate values."
+      ]
+    },
+    {
+      "SerialNo": 60,
+      "Title": "Power BI Interview Questions| Understanding Table Relationships in Power BI | Q57",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "5 minutes 42 seconds",
+      "URL": "https://www.youtube.com/watch?v=b5BqBJAdcO4",
+      "Note": [
+        "This video explains table relationships in Power BI and their importance in data modeling.",
+        "The instructor covers different relationship types and cardinality options.",
+        "Best practices for establishing and managing relationships between tables are discussed."
+      ]
+    },
+    {
+      "SerialNo": 61,
+      "Title": "Power BI Interview Question: What is Slowly Changing Dimensions (SCD) in Data Warehousing?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "7 minutes 46 seconds",
+      "URL": "https://www.youtube.com/watch?v=MnAjugKga-8",
+      "Note": [
+        "This video explains the concept of Slowly Changing Dimensions (SCD) in data warehousing.",
+        "The instructor describes different types of SCDs and their implementation approaches.",
+        "Practical examples demonstrate how to handle historical changes in dimension tables within Power BI."
+      ]
+    },
+    {
+      "SerialNo": 62,
+      "Title": "Power BI Interview Question: what is Role-Playing Dimensions? A Complete Guide",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "9 minutes 19 seconds",
+      "URL": "https://www.youtube.com/watch?v=UTTr-LvS4IM",
+      "Note": [
+        "This video provides a comprehensive explanation of role-playing dimensions in Power BI.",
+        "The instructor demonstrates how a single dimension table can serve multiple roles in a data model.",
+        "Examples illustrate common role-playing scenarios such as date dimensions in order, shipping, and delivery contexts."
+      ]
+    },
+    {
+      "SerialNo": 63,
+      "Title": "What is a Conformed Dimension in Power BI?| Interview Question 60| A Comprehensive Guide",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "2 minutes 25 seconds",
+      "URL": "https://www.youtube.com/watch?v=_LiwTMLKVGc",
+      "Note": [
+        "This video explains conformed dimensions in Power BI data modeling.",
+        "The instructor covers how conformed dimensions work across multiple fact tables or data marts.",
+        "Benefits of using conformed dimensions for consistent reporting are highlighted."
+      ]
+    },
+    {
+      "SerialNo": 64,
+      "Title": "Power BI Interview Questions- What is the difference between all and allselected in dax/power bi?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "13 minutes 53 seconds",
+      "URL": "https://www.youtube.com/watch?v=CNXRYDZGC04",
+      "Note": [
+        "This video explains the key differences between ALL and ALLSELECTED functions in DAX.",
+        "The instructor demonstrates how each function affects filter context in calculations.",
+        "Practical examples illustrate when to use each function for different analytical requirements."
+      ]
+    },
+    {
+      "SerialNo": 65,
+      "Title": "Top 10 Power BI Interview Questions(2024) 51-60 | DAX, Relationships, SCDs, and More",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "1 hours 18 minutes 39 seconds",
+      "URL": "https://www.youtube.com/watch?v=LQ-Zi_ChVKg",
+      "Note": [
+        "This compilation video covers 10 advanced Power BI interview questions (questions 51-60).",
+        "The instructor addresses topics including DAX functions, table relationships, and slowly changing dimensions.",
+        "Comprehensive answers provide in-depth knowledge for intermediate to advanced Power BI professionals."
+      ]
+    },
+    {
+      "SerialNo": 66,
+      "Title": "How to Handle 'Many to Many' Relationships Between Facts in Power BI | Power BI Data Modeling| Q61",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "9 minutes",
+      "URL": "https://www.youtube.com/watch?v=MPR4HEXWndI",
+      "Note": [
+        "This video tackles the challenge of handling many-to-many relationships between fact tables in Power BI.",
+        "The instructor demonstrates design patterns for resolving many-to-many relationship issues.",
+        "Step-by-step implementation shows how to create bridge tables and optimize the data model."
+      ]
+    },
+    {
+      "SerialNo": 67,
+      "Title": "Power Bi Interview Question: Calculate Unique Combinations of Two Columns| Distinct Count| Q62",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "4 minutes 23 seconds",
+      "URL": "https://www.youtube.com/watch?v=4hOvTk8qVFs",
+      "Note": [
+        "This video demonstrates how to calculate unique combinations of values from two columns in Power BI.",
+        "The instructor explains techniques using DISTINCTCOUNT and other DAX functions.",
+        "Practical examples show how to apply these calculations in business analysis scenarios."
+      ]
+    },
+    {
+      "SerialNo": 68,
+      "Title": "Power BI Interview Question 63- How to Show All City Values in Power BI Tooltip | Concatenatex",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "4 minutes 8 seconds",
+      "URL": "https://www.youtube.com/watch?v=pwWElCPdhvo",
+      "Note": [
+        "This video explains how to display all values from a related column (like cities) in a tooltip.",
+        "The instructor demonstrates how to use CONCATENATEX to combine multiple values into a single text string.",
+        "Step-by-step implementation shows how to enhance report interactivity with rich tooltips."
+      ]
+    },
+    {
+      "SerialNo": 69,
+      "Title": "Power BI Interview Question: Sort Matrix Visual Columns by Month-Year in Descending Order| Q 64",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "6 minutes 52 seconds",
+      "URL": "https://www.youtube.com/watch?v=eerzBNluw7Y",
+      "Note": [
+        "This video addresses the challenge of sorting matrix visual columns by month-year in descending order.",
+        "The instructor demonstrates techniques for custom sorting in matrix visualizations.",
+        "Solutions for handling chronological sorting in reverse order are provided step-by-step."
+      ]
+    },
+    {
+      "SerialNo": 70,
+      "Title": "Power BI Interview Question 65: Date Slicer Tips: Set Slicer to Today or Current Month",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "6 minutes 55 seconds",
+      "URL": "https://www.youtube.com/watch?v=RYgfrmKFG5A",
+      "Note": [
+        "This video provides tips for configuring date slicers to default to today's date or the current month.",
+        "The instructor demonstrates how to create dynamic defaults for time-based filtering.",
+        "Techniques for maintaining relevant date context in reports are explained in detail."
+      ]
+    },
+    {
+      "SerialNo": 71,
+      "Title": "Interview Question 66: How to Change Themes in Power BI? Power BI Themes: A Beginner's Guide",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "6 minutes 39 seconds",
+      "URL": "https://www.youtube.com/watch?v=dCScT0rMxHg",
+      "Note": [
+        "This beginner-friendly video explains how to apply and customize themes in Power BI.",
+        "The instructor covers built-in themes, custom themes, and theme JSON configuration.",
+        "Step-by-step guidance shows how to create consistent visual styling across reports."
+      ]
+    },
+    {
+      "SerialNo": 72,
+      "Title": "Top 10 Advanced Power BI Interview Questions (#61–70) | Master Data Modeling & Visualization",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "1 hours 4 minutes 8 seconds",
+      "URL": "https://www.youtube.com/watch?v=ZVFK-E6L6T0",
+      "Note": [
+        "This compilation video covers 10 advanced Power BI interview questions (questions 61-70).",
+        "The instructor addresses complex topics in data modeling, calculations, and visualization techniques.",
+        "Comprehensive answers provide advanced insights for Power BI professionals preparing for interviews."
+      ]
+    },
+    {
+      "SerialNo": 73,
+      "Title": "Power BI Interview Question 67: How can I add a constant or Average/Constant Line in my visual?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "7 minutes 20 seconds",
+      "URL": "https://www.youtube.com/watch?v=ZTRh3nWd_6E",
+      "Note": [
+        "This video demonstrates how to add constant or average reference lines to Power BI visuals.",
+        "The instructor explains different approaches for implementing benchmark lines in charts.",
+        "Examples show how to enhance data interpretation with visual reference points."
+      ]
+    },
+    {
+      "SerialNo": 74,
+      "Title": "Power BI Interview Question #68: What is the Report Tooltip Page? Power BI Explained!",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "5 minutes 20 seconds",
+      "URL": "https://www.youtube.com/watch?v=u2-VvV6JYTg",
+      "Note": [
+        "This video explains report tooltip pages in Power BI and their role in enhancing data visualization.",
+        "The instructor demonstrates how to create and configure custom tooltip pages with rich content.",
+        "Step-by-step implementation shows how to leverage tooltips for improved user experience."
+      ]
+    },
+    {
+      "SerialNo": 75,
+      "Title": "Power BI Interview Questions and Answers #69: What is Drill Through in Power BI?",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "11 minutes 22 seconds",
+      "URL": "https://www.youtube.com/watch?v=Yk8xWssAbdc",
+      "Note": [
+        "This video explains the drill-through functionality in Power BI and its role in interactive reporting.",
+        "The instructor demonstrates how to set up drill-through pages with appropriate filters.",
+        "Practical examples show how to implement multi-level data exploration in reports."
+      ]
+    },
+    {
+      "SerialNo": 76,
+      "Title": "Power BI Interview: Can You Drill Through from a Card Visual | Quick Guide & Demo",
+      "Channel": "Learn Microsoft Fabric, Power BI, SQL Amit Chandak",
+      "Duration": "6 minutes 14 seconds",
+      "URL": "https://www.youtube.com/watch?v=b8OCphhk_LE",
+      "Note": [
+        "This video addresses whether drill-through functionality can be implemented from card visuals in Power BI.",
+        "The instructor demonstrates techniques for enabling drill-through from card visuals to detailed reports.",
+        "Step-by-step implementation shows how to enhance the interactivity of card visuals."
+      ]
+    },
+    {
+      "SerialNo": 77,
+      "Title": "Embed Power BI Reports in Power Point | How to Sync Live Power BI Report Data in Power Point  (77)",
+      "Channel": "Analytics with Nags",
+      "Duration": "5 minutes 34 seconds",
+      "URL": "https://www.youtube.com/watch?v=ZX0X_8zR1ns",
+      "Note": [
+        "This video demonstrates how to embed Power BI reports into PowerPoint presentations.",
+        "The instructor explains techniques for maintaining live data connections between Power BI and PowerPoint.",
+        "Step-by-step guidance shows how to create dynamic presentations with synchronized Power BI data."
+      ]
+    }
+]

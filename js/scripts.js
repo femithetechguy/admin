@@ -139,8 +139,10 @@ function renderTabContent(tab, idx) {
   if (idx !== selectedTabIdx) return "";
   if (tab.name === "Behavioral" && window.renderBehavioralTab)
     return window.renderBehavioralTab(tab);
-  if (tab.name === "Interview Prep" && window.renderInterviewPrepTab)
-    return window.renderInterviewPrepTab(tab);
+  if (tab.name === "PowerBI Prep" && window.renderPowerBIPrepTab)
+    return window.renderPowerBIPrepTab(tab);
+  if (tab.name === "PowerBI Prep Vids" && window.renderPowerBIPrepVidsTab)
+    return window.renderPowerBIPrepVidsTab(tab);
   if (tab.name === "Resume" && window.renderResumeTab)
     return window.renderResumeTab(tab);
   if (tab.name === "Applied" && window.renderAppliedTab)
@@ -293,7 +295,7 @@ window.restoreTab = function () {
 // --- DEMO: Minimal working example for testing ---
 // tabs = [
 //   { name: "Behavioral" },
-//   { name: "Interview Prep" },
+//   { name: "PowerBi Prep" },
 //   { name: "Resume" },
 //   { name: "Applied" },
 //   { name: "Logout" }
