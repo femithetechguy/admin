@@ -46,6 +46,16 @@
       "author": "Dataquest",
       "dateAdded": "July 31, 2025",
       "tags": ["cheatsheet", "reference", "external", "learning"]
+    },
+    {
+      "id": 5,
+      "filename": "youtube-summarized",
+      "type": "url",
+      "description": "Tool to summarize YouTube videos",
+      "path": "https://youtubesummarized.com/",
+      "author": "YouTube Summarized",
+      "dateAdded": "July 31, 2025",
+      "tags": ["tool", "video", "external", "summarization"]
     }
   ]
 }
