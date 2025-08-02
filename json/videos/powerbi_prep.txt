@@ -1,0 +1,49 @@
+ What is Power BI?
+ What are the components and elements parts of Power BI?
+ What is Power BI Desktop? Why do we need a Power BI Desktop?
+ What is Power Query?
+ What is DAX?
+ What is the difference between a Calculated Column and a measure?
+ What is Import, Direct Query, and Live Mode?
+ What are the different types of visuals?
+ How to do a multi-column sort on a visual?
+ What is conditional formatting in Power BI and three format styles?
+ When does conditional formatting become unavailable?
+ What are Interactions in Power BI?
+ What are Field Parameters in Power BI- dynamic Axis using a slicer?
+ Before the field parameters, how do we achieve dynamic dimensions and axes?
+ What are bookmarks in Power BI? How can pass slicer values across bookmarks?
+ What is the difference between sumx and sum in power bi?
+ What is the difference between calculate and calculatetable?
+ What is the difference between Summarize and SummarizeColumns?
+ What is the difference between all and allselected in power bi?
+ What is the difference between filtering data in CALCULATE with and without FILTER Expression?
+ By default, sort order for RANKX? If we add an additional column same granularity, will I get the same ranks?
+ What is the difference between skip and dense in Rank?
+ Please provide a measure for top  states by gross sales?
+ When Grand Total does not equal the sum of rows?
+ Why Date table is very important in Power BI?
+ What are some best practices related to Time intelligence?
+ What do mean by MTD, QTD, and YTD? Could you provide the formulas for calculating MTD, QTD, and YTD?
+ For which specific month does an MTD measure using DATESMTD display its value on card visual without a filter?
+ Calculation Of Last Year Date for the very first date in the date table?
+ Then how can I get the date year before for today?
+ Are they same - LMTD= CALCULATE([Net],DATESMTD(dateadd(‘Date’[Date],-,Month))) or CALCULATE([Net], Previousmonth(‘Date’[Date]))?
+ How can I display a trend for the last  months when one month is selected?
+ How do sort the Month Year in the format MMM-YYYY?
+ What type of schema is preferred for Power BI modeling?
+ What is the RELATED function? and the difference between RELATED and RELATEDTABLE?
+ What is the difference between search and find?
+ What does FIRSTNONBLANKVALUE function do?
+ Give examples of Power BI functions that are very similar to SQL window functions?
+ What are the differences between Rank and Rankx?
+ What is the difference between GENERATE and CROSSJOIN?
+ What is the difference between the CALENDAR and CALENDARAUTO?
+ What is the best way to find min values 5 columns or measures for a given table row or visual row?
+ How can we repeat the value of a measure or column?
+ How can we generate a series of odd numbers or even numbers?
+ Power Query Unpivot Multiple columns sets
+ HR Analytics - Tenure Bucketing - Active employee, Hired, Terminated. Use relationship- Inactive Joins
+ TOPN with Others and ABC Analytics, window function, and Matrix as Project Plan Visual 
+ Field Parameters- Set of measures, Always Sort on Axis, Live connection 
+ Power Query- Cross Join, Merge Excel Sheets Data
