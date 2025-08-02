@@ -1,0 +1,120 @@
+/* Custom styles for the navigation menu */
+@media (min-width: 640px) {
+  /* For desktop view */
+  .container {
+    max-width: 100% !important; /* Make container full width */
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  #tabs-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start; /* Start from the left */
+    overflow-x: auto;
+    scrollbar-width: thin;
+    padding-bottom: 4px;
+    margin-left: 1rem; /* Less margin to show more items */
+    width: calc(100% - 130px); /* Even more space for tabs */
+    max-width: none; /* Remove max width restriction */
+  }
+  
+  #tabs-menu::-webkit-scrollbar {
+    height: 6px; /* Slightly larger scrollbar */
+  }
+  
+  #tabs-menu::-webkit-scrollbar-thumb {
+    background-color: rgba(59, 130, 246, 0.4); /* More visible scrollbar */
+    border-radius: 3px;
+  }
+  
+  #tabs-menu::-webkit-scrollbar-track {
+    background: rgba(229, 231, 235, 0.3); /* Light track background */
+  }
+  
+  #tabs-menu li {
+    flex: 0 0 auto;
+    margin-right: 2px; /* Small space between tabs */
+  }
+  
+  #tabs-menu .tab-btn {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 0.45rem; /* Slightly more compact */
+    font-size: 0.75rem;
+    border-radius: 0.25rem;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+  }
+  
+  #tabs-menu .tab-btn:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+  }
+  
+  #tabs-menu .tab-btn i {
+    margin-right: 0.25rem;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  /* Active tab styling */
+  #tabs-menu .tab-btn.bg-blue-100 {
+    background-color: #ebf5ff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767px) {
+  #tabs-menu {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  #tabs-menu .tab-btn span {
+    display: inline-block;
+  }
+}
+
+/* Ensure container has enough space */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 100% !important; /* Keep container full width on large screens */
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  /* Better spacing for larger screens */
+  #tabs-menu {
+    width: calc(100% - 130px);
+  }
+}
+
+/* Scroll buttons styling */
+.scroll-left-btn, .scroll-right-btn {
+  z-index: 30;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  opacity: 0.8;
+  border: 1px solid rgba(209, 213, 219, 0.5);
+}
+
+.scroll-left-btn:hover, .scroll-right-btn:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Start with tabs at the beginning */
+#tabs-menu {
+  scroll-behavior: smooth; /* Add smooth scrolling */
+  -webkit-overflow-scrolling: touch;
+  scrollbar-color: rgba(59, 130, 246, 0.4) rgba(229, 231, 235, 0.3);
+}

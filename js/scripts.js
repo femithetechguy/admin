@@ -66,15 +66,15 @@ function renderAppUI() {
     </div>
     <div id="dashboard" class="hidden min-h-screen flex flex-col">
       <nav class="bg-white shadow sticky top-0 z-10">
-        <div class="container mx-auto px-2 sm:px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 relative">
-          <span class="text-xl font-bold flex items-center gap-2 mb-2 sm:mb-0">
-            <i class="bi bi-kanban"></i> ${config.appName}
+        <div class="container mx-auto px-2 sm:px-4 py-2 flex flex-col sm:flex-row items-center gap-2 relative">
+          <span class="text-lg font-bold flex items-center gap-1 mb-2 sm:mb-0 sm:flex-shrink-0 sm:min-w-[110px] sm:max-w-[110px]">
+            <i class="bi bi-kanban"></i>${config.appName}
           </span>
           <!-- Hamburger for mobile -->
           <button id="hamburger" class="sm:hidden absolute right-2 top-3 text-2xl p-2 rounded focus:outline-none" aria-label="Open menu">
             <i class="bi bi-list"></i>
           </button>
-          <ul class="flex flex-col sm:flex-row sm:w-auto sm:max-w-none max-w-xs space-y-2 sm:space-y-0 sm:space-x-4 bg-white sm:bg-transparent absolute sm:static right-0 left-auto top-12 sm:top-0 z-20 shadow sm:shadow-none p-4 sm:p-0 transition-all duration-200 ease-in-out hidden sm:flex" id="tabs-menu">
+          <ul class="flex flex-col sm:flex-row sm:flex-nowrap sm:w-full sm:overflow-x-auto sm:flex-1 max-w-xs space-y-2 sm:space-y-0 sm:space-x-1 bg-white sm:bg-transparent absolute sm:static right-0 left-auto top-12 sm:top-0 z-20 shadow sm:shadow-none p-4 sm:p-0 transition-all duration-200 ease-in-out hidden sm:flex" id="tabs-menu">
             ${tabs.map((tab, idx) => renderTabBtn(tab, idx)).join("")}
           </ul>
         </div>
@@ -127,8 +127,12 @@ function renderAppUI() {
 
 function renderTabBtn(tab, idx) {
   const activeClass = idx === selectedTabIdx ? "bg-blue-100 font-bold" : "";
-  const icon = tab.biIcon ? `<i class="bi ${tab.biIcon} mr-2"></i>` : "";
-  return `<li><button class="tab-btn ${activeClass}" data-tab-idx="${idx}">${icon}${tab.name}</button></li>`;
+  const icon = tab.biIcon ? `<i class="bi ${tab.biIcon}"></i>` : "";
+  // For logout tab, show only icon on desktop
+  if (tab.name === "Logout") {
+    return `<li><button class="tab-btn ${activeClass}" title="${tab.name}" data-tab-idx="${idx}">${icon}<span class="sm:hidden">${tab.name}</span></button></li>`;
+  }
+  return `<li><button class="tab-btn ${activeClass}" title="${tab.name}" data-tab-idx="${idx}">${icon}<span>${tab.name}</span></button></li>`;
 }
 
 function renderTabContent(tab, idx) {
