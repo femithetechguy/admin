@@ -25,7 +25,7 @@
         },
         {
           "name": "Interview Prep",
-          "biIcon": "bi-lightbulb",
+          "biIcon": "bi-question-circle",
           "content": [
             "Table or card view of interview prep tasks",
             "Fields: Company, Role, Date, Notes",
@@ -34,7 +34,7 @@
         },
         {
           "name": "Behavioral",
-          "biIcon": "bi-chat-dots",
+          "biIcon": "bi-people",
           "content": [
             "Behavioral questions and answers",
             "Optional: STAR model formatting"
@@ -50,7 +50,7 @@
         },
         {
           "name": "Masterclass",
-          "biIcon": "bi-camera-video",
+          "biIcon": "bi-award",
           "content": [
             "Video tutorials and resources",
             "Optional: filters for topic, duration, etc."
@@ -66,7 +66,7 @@
         },
         {
           "name": "DataWarehouse",
-          "biIcon": "bi-camera-video",
+          "biIcon": "bi-box-seam",
           "content": [
             "Video tutorials and resources",
             "Optional: filters for topic, duration, etc."
@@ -74,7 +74,7 @@
         },
         {
           "name": "BiProjects",
-          "biIcon": "bi-camera-video",
+          "biIcon": "bi-journal",
           "content": [
             "Video tutorials and resources",
             "Optional: filters for topic, duration, etc."
@@ -82,7 +82,7 @@
         },
         {
           "name": "Interview",
-          "biIcon": "bi-camera-video",
+          "biIcon": "bi-question-circle",
           "content": [
             "Video tutorials and resources",
             "Optional: filters for topic, duration, etc."
@@ -90,7 +90,7 @@
         },
         {
           "name": "E2EAnalytics",
-          "biIcon": "bi-camera-video",
+          "biIcon": "bi-bar-chart",
           "content": [
             "Video tutorials and resources",
             "Optional: filters for topic, duration, etc."
@@ -98,7 +98,7 @@
         },
         {
           "name": "School",
-          "biIcon": "bi-book",
+          "biIcon": "bi-backpack",
           "content": [
             "School resources and links",
             "Optional: notes or study materials from second site"
@@ -130,8 +130,8 @@
     "auth": "Simple username and password (Firebase planned for later)",
     "protectDashboard": true,
     "dummyCredentials": {
-      "username": "admin",
-      "password": "admin123"
+      "username": "****",
+      "password": "****"
     }
   },
   "files": [
