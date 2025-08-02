@@ -146,6 +146,8 @@ function renderTabContent(tab, idx) {
     window.renderMasterclassTab
   )
     return window.renderMasterclassTab(tab);
+  if (tab.name === "SQL" && window.renderSQLTab)
+    return window.renderSQLTab(tab);
   if (tab.name === "BiProjects" && window.renderBiProjectsTab)
     return window.renderBiProjectsTab(tab);
   if (tab.name === "Interview" && window.renderInterviewTopicsTab)

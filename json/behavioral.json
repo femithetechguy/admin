@@ -380,6 +380,34 @@
         "Rapid Prototyping",
         "Executive Communication"
       ]
+    },
+    {
+      "serial_no": 25,
+      "question": "Describe a data analytics project you worked on that produced results that surprised you. What was the outcome and why was it surprising?",
+      "answer": "S: During the COVID-19 pandemic at Northside Hospital, I analyzed comprehensive patient data (admissions, ER visits, surgeries, diagnoses) to understand the pandemic's impact on overall patient care beyond just COVID cases. T: My responsibility was to identify trends and anomalies in non-COVID admissions during the initial surge, using data to monitor hospital capacity and resource allocation. A: I employed SQL for data extraction from clinical systems, Python with Pandas for cleaning and time-series analysis, and Tableau for creating interactive dashboards to track trends by diagnosis and procedure type. R: The results were genuinely surprising - while elective surgeries declined as expected, we discovered an alarming and disproportionate drop in admissions for time-sensitive conditions like heart attacks and strokes. This unexpected finding revealed that the pandemic's indirect impact might be deadlier than anticipated, as critically ill patients avoided seeking immediate care due to COVID fears.",
+      "category": "Data Analysis",
+      "skills": [
+        "Data Analysis",
+        "Insight Discovery",
+        "Problem Solving",
+        "Data Interpretation",
+        "Business Intelligence"
+      ]
+    },
+    {
+      "serial_no": 26,
+      "question": "Describe a challenging data analysis project you worked on that required integrating multiple datasets. What tools and techniques did you use, and what was the outcome?",
+      "answer": "S: At Manhattan Associates, we faced a significant challenge with customer data fragmentation across multiple systems (POS, web analytics, CRM, ERP, and TM), which prevented us from having a unified customer view and understanding trends, ultimately affecting our marketing and service capabilities. T: I was tasked with integrating these disparate data sources, despite challenges with inconsistent identifiers and massive data volumes. A: I implemented a comprehensive solution using Python (Pandas) for cleaning and transformation, developing custom fuzzy matching algorithms to link records across systems. I wrote SQL queries for efficient data extraction and leveraged Google BigQuery as our scalable data warehouse. Post-integration, I applied K-means clustering to segment customers and created insightful visualizations using Tableau. R: The project delivered a true 360-degree customer view that transformed our operations, enabling targeted marketing campaigns that increased conversion rates by 15% and improved customer satisfaction scores by 10%. Additionally, this unified data foundation established the groundwork for future advanced analytics initiatives.",
+      "category": "Data Integration",
+      "skills": [
+        "Data Integration",
+        "ETL",
+        "Data Modeling",
+        "Power Query",
+        "Data Transformation",
+        "SQL",
+        "Cross-Source Analysis"
+      ]
     }
   ]
 }
