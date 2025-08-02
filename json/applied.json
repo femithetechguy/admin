@@ -5,7 +5,9 @@
     "offer",
     "rejected",
     "withdrawn",
-    "WIP"
+    "WIP",
+    "Closed for applications",
+    "Duplicate"
   ],
   "jobs": [
     {

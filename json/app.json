@@ -57,6 +57,14 @@
           ]
         },
         {
+          "name": "SQL",
+          "biIcon": "bi-database",
+          "content": [
+            "SQL queries and database resources",
+            "Optional: example queries, database schemas, best practices"
+          ]
+        },
+        {
           "name": "DataWarehouse",
           "biIcon": "bi-camera-video",
           "content": [
