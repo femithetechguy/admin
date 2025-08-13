@@ -240,6 +240,28 @@
       "status": "submitted",
       "isActive": true,
       "notes": ""
+    },
+    {
+      "serial_no": 22,
+      "company": "HEALTH EQUITY",
+      "position": "Report Developer",
+      "location": "Remote",
+      "dateApplied": "2025-08-01",
+      "applicationLink": "https://jobright.ai/jobs/info/688d5c421808534a89cc2c64",
+      "status": "submitted",
+      "isActive": true,
+      "notes": ""
+    },
+    {
+      "serial_no": 23,
+      "company": "HOLMAN",
+      "position": "Power BI Technical Lead",
+      "location": "Remote",
+      "dateApplied": "2025-08-01",
+      "applicationLink": "https://jobright.ai/jobs/info/684ab245ba9aa7cc29fbfa2c",
+      "status": "submitted",
+      "isActive": true,
+      "notes": ""
     }
   ]
 }
