@@ -9,6 +9,11 @@
       "Overview of Power BI interview questions for entry-level candidates (0-2 years experience)",
       "Covers fundamental concepts like data visualization, basic DAX formulas, and Power Query",
       "Provides tips on how to prepare and what interviewers look for in junior Power BI developers"
+    ],
+    "Pictures": [
+      "images/interviewtopics/0_2_years_exp.png",
+      "images/interviewtopics/azure_architecture.png",
+      "images/interviewtopics/power_bi_architecture.png"
     ]
   },
   {
@@ -21,6 +26,11 @@
       "Detailed guide to mid-level Power BI interview questions for those with 2-5 years experience",
       "Explores intermediate topics like complex DAX functions, data modeling best practices, and performance optimization",
       "Discusses how to demonstrate practical experience and problem-solving skills to potential employers"
+    ],
+    "Pictures": [
+      "images/interviewtopics/2_5_years_exp.png",
+      "images/interviewtopics/azure_architecture.png",
+      "images/interviewtopics/power_bi_architecture.png"
     ]
   },
   {
@@ -33,6 +43,11 @@
       "Advanced Power BI interview preparation for senior analysts and developers (5-8 years experience)",
       "Focuses on enterprise-level implementation, security models, governance, and complex architecture design",
       "Includes strategies for handling scenario-based questions and demonstrating leadership in BI projects"
+    ],
+    "Pictures": [
+      "images/interviewtopics/5_8_years_exp.png",
+      "images/interviewtopics/azure_architecture.png",
+      "images/interviewtopics/power_bi_architecture.png"
     ]
   },
   {
@@ -45,6 +60,14 @@
       "Expert-level Power BI interview guide for architects and leaders with 8+ years experience",
       "Covers strategic BI implementation, integration with enterprise systems, and advanced optimization techniques",
       "Discusses leadership questions, managing large-scale BI projects, and setting organizational data strategy"
+    ],
+    "Pictures": [
+      "images/interviewtopics/8_plus_years_exp_A.png",
+      "images/interviewtopics/8_plus_years_exp_B.png",
+      "images/interviewtopics/8_plus_years_exp_C.png",
+      "images/interviewtopics/8_plus_years_exp_D.png",
+      "images/interviewtopics/0-2_years_exp_E.png",
+      "images/interviewtopics/0-2_years_exp_F.png"
     ]
   }
 ]
