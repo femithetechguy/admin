@@ -1,8 +1,7 @@
 /* Tailwind CSS CDN */
 @import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
 
-/* Add these styles to your existing CSS */
-
+/* Core animations and effects */
 .loading-spinner {
   width: 24px;
   height: 24px;
@@ -36,8 +35,28 @@
   }
 }
 
+/* Notification animations */
+.share-success-popup,
+.share-url-popup {
+  animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Typography and content styling */
 .prose {
-  max-width: none;
+  line-height: 1.7;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .prose h1 {
@@ -47,6 +66,7 @@
   color: #1f2937;
   border-bottom: 2px solid #e5e7eb;
   padding-bottom: 0.5rem;
+  margin-top: 0;
 }
 
 .prose h2 {
@@ -67,7 +87,6 @@
 
 .prose p {
   margin-bottom: 1rem;
-  line-height: 1.7;
   color: #374151;
 }
 
@@ -79,6 +98,12 @@
 
 .prose li {
   margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+.prose strong {
+  font-weight: 600;
+  color: #1f2937;
 }
 
 .prose code {
@@ -98,103 +123,21 @@
   border: 1px solid #e5e7eb;
 }
 
-.prose strong {
-  font-weight: 600;
-  color: #1f2937;
-}
-
-.prose em {
-  font-style: italic;
-  color: #4b5563;
-}
-
-/* Copy and Share button improvements */
-.note-content-header .flex {
-  align-items: flex-start;
-}
-
-@media (max-width: 640px) {
-  .note-content-header .flex {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .note-content-header .flex > div:last-child {
-    width: 100%;
-  }
-  
-  .note-content-header .flex > div:last-child .flex {
-    justify-content: stretch;
-  }
-  
-  .note-content-header .flex > div:last-child button {
-    flex: 1;
-  }
-}
-
-/* Notification animations */
-.share-success-popup,
-.share-url-popup {
-  animation: slideInRight 0.3s ease-out;
-}
-
-@keyframes slideInRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Loading spinner for copy/share operations */
-.action-loading {
-  pointer-events: none;
-  opacity: 0.6;
-}
-
-.action-loading::after {
-  content: '';
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border: 2px solid transparent;
-  border-top: 2px solid currentColor;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin-left: 8px;
-}
-
 /* Shared content popup styling */
-.prose h1:first-child {
-  margin-top: 0;
+.fixed.inset-0 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
-/* Responsive improvements for action buttons */
-@media (max-width: 480px) {
-  .note-content-header button {
-    padding: 0.5rem;
-  }
-  
-  .note-content-header button span {
-    display: none;
-  }
-  
-  .note-content-header button svg {
-    width: 1rem;
-    height: 1rem;
-  }
-}
-
-/* Better focus states for accessibility */
+/* Accessibility and interactions */
 .note-content-header button:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
 }
 
-/* Hover effects for better UX */
 .note-content-header button:hover {
   transform: translateY(-1px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -202,4 +145,140 @@
 
 .note-content-header button:active {
   transform: translateY(0);
+}
+
+/* Layout overflow prevention */
+.note-viewer-section {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.note-viewer-controls,
+.note-topics-buttons,
+.note-content-display {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Print styles */
+@media print {
+  .fixed {
+    position: static !important;
+    background: white !important;
+  }
+  
+  .bg-black {
+    background: white !important;
+  }
+  
+  .border-t, .border-b {
+    display: none !important;
+  }
+  
+  button {
+    display: none !important;
+  }
+  
+  .sticky {
+    position: static !important;
+  }
+}
+
+/* Add these mobile-specific fixes */
+
+/* Fix mobile search input zoom and overflow */
+@media (max-width: 640px) {
+  /* Prevent zoom on input focus */
+  input[type="text"], 
+  input[type="search"], 
+  input[type="email"], 
+  input[type="number"], 
+  input[type="tel"], 
+  input[type="url"], 
+  input[type="password"], 
+  textarea, 
+  select {
+    font-size: 16px !important;
+    transform: none !important;
+  }
+  
+  /* Prevent viewport changes */
+  .note-viewer-controls input,
+  .note-viewer-controls select {
+    font-size: 16px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  /* Fix button layout overflow */
+  .action-buttons-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .action-buttons-container .flex {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .action-buttons-container button {
+    flex: 1;
+    min-width: 0;
+    max-width: 100%;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .action-buttons-container button span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Ensure search container doesn't expand */
+  .note-viewer-controls {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .note-viewer-controls > div {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Fix input container overflow */
+  .note-viewer-controls .flex-1 {
+    min-width: 0;
+    width: 100%;
+  }
+  
+  /* Responsive button grid */
+  @media (max-width: 480px) {
+    .action-buttons-container .flex {
+      flex-direction: column;
+    }
+    
+    .action-buttons-container button {
+      flex: none;
+      width: 100%;
+    }
+  }
+}
+
+/* Fix shared popup buttons on mobile */
+@media (max-width: 640px) {
+  .action-buttons-container button {
+    min-height: 44px; /* Minimum touch target */
+    justify-content: center;
+  }
+  
+  .action-buttons-container svg {
+    flex-shrink: 0;
+  }
 }
