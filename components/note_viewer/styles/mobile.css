@@ -143,6 +143,41 @@
   }
 }
 
+/* Shared note popup scrolling fixes */
+@media (max-width: 768px) {
+  /* Fixed popup scrolling */
+  .fixed.inset-0 .bg-white {
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Content area scrolling */
+  .fixed.inset-0 .overflow-y-auto {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+  
+  /* Popup content adjustments */
+  .fixed.inset-0 .prose {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  /* Header stays fixed */
+  .fixed.inset-0 .flex-shrink-0 {
+    flex-shrink: 0 !important;
+  }
+  
+  /* Content area takes remaining space */
+  .fixed.inset-0 .flex-1 {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+  }
+}
+
 /* Small mobile screens */
 @media (max-width: 480px) {
   .note-viewer-controls {
@@ -253,4 +288,37 @@
     outline: 3px solid;
     outline-offset: 2px;
   }
+}
+
+/* Prevent zoom on inputs in popup */
+.fixed.inset-0 input,
+.fixed.inset-0 select,
+.fixed.inset-0 textarea {
+  font-size: 16px !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Scroll indicators */
+.fixed.inset-0 .overflow-y-auto {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 transparent;
+}
+
+.fixed.inset-0 .overflow-y-auto::-webkit-scrollbar {
+  width: 4px;
+}
+
+.fixed.inset-0 .overflow-y-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.fixed.inset-0 .overflow-y-auto::-webkit-scrollbar-thumb {
+  background-color: #cbd5e0;
+  border-radius: 2px;
+}
+
+.fixed.inset-0 .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background-color: #a0aec0;
 }

@@ -132,6 +132,15 @@
   padding-bottom: 2rem;
 }
 
+/* Shared popup specific styles */
+.fixed.inset-0 {
+  backdrop-filter: blur(2px);
+}
+
+.fixed.inset-0 .bg-white {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
 /* Accessibility and interactions */
 .note-content-header button:focus {
   outline: none;
