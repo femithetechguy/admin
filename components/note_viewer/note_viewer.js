@@ -110,6 +110,9 @@ window.noteViewer = {
     }
 
     try {
+      // Load modules first
+      await this.loadModules();
+      
       if (notesJsonPath) {
         await this.loadBasicNotes(containerId, notesJsonPath);
       } else {
@@ -168,6 +171,12 @@ window.noteViewer = {
           </div>
         `;
       }
+      
+      // Trigger event for modules that might be waiting
+      const event = new CustomEvent('noteViewerReady', { 
+        detail: { containerId, notes: this.notes } 
+      });
+      window.dispatchEvent(event);
       
       return data;
     } catch (error) {
@@ -367,8 +376,45 @@ window.noteViewer = {
     const topicsContainer = document.getElementById(`note-topics-buttons-${containerId}`);
     
     if (contentDisplay && titleElement && bodyElement) {
-      // Show loading state
-      titleElement.innerHTML = `<h1 class="text-2xl font-bold text-gray-900">${note.title || note.topic || 'Untitled'}</h1>`;
+      // Ensure modules are loaded
+      if (!this.modulesLoaded) {
+        await this.loadModules();
+      }
+
+      // Show title with action buttons - REMOVED PRINT BUTTON
+      titleElement.innerHTML = `
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4">
+          <div>
+            <h1 class="text-2xl font-bold text-gray-900">${note.title || note.topic || 'Untitled'}</h1>
+            ${note.category ? `<div class="text-sm text-blue-600 mt-1">${note.category}</div>` : ''}
+          </div>
+          <div class="action-buttons-container">
+            <div class="flex gap-2">
+              <button 
+                onclick="window.noteViewer.handleCopyNote('${containerId}', ${noteIndex})"
+                class="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+                title="Copy content to clipboard"
+              >
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2z"></path>
+                </svg>
+                <span>Copy</span>
+              </button>
+              <button 
+                onclick="window.noteViewer.handleShareNote('${containerId}', ${noteIndex})"
+                class="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+                title="Share this note"
+              >
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path>
+                </svg>
+                <span>Share</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+      
       bodyElement.innerHTML = `
         <div class="text-center py-8 text-blue-600">
           <div class="loading-spinner mx-auto mb-4" style="border: 2px solid #f3f4f6; border-top: 2px solid #3b82f6; border-radius: 50%; width: 20px; height: 20px; animation: spin 1s linear infinite;"></div>
@@ -417,19 +463,127 @@ window.noteViewer = {
     if (container) {
       container.innerHTML = `
         <div class="text-center py-8 text-gray-500">
-          <p class="text-lg font-medium">Note Viewer Ready</p>
-          <p class="text-sm">No notes path provided</p>
-          <p class="text-xs text-gray-400 mt-2">Container: ${containerId}</p>
+          <p>No notes available. Please check back later.</p>
         </div>
       `;
     }
   },
 
-  show: async function(notesJsonPath, title = 'Notes') {
-    this.debug('show called - basic popup mode');
-    alert('Note viewer popup mode - not implemented in basic version');
-  }
-};
+  // Module loading functionality
+  loadModules: async function() {
+    if (this.modulesLoaded) {
+      this.debug('Modules already loaded');
+      return;
+    }
+
+    const modules = [
+      'components/note_viewer/modules/core.js',
+      'components/note_viewer/modules/markdown.js',
+      'components/note_viewer/modules/sharing.js', 
+      'components/note_viewer/modules/printing.js',
+      'components/note_viewer/modules/inline.js',
+      'components/note_viewer/modules/popup.js'
+    ];
+
+    this.debug('Loading note viewer modules...');
+
+    for (const modulePath of modules) {
+      try {
+        await this.loadModule(modulePath);
+        this.debug(`✅ Loaded: ${modulePath}`);
+      } catch (error) {
+        console.warn(`⚠️ Failed to load module: ${modulePath}`, error);
+      }
+    }
+
+    this.modulesLoaded = true;
+    this.debug('All modules loaded successfully');
+    
+    // Check what functions are now available
+    this.debug('Available functions after module load:');
+    this.debug('copyNoteContent:', typeof window.copyNoteContent);
+    this.debug('shareNote:', typeof window.shareNote);
+    this.debug('printNote:', typeof window.printNote);
+    this.debug('printSharedContent:', typeof window.printSharedContent);
+  },
+
+  loadModule: function(src) {
+    return new Promise((resolve, reject) => {
+      // Check if already loaded
+      const existing = document.querySelector(`script[src="${src}"]`);
+      if (existing) {
+        resolve();
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.src = src;
+      script.onload = resolve;
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
+  },
+
+  // Debug utilities
+  checkModules: function() {
+    console.log('=== Module Status Check ===');
+    console.log('modulesLoaded:', this.modulesLoaded);
+    console.log('copyNoteContent:', typeof window.copyNoteContent);
+    console.log('shareNote:', typeof window.shareNote);
+    console.log('printNote:', typeof window.printNote);
+    console.log('printSharedContent:', typeof window.printSharedContent);
+    console.log('========================');
+  },
+
+  // Simplified handler methods that delegate to existing modules
+  handleCopyNote: function(containerId, noteIndex) {
+    this.debug('handleCopyNote called - delegating to modules');
+    
+    if (!this.modulesLoaded) {
+      this.loadModules().then(() => {
+        this.handleCopyNote(containerId, noteIndex);
+      });
+      return;
+    }
+    
+    if (typeof window.copyNoteContent === 'function') {
+      return window.copyNoteContent(containerId, noteIndex);
+    } else if (typeof this.copyNoteWithToast === 'function') {
+      return this.copyNoteWithToast(containerId, noteIndex);
+    } else {
+      console.warn('No copy module loaded');
+      this.showToast('❌ Copy module not available', 'error');
+    }
+  },
+
+  handleShareNote: function(containerId, noteIndex) {
+    this.debug('handleShareNote called - delegating to modules');
+    
+    if (!this.modulesLoaded) {
+      this.loadModules().then(() => {
+        this.handleShareNote(containerId, noteIndex);
+      });
+      return;
+    }
+    
+    if (typeof window.shareNote === 'function') {
+      return window.shareNote(containerId, noteIndex);
+    } else if (typeof this.shareNoteWithToast === 'function') {
+      return this.shareNoteWithToast(containerId, noteIndex);
+    } else {
+      console.warn('No share module loaded');
+      this.showToast('❌ Share module not available', 'error');
+    }
+  },
+
+  // Minimal toast for fallback only
+  showToast: function(message, type = 'info', duration = 3000) {
+    console.log(`[Toast ${type}]: ${message}`);
+    // Simple console fallback - modules should handle real toasts
+  },
+
+  // Remove all the large methods and keep only essential ones
+}; // End of noteViewer object
 
 // Global functions
 window.showNoteViewer = async function(notesJsonPath, title = 'Notes') {
@@ -473,44 +627,14 @@ window.noteViewerDebug = {
   },
   testMarkdown: (markdownPath = 'markdown/powerbi_architecture.md') => {
     return window.noteViewer.loadMarkdownContent(markdownPath);
+  },
+  loadModules: async () => {
+    return window.noteViewer.loadModules();
+  },
+  checkModules: () => {
+    return window.noteViewer.checkModules();
   }
 };
-
-// Add CSS for spinner animation
-if (!document.querySelector('#note-viewer-basic-styles')) {
-  const style = document.createElement('style');
-  style.id = 'note-viewer-basic-styles';
-  style.textContent = `
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    .line-clamp-2 {
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-    .prose {
-      line-height: 1.6;
-    }
-    .prose h1, .prose h2, .prose h3 {
-      margin-top: 1.5em;
-      margin-bottom: 0.5em;
-    }
-    .prose p {
-      margin-bottom: 1em;
-    }
-    .prose ul {
-      margin-bottom: 1em;
-      padding-left: 1.5em;
-    }
-    .prose li {
-      margin-bottom: 0.25em;
-    }
-  `;
-  document.head.appendChild(style);
-}
 
 console.log('[NoteViewer] Direct object implementation loaded successfully');
 console.log('[NoteViewer] Available methods:', Object.keys(window.noteViewer).filter(key => typeof window.noteViewer[key] === 'function'));
