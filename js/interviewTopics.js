@@ -1,3 +1,6 @@
+let allNotes = [];
+let filteredNotes = [];
+
 window.showNotePopupB64 = function(b64, title = '') {
   // First, close any open video popups
   const videoPopup = document.getElementById('video-iframe-popup');
@@ -20,7 +23,7 @@ window.showNotePopupB64 = function(b64, title = '') {
     popup = document.createElement('div');
     popup.id = 'note-popup';
     popup.className = 'note-popup';
-    popup.style.display = 'flex'; // Set display explicitly
+    popup.style.display = 'flex';
     popup.innerHTML = `
       <div id="note-popup-inner" class="note-popup-inner">
         <button onclick=\"window.closeNotePopup()\" class=\"note-popup-close\">&times;</button>
@@ -35,7 +38,7 @@ window.showNotePopupB64 = function(b64, title = '') {
     const titleDiv = popup.querySelector('.note-popup-title');
     if (titleDiv) titleDiv.textContent = title || 'Note';
     if (noteDiv) noteDiv.innerHTML = noteHtml || '<span class=\'text-gray-400\'>No note available.</span>';
-    popup.style.display = 'flex'; // Ensure it's visible
+    popup.style.display = 'flex';
   }
 };
 
@@ -44,12 +47,11 @@ window.closeNotePopup = function() {
   if (popup) popup.style.display = 'none';
 };
 
-
 // Track the currently open video (for both mobile and desktop)
 window._currentVideo = {
-  type: null, // 'mobile' or 'desktop'
-  element: null, // iframeDiv for mobile, container for desktop
-  button: null // button element for mobile
+  type: null,
+  element: null,
+  button: null
 };
 
 window.showVideoIframe = function(youtubeId, btn) {
@@ -72,7 +74,7 @@ window.showVideoIframe = function(youtubeId, btn) {
     const card = btn.closest('.bg-white');
     const iframeDiv = card.querySelector('.video-iframe');
     const isOpening = iframeDiv.classList.contains('hidden');
-    // If opening a new video, close any previous
+    
     if (isOpening) {
       closeCurrentVideo();
       iframeDiv.innerHTML = `<iframe width="100%" height="200" src="https://www.youtube.com/embed/${youtubeId}" frameborder="0" allowfullscreen></iframe>`;
@@ -80,7 +82,6 @@ window.showVideoIframe = function(youtubeId, btn) {
       btn.textContent = 'Hide';
       window._currentVideo = { type: 'mobile', element: iframeDiv, button: btn };
     } else {
-      // Closing current video
       iframeDiv.innerHTML = '';
       iframeDiv.classList.add('hidden');
       btn.textContent = 'Watch';
@@ -88,7 +89,6 @@ window.showVideoIframe = function(youtubeId, btn) {
     }
   } else {
     // Desktop: popup
-    // If a video is already open, close it
     closeCurrentVideo();
     const popup = document.getElementById('video-iframe-popup');
     const container = document.getElementById('video-iframe-container');
@@ -98,7 +98,6 @@ window.showVideoIframe = function(youtubeId, btn) {
   }
 };
 
-// Also close the tracker when popup is closed
 window.closeVideoIframePopup = function() {
   const popup = document.getElementById('video-iframe-popup');
   const container = document.getElementById('video-iframe-container');
@@ -106,7 +105,6 @@ window.closeVideoIframePopup = function() {
   popup.classList.add('hidden');
   window._currentVideo = { type: null, element: null, button: null };
 };
-
 
 // Utility: detect mobile
 function isMobile() {
@@ -118,25 +116,18 @@ window.renderInterviewTopicsTab = function() {
   setTimeout(() => {
     fetch('json/videos/power_bi_interview_playlist.json')
       .then(r => {
-        console.log('Fetch response status:', r.status); // DEBUG
+        console.log('Fetch response status:', r.status);
         if (!r.ok) {
           throw new Error(`HTTP ${r.status}`);
         }
         return r.json();
       })
       .then(data => {
-        console.log('Data loaded successfully:', data.length, 'videos'); // DEBUG
-        console.log('Data structure:', data); // DEBUG - Let's see the actual data
-        console.log('About to call renderInterviewVideos'); // DEBUG
-        try {
-          renderInterviewVideos(data);
-          console.log('renderInterviewVideos completed successfully'); // DEBUG
-        } catch (error) {
-          console.error('Error in renderInterviewVideos:', error); // DEBUG
-        }
+        console.log('Data loaded successfully:', data.length, 'videos');
+        renderInterviewVideos(data);
       })
       .catch(err => {
-        console.error('Fetch error:', err); // DEBUG
+        console.error('Fetch error:', err);
         const el = document.getElementById('videos-content');
         if (el) {
           el.innerHTML = '<div class="text-red-500">Failed to load videos. Error: ' + err.message + '</div>';
@@ -147,62 +138,39 @@ window.renderInterviewTopicsTab = function() {
     '<div id="videos-content"></div>';
 };
 
-function renderInterviewVideos(videos) {
-  window.currentInterviewVideos = videos; // Store for later access
-  console.log('renderInterviewVideos called with:', videos.length, 'videos'); // DEBUG
-  console.log('isMobile():', isMobile()); // DEBUG
-  console.log('typeof videos:', typeof videos, 'Array.isArray:', Array.isArray(videos)); // DEBUG
-  console.log('typeof renderInterviewDesktopTable:', typeof renderInterviewDesktopTable); // DEBUG
-  console.log('typeof renderInterviewMobileCards:', typeof renderInterviewMobileCards); // DEBUG
-  if (isMobile()) {
-    console.log('Calling renderInterviewMobileCards'); // DEBUG
-    renderInterviewMobileCards(videos);
-  } else {
-    console.log('Calling renderInterviewDesktopTable'); // DEBUG
-    console.log('About to execute renderInterviewDesktopTable function'); // DEBUG
-    try {
-      renderInterviewDesktopTable(videos);
-      console.log('renderInterviewDesktopTable call finished'); // DEBUG
-    } catch (error) {
-      console.error('Error in renderInterviewDesktopTable:', error); // DEBUG
+function waitForNoteViewer() {
+  return new Promise((resolve) => {
+    if (window.noteViewer && window.createInlineNoteViewer) {
+      resolve();
+      return;
     }
-  }
-  console.log('renderInterviewVideos function completed'); // DEBUG
-}
-
-function getYoutubeId(url) {
-  if (!url) return '';
-  const match = url.match(/[?&]v=([^&#]+)/) || url.match(/youtu\.be\/([^?&#]+)/);
-  return match ? match[1] : '';
-}
-
-window.showPicPopup = function(videoData, title = '') {
-  try {
-    // Find the video data from the current videos array
-    const videos = window.currentInterviewVideos || [];
-    const video = videos.find(v => v.Title === videoData);
     
-    if (video && video.Pictures && video.Pictures.length > 0) {
-      window.showPictureViewer(video.Pictures, `${title} - Pictures`, 0);
-    } else {
-      // Fallback - show a message if no pictures are available
-      alert('No pictures available for this video.');
-    }
-  } catch (error) {
-    console.error('Error showing picture popup:', error);
-    alert('Error loading pictures.');
-  }
-};
+    // Check every 100ms until the component is loaded
+    const checkInterval = setInterval(() => {
+      if (window.noteViewer && window.createInlineNoteViewer) {
+        clearInterval(checkInterval);
+        resolve();
+      }
+    }, 100);
+    
+    // Timeout after 5 seconds
+    setTimeout(() => {
+      clearInterval(checkInterval);
+      console.error('Note viewer component failed to load');
+      resolve(); // Resolve anyway to prevent hanging
+    }, 5000);
+  });
+}
 
-function renderInterviewMobileCards(videos) {
-  console.log('=== ENTERING renderInterviewMobileCards ==='); // DEBUG
+async function renderInterviewMobileCards(videos) {
+  console.log('=== ENTERING renderInterviewMobileCards ===');
   const container = document.getElementById('videos-content');
-  console.log('Rendering mobile cards for videos:', videos.length); // DEBUG
-  console.log('First video data:', videos[0]); // DEBUG
+  
+  // Wait for note viewer component to be ready
+  await waitForNoteViewer();
   
   container.innerHTML = videos.map((v, i) => {
     const youtubeId = getYoutubeId(v.URL);
-    console.log(`Video ${i} - Title: ${v.Title}, Note: ${v.Note ? v.Note[0] : 'No note'}`); // DEBUG
     
     return `
     <div class="bg-white rounded-lg shadow p-4 mb-4 flex flex-col transition-transform duration-300 ease-out opacity-0 translate-y-4 hover:scale-[1.025] hover:shadow-lg video-fadein" style="animation-delay:${i*60}ms">
@@ -223,32 +191,63 @@ function renderInterviewMobileCards(videos) {
       ${!youtubeId ? '<div class="text-red-500 text-xs mt-2">Invalid or missing YouTube ID</div>' : ''}
     </div>
     `;
-  }).join('');
+  }).join('') + addHorizontalLine() + (window.createInlineNoteViewer ? window.createInlineNoteViewer('interview-mobile') : '<div class="text-red-500">Note viewer component not loaded</div>');
   
-  console.log('Generated HTML length:', container.innerHTML.length); // DEBUG
-  console.log('HTML contains View Pic:', container.innerHTML.includes('View Pic')); // DEBUG
-  
-  setTimeout(() => {
+  setTimeout(async () => {
     document.querySelectorAll('.video-fadein').forEach((el, idx) => {
       el.style.opacity = 1;
       el.style.transform = 'none';
     });
+    
+    // Initialize the inline note viewer if available
+    if (window.initInlineNoteViewer) {
+      try {
+        await window.initInlineNoteViewer('interview-mobile', 'json/videos/note_viewer.json', 'Interview Study Notes');
+      } catch (error) {
+        console.error('Error initializing inline note viewer:', error);
+      }
+    }
   }, 50);
 }
 
-function renderInterviewDesktopTable(videos) {
-  console.log('=== ENTERING renderInterviewDesktopTable ==='); // DEBUG - Very first line
+function getYoutubeId(url) {
+  if (!url) return '';
+  const match = url.match(/[?&]v=([^&#]+)/) || url.match(/youtu\.be\/([^?&#]+)/);
+  return match ? match[1] : '';
+}
+
+window.showPicPopup = function(videoData, title = '') {
   try {
-    console.log('Rendering interview desktop table for videos:', videos.length); // DEBUG
+    const videos = window.currentInterviewVideos || [];
+    const video = videos.find(v => v.Title === videoData);
+    
+    if (video && video.Pictures && video.Pictures.length > 0) {
+      window.showPictureViewer(video.Pictures, `${title} - Pictures`, 0);
+    } else {
+      alert('No pictures available for this video.');
+    }
+  } catch (error) {
+    console.error('Error showing picture popup:', error);
+    alert('Error loading pictures.');
+  }
+};
+
+function addHorizontalLine() {
+  return '<hr class="my-4 border-gray-300 border-t-2">';
+}
+
+async function renderInterviewDesktopTable(videos) {
+  console.log('=== ENTERING renderInterviewDesktopTable ===');
+  try {
     const container = document.getElementById('videos-content');
-    console.log('Container element found:', !!container); // DEBUG
     
     if (!container) {
       console.error('videos-content container not found!');
       return;
     }
     
-    console.log('About to set container.innerHTML'); // DEBUG
+    // Wait for note viewer component to be ready
+    await waitForNoteViewer();
     
     container.innerHTML = `
       <div class="overflow-x-auto">
@@ -287,6 +286,8 @@ function renderInterviewDesktopTable(videos) {
           </tbody>
         </table>
       </div>
+      ${addHorizontalLine()}
+      ${window.createInlineNoteViewer ? window.createInlineNoteViewer('interview-desktop') : '<div class="text-red-500">Note viewer component not loaded</div>'}
       <div id="video-iframe-popup" class="video-iframe-popup hidden" style="display: none;">
         <div class="video-popup-inner">
           <button onclick="window.closeVideoIframePopup()" class="video-popup-close">&times;</button>
@@ -295,31 +296,44 @@ function renderInterviewDesktopTable(videos) {
       </div>
     `;
     
-    console.log('HTML assignment completed'); // DEBUG
-    console.log('Desktop HTML contains View Pic:', container.innerHTML.includes('View Pic')); // DEBUG
-    
     // Explicitly hide the video popup after creation
     setTimeout(() => {
       const videoPopup = document.getElementById('video-iframe-popup');
       if (videoPopup) {
         videoPopup.style.display = 'none';
-        console.log('Video popup explicitly hidden'); // DEBUG
       }
     }, 10);
     
-    setTimeout(() => {
+    setTimeout(async () => {
       document.querySelectorAll('.video-fadein').forEach((el, idx) => {
         el.style.opacity = 1;
         el.style.transform = 'none';
       });
+      
+      // Initialize the inline note viewer if available
+      if (window.initInlineNoteViewer) {
+        try {
+          await window.initInlineNoteViewer('interview-desktop', 'json/videos/note_viewer.json', 'Interview Study Notes');
+        } catch (error) {
+          console.error('Error initializing inline note viewer:', error);
+        }
+      }
     }, 50);
     
-    console.log('renderInterviewDesktopTable function completed successfully'); // DEBUG
   } catch (error) {
-    console.error('Error in renderInterviewDesktopTable:', error); // DEBUG
-    console.error('Error stack:', error.stack); // DEBUG
+    console.error('Error in renderInterviewDesktopTable:', error);
   }
-  console.log('=== EXITING renderInterviewDesktopTable ==='); // DEBUG - Very last line
 }
-// Note popup functions already defined globally
+
+// Also update the main render function to be async
+function renderInterviewVideos(videos) {
+  window.currentInterviewVideos = videos;
+  console.log('renderInterviewVideos called with:', videos.length, 'videos');
+  
+  if (isMobile()) {
+    renderInterviewMobileCards(videos);
+  } else {
+    renderInterviewDesktopTable(videos);
+  }
+}
 
