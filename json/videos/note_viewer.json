@@ -1,0 +1,40 @@
+{
+  "notes": [
+    {
+      "serialNo": 1,
+      "topic": "Power BI Architecture",
+      "category": "Architecture",
+      "markdownPath": "markdown/powerbi_architecture.md"
+    },
+    {
+      "serialNo": 2,
+      "topic": "Azure Architecture",
+      "category": "Architecture",
+      "markdownPath": "markdown/azure_architecture.md"
+    },
+    {
+      "serialNo": 3,
+      "topic": "Technical Skills for 0-2 Years of Experience",
+      "category": "Career Levels",
+      "markdownPath": "markdown/0_2_years.md"
+    },
+    {
+      "serialNo": 4,
+      "topic": "Technical Skills for 2-5 Years of Experience",
+      "category": "Career Levels",
+      "markdownPath": "markdown/2_5_years.md"
+    },
+    {
+      "serialNo": 5,
+      "topic": "Technical Skills for 5-8 Years of Experience",
+      "category": "Career Levels",
+      "markdownPath": "markdown/5_8_years.md"
+    },
+    {
+      "serialNo": 6,
+      "topic": "Technical Skills for 8+ Years of Experience",
+      "category": "Career Levels",
+      "markdownPath": "markdown/8_plus_years.md"
+    }
+  ]
+}

@@ -1,2 +1,205 @@
 /* Tailwind CSS CDN */
 @import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+
+/* Add these styles to your existing CSS */
+
+.loading-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.topic-button:hover {
+  transform: translateY(-1px);
+}
+
+.note-content-display {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.prose {
+  max-width: none;
+}
+
+.prose h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1f2937;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+.prose h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+.prose h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #4b5563;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  color: #374151;
+}
+
+.prose ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+.prose code {
+  background-color: #f3f4f6;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  color: #1f2937;
+}
+
+.prose pre {
+  background-color: #f9fafb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+  border: 1px solid #e5e7eb;
+}
+
+.prose strong {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.prose em {
+  font-style: italic;
+  color: #4b5563;
+}
+
+/* Copy and Share button improvements */
+.note-content-header .flex {
+  align-items: flex-start;
+}
+
+@media (max-width: 640px) {
+  .note-content-header .flex {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .note-content-header .flex > div:last-child {
+    width: 100%;
+  }
+  
+  .note-content-header .flex > div:last-child .flex {
+    justify-content: stretch;
+  }
+  
+  .note-content-header .flex > div:last-child button {
+    flex: 1;
+  }
+}
+
+/* Notification animations */
+.share-success-popup,
+.share-url-popup {
+  animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Loading spinner for copy/share operations */
+.action-loading {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.action-loading::after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 8px;
+}
+
+/* Shared content popup styling */
+.prose h1:first-child {
+  margin-top: 0;
+}
+
+/* Responsive improvements for action buttons */
+@media (max-width: 480px) {
+  .note-content-header button {
+    padding: 0.5rem;
+  }
+  
+  .note-content-header button span {
+    display: none;
+  }
+  
+  .note-content-header button svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+/* Better focus states for accessibility */
+.note-content-header button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Hover effects for better UX */
+.note-content-header button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.note-content-header button:active {
+  transform: translateY(0);
+}
