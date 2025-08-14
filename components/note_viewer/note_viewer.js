@@ -50,7 +50,12 @@ window.noteViewer = {
                 id="note-search-input-${containerId}" 
                 placeholder="Search topics..." 
                 class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
-                style="font-size: 16px; max-width: 100%; box-sizing: border-box;"
+                style="font-size: 16px !important; max-width: 100%; box-sizing: border-box; min-height: 44px;"
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="off"
+                spellcheck="false"
+                inputmode="search"
               />
             </div>
             <div class="flex-1">
@@ -58,7 +63,7 @@ window.noteViewer = {
               <select 
                 id="note-category-filter-${containerId}" 
                 class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
-                style="font-size: 16px; max-width: 100%; box-sizing: border-box;"
+                style="font-size: 16px !important; max-width: 100%; box-sizing: border-box; min-height: 44px;"
               >
                 <option value="all">All Categories</option>
               </select>

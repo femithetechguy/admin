@@ -1,16 +1,15 @@
-/* Mobile-specific styles and fixes */
+/* Mobile-specific styles for note viewer */
 
-/* === MOBILE INPUT FIXES === */
-@media (max-width: 640px) {
-  /* Prevent zoom on input focus */
-  input[type="text"], 
-  input[type="search"], 
-  input[type="email"], 
-  input[type="number"], 
-  input[type="tel"], 
-  input[type="url"], 
-  input[type="password"], 
-  textarea, 
+/* CRITICAL: Prevent zoom on form inputs */
+@media screen and (max-width: 768px) {
+  input[type="text"],
+  input[type="search"],
+  input[type="email"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="password"],
+  textarea,
   select {
     font-size: 16px !important;
     transform: none !important;
@@ -18,17 +17,59 @@
     -moz-appearance: none;
     appearance: none;
   }
-  
-  /* Fix input containers */
+}
+
+/* Mobile layout and input handling */
+@media (max-width: 640px) {
+  /* Prevent viewport changes on input focus */
   .note-viewer-controls input,
   .note-viewer-controls select {
-    font-size: 16px;
+    font-size: 16px !important;
     max-width: 100%;
     width: 100%;
     box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    autocomplete: off;
+    autocorrect: off;
+    autocapitalize: off;
+    spellcheck: false;
   }
   
-  /* Fix button layout overflow */
+  /* Fix search container overflow */
+  .note-viewer-controls {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0.75rem;
+  }
+  
+  .note-viewer-controls > div {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .note-viewer-controls .flex {
+    flex-direction: column;
+  }
+  
+  .note-viewer-controls .flex-1 {
+    min-width: 0;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .note-viewer-controls .flex-1:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Action buttons container fixes */
+  .action-buttons-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
   .action-buttons-container .flex {
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -42,8 +83,9 @@
     padding: 0.5rem 0.75rem;
     white-space: nowrap;
     overflow: hidden;
-    min-height: 44px; /* Minimum touch target */
+    min-height: 44px;
     justify-content: center;
+    -webkit-tap-highlight-color: transparent;
   }
   
   .action-buttons-container button span {
@@ -54,72 +96,41 @@
   .action-buttons-container svg {
     flex-shrink: 0;
   }
-  
-  /* Fix search container expansion */
-  .note-viewer-controls {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-  }
-  
-  .note-viewer-controls > div {
-    width: 100%;
-    max-width: 100%;
-  }
-  
-  .note-viewer-controls .flex-1 {
-    min-width: 0;
-    width: 100%;
-  }
-  
-  /* Mobile header layout */
-  .note-content-header .flex {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .note-content-header .flex > div:last-child {
-    width: 100%;
-  }
-  
-  .note-content-header .flex > div:last-child .flex {
-    justify-content: stretch;
-    gap: 0.5rem;
-  }
-  
-  .note-content-header .flex > div:last-child button {
-    flex: 1;
-    min-width: 0;
-    font-size: 0.875rem;
-  }
-  
-  .note-content-header .flex > div:last-child {
-    flex-wrap: nowrap;
-  }
-}
 
-/* === VERY SMALL SCREENS === */
-@media (max-width: 480px) {
-  .action-buttons-container .flex {
-    flex-direction: column;
+  /* Grid adjustments */
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
   }
-  
-  .action-buttons-container button {
-    flex: none;
-    width: 100%;
-    padding: 0.75rem 1rem;
+
+  /* Content display adjustments */
+  .note-content-display {
+    margin-top: 1rem;
   }
-  
-  .action-buttons-container button span {
-    font-size: 0.875rem;
+
+  .note-content-display .bg-white {
+    padding: 1rem !important;
   }
-  
-  .action-buttons-container button svg {
-    width: 1rem;
-    height: 1rem;
+
+  /* Typography adjustments */
+  .prose {
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
-  
-  /* Better shared popup on small screens */
+
+  .prose h1 {
+    font-size: 1.5rem;
+  }
+
+  .prose h2 {
+    font-size: 1.25rem;
+  }
+
+  .prose h3 {
+    font-size: 1.125rem;
+  }
+
+  /* Shared popup adjustments */
   .fixed.inset-0 {
     padding: 0.5rem;
     padding-top: 1rem;
@@ -130,32 +141,116 @@
     min-height: calc(100vh - 1rem);
     max-height: calc(100vh - 1rem);
   }
-  
-  .prose {
-    font-size: 0.875rem;
-  }
-  
-  .prose h1 {
-    font-size: 1.5rem;
-  }
-  
-  .prose h2 {
-    font-size: 1.25rem;
-  }
-  
-  .prose h3 {
-    font-size: 1.125rem;
-  }
 }
 
-/* === LANDSCAPE MOBILE === */
-@media (max-width: 896px) and (orientation: landscape) {
-  .fixed.inset-0 {
+/* Small mobile screens */
+@media (max-width: 480px) {
+  .note-viewer-controls {
     padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .note-viewer-controls input,
+  .note-viewer-controls select {
+    padding: 1rem 0.75rem;
+    font-size: 16px !important;
+    min-height: 44px;
+  }
+
+  /* Stack action buttons vertically on small screens */
+  .action-buttons-container .flex {
+    flex-direction: column;
   }
   
   .action-buttons-container button {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.8rem;
+    flex: none;
+    width: 100%;
+  }
+
+  /* Touch-friendly targets */
+  button,
+  .retry-btn,
+  .note-viewer-topic-btn {
+    min-height: 44px;
+    padding: 0.75rem;
+    font-size: 16px !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Prevent unwanted interactions */
+  * {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  }
+
+  /* Allow text selection where needed */
+  input,
+  select,
+  textarea,
+  .note-viewer-markdown-content,
+  .prose {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+  }
+
+  /* Prevent text selection on buttons */
+  button,
+  .note-viewer-topic-btn {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+  .note-viewer-controls {
+    padding: 0.25rem;
+  }
+
+  .grid {
+    gap: 0.5rem !important;
+  }
+}
+
+/* Short screens */
+@media (max-height: 600px) {
+  .fixed .bg-white {
+    max-height: calc(100vh - 2rem);
+    margin: 1rem auto;
+  }
+}
+
+/* iOS Safari fixes */
+@supports (-webkit-touch-callout: none) {
+  .note-viewer-container {
+    height: -webkit-fill-available;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .note-viewer-topic-btn {
+    border-width: 2px;
+  }
+
+  .note-viewer-topic-btn:focus,
+  input:focus,
+  select:focus {
+    outline: 3px solid;
+    outline-offset: 2px;
   }
 }
