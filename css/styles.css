@@ -259,3 +259,115 @@
     position: static !important;
   }
 }
+
+/* Add these mobile-specific fixes */
+
+/* Fix mobile search input zoom and overflow */
+@media (max-width: 640px) {
+  /* Prevent zoom on input focus */
+  input[type="text"], 
+  input[type="search"], 
+  input[type="email"], 
+  input[type="number"], 
+  input[type="tel"], 
+  input[type="url"], 
+  input[type="password"], 
+  textarea, 
+  select {
+    font-size: 16px !important;
+    transform: none !important;
+  }
+  
+  /* Prevent viewport changes */
+  .note-viewer-controls input,
+  .note-viewer-controls select {
+    font-size: 16px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  /* Fix button layout overflow */
+  .action-buttons-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .action-buttons-container .flex {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .action-buttons-container button {
+    flex: 1;
+    min-width: 0;
+    max-width: 100%;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .action-buttons-container button span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Ensure search container doesn't expand */
+  .note-viewer-controls {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .note-viewer-controls > div {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Fix input container overflow */
+  .note-viewer-controls .flex-1 {
+    min-width: 0;
+    width: 100%;
+  }
+  
+  /* Responsive button grid */
+  @media (max-width: 480px) {
+    .action-buttons-container .flex {
+      flex-direction: column;
+    }
+    
+    .action-buttons-container button {
+      flex: none;
+      width: 100%;
+    }
+  }
+}
+
+/* Fix shared popup buttons on mobile */
+@media (max-width: 640px) {
+  .action-buttons-container button {
+    min-height: 44px; /* Minimum touch target */
+    justify-content: center;
+  }
+  
+  .action-buttons-container svg {
+    flex-shrink: 0;
+  }
+}
+
+/* Prevent horizontal scroll */
+.note-viewer-section {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.note-viewer-controls,
+.note-topics-buttons,
+.note-content-display {
+  max-width: 100%;
+  overflow-x: hidden;
+}

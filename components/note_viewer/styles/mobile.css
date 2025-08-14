@@ -1,0 +1,161 @@
+/* Mobile-specific styles and fixes */
+
+/* === MOBILE INPUT FIXES === */
+@media (max-width: 640px) {
+  /* Prevent zoom on input focus */
+  input[type="text"], 
+  input[type="search"], 
+  input[type="email"], 
+  input[type="number"], 
+  input[type="tel"], 
+  input[type="url"], 
+  input[type="password"], 
+  textarea, 
+  select {
+    font-size: 16px !important;
+    transform: none !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  /* Fix input containers */
+  .note-viewer-controls input,
+  .note-viewer-controls select {
+    font-size: 16px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Fix button layout overflow */
+  .action-buttons-container .flex {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .action-buttons-container button {
+    flex: 1;
+    min-width: 0;
+    max-width: 100%;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+    white-space: nowrap;
+    overflow: hidden;
+    min-height: 44px; /* Minimum touch target */
+    justify-content: center;
+  }
+  
+  .action-buttons-container button span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .action-buttons-container svg {
+    flex-shrink: 0;
+  }
+  
+  /* Fix search container expansion */
+  .note-viewer-controls {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .note-viewer-controls > div {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .note-viewer-controls .flex-1 {
+    min-width: 0;
+    width: 100%;
+  }
+  
+  /* Mobile header layout */
+  .note-content-header .flex {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .note-content-header .flex > div:last-child {
+    width: 100%;
+  }
+  
+  .note-content-header .flex > div:last-child .flex {
+    justify-content: stretch;
+    gap: 0.5rem;
+  }
+  
+  .note-content-header .flex > div:last-child button {
+    flex: 1;
+    min-width: 0;
+    font-size: 0.875rem;
+  }
+  
+  .note-content-header .flex > div:last-child {
+    flex-wrap: nowrap;
+  }
+}
+
+/* === VERY SMALL SCREENS === */
+@media (max-width: 480px) {
+  .action-buttons-container .flex {
+    flex-direction: column;
+  }
+  
+  .action-buttons-container button {
+    flex: none;
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+  
+  .action-buttons-container button span {
+    font-size: 0.875rem;
+  }
+  
+  .action-buttons-container button svg {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  /* Better shared popup on small screens */
+  .fixed.inset-0 {
+    padding: 0.5rem;
+    padding-top: 1rem;
+    align-items: flex-start;
+  }
+  
+  .fixed .bg-white {
+    min-height: calc(100vh - 1rem);
+    max-height: calc(100vh - 1rem);
+  }
+  
+  .prose {
+    font-size: 0.875rem;
+  }
+  
+  .prose h1 {
+    font-size: 1.5rem;
+  }
+  
+  .prose h2 {
+    font-size: 1.25rem;
+  }
+  
+  .prose h3 {
+    font-size: 1.125rem;
+  }
+}
+
+/* === LANDSCAPE MOBILE === */
+@media (max-width: 896px) and (orientation: landscape) {
+  .fixed.inset-0 {
+    padding: 0.5rem;
+  }
+  
+  .action-buttons-container button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+}
