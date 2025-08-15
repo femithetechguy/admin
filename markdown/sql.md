@@ -1,0 +1,204 @@
+# SQL Fundamentals and Advanced Concepts
+
+## 1. DBMS (Database Management System)
+
+A **Database Management System (DBMS)** is the software that allows you to store, retrieve, and manage data in an organized way. It's the engine for your data. **SQL Server** is a popular relational DBMS that stores data in structured tables with defined relationships.
+
+## 2. DDL, DML, DQL
+
+These are the three main subsets of the SQL language, each with a distinct purpose.
+
+- **DDL (Data Definition Language)**: Used to define the database schema. It includes commands to create, alter, and delete database objects.
+
+  ```sql
+  CREATE TABLE Employees (EmployeeID INT);
+  ```
+
+- **DML (Data Manipulation Language)**: Used to manage data within tables. It's what you use for inserting, updating, and deleting records.
+
+  ```sql
+  INSERT INTO Employees (EmployeeID) VALUES (101);
+  ```
+
+- **DQL (Data Query Language)**: Used for querying and retrieving data from the database. The primary command is `SELECT`.
+
+  ```sql
+  SELECT * FROM Employees;
+  ```
+
+## 3. Constraints
+
+**Constraints** are rules enforced on data columns to ensure data integrity. They are a fundamental part of maintaining data reliability.
+
+```sql
+CREATE TABLE Products (
+    ProductID INT PRIMARY KEY,
+    ProductName VARCHAR(50) NOT NULL
+);
+```
+
+## 4. Primary/Foreign Key
+
+A **primary key** is a column that uniquely identifies a record. A **foreign key** is a column in a table that refers to a primary key in another table, establishing a link between them.
+
+```sql
+CREATE TABLE Orders (
+    OrderID INT PRIMARY KEY,
+    ProductID INT FOREIGN KEY REFERENCES Products(ProductID)
+);
+```
+
+## 5. SQL Operators
+
+These are keywords or symbols used to perform operations within SQL statements, most often in a `WHERE` or `HAVING` clause.
+
+```sql
+SELECT * FROM Products WHERE Price > 10 AND CategoryID IN (1, 2);
+```
+
+## 6. SQL Joins
+
+A **SQL JOIN** combines rows from two or more tables based on a related column. There are four main types of joins: `INNER`, `LEFT`, `RIGHT`, and `FULL`.
+
+- **INNER JOIN**: Returns only rows with matching values in both tables.
+
+  ```sql
+  SELECT o.OrderID, p.ProductName
+  FROM Orders AS o
+  INNER JOIN Products AS p ON o.ProductID = p.ProductID;
+  ```
+
+## 7. Set Operations
+
+Used to combine the result sets of two or more `SELECT` statements.
+
+- **`UNION`**: Combines results and automatically removes duplicate rows.
+
+  ```sql
+  SELECT ProductName FROM StoreA_Products UNION SELECT ProductName FROM StoreB_Products;
+  ```
+
+## 8. SQL DBA Activities
+
+A **Database Administrator (DBA)** is a professional responsible for the management, maintenance, and security of a database. This is a conceptual topic with no applicable code sample.
+
+## 9. Views & CTE | Stored Procedures | Functions
+
+These are tools for creating reusable, pre-compiled SQL code that simplifies complex queries.
+
+- **View**: A virtual table based on a query result.
+
+  ```sql
+  CREATE VIEW HighValueProducts AS
+  SELECT ProductName, Price FROM Products WHERE Price > 100;
+  ```
+
+- **CTE**: A temporary result set defined within a single statement.
+
+  ```sql
+  WITH CustomerSales AS (
+      SELECT CustomerID, SUM(Sales) AS TotalSales FROM Orders GROUP BY CustomerID
+  )
+  SELECT CustomerID FROM CustomerSales WHERE TotalSales > 5000;
+  ```
+
+- **Stored Procedure**: A pre-compiled set of SQL statements that can be executed as a single unit.
+
+  ```sql
+  CREATE PROCEDURE GetProductsByCategory @CategoryID INT AS
+  SELECT * FROM Products WHERE CategoryID = @CategoryID;
+  ```
+
+- **Function**: A database object that must return a single value and can be used within a `SELECT` statement.
+
+## 10. Triggers | Cursors | Transactions
+
+- **Trigger**: A stored procedure that executes automatically in response to an event like `INSERT` or `UPDATE`.
+
+  ```sql
+  CREATE TRIGGER LogProductUpdate ON Products AFTER UPDATE AS
+  INSERT INTO AuditLog VALUES ('Product updated at ' + GETDATE());
+  ```
+
+- **Transaction**: A sequence of one or more SQL operations that are executed as a single, all-or-nothing unit.
+
+  ```sql
+  BEGIN TRANSACTION;
+  INSERT INTO Orders VALUES (123, 456);
+  COMMIT;
+  ```
+
+- **Cursor**: A control structure for row-by-row processing. It is a conceptual topic.
+
+## 11. Clustered vs. Non-Clustered Index
+
+An **index** is a data structure that speeds up data retrieval. A **clustered index** determines the physical storage order of data. A **non-clustered index** is a separate structure that points to the data. This is a conceptual topic.
+
+## 12. SSDT & SSMS
+
+**SSDT** and **SSMS** are development and management tools for SQL Server. This is a conceptual topic.
+
+## 13. Restore Database
+
+The process of recovering a database from a backup file, a critical part of disaster recovery. This is a conceptual topic.
+
+## 14. SSMS Scripts
+
+These are SQL code files that can be automatically generated by SSMS. This is a conceptual topic.
+
+## 15. Server Name
+
+The unique identifier for a SQL Server instance, necessary for connecting to it. This is a conceptual topic.
+
+## 16. SQL Server
+
+This is the relational database management system developed by Microsoft. This is a conceptual topic.
+
+## 17. ROLLUP & CUBE
+
+These are advanced `GROUP BY` options for creating summary reports. `ROLLUP` generates subtotals for a hierarchy, while `CUBE` generates subtotals for all possible combinations.
+
+```sql
+SELECT Category, SUM(Sales) FROM Orders GROUP BY ROLLUP(Category);
+```
+
+## 18. Window Function
+
+A window function performs a calculation across a set of related rows without collapsing them.
+
+```sql
+SELECT *, RANK() OVER (ORDER BY Salary DESC) AS Rank FROM Employees;
+```
+
+## 19. PIVOT and UNPIVOT
+
+These operations reshape a table's data. `PIVOT` rotates unique row values into new columns.
+
+```sql
+SELECT * FROM (
+  SELECT Employee, Year, Sales FROM SalesData
+) AS T
+PIVOT (
+  SUM(Sales) FOR Year IN ([2022], [2023])
+) AS PivotTable;
+```
+
+## 20. Synonym
+
+An alias for a database object to simplify referencing it.
+
+```sql
+CREATE SYNONYM MyProducts FOR dbo.Products;
+```
+
+## 21. Change Tracking
+
+A lightweight feature that tracks data modifications on a table for efficient synchronization. This is a conceptual topic.
+
+## 22. Change Tracking Part 2
+
+A continuation of the previous topic, likely covering more advanced usage. This is a conceptual topic.
+
+## 23. Incremental Load
+
+A data loading strategy where only new or modified data is transferred, which is much more efficient than a full load. This is a conceptual topic.

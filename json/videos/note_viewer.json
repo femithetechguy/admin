@@ -14,72 +14,96 @@
     },
     {
       "serialNo": 3,
-      "topic": "Azure Active Directory Authentication Visualization",
-      "category": "Visualization",
-      "markdownPath": "markdown/aad.md"
+      "topic": "Data Warehouse Architecture: Conventional vs Modern",
+      "category": "Architecture",
+      "markdownPath": "markdown/data_warehouse_architecture.md"
     },
     {
       "serialNo": 4,
-      "topic": "Azure Analysis Services",
-      "category": "Analysis",
-      "markdownPath": "markdown/aas.md"
+      "topic": "Azure Active Directory Authentication Visualization",
+      "category": "Security & Identity",
+      "markdownPath": "markdown/aad.md"
     },
     {
       "serialNo": 5,
-      "topic": "Azure Data Factory, Storage Blob, and Synapse Analytics",
-      "category": "Orchestration",
-      "markdownPath": "markdown/adf_asb_asa.md"
+      "topic": "Azure Analysis Services",
+      "category": "Analytics Services",
+      "markdownPath": "markdown/aas.md"
     },
     {
       "serialNo": 6,
-      "topic": "Azure Data Sources Overview",
-      "category": "Data Sources",
-      "markdownPath": "markdown/azure_data_sources.md"
+      "topic": "Azure Data Factory, Storage Blob, and Synapse Analytics",
+      "category": "Data Integration",
+      "markdownPath": "markdown/adf_asb_asa.md"
     },
     {
       "serialNo": 7,
+      "topic": "Azure Data Sources Overview",
+      "category": "Data Storage",
+      "markdownPath": "markdown/azure_data_sources.md"
+    },
+    {
+      "serialNo": 8,
+      "topic": "Microsoft Fabric",
+      "category": "Unified Platform",
+      "markdownPath": "markdown/microsoft_fabric.md"
+    },
+    {
+      "serialNo": 9,
+      "topic": "Data Warehouse Fundamentals",
+      "category": "Data Warehousing",
+      "markdownPath": "markdown/data_warehouse.md"
+    },
+    {
+      "serialNo": 10,
+      "topic": "SQL Fundamentals and Advanced Concepts",
+      "category": "SQL",
+      "markdownPath": "markdown/sql.md"
+    },
+    {
+      "serialNo": 11,
       "topic": "DQS, MDS, SSIS, and Data Warehouse",
       "category": "Data Preparation",
       "markdownPath": "markdown/dqs_mds_ssis_dw.md"
     },
     {
-      "serialNo": 8,
+      "serialNo": 12,
       "topic": "SSAS Tabular vs Multidimensional Models",
       "category": "Data Modeling",
       "markdownPath": "markdown/ssas_tabular_multidimensional.md"
     },
     {
-      "serialNo": 9,
+      "serialNo": 13,
       "topic": "Power BI Desktop",
       "category": "Power BI Tools",
       "markdownPath": "markdown/powerbi_desktop.md"
     },
     {
-      "serialNo": 10,
+      "serialNo": 14,
       "topic": "Power BI Report Server",
       "category": "Power BI Tools",
       "markdownPath": "markdown/powerbi_report_server.md"
     },
     {
-      "serialNo": 11,
+      "serialNo": 15,
       "topic": "Technical Skills for 0-2 Years of Experience",
       "category": "Career Levels",
       "markdownPath": "markdown/0_2_years.md"
     },
     {
-      "serialNo": 12,
+      "serialNo": 16,
       "topic": "Technical Skills for 2-5 Years of Experience",
       "category": "Career Levels",
       "markdownPath": "markdown/2_5_years.md"
     },
     {
-      "serialNo": 13,
+      "serialNo": 17,
       "topic": "Technical Skills for 5-8 Years of Experience",
       "category": "Career Levels",
       "markdownPath": "markdown/5_8_years.md"
     },
     {
-      "serialNo": 14,
+      "serialNo": 18,
       "topic": "Technical Skills for 8+ Years of Experience",
       "category": "Career Levels",
       "markdownPath": "markdown/8_plus_years.md"
