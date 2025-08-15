@@ -2,6 +2,282 @@
   "videos": [
     {
       "SerialNo": 1,
+      "Title": "Learn SQL Complete | Course Introduction | SQL Full Course | SQL Tutorial For Beginners (0/11)",
+      "Channel": "Analytics with Nags",
+      "Duration": "",
+      "URL": "https://www.youtube.com/watch?v=5FrBJ4PXj2s&list=PLjNd3r1KLjQtFEklcPDhidqC_2lmpjk5H&index=1&t=3s&pp=iAQB",
+      "Note": [
+        "Introduction to the complete SQL course series.",
+        "Overview of what will be covered in the SQL tutorial series.",
+        "Course structure and learning objectives for beginners."
+      ]
+    },
+    {
+      "SerialNo": 2,
+      "Title": "What is DBMS Database SQL Server Introduction | SQL Full Course | SQL Tutorial For Beginners (1/11)",
+      "Channel": "Analytics with Nags",
+      "Duration": "",
+      "URL": "https://www.youtube.com/watch?v=STLJl30oDzM&list=PLjNd3r1KLjQtFEklcPDhidqC_2lmpjk5H&index=2&pp=iAQB",
+      "Note": [
+        "Introduction to Database Management Systems (DBMS).",
+        "Overview of SQL Server as a relational database management system.",
+        "Basic concepts of databases and their importance in data management."
+      ]
+    },
+    {
+      "SerialNo": 3,
+      "Title": "What is SQL | DDL DML DQL | Data types in SQL | SQL Full Course | SQL Tutorial For Beginners (2/11)",
+      "Channel": "Analytics with Nags",
+      "Duration": "",
+      "URL": "https://www.youtube.com/watch?v=c9MV2VsbDdc&list=PLjNd3r1KLjQtFEklcPDhidqC_2lmpjk5H&index=3&pp=iAQB",
+      "Note": [
+        "Introduction to SQL language and its categories (DDL, DML, DQL).",
+        "Overview of SQL data types and their usage.",
+        "Foundation concepts for SQL programming."
+      ]
+    },
+    {
+      "SerialNo": 4,
+      "Title": "What is Constraints How to Query Database | SQL Full Course | SQL Tutorial For Beginners (3/11)",
+      "Channel": "Analytics with Nags",
+      "Duration": "",
+      "URL": "https://www.youtube.com/watch?v=GtCJTdpMnhM&list=PLjNd3r1KLjQtFEklcPDhidqC_2lmpjk5H&index=4&pp=iAQB",
+      "Note": [
+        "Understanding database constraints and their importance.",
+        "Basic querying techniques for retrieving data from databases.",
+        "Data integrity and validation using constraints."
+      ]
+    },
+    {
+      "SerialNo": 5,
+      "Title": "What is Primary/Foreign Key, String Functions | SQL Full Course | SQL Tutorial For Beginners (4/11)",
+      "Channel": "Analytics with Nags",
+      "Duration": "",
+      "URL": "https://www.youtube.com/watch?v=LTvvBZuHYzo&list=PLjNd3r1KLjQtFEklcPDhidqC_2lmpjk5H&index=5&pp=iAQB",
+      "Note": [
+        "Understanding primary and foreign keys for data relationships.",
+        "Introduction to string functions in SQL.",
+        "Database normalization and referential integrity concepts."
+      ]
+    },
+    {
+      "SerialNo": 6,
+      "Title": "SQL Operators (in , between) , Group By Clause | SQL Full Course | SQL Tutorial For Beginners (5/11)",
+      "Channel": "Analytics with Nags",
+      "Duration": "",
+      "URL": "https://www.youtube.com/watch?v=vdXQWWseUfI&list=PLjNd3r1KLjQtFEklcPDhidqC_2lmpjk5H&index=6&pp=iAQB",
+      "Note": [
+        "Using SQL operators like IN and BETWEEN for filtering data.",
+        "GROUP BY clause for data aggregation and summarization.",
+        "Practical examples of data filtering and grouping techniques."
+      ]
+    },
+    {
+      "SerialNo": 7,
+      "Title": "SQL Joins(Inner, Left, Right Full Outer Joins) | SQL Full Course | SQL Tutorial For Beginners (6/11)",
+      "Channel": "Analytics with Nags",
+      "Duration": "",
+      "URL": "https://www.youtube.com/watch?v=fkb6YdZAaag&list=PLjNd3r1KLjQtFEklcPDhidqC_2lmpjk5H&index=7&pp=iAQB",
+      "Note": [
+        "Comprehensive overview of SQL JOIN operations.",
+        "Understanding INNER, LEFT, RIGHT, and FULL OUTER joins.",
+        "Practical examples of combining data from multiple tables."
+      ]
+    },
+    {
+      "SerialNo": 8,
+      "Title": "Query Multiple Tables |Set Operations UNION,UNION ALL,EXCEPT | SQL Full Course | SQL Tutorial (7/11)",
+      "Channel": "Analytics with Nags",
+      "Duration": "",
+      "URL": "https://www.youtube.com/watch?v=JEd3YC7BoxE&list=PLjNd3r1KLjQtFEklcPDhidqC_2lmpjk5H&index=8&pp=iAQB",
+      "Note": [
+        "Techniques for querying multiple tables simultaneously.",
+        "Set operations: UNION, UNION ALL, and EXCEPT.",
+        "Combining result sets from different queries."
+      ]
+    },
+    {
+      "SerialNo": 9,
+      "Title": "SQL DBA Activities | Import / Export| Profiler | SQL Full Course | SQL Tutorial For Beginners (8/11)",
+      "Channel": "Analytics with Nags",
+      "Duration": "",
+      "URL": "https://www.youtube.com/watch?v=gzG5mZU9-50&list=PLjNd3r1KLjQtFEklcPDhidqC_2lmpjk5H&index=9&pp=iAQB",
+      "Note": [
+        "Database Administrator (DBA) responsibilities and activities.",
+        "Data import and export operations in SQL Server.",
+        "Using SQL Server Profiler for monitoring and troubleshooting."
+      ]
+    },
+    {
+      "SerialNo": 10,
+      "Title": "Views | CTE | Stored Procedures | Functions SQL Full Course | SQL Tutorial For Beginners (9/11)",
+      "Channel": "Analytics with Nags",
+      "Duration": "",
+      "URL": "https://www.youtube.com/watch?v=guILhfb5peE&list=PLjNd3r1KLjQtFEklcPDhidqC_2lmpjk5H&index=10&pp=iAQB",
+      "Note": [
+        "Creating and using database views for simplified data access.",
+        "Common Table Expressions (CTEs) for complex queries.",
+        "Stored procedures and functions for reusable code."
+      ]
+    },
+    {
+      "SerialNo": 11,
+      "Title": "Triggers | Cursors | Transactions | SQL Full Course | SQL Tutorial For Beginners (10/11)",
+      "Channel": "Analytics with Nags",
+      "Duration": "",
+      "URL": "https://www.youtube.com/watch?v=7XBOPm5WbtQ&list=PLjNd3r1KLjQtFEklcPDhidqC_2lmpjk5H&index=11&pp=iAQB",
+      "Note": [
+        "Database triggers for automated responses to data changes.",
+        "Using cursors for row-by-row processing.",
+        "Transaction management for data consistency and integrity."
+      ]
+    },
+    {
+      "SerialNo": 12,
+      "Title": "Clustered | Non Clustered Index in SQL Server | SQL Full Course | SQL Tutorial For Beginners (11/11)",
+      "Channel": "Analytics with Nags",
+      "Duration": "",
+      "URL": "https://www.youtube.com/watch?v=pBckUHNzF_8&list=PLjNd3r1KLjQtFEklcPDhidqC_2lmpjk5H&index=12&pp=iAQB",
+      "Note": [
+        "Understanding clustered and non-clustered indexes.",
+        "Index design for optimal query performance.",
+        "Best practices for database indexing strategies."
+      ]
+    },
+    {
+      "SerialNo": 13,
+      "Title": "How to Install SQL Server , SSDT , SSMS | SQL Full Course | SQL Tutorial For Beginners (12/11)",
+      "Channel": "Analytics with Nags",
+      "Duration": "",
+      "URL": "https://www.youtube.com/watch?v=mK8a07Evkcs&list=PLjNd3r1KLjQtFEklcPDhidqC_2lmpjk5H&index=13&pp=iAQB",
+      "Note": [
+        "Step-by-step SQL Server installation guide.",
+        "Installing SQL Server Data Tools (SSDT) for development.",
+        "Setting up SQL Server Management Studio (SSMS)."
+      ]
+    },
+    {
+      "SerialNo": 14,
+      "Title": "How to Restore AdventureWorks Database in SQL Server using SSMS | SQL Tutorial For Beginners (13/20)",
+      "Channel": "Analytics with Nags",
+      "Duration": "",
+      "URL": "https://www.youtube.com/watch?v=vfh_Kdp8M7o&list=PLjNd3r1KLjQtFEklcPDhidqC_2lmpjk5H&index=14&pp=iAQB",
+      "Note": [
+        "Restoring the AdventureWorks sample database.",
+        "Using SSMS for database restoration operations.",
+        "Setting up practice environment with sample data."
+      ]
+    },
+    {
+      "SerialNo": 15,
+      "Title": "SSMS Generate Scripts Table or Database Copy Trick | SQL Tutorial For Beginners (14/20)",
+      "Channel": "Analytics with Nags",
+      "Duration": "",
+      "URL": "https://www.youtube.com/watch?v=bHlYZSxklns&list=PLjNd3r1KLjQtFEklcPDhidqC_2lmpjk5H&index=15&pp=iAQB",
+      "Note": [
+        "Using SSMS to generate SQL scripts for tables and databases.",
+        "Database backup and migration techniques.",
+        "Automating database object creation with scripts."
+      ]
+    },
+    {
+      "SerialNo": 16,
+      "Title": "How to Identify SQL Server Database Server Name / Instance Name | SQL Tutorial for Beginners (15/20)",
+      "Channel": "Analytics with Nags",
+      "Duration": "",
+      "URL": "https://www.youtube.com/watch?v=b40UmDCuR3E&list=PLjNd3r1KLjQtFEklcPDhidqC_2lmpjk5H&index=16&pp=iAQB",
+      "Note": [
+        "Identifying SQL Server instance names and server connections.",
+        "Understanding different SQL Server configuration options.",
+        "Troubleshooting connection issues and server identification."
+      ]
+    },
+    {
+      "SerialNo": 17,
+      "Title": "How to Install SQL Server in 2024",
+      "Channel": "Analytics with Nags",
+      "Duration": "",
+      "URL": "https://www.youtube.com/watch?v=l9_BXeho0I4&list=PLjNd3r1KLjQtFEklcPDhidqC_2lmpjk5H&index=17&pp=iAQB",
+      "Note": [
+        "Updated SQL Server installation guide for 2024.",
+        "Latest features and installation options.",
+        "Modern best practices for SQL Server setup."
+      ]
+    },
+    {
+      "SerialNo": 18,
+      "Title": "What is Group By | Having | Rollup | Cube in SQL or SQL Server | SQL Advanced Tutorial (18/20)",
+      "Channel": "Analytics with Nags",
+      "Duration": "",
+      "URL": "https://www.youtube.com/watch?v=dRgV07eTXtE&list=PLjNd3r1KLjQtFEklcPDhidqC_2lmpjk5H&index=18&pp=iAQB",
+      "Note": [
+        "Advanced GROUP BY operations with HAVING clause.",
+        "ROLLUP and CUBE for hierarchical and cross-tabular summaries.",
+        "Complex data aggregation and reporting techniques."
+      ]
+    },
+    {
+      "SerialNo": 19,
+      "Title": "What is Window Function in SQL Server | SQL Advanced Tutorial (19/20)",
+      "Channel": "Analytics with Nags",
+      "Duration": "",
+      "URL": "https://www.youtube.com/watch?v=CBIwt8hzhEA&list=PLjNd3r1KLjQtFEklcPDhidqC_2lmpjk5H&index=19&pp=iAQB",
+      "Note": [
+        "Understanding window functions for advanced analytics.",
+        "RANK, ROW_NUMBER, and other analytical functions.",
+        "Partitioning and ordering data for complex calculations."
+      ]
+    },
+    {
+      "SerialNo": 20,
+      "Title": "What is Pivot and Unpivot in SQL or SQL Server | SQL Advanced Tutorial (20/20)",
+      "Channel": "Analytics with Nags",
+      "Duration": "",
+      "URL": "https://www.youtube.com/watch?v=CZ-eMlIm0ds&list=PLjNd3r1KLjQtFEklcPDhidqC_2lmpjk5H&index=20&pp=iAQB",
+      "Note": [
+        "PIVOT operations for transforming rows to columns.",
+        "UNPIVOT for converting columns back to rows.",
+        "Data reshaping techniques for reporting and analysis."
+      ]
+    },
+    {
+      "SerialNo": 21,
+      "Title": "What is Synonym in SQL or SQL Server | SQL Advanced Tutorial (21)",
+      "Channel": "Analytics with Nags",
+      "Duration": "",
+      "URL": "https://www.youtube.com/watch?v=I0xaJalzafQ&list=PLjNd3r1KLjQtFEklcPDhidqC_2lmpjk5H&index=21&pp=iAQB",
+      "Note": [
+        "Creating and using synonyms for database objects.",
+        "Simplifying object references and improving code readability.",
+        "Best practices for synonym usage in enterprise environments."
+      ]
+    },
+    {
+      "SerialNo": 22,
+      "Title": "What is Change Tracking in SQL Server | SQL Advanced Tutorial (22)",
+      "Channel": "Analytics with Nags",
+      "Duration": "",
+      "URL": "https://www.youtube.com/watch?v=EU7hz83T5eA&list=PLjNd3r1KLjQtFEklcPDhidqC_2lmpjk5H&index=22&pp=iAQB",
+      "Note": [
+        "Introduction to Change Tracking feature in SQL Server.",
+        "Monitoring data modifications for synchronization purposes.",
+        "Setting up change tracking for efficient data management."
+      ]
+    },
+    {
+      "SerialNo": 23,
+      "Title": "Change Tracking Part 2 | How to Use Change Tracking for Incremental Load SQL Advanced Tutorial (23)",
+      "Channel": "Analytics with Nags",
+      "Duration": "",
+      "URL": "https://www.youtube.com/watch?v=-Tb8MXPi1CM&list=PLjNd3r1KLjQtFEklcPDhidqC_2lmpjk5H&index=23&pp=iAQB",
+      "Note": [
+        "Advanced Change Tracking implementation techniques.",
+        "Using Change Tracking for incremental data loading strategies.",
+        "Practical examples of change tracking in ETL processes."
+      ]
+    },
+    {
+      "SerialNo": 24,
       "Title": "[[ 8.5 HOURS ]] Complete SQL End to End - SQL Server Tutorial { End to End } Full Course Beginners",
       "Channel": "Analytics with Nags",
       "Duration": "8 hours 29 minutes 20 seconds",
@@ -13,7 +289,7 @@
       ]
     },
     {
-      "SerialNo": 2,
+      "SerialNo": 25,
       "Title": "[[ 4 HOURS ]] SSIS Complete Tutorial  - { End to End } Full Course - SQL Server Integration Services",
       "Channel": "Analytics with Nags",
       "Duration": "4 hours 11 minutes 40 seconds",
@@ -25,7 +301,7 @@
       ]
     },
     {
-      "SerialNo": 3,
+      "SerialNo": 26,
       "Title": "[[ 3.1 HOURS ]] SSAS Complete Tutorial - End to End - SQL Server Analysis Service",
       "Channel": "Analytics with Nags",
       "Duration": "3 hours 5 minutes 55 seconds",
@@ -37,7 +313,7 @@
       ]
     },
     {
-      "SerialNo": 4,
+      "SerialNo": 27,
       "Title": "[[ 3 HOURS ]] Data Warehouse Complete Tutorial - SQL + SSIS + SSAS + Power BI - { End to End }",
       "Channel": "Analytics with Nags",
       "Duration": "3 hours 5 minutes 30 seconds",
@@ -49,7 +325,7 @@
       ]
     },
     {
-      "SerialNo": 5,
+      "SerialNo": 28,
       "Title": "[[ 2.5 HOURS ]] Power BI Complete Tutorial - Beginner to Pro - End to End",
       "Channel": "Analytics with Nags",
       "Duration": "2 hours 27 minutes 41 seconds",
@@ -61,7 +337,7 @@
       ]
     },
     {
-      "SerialNo": 6,
+      "SerialNo": 29,
       "Title": "[[ 3 HOURS ]] Complete Power BI DAX End to End  - Power BI DAX Tutorial - { End to End } Full Course",
       "Channel": "Analytics with Nags",
       "Duration": "2 hours 57 minutes 19 seconds",
@@ -73,7 +349,7 @@
       ]
     },
     {
-      "SerialNo": 7,
+      "SerialNo": 30,
       "Title": "[[ 3 HOURS ]] Complete Power Query End to End - PowerBI Tutorial { End to End } Full Course Beginner",
       "Channel": "Analytics with Nags",
       "Duration": "2 hours 47 minutes 1 seconds",
@@ -85,7 +361,7 @@
       ]
     },
     {
-      "SerialNo": 8,
+      "SerialNo": 31,
       "Title": "[[ 4.5 HOURS ]] Complete Power BI Services - { End to End } Full Course - Deployment & more",
       "Channel": "Analytics with Nags",
       "Duration": "4 hours 18 minutes 21 seconds",
@@ -97,7 +373,7 @@
       ]
     },
     {
-      "SerialNo": 9,
+      "SerialNo": 32,
       "Title": "[[ 3 HOURS ]] Complete Power BI Paginated Reports- { End to End } Full Course - SSRS Tutorial",
       "Channel": "Analytics with Nags",
       "Duration": "3 hours 1 minutes 29 seconds",
@@ -109,7 +385,7 @@
       ]
     },
     {
-      "SerialNo": 10,
+      "SerialNo": 33,
       "Title": "[[ 4.5 HOURS ]] Complete Power BI Visuals / Charts / Dashboards - { End to End } Full Course",
       "Channel": "Analytics with Nags",
       "Duration": "4 hours 28 minutes 30 seconds",
@@ -121,7 +397,7 @@
       ]
     },
     {
-      "SerialNo": 11,
+      "SerialNo": 34,
       "Title": "[[ 3 HOURS ]] Complete Azure Data Factory - { End to End } Full Course",
       "Channel": "Analytics with Nags",
       "Duration": "3 hours 5 minutes 21 seconds",
