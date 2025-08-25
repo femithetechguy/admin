@@ -113,6 +113,12 @@
       "topic": "Data Warehouse: An Integrated View",
       "category": "Data Warehousing",
       "markdownPath": "markdown/data_warehouse_integrated.md"
+    },
+    {
+      "serialNo": 20,
+      "topic": "DAX (Data Analysis Expressions)",
+      "category": "DAX",
+      "markdownPath": "markdown/dax_integrated.md"
     }
   ]
 }
