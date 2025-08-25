@@ -107,6 +107,12 @@
       "topic": "Technical Skills for 8+ Years of Experience",
       "category": "Career Levels",
       "markdownPath": "markdown/8_plus_years.md"
+    },
+    {
+      "serialNo": 19,
+      "topic": "Data Warehouse: An Integrated View",
+      "category": "Data Warehousing",
+      "markdownPath": "markdown/data_warehouse_integrated.md"
     }
   ]
 }
