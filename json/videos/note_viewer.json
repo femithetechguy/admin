@@ -119,6 +119,24 @@
       "topic": "DAX (Data Analysis Expressions)",
       "category": "DAX",
       "markdownPath": "markdown/dax_integrated.md"
+    },
+    {
+      "serialNo": 21,
+      "topic": "DAX Fundamentals and Best Practices",
+      "category": "DAX",
+      "markdownPath": "markdown/dax_defined.md"
+    },
+    {
+      "serialNo": 22,
+      "topic": "Semantic Model: Design and Best Practices",
+      "category": "Data Modeling",
+      "markdownPath": "markdown/semantic_model.md"
+    },
+    {
+      "serialNo": 23,
+      "topic": "Report Optimization",
+      "category": "Performance",
+      "markdownPath": "markdown/report_optimization.md"
     }
   ]
 }
