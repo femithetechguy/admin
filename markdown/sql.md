@@ -68,6 +68,30 @@ A **SQL JOIN** combines rows from two or more tables based on a related column. 
   INNER JOIN Products AS p ON o.ProductID = p.ProductID;
   ```
 
+- **LEFT JOIN**: Returns all rows from the left table and matching rows from the right table. If no match, NULL values are returned for right table columns.
+
+  ```sql
+  SELECT c.CustomerName, o.OrderID
+  FROM Customers AS c
+  LEFT JOIN Orders AS o ON c.CustomerID = o.CustomerID;
+  ```
+
+- **RIGHT JOIN**: Returns all rows from the right table and matching rows from the left table. If no match, NULL values are returned for left table columns.
+
+  ```sql
+  SELECT o.OrderID, p.ProductName
+  FROM Orders AS o
+  RIGHT JOIN Products AS p ON o.ProductID = p.ProductID;
+  ```
+
+- **FULL JOIN**: Returns all rows when there's a match in either left or right table. If no match, NULL values are returned for the table without a match.
+
+  ```sql
+  SELECT e.EmployeeName, d.DepartmentName
+  FROM Employees AS e
+  FULL JOIN Departments AS d ON e.DepartmentID = d.DepartmentID;
+  ```
+
 ## 7. Set Operations
 
 Used to combine the result sets of two or more `SELECT` statements.
