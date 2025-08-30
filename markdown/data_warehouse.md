@@ -37,6 +37,54 @@ This is a data design technique used in data warehouses to optimize them for ana
 
 This is the simplest type of dimensional model. It consists of a single **fact table** in the center surrounded by multiple **dimension tables**, resembling a star. This structure makes queries simpler and faster.
 
+### Snowflake Schema
+
+This is a more complex dimensional model where dimension tables are normalized into multiple related tables. Unlike a star schema, dimension tables in a snowflake schema are split into additional tables, creating a snowflake-like structure.
+
+Key characteristics:
+- Dimension tables are normalized into multiple related tables
+- Reduces data redundancy through normalization
+- More complex queries due to additional joins
+- Typically requires more storage space due to additional keys
+- Better for maintaining data integrity
+
+Example structure:
+```sql
+-- Fact Table
+CREATE TABLE FactSales (
+    SaleID INT,
+    ProductKey INT,
+    StoreKey INT,
+    DateKey INT,
+    SalesAmount DECIMAL(10,2)
+);
+
+-- Dimension Tables (Normalized)
+CREATE TABLE DimStore (
+    StoreKey INT,
+    RegionKey INT,
+    StoreName VARCHAR(50)
+);
+
+CREATE TABLE DimRegion (
+    RegionKey INT,
+    CountryKey INT,
+    RegionName VARCHAR(50)
+);
+
+CREATE TABLE DimCountry (
+    CountryKey INT,
+    CountryName VARCHAR(50)
+);
+```
+
+Compared to Star Schema:
+- More complex query patterns
+- Better data consistency
+- Increased number of joins
+- Normalized dimension tables
+- Higher maintenance overhead
+
 ### Data Mart
 
 A data mart is a subset of a data warehouse. It's a smaller, more focused database designed for a specific business unit or department, like marketing or sales, to allow them to perform targeted analysis.
