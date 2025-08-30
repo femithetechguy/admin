@@ -84,7 +84,7 @@ A **SQL JOIN** combines rows from two or more tables based on a related column. 
   RIGHT JOIN Products AS p ON o.ProductID = p.ProductID;
   ```
 
-- **FULL JOIN**: Returns all rows when there's a match in either left or right table. If no match, NULL values are returned for the table without a match.
+- **FULL JOIN**: (also called a FULL OUTER JOIN) Returns all rows when there's a match in either left or right table. If no match, NULL values are returned for the table without a match.
 
   ```sql
   SELECT e.EmployeeName, d.DepartmentName
