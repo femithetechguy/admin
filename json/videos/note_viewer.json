@@ -161,6 +161,24 @@
       "topic": "SQL Server Integration Services (SSIS) Details",
       "category": "Data Integration",
       "markdownPath": "markdown/ssis_details.md"
+    },
+    {
+      "serialNo": 28,
+      "topic": "Workspace vs App in Power BI",
+      "category": "Power BI Tools",
+      "markdownPath": "markdown/worskapce_vs_apps.md"
+    },
+    {
+      "serialNo": 29,
+      "topic": "Unifying Diverse Reporting Needs",
+      "category": "Reporting Strategy",
+      "markdownPath": "markdown/unifying_diverse_reporting_needs.md"
+    },
+    {
+      "serialNo": 30,
+      "topic": "Unifying KPIs Across Organizations",
+      "category": "Performance Metrics",
+      "markdownPath": "markdown/unifying_kpi.md"
     }
   ]
 }
