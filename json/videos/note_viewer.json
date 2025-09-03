@@ -191,6 +191,12 @@
       "topic": "Databricks vs SSIS Comparison",
       "category": "Data Integration",
       "markdownPath": "markdown/databrick_vs_ssis.md"
+    },
+    {
+      "serialNo": 33,
+      "topic": "Optimize Your Report",
+      "category": "Performance",
+      "markdownPath": "markdown/optimize_your_report.md"
     }
   ]
 }
