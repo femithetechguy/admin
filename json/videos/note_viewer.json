@@ -194,6 +194,12 @@
     },
     {
       "serialNo": 33,
+      "topic": "Performance Analyzer Tool",
+      "category": "Performance",
+      "markdownPath": "markdown/performer_analyzer.md"
+    },
+    {
+      "serialNo": 34,
       "topic": "Optimize Your Report",
       "category": "Performance",
       "markdownPath": "markdown/optimize_your_report.md"
