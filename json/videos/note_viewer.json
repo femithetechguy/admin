@@ -203,6 +203,18 @@
       "topic": "Optimize Your Report",
       "category": "Performance",
       "markdownPath": "markdown/optimize_your_report.md"
+    },
+    {
+      "serialNo": 35,
+      "topic": "ETL and Testing",
+      "category": "Data Integration",
+      "markdownPath": "markdown/etl_and_testing.md"
+    },
+    {
+      "serialNo": 36,
+      "topic": "Creating a Good Resume",
+      "category": "Career Development",
+      "markdownPath": "markdown/good_resume.md"
     }
   ]
 }
