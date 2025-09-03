@@ -27,3 +27,23 @@ This video provides a deep dive into the VertiPaq engine and how it works to com
 
 [Mastering the VertiPaq Engine in Power BI: Boost Performance and Insights](https://www.youtube.com/watch?v=h-yVkBmEeV0&pp=ygUJI3ZlcnRpcGFx)
 http://googleusercontent.com/youtube_content/1
+
+---
+
+Yes, you absolutely can and should use query folding with Import mode in Power BI. In fact, it's one of the most important performance optimization techniques for import-based datasets.
+
+Here's how it works:
+
+* **The Goal of Query Folding:** The primary purpose of query folding is to "fold" or translate Power Query M steps into a native query (like SQL) that is then executed by the source database. This means the heavy lifting of filtering rows, removing columns, or aggregating data is done by the powerful database engine *before* the data is even sent to Power BI.
+* **Query Folding with Import Mode:** When you use Import mode, Power BI's Power Query engine still analyzes the steps you've created in the Applied Steps pane. It determines which of those steps can be translated into a single source-native query. This process happens when you do an initial data load or when you refresh your data. By folding the query, Power BI dramatically reduces the amount of data that needs to be transferred over the network and processed by its own engine. This leads to much faster refresh times.
+* **The Difference with DirectQuery:** The key difference is when the folding happens. With Import mode, the folding occurs during the **data refresh** process. The final result of the folded query is then imported and stored in the Power BI model. All subsequent user interactions (slicing, filtering, etc.) happen against this in-memory model, which is why Import mode is so fast for report visuals. In contrast, with DirectQuery, the folding happens for **every single user interaction**, as each interaction triggers a new query to the source.
+
+**Why is it so important for Import Mode?**
+
+Imagine you have a 100-million-row table in your database, but your report only needs 1 million rows after applying a few filters and aggregations.
+
+* **Without Query Folding:** Power BI would have to download all 100 million rows and then perform the filtering and aggregation in its own engine. This would be slow and inefficient.
+* **With Query Folding:** Power BI sends a query to the database saying, "Give me the aggregated data for these specific criteria." The database performs all the work and sends back only the 1 million rows of filtered and aggregated data. This is a huge performance gain.
+
+This video provides a comprehensive guide to query folding, including how it works in both Import and DirectQuery modes. [Unveiling Query Folding in Power BI](https://www.youtube.com/watch?v=LXiYHPtf60o)
+http://googleusercontent.com/youtube_content/2
