@@ -185,6 +185,12 @@
       "topic": "Kimball vs Inmon Data Warehouse Methodologies",
       "category": "Data Warehousing",
       "markdownPath": "markdown/kimbal_vs_inmon.md"
+    },
+    {
+      "serialNo": 32,
+      "topic": "Databricks vs SSIS Comparison",
+      "category": "Data Integration",
+      "markdownPath": "markdown/databrick_vs_ssis.md"
     }
   ]
 }
