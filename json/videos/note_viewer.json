@@ -143,6 +143,24 @@
       "topic": "Dataflows",
       "category": "Data Integration",
       "markdownPath": "markdown/dataflow.md"
+    },
+    {
+      "serialNo": 25,
+      "topic": "SQL Server Data Tools (SSDT)",
+      "category": "Development Tools",
+      "markdownPath": "markdown/ssdt.md"
+    },
+    {
+      "serialNo": 26,
+      "topic": "SQL Server Integration Services (SSIS)",
+      "category": "Data Integration",
+      "markdownPath": "markdown/ssis.md"
+    },
+    {
+      "serialNo": 27,
+      "topic": "SQL Server Integration Services (SSIS) Details",
+      "category": "Data Integration",
+      "markdownPath": "markdown/ssis_details.md"
     }
   ]
 }
