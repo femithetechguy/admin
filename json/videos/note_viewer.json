@@ -179,6 +179,12 @@
       "topic": "Unifying KPIs Across Organizations",
       "category": "Performance Metrics",
       "markdownPath": "markdown/unifying_kpi.md"
+    },
+    {
+      "serialNo": 31,
+      "topic": "Kimball vs Inmon Data Warehouse Methodologies",
+      "category": "Data Warehousing",
+      "markdownPath": "markdown/kimbal_vs_inmon.md"
     }
   ]
 }
