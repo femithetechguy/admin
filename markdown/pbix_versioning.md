@@ -81,3 +81,50 @@ These text-based files are perfect for Git. You can now see line-by-line changes
 -   **Better Collaboration**: Multiple developers can work on the same report using branches and merge their changes.
 -   **Code Reviews**: Use Pull Requests to review changes to the data model and report layout before merging.
 -   **CI/CD Integration**: Automate the deployment of your Power BI reports from your Git repository to the Power BI service.
+---
+
+# Power BI Project Structure Comparison while versioning
+
+## Your Structure (Modern PBIP format)
+
+```text
+├── CustomerAgeing.pbip
+├── CustomerAgeing.SemanticModel/
+│   ├── definition.pbism
+│   ├── diagramLayout.json
+│   └── definition/
+│       ├── database.tmdl
+│       ├── model.tmdl
+│       └── relationships.tmdl
+└── CustomerAgeing.Report/
+    ├── definition.pbir
+    └── definition/
+        ├── report.json
+        └── version.json
+```
+
+## Example Structure (Older format)
+
+```text
+├── MyReport.pbip
+├── MyReport.Dataset/
+│   ├── definition.pbidataset
+│   └── model.bim
+└── MyReport.Report/
+    ├── definition.pbir
+    └── report.json
+```
+
+## Key Differences
+
+1. **Semantic Model vs Dataset**: You have `*.SemanticModel/` folders instead of `*.Dataset/` - this is the **newer, preferred naming**
+
+2. **File formats**:
+   - You have `definition.pbism` instead of `definition.pbidataset`
+   - You have `.tmdl` files instead of `model.bim` - TMDL (Tabular Model Definition Language) is the **newer, more readable format**
+
+3. **Structure organization**: Your definition files are better organized in subfolders
+
+**Your structure is actually more modern and follows the current Power BI project best practices!** The example you showed appears to be from an older version or different configuration of Power BI projects.
+
+Your `.gitignore` is perfectly configured for your current structure.
