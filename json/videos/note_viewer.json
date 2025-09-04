@@ -3,85 +3,85 @@
     {
       "serialNo": 1,
       "topic": "Power BI Architecture",
-      "category": "Architecture",
+      "category": "PLATFORM ADMINISTRATION & GOVERNANCE",
       "markdownPath": "markdown/powerbi_architecture.md"
     },
     {
       "serialNo": 2,
       "topic": "Azure Architecture",
-      "category": "Architecture",
+      "category": "PLATFORM ADMINISTRATION & GOVERNANCE",
       "markdownPath": "markdown/azure_architecture.md"
     },
     {
       "serialNo": 3,
       "topic": "Data Warehouse Architecture: Conventional vs Modern",
-      "category": "Architecture",
+      "category": "DATA WAREHOUSING & INTEGRATION",
       "markdownPath": "markdown/data_warehouse_architecture.md"
     },
     {
       "serialNo": 4,
       "topic": "Azure Active Directory Authentication Visualization",
-      "category": "Security & Identity",
+      "category": "PLATFORM ADMINISTRATION & GOVERNANCE",
       "markdownPath": "markdown/aad.md"
     },
     {
       "serialNo": 5,
       "topic": "Azure Analysis Services",
-      "category": "Analytics Services",
+      "category": "DATA MODELING",
       "markdownPath": "markdown/aas.md"
     },
     {
       "serialNo": 6,
       "topic": "Azure Data Factory, Storage Blob, and Synapse Analytics",
-      "category": "Data Integration",
+      "category": "DATA WAREHOUSING & INTEGRATION",
       "markdownPath": "markdown/adf_asb_asa.md"
     },
     {
       "serialNo": 7,
       "topic": "Azure Data Sources Overview",
-      "category": "Data Storage",
+      "category": "DATA WAREHOUSING & INTEGRATION",
       "markdownPath": "markdown/azure_data_sources.md"
     },
     {
       "serialNo": 8,
       "topic": "Microsoft Fabric",
-      "category": "Unified Platform",
+      "category": "PLATFORM ADMINISTRATION & GOVERNANCE",
       "markdownPath": "markdown/microsoft_fabric.md"
     },
     {
       "serialNo": 9,
       "topic": "Data Warehouse Fundamentals",
-      "category": "Data Warehousing",
+      "category": "DATA WAREHOUSING & INTEGRATION",
       "markdownPath": "markdown/data_warehouse.md"
     },
     {
       "serialNo": 10,
       "topic": "SQL Fundamentals and Advanced Concepts",
-      "category": "SQL",
+      "category": "QUERY & SCRIPTING LANGUAGES",
       "markdownPath": "markdown/sql.md"
     },
     {
       "serialNo": 11,
       "topic": "DQS, MDS, SSIS, and Data Warehouse",
-      "category": "Data Preparation",
+      "category": "DATA WAREHOUSING & INTEGRATION",
       "markdownPath": "markdown/dqs_mds_ssis_dw.md"
     },
     {
       "serialNo": 12,
       "topic": "SSAS Tabular vs Multidimensional Models",
-      "category": "Data Modeling",
+      "category": "DATA MODELING",
       "markdownPath": "markdown/ssas_tabular_multidimensional.md"
     },
     {
       "serialNo": 13,
       "topic": "Power BI Desktop",
-      "category": "Power BI Tools",
+      "category": "VISUALIZATION & REPORTING",
       "markdownPath": "markdown/powerbi_desktop.md"
     },
     {
       "serialNo": 14,
       "topic": "Power BI Report Server",
-      "category": "Power BI Tools",
+      "category": "PLATFORM ADMINISTRATION & GOVERNANCE",
       "markdownPath": "markdown/powerbi_report_server.md"
     },
     {
@@ -111,110 +111,146 @@
     {
       "serialNo": 19,
       "topic": "Data Warehouse: An Integrated View",
-      "category": "Data Warehousing",
+      "category": "DATA WAREHOUSING & INTEGRATION",
       "markdownPath": "markdown/data_warehouse_integrated.md"
     },
     {
       "serialNo": 20,
       "topic": "DAX (Data Analysis Expressions)",
-      "category": "DAX",
+      "category": "QUERY & SCRIPTING LANGUAGES",
       "markdownPath": "markdown/dax_integrated.md"
     },
     {
       "serialNo": 21,
       "topic": "DAX Fundamentals and Best Practices",
-      "category": "DAX",
+      "category": "QUERY & SCRIPTING LANGUAGES",
       "markdownPath": "markdown/dax_defined.md"
     },
     {
       "serialNo": 22,
       "topic": "Semantic Model: Design and Best Practices",
-      "category": "Data Modeling",
+      "category": "DATA MODELING",
       "markdownPath": "markdown/semantic_model.md"
     },
     {
       "serialNo": 23,
       "topic": "Report Optimization",
-      "category": "Performance",
+      "category": "VISUALIZATION & REPORTING",
       "markdownPath": "markdown/report_optimization.md"
     },
     {
       "serialNo": 24,
       "topic": "Dataflows",
-      "category": "Data Integration",
+      "category": "DATA WAREHOUSING & INTEGRATION",
       "markdownPath": "markdown/dataflow.md"
     },
     {
       "serialNo": 25,
       "topic": "SQL Server Data Tools (SSDT)",
-      "category": "Development Tools",
+      "category": "SOFTWARE DEVELOPMENT",
       "markdownPath": "markdown/ssdt.md"
     },
     {
       "serialNo": 26,
       "topic": "SQL Server Integration Services (SSIS)",
-      "category": "Data Integration",
+      "category": "DATA WAREHOUSING & INTEGRATION",
       "markdownPath": "markdown/ssis.md"
     },
     {
       "serialNo": 27,
       "topic": "SQL Server Integration Services (SSIS) Details",
-      "category": "Data Integration",
+      "category": "DATA WAREHOUSING & INTEGRATION",
       "markdownPath": "markdown/ssis_details.md"
     },
     {
       "serialNo": 28,
       "topic": "Workspace vs App in Power BI",
-      "category": "Power BI Tools",
+      "category": "PLATFORM ADMINISTRATION & GOVERNANCE",
       "markdownPath": "markdown/worskapce_vs_apps.md"
     },
     {
       "serialNo": 29,
       "topic": "Unifying Diverse Reporting Needs",
-      "category": "Reporting Strategy",
+      "category": "VISUALIZATION & REPORTING",
       "markdownPath": "markdown/unifying_diverse_reporting_needs.md"
     },
     {
       "serialNo": 30,
       "topic": "Unifying KPIs Across Organizations",
-      "category": "Performance Metrics",
+      "category": "VISUALIZATION & REPORTING",
       "markdownPath": "markdown/unifying_kpi.md"
     },
     {
       "serialNo": 31,
       "topic": "Kimball vs Inmon Data Warehouse Methodologies",
-      "category": "Data Warehousing",
+      "category": "DATA WAREHOUSING & INTEGRATION",
       "markdownPath": "markdown/kimbal_vs_inmon.md"
     },
     {
       "serialNo": 32,
       "topic": "Databricks vs SSIS Comparison",
-      "category": "Data Integration",
+      "category": "DATA WAREHOUSING & INTEGRATION",
       "markdownPath": "markdown/databrick_vs_ssis.md"
     },
     {
       "serialNo": 33,
       "topic": "Performance Analyzer Tool",
-      "category": "Performance",
+      "category": "VISUALIZATION & REPORTING",
       "markdownPath": "markdown/performer_analyzer.md"
     },
     {
       "serialNo": 34,
       "topic": "Optimize Your Report",
-      "category": "Performance",
+      "category": "VISUALIZATION & REPORTING",
       "markdownPath": "markdown/optimize_your_report.md"
     },
     {
       "serialNo": 35,
       "topic": "ETL and Testing",
-      "category": "Data Integration",
+      "category": "DATA WAREHOUSING & INTEGRATION",
       "markdownPath": "markdown/etl_and_testing.md"
     },
     {
       "serialNo": 36,
       "topic": "Creating a Good Resume",
-      "category": "Career Development",
+      "category": "CAREER DEVELOPMENT",
       "markdownPath": "markdown/good_resume.md"
+    },
+    {
+      "serialNo": 37,
+      "topic": "Python in Analytics",
+      "category": "QUERY & SCRIPTING LANGUAGES",
+      "markdownPath": "markdown/python_in_analytics.md"
+    },
+    {
+      "serialNo": 38,
+      "topic": "Python Concepts",
+      "category": "QUERY & SCRIPTING LANGUAGES",
+      "markdownPath": "markdown/python_concepts.md"
+    },
+    {
+      "serialNo": 39,
+      "topic": "Data Privacy Levels",
+      "category": "PLATFORM ADMINISTRATION & GOVERNANCE",
+      "markdownPath": "markdown/data_privacy_levels.md"
+    },
+    {
+      "serialNo": 40,
+      "topic": "Row Level Security and Object Level Security",
+      "category": "PLATFORM ADMINISTRATION & GOVERNANCE",
+      "markdownPath": "markdown/rls_and_ols.md"
+    },
+    {
+      "serialNo": 41,
+      "topic": "Power BI Deployment Pipelines",
+      "category": "PLATFORM ADMINISTRATION & GOVERNANCE",
+      "markdownPath": "markdown/powerbi_deployment_pipelines.md"
+    },
+    {
+      "serialNo": 42,
+      "topic": "Data Warehouse Integration Notes",
+      "category": "DATA WAREHOUSING & INTEGRATION",
+      "markdownPath": "markdown/data_warehouse_integration_notes.md"
     }
   ]
 }
