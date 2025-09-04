@@ -205,6 +205,12 @@
       "markdownPath": "markdown/optimize_your_report.md"
     },
     {
+      "serialNo": 44,
+      "topic": "Troubleshooting Guide Part 1",
+      "category": "PLATFORM ADMINISTRATION & GOVERNANCE",
+      "markdownPath": "markdown/troubleshooting_1.md"
+    },
+    {
       "serialNo": 35,
       "topic": "ETL and Testing",
       "category": "DATA WAREHOUSING & INTEGRATION",
@@ -251,6 +257,24 @@
       "topic": "Data Warehouse Integration Notes",
       "category": "DATA WAREHOUSING & INTEGRATION",
       "markdownPath": "markdown/data_warehouse_integration_notes.md"
+    },
+    {
+      "serialNo": 43,
+      "topic": "Power BI File Versioning",
+      "category": "PLATFORM ADMINISTRATION & GOVERNANCE",
+      "markdownPath": "markdown/pbix_versioning.md"
+    },
+    {
+      "serialNo": 45,
+      "topic": "Software Development Notes",
+      "category": "SOFTWARE DEVELOPMENT",
+      "markdownPath": "markdown/software_dev_notes.md"
+    },
+    {
+      "serialNo": 46,
+      "topic": "Visualization and Reporting Techniques",
+      "category": "VISUALIZATION & REPORTING",
+      "markdownPath": "markdown/visualization_reporting.md"
     }
   ]
 }
