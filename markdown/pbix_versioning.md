@@ -56,15 +56,46 @@ These text-based files are perfect for Git. You can now see line-by-line changes
     It's crucial to ignore files that contain user-specific data or are auto-generated. Create a `.gitignore` file in your root directory with the following content:
 
     ```gitignore
-    # Power BI Project Files
-    # Ignore user-specific and cache files
-    *.pbir/
-    *.pbidataset/
-    .pbi/
-    ```
-    > **Note:** The `.pbir` and `.pbidataset` folders contain user-specific layout information and data caches, which should not be committed to source control. The core definitions are stored in the `definition.pbir` and `definition.pbidataset` files, which *should* be committed.
+    # Power BI project ignores
+    # PBIX files (binary, not source-controlled)
+    *.pbix
+    # Note: .pbip files should be version controlled as they define the project structure
 
-3.  **Commit Your Changes**:
+    # Power BI backup and temp files
+    PBIX_BACKUP/
+    *.tmp
+    *.bak
+
+    # Power BI cache and local settings
+    **/.pbi/cache.abf
+    **/.pbi/localSettings.json
+
+    # Static resources and custom visuals (if not source-controlled)
+    */StaticResources/
+    */CustomVisuals/
+
+    # System files
+    .DS_Store
+    Thumbs.db
+    Desktop.ini
+
+    # Node modules (if any JS/TS custom visuals)
+    node_modules/
+
+    # VS Code settings
+    .vscode/
+
+    # Python virtual environments (if used)
+    venv/
+    .env/
+
+    # Log files
+    *.log
+    ```
+
+    > **Note:** This comprehensive ignore list covers binary PBIX files, temporary files, cache data, and system-specific files that should not be committed to source control. The core definition files (`.pbip`, `definition.pbir`, `definition.pbism`, etc.) *should* be committed as they contain your project structure and source code.
+
+3. **Commit Your Changes**:
     You can now stage and commit changes as you would with any other code project.
 
     ```bash
@@ -77,13 +108,14 @@ These text-based files are perfect for Git. You can now see line-by-line changes
 
 ### Benefits of Using `.pbip`
 
--   **Clear Diffs**: See exactly what DAX, M code, or report property was changed in each commit.
--   **Better Collaboration**: Multiple developers can work on the same report using branches and merge their changes.
--   **Code Reviews**: Use Pull Requests to review changes to the data model and report layout before merging.
--   **CI/CD Integration**: Automate the deployment of your Power BI reports from your Git repository to the Power BI service.
+- **Clear Diffs**: See exactly what DAX, M code, or report property was changed in each commit.
+- **Better Collaboration**: Multiple developers can work on the same report using branches and merge their changes.
+- **Code Reviews**: Use Pull Requests to review changes to the data model and report layout before merging.
+- **CI/CD Integration**: Automate the deployment of your Power BI reports from your Git repository to the Power BI service.
+
 ---
 
-# Power BI Project Structure Comparison while versioning
+## Power BI Project Structure Comparison while versioning
 
 ## Your Structure (Modern PBIP format)
 
