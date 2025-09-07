@@ -98,6 +98,14 @@
           ]
         },
         {
+          "name": "1st_100",
+          "biIcon": "bi-list-ol",
+          "content": [
+            "First 100 interview questions and resources",
+            "Optional: filters for category, difficulty, etc."
+          ]
+        },
+        {
           "name": "E2EAnalytics",
           "biIcon": "bi-bar-chart",
           "content": [

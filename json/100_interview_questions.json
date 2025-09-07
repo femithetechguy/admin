@@ -1,0 +1,457 @@
+[
+  {
+    "serial_no": 0,
+    "question": "Microsoft Power BI Tutorial For Beginners",
+    "answer": "A comprehensive introduction to Power BI covering the essentials that beginners need to get started with the platform.",
+    "related_video_link": "https://www.youtube.com/watch?v=cN8AO3_vmlY&ab_channel=LearnMicrosoftFabric%2CPowerBI%2CSQLAmitChandak",
+    "category": "Full Course Tutorial"
+  },
+  {
+    "serial_no": 1,
+    "question": "What is Power BI?",
+    "answer": "Power BI is a unified, scalable, self-service enterprise business intelligence and analytics platform by Microsoft for transforming data into meaningful insights.",
+    "related_video_link": "https://www.youtube.com/watch?v=Wfr1Wh5SxwM&t=570s",
+    "category": "Platform Overview"
+  },
+  {
+    "serial_no": 2,
+    "question": "What are the components/elements/parts of Power BI?",
+    "answer": "Power BI Desktop, Power BI Service, Power BI Mobile apps, Power BI Report Builder, Power BI Report Server, Power BI Embedded.",
+    "related_video_link": "https://www.youtube.com/watch?v=Wfr1Wh5SxwM&t=640s",
+    "category": "Platform Architecture"
+  },
+  {
+    "serial_no": 3,
+    "question": "What is Power BI Desktop?",
+    "answer": "A free desktop application to connect, transform, model data, build interactive reports, and publish to the Power BI Service.",
+    "related_video_link": null,
+    "category": "Tooling"
+  },
+  {
+    "serial_no": 4,
+    "question": "Why do we need Power BI Desktop?",
+    "answer": "Needed for multi-source data connectivity, data modeling, report creation, and publishing to the Power BI Service.",
+    "related_video_link": null,
+    "category": "Tooling"
+  },
+  {
+    "serial_no": 5,
+    "question": "What is Power Query?",
+    "answer": "A GUI-driven data extraction and transformation tool integrated across Power BI, Excel, etc., with capabilities like filtering, merging, pivoting without code.",
+    "related_video_link": null,
+    "category": "Data Preparation"
+  },
+  {
+    "serial_no": 6,
+    "question": "What is DAX?",
+    "answer": "Data Analysis Expressions – a formula language in Power BI for calculations, measures, and data analysis.",
+    "related_video_link": null,
+    "category": "Formula Language"
+  },
+  {
+    "serial_no": 7,
+    "question": "Difference between Calculated Column and Measure?",
+    "answer": "Calculated Column: performs row-level static calculation; Measure: dynamic aggregation sensitive to filters/slicers.",
+    "related_video_link": null,
+    "category": "DAX Basics"
+  },
+  {
+    "serial_no": 8,
+    "question": "Difference between Import, DirectQuery, and Live mode?",
+    "answer": "Import: Data imported into model, refreshed periodically. DirectQuery: Queries live data on interaction. Live: Live connection to Power BI datasets or SSAS; always up-to-date.",
+    "related_video_link": null,
+    "category": "Data Connectivity"
+  },
+  {
+    "serial_no": 9,
+    "question": "What are the different types of visuals used in Power BI?",
+    "answer": "Includes bar, line, pie, area, scatter, treemap, gauge, maps, table, matrix, card, funnel, KPI, decomposition tree, key influencers, Q&A visuals.",
+    "related_video_link": null,
+    "category": "Visualization"
+  },
+  {
+    "serial_no": 10,
+    "question": "How to do a multi-column sort on a visual in Power BI?",
+    "answer": "Shift + Click on column headers in a table visual.",
+    "related_video_link": null,
+    "category": "Visualization Interaction"
+  },
+  {
+    "serial_no": 11,
+    "question": "What is conditional formatting in Power BI?",
+    "answer": "Highlight data in visuals based on criteria, using color (font/background), icons, data bars, or web URL links.",
+    "related_video_link": null,
+    "category": "Visualization Formatting"
+  },
+  {
+    "serial_no": 12,
+    "question": "What are the three format styles in Power BI conditional formatting?",
+    "answer": "Gradient-based, Rule-based, Field value-based (using measure-generated colors).",
+    "related_video_link": null,
+    "category": "Visualization Formatting"
+  },
+  {
+    "serial_no": 13,
+    "question": "When is conditional formatting unavailable?",
+    "answer": "Not supported for matrix rows/columns, pie, donut, line, area charts, or visuals with legends/multiple measures.",
+    "related_video_link": null,
+    "category": "Visualization Constraints"
+  },
+  {
+    "serial_no": 14,
+    "question": "What is Interactions in Power BI?",
+    "answer": "How visuals influence each other via cross-filtering, cross-highlighting, or disabling interactions.",
+    "related_video_link": null,
+    "category": "Visualization Interaction"
+  },
+  {
+    "serial_no": 15,
+    "question": "What are Field Parameters in Power BI? How to create dynamic axis via slicer?",
+    "answer": "Introduced May 2022, enables dynamic dimension/axis/rows or measure/values via slicer.",
+    "related_video_link": null,
+    "category": "Dynamic Features"
+  },
+  {
+    "serial_no": 16,
+    "question": "Pre-field parameters, how achieve dynamic dimensions/axes?",
+    "answer": "Using bookmarks + buttons or unpivoting columns (Type/Value table with slicer for dynamic axis).",
+    "related_video_link": null,
+    "category": "Dynamic Features"
+  },
+  {
+    "serial_no": 17,
+    "question": "What are bookmarks in Power BI?",
+    "answer": "Snapshots capturing visual state, filters, slicers, sort order to create interactive storytelling.",
+    "related_video_link": null,
+    "category": "Navigation & UX"
+  },
+  {
+    "serial_no": 18,
+    "question": "How maintain slicer values across bookmarks?",
+    "answer": "Uncheck 'Data' option in bookmark settings.",
+    "related_video_link": null,
+    "category": "Navigation & UX"
+  },
+  {
+    "serial_no": 19,
+    "question": "Difference between SUM and SUMX in DAX?",
+    "answer": "SUM: column-level sum; SUMX: row-by-row calculation then sum—necessary for expressions like Qty*Price.",
+    "related_video_link": null,
+    "category": "DAX Basics"
+  },
+  {
+    "serial_no": 20,
+    "question": "Difference between CALCULATE and CALCULATETABLE?",
+    "answer": "CALCULATE: returns scalar, modifies filter context; CALCULATETABLE: returns a table.",
+    "related_video_link": null,
+    "category": "DAX Basics"
+  },
+  {
+    "serial_no": 21,
+    "question": "Difference between SUMMARIZE and SUMMARIZECOLUMNS?",
+    "answer": "SUMMARIZE: supports row & filter context; SUMMARIZECOLUMNS: filter context only, no row context.",
+    "related_video_link": null,
+    "category": "DAX Functionality"
+  },
+  {
+    "serial_no": 22,
+    "question": "Difference between ALL and ALLSELECTED?",
+    "answer": "ALL ignores filters; ALLSELECTED preserves user-selected filters while ignoring others.",
+    "related_video_link": null,
+    "category": "DAX Functionality"
+  },
+  {
+    "serial_no": 23,
+    "question": "Difference between CALCULATE with and without FILTER expression?",
+    "answer": "Without FILTER: simple column filter; With FILTER: allows complex table-based filter logic.",
+    "related_video_link": null,
+    "category": "DAX Functionality"
+  },
+  {
+    "serial_no": 24,
+    "question": "Default order in RANKX? Ascending or descending?",
+    "answer": "Descending is the default.",
+    "related_video_link": null,
+    "category": "DAX Ranking"
+  },
+  {
+    "serial_no": 25,
+    "question": "Adding city ID column (same granularity) in ranking—what happens?",
+    "answer": "All ranks become 1 due to identical granularity.",
+    "related_video_link": null,
+    "category": "DAX Ranking"
+  },
+  {
+    "serial_no": 26,
+    "question": "SKIP vs DENSE in RANK?",
+    "answer": "SKIP leaves rank gaps after ties; DENSE assigns continuous ranks with no gaps.",
+    "related_video_link": null,
+    "category": "DAX Ranking"
+  },
+  {
+    "serial_no": 27,
+    "question": "Measure for Top 10 states by gross?",
+    "answer": "TOP 10 = CALCULATE([Gross], KEEPFILTERS(TOPN(10, ALLSELECTED(Geography[State]), [Net], DESC)))",
+    "related_video_link": null,
+    "category": "DAX Filters"
+  },
+  {
+    "serial_no": 28,
+    "question": "Why Grand Total might not equal sum of rows?",
+    "answer": "Use of context-aware functions (like DISTINCTCOUNT) may cause mismatch; fix by using SUMX or VALUES/SUMMARIZE.",
+    "related_video_link": null,
+    "category": "DAX Aggregation"
+  },
+  {
+    "serial_no": 29,
+    "question": "Why is Date table important?",
+    "answer": "Central to model design and essential for time intelligence (MTD/QTD/YTD) with continuous dates.",
+    "related_video_link": null,
+    "category": "Modeling"
+  },
+  {
+    "serial_no": 30,
+    "question": "Best practices for Time Intelligence or Date Tables?",
+    "answer": "Use and mark Date Table, avoid timestamps, ensure full coverage, avoid bidirectional relationships.",
+    "related_video_link": null,
+    "category": "Modeling"
+  },
+  {
+    "serial_no": 31,
+    "question": "What is MTD, QTD, YTD?",
+    "answer": "Month-to-Date, Quarter-to-Date, Year-to-Date metrics.",
+    "related_video_link": null,
+    "category": "Time Intelligence"
+  },
+  {
+    "serial_no": 32,
+    "question": "Functions for MTD/QTD/YTD?",
+    "answer": "TOTALMTD/TOTALQTD/TOTALYTD (scalar); DATESMTD/DATESQTD/DATESYTD (table-based).",
+    "related_video_link": null,
+    "category": "Time Intelligence Functions"
+  },
+  {
+    "serial_no": 33,
+    "question": "If no date context, what does DATESMTD show when used?",
+    "answer": "Uses last date in column; shows MTD for that; may return blank if no data exists for that period.",
+    "related_video_link": null,
+    "category": "Time Intelligence Edge Cases"
+  },
+  {
+    "serial_no": 34,
+    "question": "What happens if DATEADD subtracts from the earliest date?",
+    "answer": "Returns blank due to discontinuous date.",
+    "related_video_link": null,
+    "category": "Time Intelligence Edge Cases"
+  },
+  {
+    "serial_no": 35,
+    "question": "How to get date one year prior properly?",
+    "answer": "Use DATE(year([Date])–1, month([Date]), day([Date])).",
+    "related_video_link": null,
+    "category": "Time Intelligence Calculations"
+  },
+  {
+    "serial_no": 36,
+    "question": "Difference between DATESMTD(DATEADD(...)) and PREVIOUSMONTH?",
+    "answer": "DATESMTD with DATEADD gives data till same day last month; PREVIOUSMONTH gives full previous month.",
+    "related_video_link": null,
+    "category": "Time Intelligence Calculations"
+  },
+  {
+    "serial_no": 37,
+    "question": "How to show a 12-month trend ending at a chosen month?",
+    "answer": "Use a disconnected date table and a measure leveraging MAX/MIN from that table to filter range.",
+    "related_video_link": null,
+    "category": "Time Intelligence Trends"
+  },
+  {
+    "serial_no": 38,
+    "question": "Sorting MMM-YYYY incorrectly—how to fix it?",
+    "answer": "Create YYYYMM numeric sort column (via FORMAT or Year*100+Month), set as sort order.",
+    "related_video_link": null,
+    "category": "Modeling/UI"
+  },
+  {
+    "serial_no": 39,
+    "question": "Preferred schema in Power BI modeling?",
+    "answer": "Star schema: central fact table connected to dimension tables; no direct dimension-to-dimension joins.",
+    "related_video_link": null,
+    "category": "Modeling"
+  },
+  {
+    "serial_no": 40,
+    "question": "When to use RELATED? Why might it fail?",
+    "answer": "Use RELATED across one-to-many relationships; fails if no active relationship exists.",
+    "related_video_link": null,
+    "category": "DAX Functionality"
+  },
+  {
+    "serial_no": 41,
+    "question": "What is the difference between RELATED and RELATEDTABLE?",
+    "answer": "The RELATED function retrieves a single value from a related table on the 'one' side of a one-to-many relationship, typically used in calculated columns or measures. The RELATEDTABLE function returns a table from the related 'many' side of a relationship, useful for aggregations or filtering.",
+    "related_video_link": "https://www.youtube.com/watch?v=example41",
+    "category": "DAX Functions"
+  },
+  {
+    "serial_no": 42,
+    "question": "How do you implement Row-Level Security (RLS) in Power BI?",
+    "answer": "RLS in Power BI is implemented by creating roles with DAX filters that restrict data access based on user identity. These roles are then assigned to users or groups in the Power BI Service.",
+    "related_video_link": "https://www.youtube.com/watch?v=example42",
+    "category": "Security"
+  },
+  {
+    "serial_no": 43,
+    "question": "What is the difference between Import Mode and DirectQuery?",
+    "answer": "Import Mode loads data into Power BI's in-memory engine, offering fast performance but requiring data refreshes. DirectQuery maintains a live connection to the data source, providing real-time data access but with potentially slower performance.",
+    "related_video_link": "https://www.youtube.com/watch?v=example43",
+    "category": "Data Connectivity"
+  },
+  {
+    "serial_no": 44,
+    "question": "What is a composite model in Power BI?",
+    "answer": "A composite model allows combining data from both imported and DirectQuery sources in a single report, providing flexibility in data modeling and performance optimization.",
+    "related_video_link": "https://www.youtube.com/watch?v=example44",
+    "category": "Data Modeling"
+  },
+  {
+    "serial_no": 45,
+    "question": "Explain the difference between ALL(), ALLEXCEPT(), and ALLSELECTED() in DAX.",
+    "answer": "ALL() removes all filters from a table or column, ALLEXCEPT() removes all filters except those specified, and ALLSELECTED() removes filters applied by slicers or visuals but retains other filters.",
+    "related_video_link": "https://www.youtube.com/watch?v=example45",
+    "category": "DAX Functions"
+  },
+  {
+    "serial_no": 46,
+    "question": "How do you optimize performance in a slow Power BI report?",
+    "answer": "Optimizing performance involves reducing the number of visuals per page, using Import mode where possible, avoiding complex DAX in visuals, using variables in DAX, disabling unnecessary interactions, and using query folding in Power Query.",
+    "related_video_link": "https://www.youtube.com/watch?v=example46",
+    "category": "Performance Optimization"
+  },
+  {
+    "serial_no": 47,
+    "question": "What is query folding and why does it matter?",
+    "answer": "Query folding refers to Power BI pushing transformation steps back to the data source, improving performance by reducing the amount of data transferred and processed in Power BI.",
+    "related_video_link": "https://www.youtube.com/watch?v=example47",
+    "category": "Data Transformation"
+  },
+  {
+    "serial_no": 48,
+    "question": "What’s the difference between calculated columns, calculated tables, and measures?",
+    "answer": "Calculated columns are computed during data refresh and stored in the model, calculated tables are entire tables created using DAX expressions, and measures are calculations performed on the fly based on the current filter context.",
+    "related_video_link": "https://www.youtube.com/watch?v=example48",
+    "category": "DAX Concepts"
+  },
+  {
+    "serial_no": 49,
+    "question": "How do you use RANKX() in Power BI?",
+    "answer": "RANKX() is used to rank rows based on a measure, allowing for dynamic ranking in reports. It can be used with ALL() to remove filters or with specific columns to rank within groups.",
+    "related_video_link": "https://www.youtube.com/watch?v=example49",
+    "category": "DAX Functions"
+  },
+  {
+    "serial_no": 50,
+    "question": "How do you implement time intelligence in Power BI?",
+    "answer": "Time intelligence in Power BI is implemented using DAX functions like DATESYTD(), TOTALYTD(), SAMEPERIODLASTYEAR(), and DATEADD(), along with a properly configured date table.",
+    "related_video_link": "https://www.youtube.com/watch?v=example50",
+    "category": "Time Intelligence"
+  },
+  {
+    "serial_no": 51,
+    "question": "How do incremental refresh policies work?",
+    "answer": "Incremental refresh policies in Power BI allow for refreshing only new or modified data, rather than the entire dataset, improving refresh times and resource usage.",
+    "related_video_link": "https://www.youtube.com/watch?v=example51",
+    "category": "Data Refresh"
+  },
+  {
+    "serial_no": 52,
+    "question": "Can you explain the difference between cross filter direction: single vs both?",
+    "answer": "Single cross filter direction means filters flow from one table to another, while both allows filters to flow in both directions, useful in scenarios like many-to-many relationships.",
+    "related_video_link": "https://www.youtube.com/watch?v=example52",
+    "category": "Data Modeling"
+  },
+  {
+    "serial_no": 53,
+    "question": "When would you use a disconnected table in Power BI?",
+    "answer": "Disconnected tables are used when you want to create custom slicers, perform What-If analysis, or create selections that don’t filter visuals directly but affect measures via DAX.",
+    "related_video_link": "https://www.youtube.com/watch?v=example53",
+    "category": "Data Modeling"
+  },
+  {
+    "serial_no": 54,
+    "question": "How do you handle circular dependencies in DAX?",
+    "answer": "Circular dependencies occur when columns or measures reference each other in a loop. They can be avoided by restructuring the logic, using variables, or separating logic into multiple measures.",
+    "related_video_link": "https://www.youtube.com/watch?v=example54",
+    "category": "DAX Troubleshooting"
+  },
+  {
+    "serial_no": 55,
+    "question": "What’s the difference between Power BI Service and Report Server?",
+    "answer": "Power BI Service is a cloud-based platform for sharing and collaborating on reports, while Power BI Report Server is an on-premises solution for organizations that require their reports and data to be hosted within their own firewall.",
+    "related_video_link": "https://www.youtube.com/watch?v=example55",
+    "category": "Deployment"
+  },
+  {
+    "serial_no": 56,
+    "question": "What are aggregations in Power BI and why are they useful?",
+    "answer": "Aggregations are pre-summarized tables that allow Power BI to answer queries faster by avoiding detailed-level calculations, especially useful for large datasets.",
+    "related_video_link": "https://www.youtube.com/watch?v=example56",
+    "category": "Performance Optimization"
+  },
+  {
+    "serial_no": 57,
+    "question": "How do you handle slowly changing dimensions (SCD) in Power BI?",
+    "answer": "SCDs can be handled by using EffectiveDate, EndDate, and CurrentFlag in your data model to track historical changes.",
+    "related_video_link": "https://www.youtube.com/watch?v=example57",
+    "category": "Data Modeling"
+  },
+  {
+    "serial_no": 58,
+    "question": "How do you create What-If parameters in Power BI?",
+    "answer": "What-If parameters can be created by going to Modeling → New Parameter → What-If Parameter, which creates a disconnected table and an automatic slicer.",
+    "related_video_link": "https://www.youtube.com/watch?v=example58",
+    "category": "Data Modeling"
+  },
+  {
+    "serial_no": 59,
+    "question": "What is the difference between USERNAME() and USERPRINCIPALNAME()?",
+    "answer": "USERNAME() returns DOMAIN\\username (desktop/local usage), while USERPRINCIPALNAME() returns user@domain.com (email format), useful for dynamic RLS in Power BI Service.",
+    "related_video_link": "https://www.youtube.com/watch?v=example59",
+    "category": "Security"
+  },
+  {
+    "serial_no": 60,
+    "question": "How do you handle ambiguous relationships in Power BI?",
+    "answer": "Ambiguous relationships can be handled by using a bridge table with unique keys, preferring single-direction filters, and avoiding 'autodetect relationships' by manually validating the model diagram.",
+    "related_video_link": "https://www.youtube.com/watch?v=example60",
+    "category": "Data Modeling"
+  },
+  {
+    "serial_no": 61,
+    "question": "How do you use bookmarks in Power BI?",
+    "answer": "Bookmarks capture the current state of a report, including filters, visual visibility, and slicers, and can be used to build interactive storytelling, enable toggle views, and create custom navigation.",
+    "related_video_link": "https://www.youtube.com/watch?v=example61",
+    "category": "User Interface"
+  },
+  {
+    "serial_no": 62,
+    "question": "What are deployment pipelines in Power BI?",
+    "answer": "Deployment Pipelines enable version-controlled movement of reports through development, test, and production stages, allowing for comparing versions before promotion and automating content delivery.",
+    "related_video_link": "https://www.youtube.com/watch?v=example62",
+    "category": "Deployment"
+  },
+  {
+    "serial_no": 63,
+    "question": "Scenario-Based: Show sales trend for the last 3 years, excluding the current incomplete month.",
+    "answer": "Use the DAX expression: Sales_L3Y_CompleteMonths = CALCULATE([Total Sales], DATESINPERIOD('Date'[Date], EOMONTH(TODAY(), -1), -36, MONTH))",
+    "related_video_link": "https://www.youtube.com/watch?v=example63",
+    "category": "Scenario-Based"
+  },
+  {
+    "serial_no": 64,
+    "question": "How do you handle time zones in Power BI?",
+    "answer": "Time zones can be handled by converting timestamps to a common time zone using DAX",
+    "related_video_link": "https://www.youtube.com/watch?v=example64",
+    "category": "Data Transformation"
+  }
+]

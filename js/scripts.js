@@ -158,6 +158,12 @@ function renderTabContent(tab, idx) {
     return window.renderBiProjectsTab(tab);
   if (tab.name === "Interview" && window.renderInterviewTopicsTab)
     return window.renderInterviewTopicsTab(tab);
+  if (tab.name === "1st_100" && window.render1st100Tab) {
+    if (typeof window.render1st100Tab === "function") {
+      window.render1st100Tab();
+    }
+    return `<div id="1st_100-content" class="p-4"></div>`;
+  }
   if (tab.name === "E2EAnalytics" && window.renderE2EAnalyticsTab)
     return window.renderE2EAnalyticsTab(tab);
   if (tab.name === "DataWarehouse" && window.renderDataWarehouseTab)
