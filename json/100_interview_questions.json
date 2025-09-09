@@ -10,77 +10,77 @@
     "serial_no": 1,
     "question": "What is Power BI?",
     "answer": "Power BI is a unified, scalable, self-service enterprise business intelligence and analytics platform by Microsoft for transforming data into meaningful insights.",
-    "related_video_link": "https://www.youtube.com/watch?v=Wfr1Wh5SxwM&t=570s",
+    "related_video_link": "https://youtu.be/lQhhkjqIdQg",
     "category": "Platform Overview"
   },
   {
     "serial_no": 2,
     "question": "What are the components/elements/parts of Power BI?",
     "answer": "Power BI Desktop, Power BI Service, Power BI Mobile apps, Power BI Report Builder, Power BI Report Server, Power BI Embedded.",
-    "related_video_link": "https://www.youtube.com/watch?v=Wfr1Wh5SxwM&t=640s",
+    "related_video_link": "https://youtu.be/6O4chvRXWDc",
     "category": "Platform Architecture"
   },
   {
     "serial_no": 3,
     "question": "What is Power BI Desktop?",
     "answer": "A free desktop application to connect, transform, model data, build interactive reports, and publish to the Power BI Service.",
-    "related_video_link": null,
+    "related_video_link": "https://youtu.be/evTiRy4U8Ow",
     "category": "Tooling"
   },
   {
     "serial_no": 4,
     "question": "Why do we need Power BI Desktop?",
     "answer": "Needed for multi-source data connectivity, data modeling, report creation, and publishing to the Power BI Service.",
-    "related_video_link": null,
+    "related_video_link": "https://youtu.be/sd9VlW0SQKw",
     "category": "Tooling"
   },
   {
     "serial_no": 5,
     "question": "What is Power Query?",
     "answer": "A GUI-driven data extraction and transformation tool integrated across Power BI, Excel, etc., with capabilities like filtering, merging, pivoting without code.",
-    "related_video_link": null,
+    "related_video_link": "https://youtu.be/N2hsqP1IS9U",
     "category": "Data Preparation"
   },
   {
     "serial_no": 6,
     "question": "What is DAX?",
     "answer": "Data Analysis Expressions – a formula language in Power BI for calculations, measures, and data analysis.",
-    "related_video_link": null,
+    "related_video_link": "https://youtu.be/jqePwg75UV8",
     "category": "Formula Language"
   },
   {
     "serial_no": 7,
     "question": "Difference between Calculated Column and Measure?",
     "answer": "Calculated Column: performs row-level static calculation; Measure: dynamic aggregation sensitive to filters/slicers.",
-    "related_video_link": null,
+    "related_video_link": "https://youtu.be/JoHxzC0JHMU",
     "category": "DAX Basics"
   },
   {
     "serial_no": 8,
     "question": "Difference between Import, DirectQuery, and Live mode?",
     "answer": "Import: Data imported into model, refreshed periodically. DirectQuery: Queries live data on interaction. Live: Live connection to Power BI datasets or SSAS; always up-to-date.",
-    "related_video_link": null,
+    "related_video_link": "https://youtu.be/934Wei0A4GU",
     "category": "Data Connectivity"
   },
   {
     "serial_no": 9,
     "question": "What are the different types of visuals used in Power BI?",
-    "answer": "Includes bar, line, pie, area, scatter, treemap, gauge, maps, table, matrix, card, funnel, KPI, decomposition tree, key influencers, Q&A visuals.",
-    "related_video_link": null,
+    "answer": "Manual multi-column sort is primarily supported on table visuals. You can do that using Shift + Click on the column headers. Includes bar, line, pie, area, scatter, treemap, gauge, maps, table, matrix, card, funnel, KPI, decomposition tree, key influencers, Q&A visuals.",
+    "related_video_link": "https://youtu.be/gzHvS7wq4jA",
     "category": "Visualization"
   },
   {
     "serial_no": 10,
     "question": "How to do a multi-column sort on a visual in Power BI?",
-    "answer": "Shift + Click on column headers in a table visual.",
-    "related_video_link": null,
+    "answer": "To perform multi-column sort in Power BI: 1) Select the visual (table/matrix), 2) Go to the 'Column tools' tab, 3) Click 'Sort by column', 4) Select primary column and sort direction, 5) For additional columns, hold Shift + Click on column headers in the visual itself, or 6) Use the Sort menu in Format pane > Sort icon > Advanced sorting.",
+    "related_video_link": "https://youtu.be/UTlobzOrQFU",
     "category": "Visualization Interaction"
   },
   {
     "serial_no": 11,
     "question": "What is conditional formatting in Power BI?",
     "answer": "Highlight data in visuals based on criteria, using color (font/background), icons, data bars, or web URL links.",
-    "related_video_link": null,
+    "related_video_link": "https://youtu.be/JmodMtyKBVo",
     "category": "Visualization Formatting"
   },
   {
