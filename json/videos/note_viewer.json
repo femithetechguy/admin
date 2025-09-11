@@ -275,6 +275,12 @@
       "topic": "Visualization and Reporting Techniques",
       "category": "VISUALIZATION & REPORTING",
       "markdownPath": "markdown/visualization_reporting.md"
+    },
+    {
+      "serialNo": 47,
+      "topic": "Data Pipeline Architecture",
+      "category": "DATA WAREHOUSING & INTEGRATION",
+      "markdownPath": "markdown/data_pipeline.md"
     }
   ]
 }
