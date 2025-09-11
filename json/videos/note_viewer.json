@@ -323,6 +323,18 @@
       "topic": "API Data Integration",
       "category": "DATA WAREHOUSING & INTEGRATION",
       "markdownPath": "markdown/api_data_integration.md"
+    },
+    {
+      "serialNo": 55,
+      "topic": "Data Transformation Tools",
+      "category": "DATA WAREHOUSING & INTEGRATION",
+      "markdownPath": "markdown/data_transformation_tools.md"
+    },
+    {
+      "serialNo": 56,
+      "topic": "Dashboard Creation for Large Datasets",
+      "category": "VISUALIZATION & REPORTING",
+      "markdownPath": "markdown/dashboard_creation_large_dataset.md"
     }
   ]
 }
