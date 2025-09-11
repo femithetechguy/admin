@@ -32,6 +32,58 @@
       ]
     },
     {
+      "serial_no": 101,
+      "question": "Quick Pitch - CFO & S&OP",
+      "answer": "I'm a business intelligence professional with a track record of building data solutions that directly support key processes like S&OP. My focus goes beyond dashboards — I help leadership make better decisions by integrating data across sales, operations, and finance into a single, trusted source of truth.\n\nAt Hiscox Insurance, for example, I built insights into cost-to-claim ratios that uncovered variances and enabled a $750K premium adjustment, improving profitability. That kind of impact came from connecting data silos and giving executives clear, actionable visibility.\n\nWith my expertise in Microsoft Fabric and scalable BI solutions, I can help streamline your S&OP cycle by unifying demand forecasts and supply chain data into one transparent view. This allows teams to move from reactive reporting to proactive planning — ultimately improving efficiency, profitability, and confidence in decision-making.\n\nI'd be excited to bring that same value here, aligning BI with your strategic goals and helping your teams drive growth.",
+      "category": "Executive",
+      "skills": [
+        "S&OP",
+        "Financial Analytics",
+        "Microsoft Fabric",
+        "Business Intelligence",
+        "Demand Forecasting",
+        "Supply Chain Analytics",
+        "Data Integration",
+        "Executive Reporting"
+      ]
+    },
+    {
+      "serial_no": 102,
+      "question": "Longer Pitch - CFO & S&OP",
+      "answer": "I am a business intelligence professional with extensive experience in creating data solutions that directly support key business processes like S&OP. My background allows me to go beyond building dashboards and focus on helping a company's leadership make better decisions. My expertise in the Microsoft Fabric platform enables me to build an integrated data environment that can unify demand forecasts from sales with supply chain data, allowing for a single, transparent view across the organization.\n\nIn my previous roles, I have consistently partnered with cross-functional teams to integrate disparate data sources—including sales, operations, and finance—into a single, reliable data model. This work has been critical in providing executive teams with the accurate, real-time insights needed for strategic decision-making. For example, at Hiscox Insurance, I helped investigate cost-to-claim ratio variances, directly contributing to a $750K premium adjustment, which helped improve profitability. This wasn't just about a report; it was about providing the numbers that enabled a key business decision.\n\nI also have a strong track record of optimizing resources by automating manual processes and creating proactive data monitoring systems to ensure reliability. I can help streamline your S&OP cycle by building a unified data foundation that provides a single source of truth, breaking down the departmental silos you mentioned. This will empower your teams to move from reactive reporting to proactive planning, ultimately leading to more efficient operations and more informed, profitable business decisions.\n\nI am confident that my experience in creating scalable BI solutions and my understanding of the strategic importance of aligning supply and demand make me a strong candidate to support your team's goals and help drive business growth.",
+      "category": "Executive",
+      "skills": [
+        "S&OP",
+        "Financial Analytics",
+        "Microsoft Fabric",
+        "Business Intelligence",
+        "Demand Forecasting",
+        "Supply Chain Analytics",
+        "Data Integration",
+        "Executive Reporting",
+        "Cross-Functional Collaboration",
+        "Data Modeling",
+        "Process Automation",
+        "Strategic Planning"
+      ]
+    },
+    {
+      "serial_no": 103,
+      "question": "Data Analyst VS Business Intelligence Analyst",
+      "answer": "While the terms Data Analyst and Business Intelligence (BI) Analyst are often used interchangeably, they typically represent different roles with unique focuses. A Data Analyst is a data detective focused on the \"what\" and \"why,\" while a BI Analyst is focused on the \"so what\" and \"what's next.\" Data Analysts are more technical, using tools like Python, R, and SQL to investigate data, find trends, and answer questions about past performance. BI Analysts are business strategists who bridge raw data and stakeholders, using tools like Power BI or Tableau to build user-friendly dashboards and visualizations that make data accessible for executives. They provide real-time visibility into KPIs, enabling proactive decision-making and strategic planning. My experience creating dashboards, reports, and implementing governance aligns perfectly with the BI Analyst role, where I've focused on providing actionable insights that drive business decisions rather than just uncovering what happened.",
+      "category": "Career Knowledge",
+      "skills": [
+        "Business Intelligence",
+        "Data Analysis",
+        "Power BI",
+        "Tableau",
+        "SQL",
+        "Dashboard Design",
+        "KPI Development",
+        "Strategic Planning"
+      ]
+    },
+    {
       "serial_no": 2,
       "question": "Tell me about yourself - 1 Minute Pitch (STAR Method)",
       "description": "One-minute general pitch",
@@ -407,6 +459,22 @@
         "Data Transformation",
         "SQL",
         "Cross-Source Analysis"
+      ]
+    },
+    {
+      "serial_no": 27,
+      "question": "Describe your experience with S&OP (Sales and Operations Planning) reporting and how you've used data to enhance this process.",
+      "answer": "S: At Costco, the merchandising department struggled with siloed S&OP processes where sales forecasts, inventory data, and production capacity information existed in separate systems, leading to misaligned plans and inventory inefficiencies. T: I was tasked with developing an integrated S&OP dashboard that would bring together cross-functional data to improve forecast accuracy and inventory optimization. A: I designed a comprehensive Power BI solution that integrated data from multiple sources - sales systems, ERP for inventory levels, production capacity data, and financial targets. I implemented DAX measures to calculate key performance indicators like forecast accuracy, inventory turns, and demand-supply gaps. I also created interactive visualizations with drill-down capabilities that allowed stakeholders to examine data at various levels of granularity. The dashboard included scenario planning features to model different demand and supply situations. R: The integrated S&OP dashboard transformed their planning process, leading to a 15% improvement in forecast accuracy, 20% reduction in excess inventory, and significantly enhanced cross-departmental communication. Executive leadership gained a unified view of operations, enabling more informed strategic decisions during monthly S&OP meetings. The solution became the central tool for their S&OP process, facilitating more collaborative and data-driven planning across sales, marketing, operations, and finance teams.",
+      "category": "Business Planning",
+      "skills": [
+        "Power BI",
+        "Data Integration",
+        "S&OP Reporting",
+        "Forecasting",
+        "Supply Chain Analytics",
+        "Cross-Functional Collaboration",
+        "KPI Development",
+        "Scenario Planning"
       ]
     }
   ]

@@ -275,6 +275,54 @@
       "topic": "Visualization and Reporting Techniques",
       "category": "VISUALIZATION & REPORTING",
       "markdownPath": "markdown/visualization_reporting.md"
+    },
+    {
+      "serialNo": 47,
+      "topic": "Data Pipeline Architecture",
+      "category": "DATA WAREHOUSING & INTEGRATION",
+      "markdownPath": "markdown/data_pipeline.md"
+    },
+    {
+      "serialNo": 48,
+      "topic": "Data Analyst vs Business Intelligence Analyst",
+      "category": "CAREER DEVELOPMENT",
+      "markdownPath": "markdown/data_analyst_vs_business_intelligence_analyst.md"
+    },
+    {
+      "serialNo": 49,
+      "topic": "Qualities of a Great Analyst",
+      "category": "CAREER DEVELOPMENT",
+      "markdownPath": "markdown/great_analyst.md"
+    },
+    {
+      "serialNo": 50,
+      "topic": "Quick Recruiter Reference Guide - Part 1",
+      "category": "CAREER DEVELOPMENT",
+      "markdownPath": "markdown/quick_recruiter_reference_1.md"
+    },
+    {
+      "serialNo": 51,
+      "topic": "Quick Recruiter Reference Guide - Part 2",
+      "category": "CAREER DEVELOPMENT",
+      "markdownPath": "markdown/quick_recruiter_reference_2.md"
+    },
+    {
+      "serialNo": 52,
+      "topic": "Quick Recruiter Reference Guide - Part 3",
+      "category": "CAREER DEVELOPMENT",
+      "markdownPath": "markdown/quick_recruiter_reference_3.md"
+    },
+    {
+      "serialNo": 53,
+      "topic": "Quick Recruiter Reference Guide - Part 4",
+      "category": "CAREER DEVELOPMENT",
+      "markdownPath": "markdown/quick_recruiter_reference_4.md"
+    },
+    {
+      "serialNo": 54,
+      "topic": "API Data Integration",
+      "category": "DATA WAREHOUSING & INTEGRATION",
+      "markdownPath": "markdown/api_data_integration.md"
     }
   ]
 }
