@@ -359,6 +359,30 @@
       "topic": "Cost to Claim Ratio Insight",
       "category": "DATA WAREHOUSING & INTEGRATION",
       "markdownPath": "markdown/cost_to_claim_ratio_insight.md"
+    },
+    {
+      "serialNo": 61,
+      "topic": "Costco CFO and SOP",
+      "category": "CAREER DEVELOPMENT",
+      "markdownPath": "markdown/costco_cfo_and_sop.md"
+    },
+    {
+      "serialNo": 62,
+      "topic": "Hiscox CFO and SOP",
+      "category": "CAREER DEVELOPMENT",
+      "markdownPath": "markdown/hiscox_cfo_and_sop.md"
+    },
+    {
+      "serialNo": 63,
+      "topic": "Northside CFO and SOP",
+      "category": "CAREER DEVELOPMENT",
+      "markdownPath": "markdown/northside_cfo_and_sop.md"
+    },
+    {
+      "serialNo": 64,
+      "topic": "Manhattan CFO and SOP",
+      "category": "CAREER DEVELOPMENT",
+      "markdownPath": "markdown/manhattan_cfo_and_sop.md"
     }
   ]
 }
