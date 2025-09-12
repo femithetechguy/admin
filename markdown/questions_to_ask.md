@@ -35,6 +35,22 @@ These questions are designed to get a sense of their technical stack, data matur
 
 ---
 
+## Understanding the Data Landscape
+
+By asking about the "landscape of data," you're not just asking about a single dataset; you're inquiring about the entire ecosystem:
+
+**Data Sources:** Where does the data originate? Is it from ERP systems, CRM, external market data, or spreadsheets?
+
+**Data Quality:** How clean, accurate, and reliable is the data? This is a huge pain point for many companies, and showing you care about it signals your professionalism.
+
+**Data Readiness:** How much effort is required to prepare the data for analysis? Do analysts spend most of their time cleaning data, or is there a well-established process that makes data readily available?
+
+**Technical Infrastructure:** You can also subtly touch on the technical side, like whether they have a centralized data warehouse or if data is siloed across different departments.
+
+This question will likely lead to a rich discussion that gives you a clear picture of the company's data maturity, the challenges they face, and the specific problems you'll be tasked with solving. It's a question that sets you apart from someone who just knows the tools and highlights your ability to think strategically about data's role in the business.
+
+---
+
 ## General & Closing Questions
 
 These questions tie everything together and show your long-term vision and commitment.
