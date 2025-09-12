@@ -335,6 +335,12 @@
       "topic": "Dashboard Creation for Large Datasets",
       "category": "VISUALIZATION & REPORTING",
       "markdownPath": "markdown/dashboard_creation_large_dataset.md"
+    },
+    {
+      "serialNo": 57,
+      "topic": "Testing in Power BI",
+      "category": "PLATFORM ADMINISTRATION & GOVERNANCE",
+      "markdownPath": "markdown/testing_in_powerbi.md"
     }
   ]
 }
