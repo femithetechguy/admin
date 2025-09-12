@@ -347,6 +347,12 @@
       "topic": "Types of Business Planning",
       "category": "CAREER DEVELOPMENT",
       "markdownPath": "markdown/types_of_business_plannings.md"
+    },
+    {
+      "serialNo": 59,
+      "topic": "Questions to Ask",
+      "category": "CAREER DEVELOPMENT",
+      "markdownPath": "markdown/questions_to_ask.md"
     }
   ]
 }
