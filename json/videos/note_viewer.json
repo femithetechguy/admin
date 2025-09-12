@@ -353,6 +353,12 @@
       "topic": "Questions to Ask",
       "category": "CAREER DEVELOPMENT",
       "markdownPath": "markdown/questions_to_ask.md"
+    },
+    {
+      "serialNo": 60,
+      "topic": "Cost to Claim Ratio Insight",
+      "category": "DATA WAREHOUSING & INTEGRATION",
+      "markdownPath": "markdown/cost_to_claim_ratio_insight.md"
     }
   ]
 }
