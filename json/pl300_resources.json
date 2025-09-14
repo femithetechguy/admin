@@ -3,6 +3,18 @@
   "lastUpdated": "2025-09-14",
   "resources": [
     {
+      "id": "official-study-guide",
+      "title": "Official Microsoft PL-300 Study Guide",
+      "description": "Comprehensive official study guide from Microsoft Learn covering all exam domains, skills measured, and preparation resources. Updated as of April 2025 with current exam objectives and requirements.",
+      "type": "Study Guide",
+      "category": "study-guide",
+      "difficulty": "intermediate",
+      "duration": "Self-paced",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/pl-300",
+      "videoId": "",
+      "tags": ["Official", "Microsoft", "Comprehensive", "Current", "Exam Domains"]
+    },
+    {
       "id": "ms-learn-path",
       "title": "Microsoft Learn - Data Analyst Path",
       "description": "Official Microsoft learning path for PL-300 certification covering all exam domains with hands-on exercises.",
