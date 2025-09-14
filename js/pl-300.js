@@ -101,6 +101,14 @@ function renderPL300Tab(tab) {
                 </h3>
                 <!-- Exam domains content will be loaded here -->
             </div>
+            
+            <!-- Video popup for desktop -->
+            <div id="video-iframe-popup" class="video-iframe-popup" style="display: none;">
+                <div class="video-popup-inner">
+                    <button onclick="window.closeVideoIframePopup()" class="video-popup-close">&times;</button>
+                    <div id="video-iframe-container"></div>
+                </div>
+            </div>
         </div>
     `;
     
@@ -111,6 +119,84 @@ function renderPL300Tab(tab) {
     
     return html;
 }
+
+// Track the currently open video (for both mobile and desktop)
+window._currentVideo = window._currentVideo || {
+  type: null, // 'mobile' or 'desktop'
+  element: null, // iframeDiv for mobile, container for desktop
+  button: null // button element for mobile
+};
+
+window.showVideoIframe = window.showVideoIframe || function(youtubeId, btn) {
+  // Helper to close any open video
+  function closeCurrentVideo() {
+    if (window._currentVideo.type === 'mobile' && window._currentVideo.element && window._currentVideo.button) {
+      window._currentVideo.element.innerHTML = '';
+      window._currentVideo.element.style.display = 'none';
+      window._currentVideo.button.textContent = 'Watch';
+    } else if (window._currentVideo.type === 'desktop' && window._currentVideo.element) {
+      window._currentVideo.element.innerHTML = '';
+      const popup = document.getElementById('video-iframe-popup');
+      if (popup) popup.style.display = 'none';
+    }
+    window._currentVideo = { type: null, element: null, button: null };
+  }
+  
+  // Close any open note popups
+  const notePopup = document.getElementById('note-popup');
+  if (notePopup && notePopup.style.display !== 'none') {
+    window.closeNotePopup && window.closeNotePopup();
+  }
+
+  if (window.innerWidth <= 768) {
+    // Mobile: inline card
+    const card = btn.closest('.bg-white');
+    const iframeDiv = card.querySelector('.video-iframe');
+    const isOpening = iframeDiv.style.display === 'none' || !iframeDiv.style.display;
+    // If opening a new video, close any previous
+    if (isOpening) {
+      closeCurrentVideo();
+      iframeDiv.innerHTML = `<iframe width="100%" height="200" src="https://www.youtube.com/embed/${youtubeId}" frameborder="0" allowfullscreen></iframe>`;
+      iframeDiv.style.display = 'block';
+      btn.textContent = 'Hide';
+      window._currentVideo = { type: 'mobile', element: iframeDiv, button: btn };
+    } else {
+      // Closing current video
+      iframeDiv.innerHTML = '';
+      iframeDiv.style.display = 'none';
+      btn.textContent = 'Watch';
+      window._currentVideo = { type: null, element: null, button: null };
+    }
+  } else {
+    // Desktop: popup
+    // If a video is already open, close it
+    closeCurrentVideo();
+    
+    const popup = document.getElementById('video-iframe-popup');
+    if (popup) {
+      const container = document.getElementById('video-iframe-container');
+      if (container) {
+        container.innerHTML = `<iframe width="800" height="450" src="https://www.youtube.com/embed/${youtubeId}" frameborder="0" allowfullscreen></iframe>`;
+        popup.style.display = 'flex';
+        window._currentVideo = { type: 'desktop', element: container, button: null };
+      } else {
+        console.error('Could not find video popup elements');
+      }
+    }
+  }
+};
+
+window.closeVideoIframePopup = window.closeVideoIframePopup || function() {
+  const popup = document.getElementById('video-iframe-popup');
+  if (popup) {
+    popup.style.display = 'none';
+    const container = document.getElementById('video-iframe-container');
+    if (container) {
+      container.innerHTML = '';
+    }
+  }
+  window._currentVideo = { type: null, element: null, button: null };
+};
 
 async function loadPL300Content() {
     try {
@@ -214,7 +300,7 @@ function renderResourceCards(resources) {
                 ` : '<span class="text-gray-400">Coming Soon</span>'}
                 
                 ${resource.videoId ? `
-                    <button onclick="showPL300Video('${resource.videoId}', '${escapeHtml(resource.title)}')" 
+                    <button onclick="window.showVideoIframe('${resource.videoId}', this)" 
                             class="inline-flex items-center px-3 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors">
                         <i class="bi bi-play-circle mr-2"></i>
                         Watch
@@ -227,6 +313,9 @@ function renderResourceCards(resources) {
                     ${resource.tags.map(tag => `<span class="px-2 py-1 bg-gray-100 text-xs rounded-full">${escapeHtml(tag)}</span>`).join('')}
                 </div>
             ` : ''}
+            
+            <!-- Video iframe for mobile -->
+            <div class="video-iframe mt-3" style="display: none;"></div>
         </div>
     `).join('');
 }
@@ -322,16 +411,6 @@ function filterPL300Resources() {
             card.style.display = 'none';
         }
     });
-}
-
-function showPL300Video(videoId, title) {
-    // Reuse the video popup functionality from other tabs
-    if (typeof showVideoPopup === 'function') {
-        showVideoPopup(videoId, title);
-    } else {
-        // Fallback: open in new tab
-        window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
-    }
 }
 
 function getResourceIcon(type) {
