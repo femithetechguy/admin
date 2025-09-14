@@ -1,0 +1,288 @@
+{
+  "description": "Comprehensive resources for Microsoft PL-300: Power BI Data Analyst certification preparation",
+  "lastUpdated": "2025-09-14",
+  "resources": [
+    {
+      "id": "ms-learn-path",
+      "title": "Microsoft Learn - Data Analyst Path",
+      "description": "Official Microsoft learning path for PL-300 certification covering all exam domains with hands-on exercises.",
+      "type": "Study Guide",
+      "category": "study-guide",
+      "difficulty": "beginner",
+      "duration": "40+ hours",
+      "url": "https://docs.microsoft.com/learn/certifications/exams/pl-300",
+      "videoId": "",
+      "tags": ["Official", "Free", "Interactive", "Comprehensive"]
+    },
+    {
+      "id": "power-bi-desktop",
+      "title": "Power BI Desktop Documentation",
+      "description": "Complete documentation for Power BI Desktop features, data modeling, and visualization best practices.",
+      "type": "Documentation",
+      "category": "documentation",
+      "difficulty": "intermediate",
+      "url": "https://docs.microsoft.com/power-bi/desktop-what-is-desktop",
+      "videoId": "",
+      "tags": ["Official", "Reference", "Desktop"]
+    },
+    {
+      "id": "dax-fundamentals",
+      "title": "DAX Fundamentals Video Series",
+      "description": "Learn Data Analysis Expressions (DAX) from basics to advanced concepts with practical examples.",
+      "type": "Video Tutorial",
+      "category": "video",
+      "difficulty": "intermediate",
+      "duration": "6 hours",
+      "videoId": "klQAZLr5vxA",
+      "tags": ["DAX", "Calculations", "Measures"]
+    },
+    {
+      "id": "power-query-mastery",
+      "title": "Power Query M Language Guide",
+      "description": "Master data transformation using Power Query M language for efficient data preparation.",
+      "type": "Study Guide",
+      "category": "study-guide",
+      "difficulty": "advanced",
+      "duration": "4 hours",
+      "videoId": "",
+      "tags": ["Power Query", "M Language", "Data Transformation"]
+    },
+    {
+      "id": "practice-exam-1",
+      "title": "PL-300 Practice Test - Set 1",
+      "description": "100 practice questions covering all PL-300 exam domains with detailed explanations.",
+      "type": "Practice Test",
+      "category": "practice-test",
+      "difficulty": "intermediate",
+      "duration": "2 hours",
+      "videoId": "",
+      "tags": ["Practice", "Mock Exam", "Assessment"]
+    },
+    {
+      "id": "data-modeling-best-practices",
+      "title": "Power BI Data Modeling Best Practices",
+      "description": "Learn optimal data modeling techniques, star schema design, and performance optimization.",
+      "type": "Video Tutorial",
+      "category": "video",
+      "difficulty": "intermediate",
+      "duration": "3 hours",
+      "videoId": "6_nFFF3qQsQ",
+      "tags": ["Data Modeling", "Star Schema", "Performance"]
+    },
+    {
+      "id": "row-level-security",
+      "title": "Implementing Row-Level Security",
+      "description": "Comprehensive guide to implementing and managing row-level security in Power BI.",
+      "type": "Hands-on Lab",
+      "category": "hands-on",
+      "difficulty": "advanced",
+      "duration": "2 hours",
+      "videoId": "",
+      "tags": ["Security", "RLS", "Administration"]
+    },
+    {
+      "id": "power-bi-service",
+      "title": "Power BI Service Administration",
+      "description": "Learn workspace management, sharing, security, and governance in Power BI Service.",
+      "type": "Study Guide",
+      "category": "study-guide",
+      "difficulty": "intermediate",
+      "duration": "5 hours",
+      "videoId": "",
+      "tags": ["Power BI Service", "Administration", "Governance"]
+    },
+    {
+      "id": "advanced-visualizations",
+      "title": "Advanced Power BI Visualizations",
+      "description": "Create compelling dashboards and reports with advanced visualization techniques and custom visuals.",
+      "type": "Video Tutorial",
+      "category": "video",
+      "difficulty": "intermediate",
+      "duration": "4 hours",
+      "videoId": "7Zn0tPM0OEY",
+      "tags": ["Visualizations", "Dashboard", "Custom Visuals"]
+    },
+    {
+      "id": "performance-optimization",
+      "title": "Power BI Performance Optimization",
+      "description": "Techniques for optimizing Power BI reports and datasets for better performance and user experience.",
+      "type": "Documentation",
+      "category": "documentation",
+      "difficulty": "advanced",
+      "duration": "3 hours",
+      "videoId": "",
+      "tags": ["Performance", "Optimization", "Best Practices"]
+    },
+    {
+      "id": "exam-prep-bootcamp",
+      "title": "PL-300 Exam Preparation Bootcamp",
+      "description": "Intensive exam preparation covering all domains with practice questions and exam strategies.",
+      "type": "Exam Prep",
+      "category": "study-guide",
+      "difficulty": "intermediate",
+      "duration": "8 hours",
+      "videoId": "1SiylvWqtqQ",
+      "tags": ["Exam Prep", "Bootcamp", "Strategy"]
+    },
+    {
+      "id": "power-platform-integration",
+      "title": "Power Platform Integration",
+      "description": "Learn how Power BI integrates with other Microsoft Power Platform services like Power Apps and Power Automate.",
+      "type": "Study Guide",
+      "category": "study-guide",
+      "difficulty": "intermediate",
+      "duration": "3 hours",
+      "videoId": "",
+      "tags": ["Power Platform", "Integration", "Ecosystem"]
+    }
+  ],
+  "studyPlan": [
+    {
+      "topic": "Power BI Fundamentals",
+      "tasks": [
+        "Complete Microsoft Learn modules 1-3",
+        "Install and explore Power BI Desktop",
+        "Create your first simple report",
+        "Understand Power BI ecosystem"
+      ],
+      "timeCommitment": "8-10 hours"
+    },
+    {
+      "topic": "Data Preparation & Modeling",
+      "tasks": [
+        "Learn Power Query basics",
+        "Practice data transformation",
+        "Understand star schema design",
+        "Create relationships between tables"
+      ],
+      "timeCommitment": "10-12 hours"
+    },
+    {
+      "topic": "DAX & Calculations",
+      "tasks": [
+        "Learn DAX fundamentals",
+        "Practice calculated columns vs measures",
+        "Master time intelligence functions",
+        "Create complex calculations"
+      ],
+      "timeCommitment": "12-15 hours"
+    },
+    {
+      "topic": "Visualizations & Reports",
+      "tasks": [
+        "Master different visual types",
+        "Learn dashboard design principles",
+        "Practice creating interactive reports",
+        "Implement report navigation"
+      ],
+      "timeCommitment": "10-12 hours"
+    },
+    {
+      "topic": "Power BI Service & Administration",
+      "tasks": [
+        "Learn workspace management",
+        "Understand sharing and security",
+        "Practice row-level security",
+        "Configure data refresh"
+      ],
+      "timeCommitment": "8-10 hours"
+    },
+    {
+      "topic": "Advanced Topics & Optimization",
+      "tasks": [
+        "Learn performance optimization",
+        "Practice with large datasets",
+        "Understand premium features",
+        "Explore custom visuals"
+      ],
+      "timeCommitment": "10-12 hours"
+    },
+    {
+      "topic": "Practice & Review",
+      "tasks": [
+        "Complete practice exams",
+        "Review weak areas",
+        "Practice hands-on scenarios",
+        "Final exam preparation"
+      ],
+      "timeCommitment": "15-20 hours"
+    },
+    {
+      "topic": "Exam Day Preparation",
+      "tasks": [
+        "Review exam format and structure",
+        "Practice time management",
+        "Final review of key concepts",
+        "Schedule and take exam"
+      ],
+      "timeCommitment": "5-8 hours"
+    }
+  ],
+  "examDomains": [
+    {
+      "name": "Prepare the data",
+      "weight": 25,
+      "description": "Get data from different data sources and optimize the performance of the data model.",
+      "skills": [
+        "Get data from different data sources",
+        "Clean, transform, and load data",
+        "Profile and examine the data",
+        "Configure data loading for datasets"
+      ]
+    },
+    {
+      "name": "Model the data",
+      "weight": 30,
+      "description": "Design and develop a data model, create model calculations using DAX, and optimize model performance.",
+      "skills": [
+        "Design and build a data model",
+        "Create calculated tables, columns, and measures using DAX",
+        "Optimize model performance",
+        "Identify when to use calculated columns versus measures"
+      ]
+    },
+    {
+      "name": "Visualize the data",
+      "weight": 25,
+      "description": "Create reports and dashboards, and enhance reports for usability and storytelling.",
+      "skills": [
+        "Create and format visualizations",
+        "Create and configure dashboards",
+        "Enhance reports for usability",
+        "Apply and perform advanced analytics"
+      ]
+    },
+    {
+      "name": "Analyze the data",
+      "weight": 10,
+      "description": "Apply advanced analytics and configure reports and dashboards for consumption and distribution.",
+      "skills": [
+        "Perform advanced analytics",
+        "Work with AI visuals",
+        "Identify outliers and anomalies",
+        "Create what-if parameters"
+      ]
+    },
+    {
+      "name": "Deploy and maintain deliverables",
+      "weight": 10,
+      "description": "Configure and manage Premium capacity and implement security.",
+      "skills": [
+        "Manage datasets and workspaces",
+        "Configure data refresh",
+        "Create and configure a data gateway",
+        "Implement row-level security"
+      ]
+    }
+  ],
+  "examTips": [
+    "Hands-on experience is crucial - practice building actual reports and dashboards",
+    "Focus on DAX functions and their proper usage contexts",
+    "Understand the difference between Power BI Desktop and Power BI Service features",
+    "Practice data modeling scenarios and star schema design",
+    "Learn when to use different visualization types for different data stories",
+    "Understand security concepts including RLS and sharing permissions",
+    "Be familiar with data refresh and gateway configuration",
+    "Practice troubleshooting common Power BI issues"
+  ]
+}

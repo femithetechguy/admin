@@ -164,6 +164,8 @@ function renderTabContent(tab, idx) {
     }
     return `<div id="1st_100-content" class="p-4"></div>`;
   }
+  if (tab.name === "PL-300" && window.renderPL300Tab)
+    return window.renderPL300Tab(tab);
   if (tab.name === "E2EAnalytics" && window.renderE2EAnalyticsTab)
     return window.renderE2EAnalyticsTab(tab);
   if (tab.name === "DataWarehouse" && window.renderDataWarehouseTab)

@@ -383,6 +383,12 @@
       "topic": "Manhattan CFO and SOP",
       "category": "CAREER DEVELOPMENT",
       "markdownPath": "markdown/manhattan_cfo_and_sop.md"
+    },
+    {
+      "serialNo": 65,
+      "topic": "PL-300 Certification Guide",
+      "category": "CAREER DEVELOPMENT",
+      "markdownPath": "markdown/pl300_certification_guide.md"
     }
   ]
 }

@@ -106,6 +106,14 @@
           ]
         },
         {
+          "name": "PL-300",
+          "biIcon": "bi-trophy",
+          "content": [
+            "Microsoft Power BI Data Analyst (PL-300) certification resources",
+            "Optional: exam prep materials, practice questions, study guides"
+          ]
+        },
+        {
           "name": "E2EAnalytics",
           "biIcon": "bi-bar-chart",
           "content": [
