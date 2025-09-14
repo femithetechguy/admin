@@ -126,6 +126,16 @@
       "author": "Amit Chandak",
       "dateAdded": "July 31, 2025",
       "tags": ["interview", "video", "external", "playlist", "practice"]
+    },
+    {
+      "id": 13,
+      "filename": "microsoft-data-analyst-certification",
+      "type": "url",
+      "description": "Microsoft Certified: Data Analyst Associate Certification",
+      "path": "https://learn.microsoft.com/en-us/credentials/certifications/data-analyst-associate/?practice-assessment-type=certification&source=learn",
+      "author": "Microsoft",
+      "dateAdded": "July 31, 2025",
+      "tags": ["certification", "learning", "external", "Microsoft", "official"]
     }
   ]
 }
