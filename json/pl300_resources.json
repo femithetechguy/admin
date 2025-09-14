@@ -125,6 +125,17 @@
       "tags": ["Exam Prep", "Bootcamp", "Strategy"]
     },
     {
+      "id": "how-i-passed-pl300",
+      "title": "How did I pass Microsoft Power BI Data Analyst - PL-300?",
+      "description": "Personal experience and tips from someone who successfully passed the PL-300 certification exam, including study strategies and key insights.",
+      "type": "Video Tutorial",
+      "category": "video",
+      "difficulty": "intermediate",
+      "duration": "Variable",
+      "videoId": "yW3FhS5sU2w",
+      "tags": ["Exam Experience", "Study Tips", "Personal Journey", "Success Story"]
+    },
+    {
       "id": "power-platform-integration",
       "title": "Power Platform Integration",
       "description": "Learn how Power BI integrates with other Microsoft Power Platform services like Power Apps and Power Automate.",
