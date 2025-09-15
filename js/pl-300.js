@@ -109,6 +109,20 @@ function renderPL300Tab(tab) {
                     <div id="video-iframe-container"></div>
                 </div>
             </div>
+            
+            <!-- Markdown content popup -->
+            <div id="markdown-content-popup" class="video-iframe-popup" style="display: none;">
+                <div class="video-popup-inner max-w-4xl">
+                    <button onclick="window.closeMarkdownPopup()" class="video-popup-close">&times;</button>
+                    <div id="markdown-content-container" class="p-6 max-h-96 overflow-y-auto">
+                        <div id="markdown-loading" class="flex justify-center items-center h-32">
+                            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+                            <span class="ml-3">Loading content...</span>
+                        </div>
+                        <div id="markdown-content-body" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     `;
     
@@ -290,20 +304,30 @@ function renderResourceCards(resources) {
             
             <p class="text-gray-600 mb-4 line-clamp-3">${escapeHtml(resource.description)}</p>
             
-            <div class="flex items-center justify-between">
-                ${resource.url ? `
-                    <a href="${resource.url}" target="_blank" 
-                       class="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
-                        <i class="bi bi-box-arrow-up-right mr-2"></i>
-                        Access Resource
-                    </a>
-                ` : '<span class="text-gray-400">Coming Soon</span>'}
+            <div class="flex items-center justify-between flex-wrap gap-2">
+                <div class="flex items-center space-x-2">
+                    ${resource.url ? `
+                        <a href="${resource.url}" target="_blank" 
+                           class="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+                            <i class="bi bi-box-arrow-up-right mr-2"></i>
+                            Access Resource
+                        </a>
+                    ` : ''}
+                    
+                    ${resource.videoId ? `
+                        <button onclick="window.showVideoIframe('${resource.videoId}', this)" 
+                                class="inline-flex items-center px-3 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors">
+                            <i class="bi bi-play-circle mr-2"></i>
+                            Watch
+                        </button>
+                    ` : ''}
+                </div>
                 
-                ${resource.videoId ? `
-                    <button onclick="window.showVideoIframe('${resource.videoId}', this)" 
-                            class="inline-flex items-center px-3 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors">
-                        <i class="bi bi-play-circle mr-2"></i>
-                        Watch
+                ${resource.markdownPath ? `
+                    <button onclick="window.showMarkdownContent('${resource.markdownPath}', '${escapeHtml(resource.title)}', this)" 
+                            class="inline-flex items-center px-3 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors">
+                        <i class="bi bi-info-circle mr-2"></i>
+                        See More
                     </button>
                 ` : ''}
             </div>
@@ -444,4 +468,105 @@ function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
+}
+
+// Markdown content popup functionality
+window.showMarkdownContent = window.showMarkdownContent || function(markdownPath, title, btn) {
+  console.log('Opening markdown content:', markdownPath);
+  
+  const popup = document.getElementById('markdown-content-popup');
+  const container = document.getElementById('markdown-content-container');
+  const loading = document.getElementById('markdown-loading');
+  const content = document.getElementById('markdown-content-body');
+  
+  if (!popup || !container || !loading || !content) {
+    console.error('Could not find markdown popup elements');
+    return;
+  }
+  
+  // Show popup and loading state
+  popup.style.display = 'flex';
+  loading.style.display = 'flex';
+  content.style.display = 'none';
+  
+  // Fetch the markdown content
+  fetch(markdownPath)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.text();
+    })
+    .then(markdownText => {
+      // Hide loading and show content
+      loading.style.display = 'none';
+      content.style.display = 'block';
+      
+      // Simple markdown to HTML conversion (basic implementation)
+      const htmlContent = convertMarkdownToHTML(markdownText);
+      content.innerHTML = `
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">${escapeHtml(title)}</h2>
+        <div class="prose max-w-none">${htmlContent}</div>
+      `;
+    })
+    .catch(error => {
+      console.error('Error fetching markdown content:', error);
+      loading.style.display = 'none';
+      content.style.display = 'block';
+      content.innerHTML = `
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">${escapeHtml(title)}</h2>
+        <div class="text-center text-gray-500 py-8">
+          <i class="bi bi-exclamation-triangle text-4xl mb-4"></i>
+          <p class="text-lg">Content not available yet</p>
+          <p class="text-sm">This resource's detailed content is coming soon!</p>
+        </div>
+      `;
+    });
+};
+
+window.closeMarkdownPopup = window.closeMarkdownPopup || function() {
+  const popup = document.getElementById('markdown-content-popup');
+  if (popup) {
+    popup.style.display = 'none';
+    const content = document.getElementById('markdown-content-body');
+    if (content) {
+      content.innerHTML = '';
+    }
+  }
+};
+
+// Simple markdown to HTML converter (basic implementation)
+function convertMarkdownToHTML(markdown) {
+  if (!markdown) return '';
+  
+  let html = markdown
+    // Headers
+    .replace(/^### (.*$)/gim, '<h3 class="text-lg font-semibold mt-6 mb-3">$1</h3>')
+    .replace(/^## (.*$)/gim, '<h2 class="text-xl font-semibold mt-8 mb-4">$1</h2>')
+    .replace(/^# (.*$)/gim, '<h1 class="text-2xl font-bold mt-8 mb-6">$1</h1>')
+    // Bold and italic
+    .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold">$1</strong>')
+    .replace(/\*(.*?)\*/g, '<em class="italic">$1</em>')
+    // Links
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" class="text-blue-600 hover:text-blue-800 underline">$1</a>')
+    // Code blocks (simple)
+    .replace(/```([\s\S]*?)```/g, '<pre class="bg-gray-100 p-3 rounded mt-2 mb-2 overflow-x-auto"><code>$1</code></pre>')
+    // Inline code
+    .replace(/`([^`]+)`/g, '<code class="bg-gray-100 px-1 rounded">$1</code>')
+    // Lists
+    .replace(/^\* (.*$)/gim, '<li class="ml-4">$1</li>')
+    .replace(/^- (.*$)/gim, '<li class="ml-4">$1</li>')
+    // Line breaks
+    .replace(/\n\n/g, '</p><p class="mb-4">')
+    .replace(/\n/g, '<br>');
+  
+  // Wrap in paragraphs
+  html = '<p class="mb-4">' + html + '</p>';
+  
+  // Fix list items
+  html = html.replace(/(<li class="ml-4">.*?<\/li>)/gs, function(match) {
+    return '<ul class="list-disc ml-6 mb-4">' + match.replace(/<p[^>]*>|<\/p>/g, '') + '</ul>';
+  });
+  
+  return html;
 }
