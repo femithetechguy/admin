@@ -3,6 +3,19 @@
   "lastUpdated": "2025-09-14",
   "resources": [
     {
+      "id": "official-study-guide",
+      "title": "Official Microsoft PL-300 Study Guide",
+      "description": "Comprehensive official study guide from Microsoft Learn covering all exam domains, skills measured, and preparation resources. Updated as of April 2025 with current exam objectives and requirements.",
+      "type": "Study Guide",
+      "category": "study-guide",
+      "difficulty": "intermediate",
+      "duration": "Self-paced",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/pl-300",
+      "videoId": "",
+      "markdownPath": "markdown/pl300/official_pl300_studyguide.md",
+      "tags": ["Official", "Microsoft", "Comprehensive", "Current", "Exam Domains"]
+    },
+    {
       "id": "ms-learn-path",
       "title": "Microsoft Learn - Data Analyst Path",
       "description": "Official Microsoft learning path for PL-300 certification covering all exam domains with hands-on exercises.",
@@ -12,6 +25,7 @@
       "duration": "40+ hours",
       "url": "https://docs.microsoft.com/learn/certifications/exams/pl-300",
       "videoId": "",
+      "markdownPath": "markdown/pl300/ms_learn_path.md",
       "tags": ["Official", "Free", "Interactive", "Comprehensive"]
     },
     {
@@ -23,6 +37,7 @@
       "difficulty": "intermediate",
       "url": "https://docs.microsoft.com/power-bi/desktop-what-is-desktop",
       "videoId": "",
+      "markdownPath": "markdown/pl300/power_bi_desktop.md",
       "tags": ["Official", "Reference", "Desktop"]
     },
     {
@@ -34,6 +49,7 @@
       "difficulty": "intermediate",
       "duration": "6 hours",
       "videoId": "klQAZLr5vxA",
+      "markdownPath": "markdown/pl300/dax_fundamentals.md",
       "tags": ["DAX", "Calculations", "Measures"]
     },
     {
@@ -45,6 +61,7 @@
       "difficulty": "advanced",
       "duration": "4 hours",
       "videoId": "",
+      "markdownPath": "markdown/pl300/power_query_mastery.md",
       "tags": ["Power Query", "M Language", "Data Transformation"]
     },
     {
@@ -56,6 +73,7 @@
       "difficulty": "intermediate",
       "duration": "2 hours",
       "videoId": "",
+      "markdownPath": "markdown/pl300/practice_exam_1.md",
       "tags": ["Practice", "Mock Exam", "Assessment"]
     },
     {
@@ -67,6 +85,7 @@
       "difficulty": "intermediate",
       "duration": "3 hours",
       "videoId": "6_nFFF3qQsQ",
+      "markdownPath": "markdown/pl300/data_modeling_best_practices.md",
       "tags": ["Data Modeling", "Star Schema", "Performance"]
     },
     {
@@ -78,6 +97,7 @@
       "difficulty": "advanced",
       "duration": "2 hours",
       "videoId": "",
+      "markdownPath": "markdown/pl300/row_level_security.md",
       "tags": ["Security", "RLS", "Administration"]
     },
     {
@@ -89,6 +109,7 @@
       "difficulty": "intermediate",
       "duration": "5 hours",
       "videoId": "",
+      "markdownPath": "markdown/pl300/power_bi_service.md",
       "tags": ["Power BI Service", "Administration", "Governance"]
     },
     {
@@ -100,40 +121,44 @@
       "difficulty": "intermediate",
       "duration": "4 hours",
       "videoId": "7Zn0tPM0OEY",
+      "markdownPath": "markdown/pl300/advanced_visualizations.md",
       "tags": ["Visualizations", "Dashboard", "Custom Visuals"]
     },
     {
       "id": "performance-optimization",
       "title": "Power BI Performance Optimization",
-      "description": "Techniques for optimizing Power BI reports and datasets for better performance and user experience.",
-      "type": "Documentation",
-      "category": "documentation",
+      "description": "Learn techniques to optimize report performance, improve loading times, and handle large datasets efficiently.",
+      "type": "Advanced Guide",
+      "category": "video",
       "difficulty": "advanced",
       "duration": "3 hours",
-      "videoId": "",
-      "tags": ["Performance", "Optimization", "Best Practices"]
+      "videoId": "LDL5Qlr8mgo",
+      "markdownPath": "markdown/pl300/performance_optimization.md",
+      "tags": ["Performance", "Optimization", "Large Datasets"]
     },
     {
       "id": "exam-prep-bootcamp",
       "title": "PL-300 Exam Preparation Bootcamp",
-      "description": "Intensive exam preparation covering all domains with practice questions and exam strategies.",
-      "type": "Exam Prep",
-      "category": "study-guide",
+      "description": "Intensive bootcamp covering all exam objectives with hands-on labs and real-world scenarios.",
+      "type": "Bootcamp",
+      "category": "video",
       "difficulty": "intermediate",
       "duration": "8 hours",
-      "videoId": "1SiylvWqtqQ",
-      "tags": ["Exam Prep", "Bootcamp", "Strategy"]
+      "videoId": "xUKWWUJFDEI",
+      "markdownPath": "markdown/pl300/exam_prep_bootcamp.md",
+      "tags": ["Exam Prep", "Bootcamp", "Hands-on Labs"]
     },
     {
       "id": "how-i-passed-pl300",
-      "title": "How did I pass Microsoft Power BI Data Analyst - PL-300?",
-      "description": "Personal experience and tips from someone who successfully passed the PL-300 certification exam, including study strategies and key insights.",
-      "type": "Video Tutorial",
+      "title": "How I Passed PL-300: Personal Journey",
+      "description": "Real success story sharing study strategies, timeline, and practical tips from a certified professional.",
+      "type": "Experience Sharing",
       "category": "video",
-      "difficulty": "intermediate",
-      "duration": "Variable",
+      "difficulty": "beginner",
+      "duration": "45 minutes",
       "videoId": "yW3FhS5sU2w",
-      "tags": ["Exam Experience", "Study Tips", "Personal Journey", "Success Story"]
+      "markdownPath": "",
+      "tags": ["Success Story", "Study Tips", "Personal Experience"]
     },
     {
       "id": "power-platform-integration",
@@ -144,6 +169,7 @@
       "difficulty": "intermediate",
       "duration": "3 hours",
       "videoId": "",
+      "markdownPath": "markdown/pl300/power_platform_integration.md",
       "tags": ["Power Platform", "Integration", "Ecosystem"]
     }
   ],
