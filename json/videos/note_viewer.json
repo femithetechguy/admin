@@ -389,6 +389,12 @@
       "topic": "PL-300 Certification Guide",
       "category": "CAREER DEVELOPMENT",
       "markdownPath": "markdown/pl300_certification_guide.md"
+    },
+    {
+      "serialNo": 66,
+      "topic": "Microsoft Fabric Architecture Explained",
+      "category": "PLATFORM ADMINISTRATION & GOVERNANCE",
+      "markdownPath": "markdown/microsoft_fabric_architecture_explained.md"
     }
   ]
 }
