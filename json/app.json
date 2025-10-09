@@ -74,6 +74,14 @@
           ]
         },
         {
+          "name": "Python",
+          "biIcon": "bi-database",
+          "content": [
+            "Python programming resources",
+            "Optional: example code snippets, libraries, best practices"
+          ]
+        },
+        {
           "name": "DataWarehouse",
           "biIcon": "bi-box-seam",
           "content": [
