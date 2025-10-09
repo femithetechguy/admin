@@ -1,0 +1,76 @@
+{
+  "videos": [
+    {
+      "SerialNo": 1,
+      "Title": "Data Analysis with Python: Part 1 of 6 (Live Course)",
+      "Duration": "1 hours 9 minutes 15 seconds",
+      "Id": "EsDFiZPljYo",
+      "URL": "https://youtube.com/watch?v=EsDFiZPljYo",
+      "Note": [
+        "Introduction to data analysis with Python programming.",
+        "Foundation concepts for data science and analytics.",
+        "Setting up Python environment for data analysis projects."
+      ]
+    },
+    {
+      "SerialNo": 2,
+      "Title": "Data Analysis with Python: Part 2 of 6 - Python Functions and Working with Files (Live Course)",
+      "Duration": "2 hours 12 minutes 48 seconds",
+      "Id": "JOKJ6g3gUFE",
+      "URL": "https://youtube.com/watch?v=JOKJ6g3gUFE",
+      "Note": [
+        "Understanding Python functions for data manipulation.",
+        "File handling techniques for data input/output operations.",
+        "Best practices for organizing data analysis code."
+      ]
+    },
+    {
+      "SerialNo": 3,
+      "Title": "Data Analysis with Python: Part 3 of 6 Numerical Computing with Numpy (Live Course)",
+      "Duration": "2 hours 5 minutes 14 seconds",
+      "Id": "NlZXAytUeeE",
+      "URL": "https://youtube.com/watch?v=NlZXAytUeeE",
+      "Note": [
+        "Introduction to NumPy library for numerical computing.",
+        "Array operations and mathematical functions in NumPy.",
+        "Efficient data processing with vectorized operations."
+      ]
+    },
+    {
+      "SerialNo": 4,
+      "Title": "Data Analysis with Python: Part 4 of 6 - Analyzing tabular data with Pandas",
+      "Duration": "2 hours 3 minutes 55 seconds",
+      "Id": "b2mLDkMSyn4",
+      "URL": "https://youtube.com/watch?v=b2mLDkMSyn4",
+      "Note": [
+        "Pandas library for data manipulation and analysis.",
+        "Working with DataFrames and Series for tabular data.",
+        "Data cleaning, filtering, and transformation techniques."
+      ]
+    },
+    {
+      "SerialNo": 5,
+      "Title": "Data Analysis with Python: Part 5 of 6 - Visualization with Matplotlib and Seaborn (Live Course)",
+      "Duration": "2 hours 16 minutes 52 seconds",
+      "Id": "bybjFBOBJlg",
+      "URL": "https://youtube.com/watch?v=bybjFBOBJlg",
+      "Note": [
+        "Data visualization using Matplotlib and Seaborn libraries.",
+        "Creating charts, plots, and graphs for data insights.",
+        "Best practices for effective data storytelling through visuals."
+      ]
+    },
+    {
+      "SerialNo": 6,
+      "Title": "Data Analysis with Python: Part 6 of 6 - Exploratory Data Analysis - A Case Study [Live Course]",
+      "Duration": "2 hours 18 minutes 16 seconds",
+      "Id": "XRKIa4k0h2E",
+      "URL": "https://youtube.com/watch?v=XRKIa4k0h2E",
+      "Note": [
+        "Complete exploratory data analysis (EDA) case study.",
+        "Real-world application of Python data analysis techniques.",
+        "End-to-end data analysis project workflow and documentation."
+      ]
+    }
+  ]
+}
