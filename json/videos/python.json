@@ -1,89 +1,568 @@
 {
   "videos": [
-    {
-      "SerialNo": 1,
-      "Title": "Data Analysis with Python: Part 1 of 6 (Live Course)",
-      "Duration": "1 hours 9 minutes 15 seconds",
-      "Id": "EsDFiZPljYo",
-      "URL": "https://youtube.com/watch?v=EsDFiZPljYo",
-      "Note": [
-        "Introduction to data analysis with Python programming.",
-        "Foundation concepts for data science and analytics.",
-        "Setting up Python environment for data analysis projects."
-      ]
-    },
-    {
-      "SerialNo": 2,
-      "Title": "Data Analysis with Python: Part 2 of 6 - Python Functions and Working with Files (Live Course)",
-      "Duration": "2 hours 12 minutes 48 seconds",
-      "Id": "JOKJ6g3gUFE",
-      "URL": "https://youtube.com/watch?v=JOKJ6g3gUFE",
-      "Note": [
-        "Understanding Python functions for data manipulation.",
-        "File handling techniques for data input/output operations.",
-        "Best practices for organizing data analysis code."
-      ]
-    },
-    {
-      "SerialNo": 3,
-      "Title": "Data Analysis with Python: Part 3 of 6 Numerical Computing with Numpy (Live Course)",
-      "Duration": "2 hours 5 minutes 14 seconds",
-      "Id": "NlZXAytUeeE",
-      "URL": "https://youtube.com/watch?v=NlZXAytUeeE",
-      "Note": [
-        "Introduction to NumPy library for numerical computing.",
-        "Array operations and mathematical functions in NumPy.",
-        "Efficient data processing with vectorized operations."
-      ]
-    },
-    {
-      "SerialNo": 4,
-      "Title": "Data Analysis with Python: Part 4 of 6 - Analyzing tabular data with Pandas",
-      "Duration": "2 hours 3 minutes 55 seconds",
-      "Id": "b2mLDkMSyn4",
-      "URL": "https://youtube.com/watch?v=b2mLDkMSyn4",
-      "Note": [
-        "Pandas library for data manipulation and analysis.",
-        "Working with DataFrames and Series for tabular data.",
-        "Data cleaning, filtering, and transformation techniques."
-      ]
-    },
-    {
-      "SerialNo": 5,
-      "Title": "Data Analysis with Python: Part 5 of 6 - Visualization with Matplotlib and Seaborn (Live Course)",
-      "Duration": "2 hours 16 minutes 52 seconds",
-      "Id": "bybjFBOBJlg",
-      "URL": "https://youtube.com/watch?v=bybjFBOBJlg",
-      "Note": [
-        "Data visualization using Matplotlib and Seaborn libraries.",
-        "Creating charts, plots, and graphs for data insights.",
-        "Best practices for effective data storytelling through visuals."
-      ]
-    },
-    {
-      "SerialNo": 6,
-      "Title": "Data Analysis with Python: Part 6 of 6 - Exploratory Data Analysis - A Case Study [Live Course]",
-      "Duration": "2 hours 18 minutes 16 seconds",
-      "Id": "XRKIa4k0h2E",
-      "URL": "https://youtube.com/watch?v=XRKIa4k0h2E",
-      "Note": [
-        "Complete exploratory data analysis (EDA) case study.",
-        "Real-world application of Python data analysis techniques.",
-        "End-to-end data analysis project workflow and documentation."
-      ]
-    }
-    ,
-    {
-      "SerialNo": 7,
-      "Title": "Python For Data Analysis Full Course (2025) | Python For Data Analytics Course FREE | Intellipaat",
-      "Duration": "5 hours 2 minutes 40 seconds",
-      "Id": "lZk8ZY3g1fU",
-      "URL": "https://www.youtube.com/watch?v=lZk8ZY3g1fU&t=11530s",
-      "Note": [
-        "Comprehensive full-course covering Python for data analysis workflows.",
-        "Topics include NumPy, Pandas, data cleaning, visualization, and real-world projects.",
-        "Good for end-to-end learning and hands-on exercises for data analytics."
-      ]
-    }
-  ]
+  {
+    "SerialNo": 1,
+    "Title": "Data Analysis with Python: Part 1 of 6 (Live Course)",
+    "Duration": "1 hours 9 minutes 15 seconds",
+    "Id": "EsDFiZPljYo",
+    "URL": "https://youtube.com/watch?v=EsDFiZPljYo",
+    "Note": [
+      "Introduction to data analysis with Python programming.",
+      "Foundation concepts for data science and analytics.",
+      "Setting up Python environment for data analysis projects."
+    ]
+  },
+  {
+    "SerialNo": 2,
+    "Title": "Data Analysis with Python: Part 2 of 6 - Python Functions and Working with Files (Live Course)",
+    "Duration": "2 hours 12 minutes 48 seconds",
+    "Id": "JOKJ6g3gUFE",
+    "URL": "https://youtube.com/watch?v=JOKJ6g3gUFE",
+    "Note": [
+      "Understanding Python functions for data manipulation.",
+      "File handling techniques for data input/output operations.",
+      "Best practices for organizing data analysis code."
+    ]
+  },
+  {
+    "SerialNo": 3,
+    "Title": "Data Analysis with Python: Part 3 of 6 Numerical Computing with Numpy (Live Course)",
+    "Duration": "2 hours 5 minutes 14 seconds",
+    "Id": "NlZXAytUeeE",
+    "URL": "https://youtube.com/watch?v=NlZXAytUeeE",
+    "Note": [
+      "Introduction to NumPy library for numerical computing.",
+      "Array operations and mathematical functions in NumPy.",
+      "Efficient data processing with vectorized operations."
+    ]
+  },
+  {
+    "SerialNo": 4,
+    "Title": "Data Analysis with Python: Part 4 of 6 - Analyzing tabular data with Pandas",
+    "Duration": "2 hours 3 minutes 55 seconds",
+    "Id": "b2mLDkMSyn4",
+    "URL": "https://youtube.com/watch?v=b2mLDkMSyn4",
+    "Note": [
+      "Pandas library for data manipulation and analysis.",
+      "Working with DataFrames and Series for tabular data.",
+      "Data cleaning, filtering, and transformation techniques."
+    ]
+  },
+  {
+    "SerialNo": 5,
+    "Title": "Data Analysis with Python: Part 5 of 6 - Visualization with Matplotlib and Seaborn (Live Course)",
+    "Duration": "2 hours 16 minutes 52 seconds",
+    "Id": "bybjFBOBJlg",
+    "URL": "https://youtube.com/watch?v=bybjFBOBJlg",
+    "Note": [
+      "Data visualization using Matplotlib and Seaborn libraries.",
+      "Creating charts, plots, and graphs for data insights.",
+      "Best practices for effective data storytelling through visuals."
+    ]
+  },
+  {
+    "SerialNo": 6,
+    "Title": "Data Analysis with Python: Part 6 of 6 - Exploratory Data Analysis - A Case Study [Live Course]",
+    "Duration": "2 hours 18 minutes 16 seconds",
+    "Id": "XRKIa4k0h2E",
+    "URL": "https://youtube.com/watch?v=XRKIa4k0h2E",
+    "Note": [
+      "Complete exploratory data analysis (EDA) case study.",
+      "Real-world application of Python data analysis techniques.",
+      "End-to-end data analysis project workflow and documentation."
+    ]
+  },
+  {
+    "SerialNo": 7,
+    "Title": "Python For Data Analysis Full Course (2025) | Python For Data Analytics Course FREE | Intellipaat",
+    "Duration": "5 hours 2 minutes 40 seconds",
+    "Id": "lZk8ZY3g1fU",
+    "URL": "https://www.youtube.com/watch?v=lZk8ZY3g1fU&t=11530s",
+    "Note": [
+      "Comprehensive full-course covering Python for data analysis workflows.",
+      "Topics include NumPy, Pandas, data cleaning, visualization, and real-world projects.",
+      "Good for end-to-end learning and hands-on exercises for data analytics."
+    ]
+  },
+  {
+    "SerialNo": 8,
+    "Title": "Python Thread Tutorial | Python Thread Pool | Python Thread Pool Executor | Intellipaat",
+    "Duration": "27 minutes 41 seconds",
+    "Id": "4WoXz4GHWWQ",
+    "URL": "https://youtube.com/watch?v=4WoXz4GHWWQ",
+    "Note": []
+  },
+  {
+    "SerialNo": 9,
+    "Title": "Python Modules | Python Modules Tutorial | What Are Python Modules | Intellipaat",
+    "Duration": "38 minutes 36 seconds",
+    "Id": "8DpCnPAU61c",
+    "URL": "https://youtube.com/watch?v=8DpCnPAU61c",
+    "Note": []
+  },
+  {
+    "SerialNo": 10,
+    "Title": "Python Packages | Python Packages Tutorial | Python For Beginners | Intellipaat",
+    "Duration": "25 minutes 10 seconds",
+    "Id": "VprIN3MYL2w",
+    "URL": "https://youtube.com/watch?v=VprIN3MYL2w",
+    "Note": []
+  },
+  {
+    "SerialNo": 11,
+    "Title": "Python Project | Python Projects For Beginners | Python Project Tutorial | Intellipaat",
+    "Duration": "2 hours 4 minutes 30 seconds",
+    "Id": "7ou-Jf8VJrg",
+    "URL": "https://youtube.com/watch?v=7ou-Jf8VJrg",
+    "Note": []
+  },
+  {
+    "SerialNo": 12,
+    "Title": "Python Interview Questions and Answers | Top Python Interview Questions | Intellipaat",
+    "Duration": "58 minutes 30 seconds",
+    "Id": "4UJEdzEeYZI",
+    "URL": "https://youtube.com/watch?v=4UJEdzEeYZI",
+    "Note": []
+  },
+  {
+    "SerialNo": 13,
+    "Title": "Python Course | Python Programming Tutorial | Learn Python | Intellipaat",
+    "Duration": "9 hours 47 minutes 56 seconds",
+    "Id": "Ac-Ojbu4OB0",
+    "URL": "https://youtube.com/watch?v=Ac-Ojbu4OB0",
+    "Note": []
+  },
+  {
+    "SerialNo": 14,
+    "Title": "Python for Data Science | Python Data Science Course | Python for Data Science Tutorial |Intellipaat",
+    "Duration": "10 hours 22 minutes 26 seconds",
+    "Id": "V3mf2euDge4",
+    "URL": "https://youtube.com/watch?v=V3mf2euDge4",
+    "Note": []
+  },
+  {
+    "SerialNo": 15,
+    "Title": "Python Projects For Beginners | Python Programming Projects For Beginners | Intellipaat",
+    "Duration": "9 hours 14 minutes 41 seconds",
+    "Id": "t-T7zbY56fg",
+    "URL": "https://youtube.com/watch?v=t-T7zbY56fg",
+    "Note": []
+  },
+  {
+    "SerialNo": 16,
+    "Title": "Pyspark Training | Pyspark Tutorial | Pyspark Dataframe Tutorial | Intellipaat",
+    "Duration": "7 hours 11 minutes 41 seconds",
+    "Id": "ANotA_YZjvI",
+    "URL": "https://youtube.com/watch?v=ANotA_YZjvI",
+    "Note": []
+  },
+  {
+    "SerialNo": 17,
+    "Title": "Machine Learning with Python | Machine Learning Python | Python for Machine Learning | Intellipaat",
+    "Duration": "7 hours 3 minutes 16 seconds",
+    "Id": "73ccJ6NuTkc",
+    "URL": "https://youtube.com/watch?v=73ccJ6NuTkc",
+    "Note": []
+  },
+  {
+    "SerialNo": 18,
+    "Title": "Python Programming Tutorial (Basic to Advance) | Python For Intermediates | Intellipaat",
+    "Duration": "10 hours 27 minutes 45 seconds",
+    "Id": "TA1Fr8NhRFs",
+    "URL": "https://youtube.com/watch?v=TA1Fr8NhRFs",
+    "Note": []
+  },
+  {
+    "SerialNo": 19,
+    "Title": "Python Django Tutorial | Python Django Full Course | Django Tutorial For Beginners | Intellipaat",
+    "Duration": "5 hours 19 minutes 35 seconds",
+    "Id": "VVmynbXrSjo",
+    "URL": "https://youtube.com/watch?v=VVmynbXrSjo",
+    "Note": []
+  },
+  {
+    "SerialNo": 20,
+    "Title": "Python Trends | What's New in Python | Python in 2021 | Python Features | Intellipaat",
+    "Duration": "15 minutes 50 seconds",
+    "Id": "eRdDpCk1r_M",
+    "URL": "https://youtube.com/watch?v=eRdDpCk1r_M",
+    "Note": []
+  },
+  {
+    "SerialNo": 21,
+    "Title": "Career Options for Python Developer | Python Career Opportunities | Python Career Path",
+    "Duration": "21 minutes 5 seconds",
+    "Id": "v3aTjgvh5dA",
+    "URL": "https://youtube.com/watch?v=v3aTjgvh5dA",
+    "Note": []
+  },
+  {
+    "SerialNo": 22,
+    "Title": "How To Get Python Developer Job | How To Get A Job As A Python Programmer | Intellipaat",
+    "Duration": "22 minutes 55 seconds",
+    "Id": "NOCbuNZJJBk",
+    "URL": "https://youtube.com/watch?v=NOCbuNZJJBk",
+    "Note": []
+  },
+  {
+    "SerialNo": 23,
+    "Title": "Easy Way To Learn Python | How to Learn Python Programming For Free | Intellipaat",
+    "Duration": "15 minutes 11 seconds",
+    "Id": "DJzhnMk7-zI",
+    "URL": "https://youtube.com/watch?v=DJzhnMk7-zI",
+    "Note": []
+  },
+  {
+    "SerialNo": 24,
+    "Title": "Python Career Path | Python for Different Job Roles | Python For Beginners | Intellipaat",
+    "Duration": "20 minutes 56 seconds",
+    "Id": "TlOJG9lTHqk",
+    "URL": "https://youtube.com/watch?v=TlOJG9lTHqk",
+    "Note": []
+  },
+  {
+    "SerialNo": 25,
+    "Title": "Python Full Course | Python For Beginners | Learn Python | Intellipaat",
+    "Duration": "10 hours 55 minutes 32 seconds",
+    "Id": "nj2TxBW3vCk",
+    "URL": "https://youtube.com/watch?v=nj2TxBW3vCk",
+    "Note": []
+  },
+  {
+    "SerialNo": 26,
+    "Title": "How to Learn Programming For Beginners | How to Learn Programming Faster | Intellipaat",
+    "Duration": "26 minutes 3 seconds",
+    "Id": "zYpO7-Mpdk4",
+    "URL": "https://youtube.com/watch?v=zYpO7-Mpdk4",
+    "Note": []
+  },
+  {
+    "SerialNo": 27,
+    "Title": "How to Learn Coding Fast | Best Way to Learn Coding | Learn Coding | Intellipaat",
+    "Duration": "14 minutes 5 seconds",
+    "Id": "Kw68gHlpmvc",
+    "URL": "https://youtube.com/watch?v=Kw68gHlpmvc",
+    "Note": []
+  },
+  {
+    "SerialNo": 28,
+    "Title": "Which Programming Language to Learn First | Programming Language for Beginners | Intellipaat",
+    "Duration": "11 minutes 5 seconds",
+    "Id": "Ego8GCxDv9I",
+    "URL": "https://youtube.com/watch?v=Ego8GCxDv9I",
+    "Note": []
+  },
+  {
+    "SerialNo": 29,
+    "Title": "Top 5 Reasons To Learn Programming | Why You Should Learn To Code | Intellipaat",
+    "Duration": "5 minutes 10 seconds",
+    "Id": "cUnayHxk-Rs",
+    "URL": "https://youtube.com/watch?v=cUnayHxk-Rs",
+    "Note": []
+  },
+  {
+    "SerialNo": 30,
+    "Title": "Python Closures Explained | What are Closures in Python | Python Closures | Intellipaat",
+    "Duration": "11 minutes 55 seconds",
+    "Id": "ZKcGrE1QudU",
+    "URL": "https://youtube.com/watch?v=ZKcGrE1QudU",
+    "Note": []
+  },
+  {
+    "SerialNo": 31,
+    "Title": "Python Project for Beginners | Python Data Manipulation with Pandas | Intellipaat",
+    "Duration": "1 hours 36 seconds",
+    "Id": "6bPQoM9anes",
+    "URL": "https://youtube.com/watch?v=6bPQoM9anes",
+    "Note": []
+  },
+  {
+    "SerialNo": 32,
+    "Title": "Python Decorators | Python Decorators Explained | Decorators in Python | Intellipaat",
+    "Duration": "7 minutes 46 seconds",
+    "Id": "sI01h0UVwqg",
+    "URL": "https://youtube.com/watch?v=sI01h0UVwqg",
+    "Note": []
+  },
+  {
+    "SerialNo": 33,
+    "Title": "Python Full Course - Learn Python in 11 Hours | Python Tutorial For Beginners | Intellipaat",
+    "Duration": "10 hours 40 minutes 3 seconds",
+    "Id": "C2QC2kpUv4s",
+    "URL": "https://youtube.com/watch?v=C2QC2kpUv4s",
+    "Note": []
+  },
+  {
+    "SerialNo": 34,
+    "Title": "Python Context Managers  | How Python Context Managers help in Cleaning | Intellipaat",
+    "Duration": "9 minutes 35 seconds",
+    "Id": "QtZ3EnXxgzc",
+    "URL": "https://youtube.com/watch?v=QtZ3EnXxgzc",
+    "Note": []
+  },
+  {
+    "SerialNo": 35,
+    "Title": "Python Generators Tutorial | Python Generator Examples | Intellipaat",
+    "Duration": "9 minutes 20 seconds",
+    "Id": "I2YBXxa65aA",
+    "URL": "https://youtube.com/watch?v=I2YBXxa65aA",
+    "Note": []
+  },
+  {
+    "SerialNo": 36,
+    "Title": "Python Iterators Tutorial | Python Iterator Examples | Intellipaat",
+    "Duration": "9 minutes 20 seconds",
+    "Id": "u_dQeXh_w_A",
+    "URL": "https://youtube.com/watch?v=u_dQeXh_w_A",
+    "Note": []
+  },
+  {
+    "SerialNo": 37,
+    "Title": "Python Data Science Course | Learn Python for Data Science | Intellipaat",
+    "Duration": "11 hours 39 minutes 21 seconds",
+    "Id": "uriMdU31Wvo",
+    "URL": "https://youtube.com/watch?v=uriMdU31Wvo",
+    "Note": []
+  },
+  {
+    "SerialNo": 38,
+    "Title": "How to Learn Python from Scratch | Easy Way to Learn Python | Intellipaat",
+    "Duration": "41 minutes 45 seconds",
+    "Id": "Pyrayb13ERo",
+    "URL": "https://youtube.com/watch?v=Pyrayb13ERo",
+    "Note": []
+  },
+  {
+    "SerialNo": 39,
+    "Title": "Python Developer RoadMap for 2022 | Python Career Path | Intellipaat",
+    "Duration": "32 minutes 30 seconds",
+    "Id": "I0IAxF_vem0",
+    "URL": "https://youtube.com/watch?v=I0IAxF_vem0",
+    "Note": []
+  },
+  {
+    "SerialNo": 40,
+    "Title": "Python Data Science Course | Python Data Science Training | Intellipaat",
+    "Duration": "11 hours 36 minutes",
+    "Id": "KBL8glfjuDY",
+    "URL": "https://youtube.com/watch?v=KBL8glfjuDY",
+    "Note": []
+  },
+  {
+    "SerialNo": 41,
+    "Title": "Simple Python Project | Recommendation Engine using Python | Python Project | Intellipaat",
+    "Duration": "2 hours 26 minutes 30 seconds",
+    "Id": "U4uwe-GJ1RA",
+    "URL": "https://youtube.com/watch?v=U4uwe-GJ1RA",
+    "Note": []
+  },
+  {
+    "SerialNo": 42,
+    "Title": "Top 5 Programming Languages to Learn in 2022 | Top Programming Languages | Intellipaat",
+    "Duration": "5 minutes 43 seconds",
+    "Id": "ie1LDlbjzyQ",
+    "URL": "https://youtube.com/watch?v=ie1LDlbjzyQ",
+    "Note": []
+  },
+  {
+    "SerialNo": 43,
+    "Title": "PySpark Tutorial For Beginners | Apache Spark With Python Tutorial | Intellipaat",
+    "Duration": "8 hours 45 minutes 50 seconds",
+    "Id": "OHhNi56euvM",
+    "URL": "https://youtube.com/watch?v=OHhNi56euvM",
+    "Note": []
+  },
+  {
+    "SerialNo": 44,
+    "Title": "Python Developer Roadmap for 2022 | Python Developer Skillset | Python 2022 | Intellipaat",
+    "Duration": "26 minutes 51 seconds",
+    "Id": "-I1Pfxzfayo",
+    "URL": "https://youtube.com/watch?v=-I1Pfxzfayo",
+    "Note": []
+  },
+  {
+    "SerialNo": 45,
+    "Title": "Python Tutorial For Beginners | Python Full Course | Python Training | Intellipaat",
+    "Duration": "11 hours 24 minutes 31 seconds",
+    "Id": "d6XwhJ-CX0g",
+    "URL": "https://youtube.com/watch?v=d6XwhJ-CX0g",
+    "Note": []
+  },
+  {
+    "SerialNo": 46,
+    "Title": "Python Data Science Course | Data Science Python | Python Data Science | Intellipaat",
+    "Duration": "11 hours 55 minutes",
+    "Id": "6ve92eG8XlM",
+    "URL": "https://youtube.com/watch?v=6ve92eG8XlM",
+    "Note": []
+  },
+  {
+    "SerialNo": 47,
+    "Title": "Python Series Day 5: Looping Statements In Python | Loops In Python | Learn Python | Intellipaat",
+    "Duration": "15 minutes",
+    "Id": "_e6R-H8kXAI",
+    "URL": "https://youtube.com/watch?v=_e6R-H8kXAI",
+    "Note": []
+  },
+  {
+    "SerialNo": 48,
+    "Title": "Python Series Day 6: Functions In Python | Python Functions Explained | Python Functions Tutorial",
+    "Duration": "16 minutes 35 seconds",
+    "Id": "B55FcEaNH10",
+    "URL": "https://youtube.com/watch?v=B55FcEaNH10",
+    "Note": []
+  },
+  {
+    "SerialNo": 49,
+    "Title": "Python Series Day 7: Operators In Python | Types Of Operators In Python | Learn Python | Intellipaat",
+    "Duration": "14 minutes 50 seconds",
+    "Id": "Sbixd7-mzx0",
+    "URL": "https://youtube.com/watch?v=Sbixd7-mzx0",
+    "Note": []
+  },
+  {
+    "SerialNo": 50,
+    "Title": "Python Series Day 8: Exception Handling In Python | What Is Exception Handling | Intellipaat",
+    "Duration": "25 minutes 1 seconds",
+    "Id": "5Mu8vfMJmJg",
+    "URL": "https://youtube.com/watch?v=5Mu8vfMJmJg",
+    "Note": []
+  },
+  {
+    "SerialNo": 51,
+    "Title": "Python Series Day 9: Predictive Analysis In Python | How To Perform Predictive Analysis Using Python",
+    "Duration": "23 minutes",
+    "Id": "V72VnbY8KE0",
+    "URL": "https://youtube.com/watch?v=V72VnbY8KE0",
+    "Note": []
+  },
+  {
+    "SerialNo": 52,
+    "Title": "Python Series Day 10: File Handling In Python | File Operations | Python Training | Intellipaat",
+    "Duration": "25 minutes 40 seconds",
+    "Id": "eCtTXvmqfRg",
+    "URL": "https://youtube.com/watch?v=eCtTXvmqfRg",
+    "Note": []
+  },
+  {
+    "SerialNo": 53,
+    "Title": "Python Series Day 11: Data Visualization In Python | Data Analysis With Python | Python Training",
+    "Duration": "22 minutes 13 seconds",
+    "Id": "SvPe_ocOWcU",
+    "URL": "https://youtube.com/watch?v=SvPe_ocOWcU",
+    "Note": []
+  },
+  {
+    "SerialNo": 54,
+    "Title": "Python Series Day 12: Flow control In Python | What Is Flow Control In Programming | Intellipaat",
+    "Duration": "19 minutes 40 seconds",
+    "Id": "S6S916GnnuM",
+    "URL": "https://youtube.com/watch?v=S6S916GnnuM",
+    "Note": []
+  },
+  {
+    "SerialNo": 55,
+    "Title": "Python Series Day 13: Python Web Scraping | What Is Web Scraping | Web Scraping With Python",
+    "Duration": "30 minutes",
+    "Id": "SMLv6dVBqVQ",
+    "URL": "https://youtube.com/watch?v=SMLv6dVBqVQ",
+    "Note": []
+  },
+  {
+    "SerialNo": 56,
+    "Title": "Python Series Day 14: Building REST API In Python | Python REST API Tutorial | Python Project",
+    "Duration": "24 minutes 18 seconds",
+    "Id": "JuvBXrrFZZo",
+    "URL": "https://youtube.com/watch?v=JuvBXrrFZZo",
+    "Note": []
+  },
+  {
+    "SerialNo": 57,
+    "Title": "How To Code In Python | Python Tutorial For Beginners | Python Basics | Learn Python | Intellipaat",
+    "Duration": "26 minutes 6 seconds",
+    "Id": "4aT66J0C8Cs",
+    "URL": "https://youtube.com/watch?v=4aT66J0C8Cs",
+    "Note": []
+  },
+  {
+    "SerialNo": 58,
+    "Title": "How Python Helps In Building IT Career | How To Become A Professional Python Developer | Intellipaat",
+    "Duration": "50 minutes 21 seconds",
+    "Id": "E3w-R5wpSXY",
+    "URL": "https://youtube.com/watch?v=E3w-R5wpSXY",
+    "Note": []
+  },
+  {
+    "SerialNo": 59,
+    "Title": "Python Career Options | Python Career Roadmap | Career In Python | Intellipaat",
+    "Duration": "17 minutes 44 seconds",
+    "Id": "yWBlSdf1Ft4",
+    "URL": "https://youtube.com/watch?v=yWBlSdf1Ft4",
+    "Note": []
+  },
+  {
+    "SerialNo": 60,
+    "Title": "Python Course | Python Training | Learn Python Programming | Intellipaat",
+    "Duration": "8 hours 25 minutes 45 seconds",
+    "Id": "lmvNhNvmQmY",
+    "URL": "https://youtube.com/watch?v=lmvNhNvmQmY",
+    "Note": []
+  },
+  {
+    "SerialNo": 61,
+    "Title": "Introduction To Vector Using Python | Vectors In Python | Vector Operations In Python | Intellipaat",
+    "Duration": "18 minutes 52 seconds",
+    "Id": "fqxWBj0cmDY",
+    "URL": "https://youtube.com/watch?v=fqxWBj0cmDY",
+    "Note": []
+  },
+  {
+    "SerialNo": 62,
+    "Title": "Introduction To Matrix Using Python | Matrix In Python | Matrix Operations In Python | Intellipaat",
+    "Duration": "16 minutes 35 seconds",
+    "Id": "Wz1_Ma2cA-8",
+    "URL": "https://youtube.com/watch?v=Wz1_Ma2cA-8",
+    "Note": []
+  },
+  {
+    "SerialNo": 63,
+    "Title": "Python Pattern Tutorial | Python Pattern Printing Programs | How To Print Patterns In Python",
+    "Duration": "18 minutes 25 seconds",
+    "Id": "2rLkDqFNENM",
+    "URL": "https://youtube.com/watch?v=2rLkDqFNENM",
+    "Note": []
+  },
+  {
+    "SerialNo": 64,
+    "Title": "Python Frameworks Tutorial | Best Python Framework | Python Frameworks | Intellipaat",
+    "Duration": "12 minutes 38 seconds",
+    "Id": "3lhpfPtEm1U",
+    "URL": "https://youtube.com/watch?v=3lhpfPtEm1U",
+    "Note": []
+  },
+  {
+    "SerialNo": 65,
+    "Title": "Python In Hindi | Python Tutorial For Beginners In Hindi | Python Training In Hindi | Intellipaat",
+    "Duration": "1 hours 19 minutes 10 seconds",
+    "Id": "gJT_sdtfCBw",
+    "URL": "https://youtube.com/watch?v=gJT_sdtfCBw",
+    "Note": []
+  },
+  {
+    "SerialNo": 66,
+    "Title": "OOPs Interview Questions | Object-Oriented Programming Interview Questions And Answers | Intellipaat",
+    "Duration": "19 minutes 50 seconds",
+    "Id": "DPCsnuYIl7A",
+    "URL": "https://youtube.com/watch?v=DPCsnuYIl7A",
+    "Note": []
+  },
+  {
+    "SerialNo": 67,
+    "Title": "Python Training | Python For Beginners | Python Tutorial For Beginners | Python Course | Intellipaat",
+    "Duration": "8 hours 40 minutes 5 seconds",
+    "Id": "I8QKRQ-IXWU",
+    "URL": "https://youtube.com/watch?v=I8QKRQ-IXWU",
+    "Note": []
+  }
+]
 }
