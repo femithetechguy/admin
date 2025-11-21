@@ -90,7 +90,10 @@
     "Duration": "27 minutes 41 seconds",
     "Id": "4WoXz4GHWWQ",
     "URL": "https://youtube.com/watch?v=4WoXz4GHWWQ",
-    "Note": []
+    "Note": [
+      "Covers concurrent programming using Python **threads** and the **ThreadPoolExecutor**.",
+      "Explains concepts like multitasking and thread pools for efficiency."
+    ]
   },
   {
     "SerialNo": 9,
@@ -98,7 +101,10 @@
     "Duration": "38 minutes 36 seconds",
     "Id": "8DpCnPAU61c",
     "URL": "https://youtube.com/watch?v=8DpCnPAU61c",
-    "Note": []
+    "Note": [
+      "Explains how to create and use **modules** in Python.",
+      "Focuses on structuring and reusing code by importing functionalities."
+    ]
   },
   {
     "SerialNo": 10,
@@ -106,7 +112,10 @@
     "Duration": "25 minutes 10 seconds",
     "Id": "VprIN3MYL2w",
     "URL": "https://youtube.com/watch?v=VprIN3MYL2w",
-    "Note": []
+    "Note": [
+      "Introduces the concept of **Python packages** for organizing multiple modules.",
+      "Covers the structure and creation of distributable Python packages."
+    ]
   },
   {
     "SerialNo": 11,
@@ -114,7 +123,10 @@
     "Duration": "2 hours 4 minutes 30 seconds",
     "Id": "7ou-Jf8VJrg",
     "URL": "https://youtube.com/watch?v=7ou-Jf8VJrg",
-    "Note": []
+    "Note": [
+      "A guided, **hands-on project tutorial** to help beginners apply foundational Python programming concepts.",
+      "Suitable for new coders seeking practical experience."
+    ]
   },
   {
     "SerialNo": 12,
@@ -122,7 +134,10 @@
     "Duration": "58 minutes 30 seconds",
     "Id": "4UJEdzEeYZI",
     "URL": "https://youtube.com/watch?v=4UJEdzEeYZI",
-    "Note": []
+    "Note": [
+      "A collection of frequently asked **Python interview questions and answers**.",
+      "Covers core programming, data structures, and other popular topics."
+    ]
   },
   {
     "SerialNo": 13,
@@ -130,7 +145,10 @@
     "Duration": "9 hours 47 minutes 56 seconds",
     "Id": "Ac-Ojbu4OB0",
     "URL": "https://youtube.com/watch?v=Ac-Ojbu4OB0",
-    "Note": []
+    "Note": [
+      "A comprehensive, long-form tutorial covering **basic to advanced Python programming** concepts.",
+      "Includes core syntax, data structures, and advanced features."
+    ]
   },
   {
     "SerialNo": 14,
@@ -138,7 +156,10 @@
     "Duration": "10 hours 22 minutes 26 seconds",
     "Id": "V3mf2euDge4",
     "URL": "https://youtube.com/watch?v=V3mf2euDge4",
-    "Note": []
+    "Note": [
+      "An extensive course focusing on using Python libraries (like Pandas and NumPy) for **data analysis** and **data science** workflows.",
+      "Covers data manipulation, cleaning, and preparation."
+    ]
   },
   {
     "SerialNo": 15,
@@ -146,7 +167,10 @@
     "Duration": "9 hours 14 minutes 41 seconds",
     "Id": "t-T7zbY56fg",
     "URL": "https://youtube.com/watch?v=t-T7zbY56fg",
-    "Note": []
+    "Note": [
+      "A collection of **beginner-level Python projects** to build a portfolio.",
+      "Focuses on gaining hands-on coding experience through practical application."
+    ]
   },
   {
     "SerialNo": 16,
@@ -154,7 +178,10 @@
     "Duration": "7 hours 11 minutes 41 seconds",
     "Id": "ANotA_YZjvI",
     "URL": "https://youtube.com/watch?v=ANotA_YZjvI",
-    "Note": []
+    "Note": [
+      "Tutorial on **PySpark**, covering **Spark DataFrames** and distributed data processing with Python.",
+      "Designed for big data analysis and scalable computing."
+    ]
   },
   {
     "SerialNo": 17,
@@ -162,7 +189,10 @@
     "Duration": "7 hours 3 minutes 16 seconds",
     "Id": "73ccJ6NuTkc",
     "URL": "https://youtube.com/watch?v=73ccJ6NuTkc",
-    "Note": []
+    "Note": [
+      "Full course on **Machine Learning** concepts and their implementation using Python libraries like scikit-learn.",
+      "Covers various ML algorithms and model training."
+    ]
   },
   {
     "SerialNo": 18,
@@ -170,7 +200,10 @@
     "Duration": "10 hours 27 minutes 45 seconds",
     "Id": "TA1Fr8NhRFs",
     "URL": "https://youtube.com/watch?v=TA1Fr8NhRFs",
-    "Note": []
+    "Note": [
+      "An in-depth tutorial detailing Python programming from **fundamentals to intermediate/advanced** topics.",
+      "Suitable for those with basic knowledge looking to upskill."
+    ]
   },
   {
     "SerialNo": 19,
@@ -178,7 +211,10 @@
     "Duration": "5 hours 19 minutes 35 seconds",
     "Id": "VVmynbXrSjo",
     "URL": "https://youtube.com/watch?v=VVmynbXrSjo",
-    "Note": []
+    "Note": [
+      "A full course on the **Django web framework** for building robust, database-driven web applications in Python.",
+      "Covers MVT architecture and core Django features."
+    ]
   },
   {
     "SerialNo": 20,
@@ -186,7 +222,10 @@
     "Duration": "15 minutes 50 seconds",
     "Id": "eRdDpCk1r_M",
     "URL": "https://youtube.com/watch?v=eRdDpCk1r_M",
-    "Note": []
+    "Note": [
+      "Discusses the latest **features, updates, and trends** in the Python language.",
+      "Provides insights into what's new in the Python ecosystem."
+    ]
   },
   {
     "SerialNo": 21,
@@ -194,7 +233,10 @@
     "Duration": "21 minutes 5 seconds",
     "Id": "v3aTjgvh5dA",
     "URL": "https://youtube.com/watch?v=v3aTjgvh5dA",
-    "Note": []
+    "Note": [
+      "Outlines various **job roles** and **career paths** available to a professional Python developer.",
+      "Discusses salary expectations and industry demand."
+    ]
   },
   {
     "SerialNo": 22,
@@ -202,7 +244,10 @@
     "Duration": "22 minutes 55 seconds",
     "Id": "NOCbuNZJJBk",
     "URL": "https://youtube.com/watch?v=NOCbuNZJJBk",
-    "Note": []
+    "Note": [
+      "Provides tips, strategies, and steps on how to **prepare for and secure a job** as a Python programmer.",
+      "Focuses on interview preparation and required skills."
+    ]
   },
   {
     "SerialNo": 23,
@@ -210,7 +255,10 @@
     "Duration": "15 minutes 11 seconds",
     "Id": "DJzhnMk7-zI",
     "URL": "https://youtube.com/watch?v=DJzhnMk7-zI",
-    "Note": []
+    "Note": [
+      "Focuses on the **best methods and resources** for beginners to learn Python programming quickly and effectively.",
+      "A guide for self-study and free learning options."
+    ]
   },
   {
     "SerialNo": 24,
@@ -218,7 +266,10 @@
     "Duration": "20 minutes 56 seconds",
     "Id": "TlOJG9lTHqk",
     "URL": "https://youtube.com/watch?v=TlOJG9lTHqk",
-    "Note": []
+    "Note": [
+      "Explains how Python is used in **different job roles** (e.g., Data Scientist, Web Developer, Automation Engineer).",
+      "Helps beginners choose a specialization path."
+    ]
   },
   {
     "SerialNo": 25,
@@ -226,7 +277,10 @@
     "Duration": "10 hours 55 minutes 32 seconds",
     "Id": "nj2TxBW3vCk",
     "URL": "https://youtube.com/watch?v=nj2TxBW3vCk",
-    "Note": []
+    "Note": [
+      "A long and detailed **Python full course** for beginners, covering all core programming concepts.",
+      "A comprehensive guide from setup to intermediate topics."
+    ]
   },
   {
     "SerialNo": 26,
@@ -234,7 +288,10 @@
     "Duration": "26 minutes 3 seconds",
     "Id": "zYpO7-Mpdk4",
     "URL": "https://youtube.com/watch?v=zYpO7-Mpdk4",
-    "Note": []
+    "Note": [
+      "General guidance and best practices for **new programmers** on how to approach learning to code.",
+      "Tips on accelerating the programming learning process."
+    ]
   },
   {
     "SerialNo": 27,
@@ -242,7 +299,10 @@
     "Duration": "14 minutes 5 seconds",
     "Id": "Kw68gHlpmvc",
     "URL": "https://youtube.com/watch?v=Kw68gHlpmvc",
-    "Note": []
+    "Note": [
+      "Provides **techniques and strategies** to accelerate the learning process of programming and coding skills.",
+      "Focuses on efficient learning methods for quick mastery."
+    ]
   },
   {
     "SerialNo": 28,
@@ -250,7 +310,10 @@
     "Duration": "11 minutes 5 seconds",
     "Id": "Ego8GCxDv9I",
     "URL": "https://youtube.com/watch?v=Ego8GCxDv9I",
-    "Note": []
+    "Note": [
+      "Discusses the pros and cons of different languages to help beginners choose the **first programming language** to master.",
+      "Compares popular beginner-friendly languages."
+    ]
   },
   {
     "SerialNo": 29,
@@ -258,7 +321,10 @@
     "Duration": "5 minutes 10 seconds",
     "Id": "cUnayHxk-Rs",
     "URL": "https://youtube.com/watch?v=cUnayHxk-Rs",
-    "Note": []
+    "Note": [
+      "Highlights the **key benefits and motivations** for learning how to code in the current job market.",
+      "Focuses on career and personal growth advantages."
+    ]
   },
   {
     "SerialNo": 30,
@@ -266,7 +332,10 @@
     "Duration": "11 minutes 55 seconds",
     "Id": "ZKcGrE1QudU",
     "URL": "https://youtube.com/watch?v=ZKcGrE1QudU",
-    "Note": []
+    "Note": [
+      "Detailed explanation of **closures** in Python.",
+      "Covers concepts like variable scope and nested functions."
+    ]
   },
   {
     "SerialNo": 31,
@@ -274,7 +343,10 @@
     "Duration": "1 hours 36 seconds",
     "Id": "6bPQoM9anes",
     "URL": "https://youtube.com/watch?v=6bPQoM9anes",
-    "Note": []
+    "Note": [
+      "A project focusing on **data manipulation** and analysis techniques using the **Pandas** library.",
+      "A practical case study for data handling."
+    ]
   },
   {
     "SerialNo": 32,
@@ -282,7 +354,10 @@
     "Duration": "7 minutes 46 seconds",
     "Id": "sI01h0UVwqg",
     "URL": "https://youtube.com/watch?v=sI01h0UVwqg",
-    "Note": []
+    "Note": [
+      "A tutorial on **decorators** in Python.",
+      "Explains how to use decorators to modify functions or classes without changing their source code."
+    ]
   },
   {
     "SerialNo": 33,
@@ -290,15 +365,21 @@
     "Duration": "10 hours 40 minutes 3 seconds",
     "Id": "C2QC2kpUv4s",
     "URL": "https://youtube.com/watch?v=C2QC2kpUv4s",
-    "Note": []
+    "Note": [
+      "A marathon-style, **comprehensive Python tutorial** covering fundamentals for beginners.",
+      "A fast-paced guide for quick, holistic learning."
+    ]
   },
   {
     "SerialNo": 34,
-    "Title": "Python Context Managers  | How Python Context Managers help in Cleaning | Intellipaat",
+    "Title": "Python Context Managers  | How Python Context Managers help in Cleaning | Intellipaat",
     "Duration": "9 minutes 35 seconds",
     "Id": "QtZ3EnXxgzc",
     "URL": "https://youtube.com/watch?v=QtZ3EnXxgzc",
-    "Note": []
+    "Note": [
+      "Explains **context managers** and the `with` statement.",
+      "Focuses on efficient resource cleanup (e.g., proper handling of file closing or database connections)."
+    ]
   },
   {
     "SerialNo": 35,
@@ -306,7 +387,10 @@
     "Duration": "9 minutes 20 seconds",
     "Id": "I2YBXxa65aA",
     "URL": "https://youtube.com/watch?v=I2YBXxa65aA",
-    "Note": []
+    "Note": [
+      "Introduction to **generators** and the `yield` keyword.",
+      "Explains their use for memory-efficient iteration and large data processing."
+    ]
   },
   {
     "SerialNo": 36,
@@ -314,7 +398,10 @@
     "Duration": "9 minutes 20 seconds",
     "Id": "u_dQeXh_w_A",
     "URL": "https://youtube.com/watch?v=u_dQeXh_w_A",
-    "Note": []
+    "Note": [
+      "Explanation of **iterators** in Python.",
+      "Covers the `iter()` and `next()` methods and the iterator protocol."
+    ]
   },
   {
     "SerialNo": 37,
@@ -322,7 +409,10 @@
     "Duration": "11 hours 39 minutes 21 seconds",
     "Id": "uriMdU31Wvo",
     "URL": "https://youtube.com/watch?v=uriMdU31Wvo",
-    "Note": []
+    "Note": [
+      "An in-depth training on using Python for data science.",
+      "Covers statistical analysis, data visualization, and machine learning basics."
+    ]
   },
   {
     "SerialNo": 38,
@@ -330,7 +420,10 @@
     "Duration": "41 minutes 45 seconds",
     "Id": "Pyrayb13ERo",
     "URL": "https://youtube.com/watch?v=Pyrayb13ERo",
-    "Note": []
+    "Note": [
+      "Step-by-step guide for absolute beginners on **starting their Python learning journey**.",
+      "Provides a structured approach to mastering the language fundamentals."
+    ]
   },
   {
     "SerialNo": 39,
@@ -338,7 +431,10 @@
     "Duration": "32 minutes 30 seconds",
     "Id": "I0IAxF_vem0",
     "URL": "https://youtube.com/watch?v=I0IAxF_vem0",
-    "Note": []
+    "Note": [
+      "Outlines the **roadmap and necessary skillset** for becoming a Python developer in 2022.",
+      "Covers core Python features, career paths, and steps to get a job."
+    ]
   },
   {
     "SerialNo": 40,
@@ -346,7 +442,10 @@
     "Duration": "11 hours 36 minutes",
     "Id": "KBL8glfjuDY",
     "URL": "https://youtube.com/watch?v=KBL8glfjuDY",
-    "Note": []
+    "Note": [
+      "A long-duration training program dedicated to mastering **Python for Data Science**.",
+      "Covers foundational tools and practical data analysis techniques."
+    ]
   },
   {
     "SerialNo": 41,
@@ -354,7 +453,10 @@
     "Duration": "2 hours 26 minutes 30 seconds",
     "Id": "U4uwe-GJ1RA",
     "URL": "https://youtube.com/watch?v=U4uwe-GJ1RA",
-    "Note": []
+    "Note": [
+      "A project tutorial for building a **Recommendation Engine** to apply Python skills practically.",
+      "Covers the underlying logic and implementation steps for this common machine learning task."
+    ]
   },
   {
     "SerialNo": 42,
@@ -362,7 +464,10 @@
     "Duration": "5 minutes 43 seconds",
     "Id": "ie1LDlbjzyQ",
     "URL": "https://youtube.com/watch?v=ie1LDlbjzyQ",
-    "Note": []
+    "Note": [
+      "A brief analysis of the **most in-demand and valuable programming languages** for the year 2022.",
+      "Provides career context and highlights market trends."
+    ]
   },
   {
     "SerialNo": 43,
@@ -370,7 +475,10 @@
     "Duration": "8 hours 45 minutes 50 seconds",
     "Id": "OHhNi56euvM",
     "URL": "https://youtube.com/watch?v=OHhNi56euvM",
-    "Note": []
+    "Note": [
+      "A comprehensive introduction to **PySpark** and **Apache Spark** with Python for handling big data.",
+      "Covers concepts for distributed computing and large-scale data processing."
+    ]
   },
   {
     "SerialNo": 44,
@@ -378,7 +486,10 @@
     "Duration": "26 minutes 51 seconds",
     "Id": "-I1Pfxzfayo",
     "URL": "https://youtube.com/watch?v=-I1Pfxzfayo",
-    "Note": []
+    "Note": [
+      "A detailed breakdown of the **skills and technologies** required for a Python developer in 2022.",
+      "A shorter version of the developer roadmap focusing on the core skillset."
+    ]
   },
   {
     "SerialNo": 45,
@@ -386,7 +497,10 @@
     "Duration": "11 hours 24 minutes 31 seconds",
     "Id": "d6XwhJ-CX0g",
     "URL": "https://youtube.com/watch?v=d6XwhJ-CX0g",
-    "Note": []
+    "Note": [
+      "A long-form **full course/tutorial** covering Python fundamentals for beginners.",
+      "Suitable for learning core Python concepts from scratch."
+    ]
   },
   {
     "SerialNo": 46,
@@ -394,7 +508,10 @@
     "Duration": "11 hours 55 minutes",
     "Id": "6ve92eG8XlM",
     "URL": "https://youtube.com/watch?v=6ve92eG8XlM",
-    "Note": []
+    "Note": [
+      "A comprehensive course on **data science with Python**.",
+      "Covers key libraries, statistical modeling, and data-driven problem-solving methodologies."
+    ]
   },
   {
     "SerialNo": 47,
@@ -402,7 +519,10 @@
     "Duration": "15 minutes",
     "Id": "_e6R-H8kXAI",
     "URL": "https://youtube.com/watch?v=_e6R-H8kXAI",
-    "Note": []
+    "Note": [
+      "Tutorial on different types of **looping statements** (`for`, `while`) and iterative flow control in Python.",
+      "Part of a structured Python series."
+    ]
   },
   {
     "SerialNo": 48,
@@ -410,7 +530,10 @@
     "Duration": "16 minutes 35 seconds",
     "Id": "B55FcEaNH10",
     "URL": "https://youtube.com/watch?v=B55FcEaNH10",
-    "Note": []
+    "Note": [
+      "Detailed explanation of creating and using **functions** in Python.",
+      "Covers arguments, return values, and function scope."
+    ]
   },
   {
     "SerialNo": 49,
@@ -418,7 +541,10 @@
     "Duration": "14 minutes 50 seconds",
     "Id": "Sbixd7-mzx0",
     "URL": "https://youtube.com/watch?v=Sbixd7-mzx0",
-    "Note": []
+    "Note": [
+      "Covers various **operators** in Python (arithmetic, logical, comparison, assignment, etc.) and their use cases.",
+      "Essential building block for coding logic."
+    ]
   },
   {
     "SerialNo": 50,
@@ -426,7 +552,10 @@
     "Duration": "25 minutes 1 seconds",
     "Id": "5Mu8vfMJmJg",
     "URL": "https://youtube.com/watch?v=5Mu8vfMJmJg",
-    "Note": []
+    "Note": [
+      "Focuses on **exception handling** using `try-except-finally` blocks.",
+      "Teaches how to manage and respond to runtime errors gracefully."
+    ]
   },
   {
     "SerialNo": 51,
@@ -434,7 +563,10 @@
     "Duration": "23 minutes",
     "Id": "V72VnbY8KE0",
     "URL": "https://youtube.com/watch?v=V72VnbY8KE0",
-    "Note": []
+    "Note": [
+      "Introduction to **predictive analysis** concepts and how to implement them using Python.",
+      "Covers basic machine learning concepts for forecasting."
+    ]
   },
   {
     "SerialNo": 52,
@@ -442,7 +574,10 @@
     "Duration": "25 minutes 40 seconds",
     "Id": "eCtTXvmqfRg",
     "URL": "https://youtube.com/watch?v=eCtTXvmqfRg",
-    "Note": []
+    "Note": [
+      "Guide on **File Handling** operations in Python.",
+      "Covers reading, writing, and various file modes and best practices."
+    ]
   },
   {
     "SerialNo": 53,
@@ -450,7 +585,10 @@
     "Duration": "22 minutes 13 seconds",
     "Id": "SvPe_ocOWcU",
     "URL": "https://youtube.com/watch?v=SvPe_ocOWcU",
-    "Note": []
+    "Note": [
+      "Tutorial on performing **Data Visualization** using Python libraries.",
+      "Teaches how to create informative plots and charts for data analysis."
+    ]
   },
   {
     "SerialNo": 54,
@@ -458,7 +596,10 @@
     "Duration": "19 minutes 40 seconds",
     "Id": "S6S916GnnuM",
     "URL": "https://youtube.com/watch?v=S6S916GnnuM",
-    "Note": []
+    "Note": [
+      "Focuses on **flow control** structures in Python programming.",
+      "Covers conditional statements (`if-elif-else`) to guide program execution."
+    ]
   },
   {
     "SerialNo": 55,
@@ -466,7 +607,10 @@
     "Duration": "30 minutes",
     "Id": "SMLv6dVBqVQ",
     "URL": "https://youtube.com/watch?v=SMLv6dVBqVQ",
-    "Note": []
+    "Note": [
+      "Tutorial on **Web Scraping** techniques using Python libraries.",
+      "Explains how to extract data from websites for various applications."
+    ]
   },
   {
     "SerialNo": 56,
@@ -474,7 +618,10 @@
     "Duration": "24 minutes 18 seconds",
     "Id": "JuvBXrrFZZo",
     "URL": "https://youtube.com/watch?v=JuvBXrrFZZo",
-    "Note": []
+    "Note": [
+      "Hands-on tutorial on **building a REST API** using a Python framework like Flask or Django.",
+      "Covers the basics of web services and API design."
+    ]
   },
   {
     "SerialNo": 57,
@@ -482,7 +629,10 @@
     "Duration": "26 minutes 6 seconds",
     "Id": "4aT66J0C8Cs",
     "URL": "https://youtube.com/watch?v=4aT66J0C8Cs",
-    "Note": []
+    "Note": [
+      "A basic tutorial covering the **fundamentals of coding in Python**.",
+      "Focuses on core syntax and simple data types for absolute beginners."
+    ]
   },
   {
     "SerialNo": 58,
@@ -490,7 +640,10 @@
     "Duration": "50 minutes 21 seconds",
     "Id": "E3w-R5wpSXY",
     "URL": "https://youtube.com/watch?v=E3w-R5wpSXY",
-    "Note": []
+    "Note": [
+      "Discussion on Python's role in the IT industry and how to transition into a **professional Python developer**.",
+      "Explores career growth and the high demand for Python skills."
+    ]
   },
   {
     "SerialNo": 59,
@@ -498,7 +651,10 @@
     "Duration": "17 minutes 44 seconds",
     "Id": "yWBlSdf1Ft4",
     "URL": "https://youtube.com/watch?v=yWBlSdf1Ft4",
-    "Note": []
+    "Note": [
+      "A concise overview of **career options and the roadmap** for success in a Python-centric job role.",
+      "A guide for planning a professional path with Python."
+    ]
   },
   {
     "SerialNo": 60,
@@ -506,7 +662,10 @@
     "Duration": "8 hours 25 minutes 45 seconds",
     "Id": "lmvNhNvmQmY",
     "URL": "https://youtube.com/watch?v=lmvNhNvmQmY",
-    "Note": []
+    "Note": [
+      "A long-duration **comprehensive course** on Python programming.",
+      "Covers fundamental concepts and prepares learners for advanced topics."
+    ]
   },
   {
     "SerialNo": 61,
@@ -514,7 +673,10 @@
     "Duration": "18 minutes 52 seconds",
     "Id": "fqxWBj0cmDY",
     "URL": "https://youtube.com/watch?v=fqxWBj0cmDY",
-    "Note": []
+    "Note": [
+      "Introduction to **vectors** and performing **vector operations** in Python.",
+      "Likely uses the NumPy library for numerical computing."
+    ]
   },
   {
     "SerialNo": 62,
@@ -522,7 +684,10 @@
     "Duration": "16 minutes 35 seconds",
     "Id": "Wz1_Ma2cA-8",
     "URL": "https://youtube.com/watch?v=Wz1_Ma2cA-8",
-    "Note": []
+    "Note": [
+      "Introduction to **matrices** and performing **matrix operations** in Python.",
+      "Essential for linear algebra, data science, and machine learning."
+    ]
   },
   {
     "SerialNo": 63,
@@ -530,7 +695,10 @@
     "Duration": "18 minutes 25 seconds",
     "Id": "2rLkDqFNENM",
     "URL": "https://youtube.com/watch?v=2rLkDqFNENM",
-    "Note": []
+    "Note": [
+      "Focuses on programming practice by solving problems related to **pattern printing** using loops.",
+      "A common exercise to improve logic and looping skills."
+    ]
   },
   {
     "SerialNo": 64,
@@ -538,7 +706,10 @@
     "Duration": "12 minutes 38 seconds",
     "Id": "3lhpfPtEm1U",
     "URL": "https://youtube.com/watch?v=3lhpfPtEm1U",
-    "Note": []
+    "Note": [
+      "Discusses and compares the **best Python frameworks** for web development and other applications.",
+      "Covers popular choices like Django, Flask, and potentially FastAPI."
+    ]
   },
   {
     "SerialNo": 65,
@@ -546,7 +717,10 @@
     "Duration": "1 hours 19 minutes 10 seconds",
     "Id": "gJT_sdtfCBw",
     "URL": "https://youtube.com/watch?v=gJT_sdtfCBw",
-    "Note": []
+    "Note": [
+      "A **Python tutorial for beginners** delivered entirely in the **Hindi** language.",
+      "Covers introductory concepts for a Hindi-speaking audience."
+    ]
   },
   {
     "SerialNo": 66,
@@ -554,7 +728,10 @@
     "Duration": "19 minutes 50 seconds",
     "Id": "DPCsnuYIl7A",
     "URL": "https://youtube.com/watch?v=DPCsnuYIl7A",
-    "Note": []
+    "Note": [
+      "Focuses specifically on frequently asked **Object-Oriented Programming (OOP)** interview questions and answers.",
+      "Covers concepts like classes, objects, inheritance, and polymorphism."
+    ]
   },
   {
     "SerialNo": 67,
@@ -562,7 +739,10 @@
     "Duration": "8 hours 40 minutes 5 seconds",
     "Id": "I8QKRQ-IXWU",
     "URL": "https://youtube.com/watch?v=I8QKRQ-IXWU",
-    "Note": []
+    "Note": [
+      "A long-duration, **comprehensive Python course** aimed at beginners.",
+      "Covers essential syntax and programming logic to start coding."
+    ]
   }
 ]
 }
