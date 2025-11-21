@@ -72,5 +72,18 @@
         "End-to-end data analysis project workflow and documentation."
       ]
     }
+    ,
+    {
+      "SerialNo": 7,
+      "Title": "Python For Data Analysis Full Course (2025) | Python For Data Analytics Course FREE | Intellipaat",
+      "Duration": "5 hours 2 minutes 40 seconds",
+      "Id": "lZk8ZY3g1fU",
+      "URL": "https://www.youtube.com/watch?v=lZk8ZY3g1fU&t=11530s",
+      "Note": [
+        "Comprehensive full-course covering Python for data analysis workflows.",
+        "Topics include NumPy, Pandas, data cleaning, visualization, and real-world projects.",
+        "Good for end-to-end learning and hands-on exercises for data analytics."
+      ]
+    }
   ]
 }
