@@ -166,6 +166,36 @@
       "author": "Meetup",
       "dateAdded": "July 31, 2025",
       "tags": ["meetup", "community", "events", "external"]
+    },
+    {
+      "id": 17,
+      "filename": "powerbi-blog",
+      "type": "url",
+      "description": "Official Power BI blog",
+      "path": "https://powerbi.microsoft.com/blog/",
+      "author": "Microsoft",
+      "dateAdded": "July 31, 2025",
+      "tags": ["blog", "official", "Power BI", "news"]
+    },
+    {
+      "id": 18,
+      "filename": "guy-in-a-cube-videos",
+      "type": "url",
+      "description": "Guy in a Cube YouTube channel videos",
+      "path": "https://www.youtube.com/@GuyInACube/videos",
+      "author": "Guy in a Cube",
+      "dateAdded": "July 31, 2025",
+      "tags": ["video", "YouTube", "tutorial", "community"]
+    },
+    {
+      "id": 19,
+      "filename": "pbi-user-group",
+      "type": "url",
+      "description": "Power BI User Group community site",
+      "path": "https://pbiusergroup.com/",
+      "author": "Power BI User Group",
+      "dateAdded": "July 31, 2025",
+      "tags": ["community", "events", "forum", "external"]
     }
   ]
 }
