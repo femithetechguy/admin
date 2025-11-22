@@ -136,6 +136,36 @@
       "author": "Microsoft",
       "dateAdded": "July 31, 2025",
       "tags": ["certification", "learning", "external", "Microsoft", "official"]
+    },
+    {
+      "id": 14,
+      "filename": "workout-wednesday",
+      "type": "url",
+      "description": "Workout Wednesday — Power BI practice challenges and tutorials",
+      "path": "https://workout-wednesday.com/",
+      "author": "Workout Wednesday",
+      "dateAdded": "July 31, 2025",
+      "tags": ["practice", "challenges", "Power BI", "external", "learning"]
+    },
+    {
+      "id": 15,
+      "filename": "ac-atl-meetup",
+      "type": "url",
+      "description": "AC-ATL Meetup group page",
+      "path": "https://www.meetup.com/ac-atl/",
+      "author": "Meetup",
+      "dateAdded": "July 31, 2025",
+      "tags": ["meetup", "community", "events", "external"]
+    },
+    {
+      "id": 16,
+      "filename": "atlanta-microsoft-business-intelligence-users",
+      "type": "url",
+      "description": "Atlanta Microsoft Business Intelligence Users Meetup",
+      "path": "https://www.meetup.com/atlanta-microsoft-business-intelligence-users/",
+      "author": "Meetup",
+      "dateAdded": "July 31, 2025",
+      "tags": ["meetup", "community", "events", "external"]
     }
   ]
 }
